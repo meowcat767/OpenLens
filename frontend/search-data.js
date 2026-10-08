@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 728,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html",
+    "title": "Emscripten Runtime Environment - Emscripten 6.0.12-git (dev) documentation",
+    "content": "Emscripten / Discussion Introducing Emscripten About Emscripten Community Open Source License Release Notes Talks and Publications Getting Started Download and install Emscripten Tutorial Emscripten Test Suite Bug Reporting FAQ Compiling and Running Projects Building Projects Building to WebAssembly Modularized Output Dynamic Linking Running HTML files with emrun Deploying Emscripten Compiled Pages Building and Deploying on GitLab Emscripten Contrib Ports Cross-Origin Storage (COS) Porting Code Portability and Limitations Portability Guidelines API Limitations Function Pointer Issues Specific Browser Limitations Emscripten Runtime Environment Connecting C++ and JavaScript Interacting with code Embind WebIDL Binder Files and File Systems File System Overview Packaging Files Synchronous Virtual XHR Backed File System Usage Multimedia and Graphics Using WebGPU in Emscripten EGL Support in Emscripten OpenGL support in Emscripten Audio Debugging Pthreads support Networking Using SIMD with WebAssembly C++ Exceptions Support C setjmp-longjmp Support Asynchronous Code Building Projects API Reference emscripten.h html5.h console.h preamble.js File System API Fetch API Module object val.h bind.h (under-construction) trace.h fiber.h proxying.h stack.h Wasm Workers API Wasm Audio Worklets API Advanced APIs Tools Reference Emscripten SDK (emsdk) Emscripten Compiler Frontend (emcc) Emscripten Windows Command Prompt (emcmdprompt.bat) Emscripten Compiler Settings Deprecated Settings Legacy Settings Optimizing Code Optimizing WebGL Debugging with Sanitizers Building Emscripten from Source Emscripten Toolchain Requirements Configuring Emscripten Settings when Manually Building from Source Verifying the Emscripten Development Environment Contributing to Emscripten Contributing Developer’s Guide AUTHORS Profiling the Toolchain About this site Index On this page Input/output File Systems Browser main loop Implementing an asynchronous main loop in C/C++ Using Asyncify to yield to the browser Execution lifecycle Emscripten memory representation emscripten 0 0 Edit this page Emscripten / Porting / Emscripten Runtime Environment Emscripten Runtime Environment¶ The Emscripten runtime environment is different to that expected by most C/C++ applications. Emscripten works hard to abstract and mitigate these differences, so that in general code can be compiled with little or no change. This article expands on some of the differences and the resulting API Limitations, and outlines the few changes you may need to make to your C/C++ code. Input/output¶ Emscripten implements the Simple DirectMedia Layer API (SDL) for the browser environment, which provides low level access to audio, keyboard, mouse, joystick, and graphics hardware. Applications that use SDL typically require no input/output changes to run in the browser. In addition, we have more limited support for glut, glfw, glew and xlib. Applications that do not use SDL or the other APIs can use the Emscripten-specific APIs for input and output: html5.h, which defines the Emscripten low-level glue bindings to interact with HTML5 events from native code, including access to keys, mouse, wheel, device orientation, battery levels, vibration, etc. Multimedia and Graphics APIs, including OpenGL and EGL. File Systems¶ A lot of C/C++ code uses the synchronous file system APIs in libc and libcxx to access code in the local file system. This is problematic because the browser prevents code from directly accessing files on the host system, and because JavaScript only supports asynchronous file access outside of web workers. Emscripten provides an implementation of libc and libcxx and a virtual file system so that normal C/C++ code can be compiled and run without change. Most developers need only specify the set of files to be packaged for preloading into the virtual file system at runtime. Note Using a virtual file system bypasses the limitations listed above. The file data is packaged at compile time and downloaded into the file system using asynchronous JavaScript APIs before the compiled code is allowed to run. The compiled code then makes “file” calls that are really just calls into program memory. The default file system (MEMFS) stores files in-memory, so that any changes are lost when the page is reloaded. If file changes need to be stored more permanently then developers can mount the IDBFS file system, which allows data to be persisted in the browser. When running code in node.js, developers can mount NODEFS to give code direct access to the local file system. Emscripten also has an API to support asynchronous file access. For more information and examples see Files and File Systems. Browser main loop¶ The browser event model uses co-operative multitasking — each event has a “turn” to run, and must then return control to the browser so that other events can be processed. A common cause of HTML pages hanging is JavaScript that does not complete and return control to the browser. Graphical",
+    "scrapedAt": "2026-10-08 19:11:50.799442"
+  },
+  {
+    "id": 726,
+    "url": "https://github.com/python/cpython/issues/120804",
+    "title": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Rewrite asyncio subprocesses without child watchers #120804 New issue Copy link New issue Copy link Closed Closed Rewrite asyncio subprocesses without child watchers #120804 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestopic-asyncio Description kumaraditya303 opened on Jun 20, 2024 Issue body actions Tasks Remove child watchers (excludes threaded and pidfd watcher) GH-120804: Remove SafeChildWatcher, FastChildWatcher and MultiLoopChildWatcher from asyncio #120805 Remove get_child_watcher and set_child_watcher GH-120804: Remove get_child_watcher and set_child_watcher from asyncio #120818 Remove threaded and pidfd watcher GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 Remove abc of it GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 Add documentation regarding it and news entry GH-120804: add docs for removal for asyncio child watchers #120895 Each task item will be done in a separate PR and news entry will be added when all of this is done otherwise it will be confusing for users. Linked PRs GH-120804: Remove SafeChildWatcher, FastChildWatcher and MultiLoopChildWatcher from asyncio #120805 GH-120804: Remove get_child_watcher and set_child_watcher from asyncio #120818 GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 GH-120804: add docs for removal for asyncio child watchers #120895 gh-120804: remove is_active method from internal child watchers implementation in asyncio #121124 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees kumaraditya303 Labels 3.14bugs and security fixesbugs and security fixestopic-asyncio Projects asyncio Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:11:49.46248"
+  },
+  {
+    "id": 725,
+    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo",
+    "title": "locale — Internationalization services — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic cons",
+    "scrapedAt": "2026-10-08 19:11:47.337748"
+  },
+  {
+    "id": 724,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:11:46.119817"
+  },
+  {
+    "id": 723,
+    "url": "https://github.com/python/cpython/issues/69998",
+    "title": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} locale.nl_langinfo() can\u0027t decode THOUSEP monetary value #69998 New issue Copy link New issue Copy link Closed Closed locale.nl_langinfo() can\u0027t decode THOUSEP monetary value#69998 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description serhiy-storchaka opened on Dec 5, 2015 Issue body actions BPO 25812 Nosy @malemburg, @loewis, @warsaw, @vstinner, @bitdancer, @serhiy-storchaka, @nnja Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d \u0027https://github.com/nnja\u0027\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2015-12-05.21:19:05.273\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-bug\u0027, \u0027library\u0027]\ntitle \u003d \"locale.nl_langinfo() can\u0027t decode value\"\nupdated_at \u003d \u003cDate 2019-01-09.11:53:37.581\u003e\nuser \u003d \u0027https://github.com/serhiy-storchaka\u0027 bugs.python.org fields: activity \u003d \u003cDate 2019-01-09.11:53:37.581\u003e\nactor \u003d \u0027vstinner\u0027\nassignee \u003d \u0027nnja\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2015-12-05.21:19:05.273\u003e\ncreator \u003d \u0027serhiy.storchaka\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 25812\nkeywords \u003d []\nmessage_count \u003d 4.0\nmessages \u003d [\u0027255979\u0027, \u0027267017\u0027, \u0027267192\u0027, \u0027333308\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027lemburg\u0027, \u0027loewis\u0027, \u0027barry\u0027, \u0027vstinner\u0027, \u0027r.david.murray\u0027, \u0027serhiy.storchaka\u0027, \u0027nnja\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue25812\u0027\nversions \u003d [\u0027Python 3.8\u0027] Linked PRs gh-69998: Fix decoding error in locale.nl_langinfo() #124963 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees nnja Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Locale issues 🗺 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:11:44.900406"
+  },
+  {
     "id": 722,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -4750,26 +4785,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 723,
-    "url": "https://github.com/python/cpython/issues/69998"
-  },
-  {
-    "id": 724,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
-  },
-  {
-    "id": 725,
-    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
-  },
-  {
-    "id": 726,
-    "url": "https://github.com/python/cpython/issues/120804"
-  },
-  {
-    "id": 728,
-    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
   },
   {
     "id": 729,
@@ -121694,10 +121709,1369 @@ window.searchData = [
     "id": 85616,
     "url": "https://docs.python.org/3/library/types.html#standard-interpreter-types",
     "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 87129,
+    "url": "https://github.com/malemburg",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87130,
+    "url": "https://github.com/python/cpython/issues/69998#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87131,
+    "url": "https://github.com/warsaw",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87132,
+    "url": "https://github.com/orgs/python/projects/22",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87133,
+    "url": "https://github.com/serhiy-storchaka",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87136,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/69998",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87137,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22type-bug%22",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87140,
+    "url": "https://github.com/nnja",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87141,
+    "url": "https://github.com/loewis",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87142,
+    "url": "https://github.com/python/cpython/issues/69998#top",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87143,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/69998",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87144,
+    "url": "https://bugs.python.org/issue25812",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87145,
+    "url": "https://github.com/python/cpython/issues/69998#issue-1198944975",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87146,
+    "url": "https://github.com/python/cpython/pull/124963",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87262,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_ALL",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87263,
+    "url": "https://docs.python.org/3/library/locale.html#background-details-hints-tips-and-caveats",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87264,
+    "url": "https://www.rfc-editor.org/info/bcp47",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87265,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87267,
+    "url": "https://docs.python.org/3/library/locale.html#locale.str",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87269,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_NUMERIC",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87270,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/intl/locale-names",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87271,
+    "url": "https://docs.python.org/3/library/locale.html#locale.gettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87273,
+    "url": "https://docs.python.org/3/library/locale.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87274,
+    "url": "https://docs.python.org/3/library/locale.html#locale.bindtextdomain",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87275,
+    "url": "https://docs.python.org/3/library/locale.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87276,
+    "url": "https://docs.python.org/3/library/locale.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87277,
+    "url": "https://docs.python.org/3/library/locale.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87278,
+    "url": "https://docs.python.org/3/library/locale.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87280,
+    "url": "https://docs.python.org/3/library/locale.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87281,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87282,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87283,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87284,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87285,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87286,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87287,
+    "url": "https://docs.python.org/3/library/locale.html#locale.YESEXPR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87289,
+    "url": "https://docs.python.org/3/library/locale.html#locale.T_FMT_AMPM",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87290,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87291,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87293,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87294,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87295,
+    "url": "https://docs.python.org/3/library/locale.html#locale.normalize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87296,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87297,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87298,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87299,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87300,
+    "url": "https://docs.python.org/3/library/locale.html#locale.currency",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87301,
+    "url": "https://www.iso.org/iso-639-language-code",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87302,
+    "url": "https://docs.python.org/3/library/locale.html#locale.localize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87306,
+    "url": "https://docs.python.org/3/library/time.html#time.strftime",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87307,
+    "url": "https://docs.python.org/3/library/locale.html#locale-names",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87308,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_8",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87309,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87310,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_9",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87311,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87312,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87313,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_D_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87314,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87315,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87316,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_MESSAGES",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87317,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87318,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87319,
+    "url": "https://docs.python.org/3/library/locale.html#locale.THOUSEP",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87321,
+    "url": "https://docs.python.org/3/library/locale.html#locale.format_string",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87322,
+    "url": "https://docs.python.org/3/library/locale.html#locale.D_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87323,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/locale.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87324,
+    "url": "https://docs.python.org/3/library/locale.html#locale.RADIXCHAR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87326,
+    "url": "https://docs.python.org/3/library/locale.html#locale-name",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87328,
+    "url": "https://docs.python.org/3/library/locale.html#for-extension-writers-and-programs-that-embed-python",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87330,
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap07.html#tag_07_03_05_02",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87331,
+    "url": "https://docs.python.org/3/library/locale.html#locale.delocalize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87332,
+    "url": "https://docs.python.org/3/library/locale.html#locale.NOEXPR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87333,
+    "url": "https://docs.python.org/3/library/locale.html#locale.localeconv",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87334,
+    "url": "https://docs.python.org/3/library/locale.html#locale.strcoll",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87336,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_MONETARY",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87337,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ALT_DIGITS",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87338,
+    "url": "https://docs.python.org/3/library/locale.html#locale.Error",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87340,
+    "url": "https://docs.python.org/3/library/locale.html#",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87341,
+    "url": "https://docs.python.org/3/library/locale.html#locale.bind_textdomain_codeset",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87343,
+    "url": "https://docs.python.org/3/library/locale.html#access-to-message-catalogs",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87346,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_TIME",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87348,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CODESET",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87351,
+    "url": "https://www.iso.org/iso-3166-country-codes.html",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87352,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/locale.py",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87353,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87356,
+    "url": "https://learn.microsoft.com/en-us/cpp/c-runtime-library/locale-names-languages-and-country-region-strings",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87357,
+    "url": "https://docs.python.org/3/library/locale.html#locale.textdomain",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87358,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_11",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87359,
+    "url": "https://docs.python.org/3/library/locale.html#locale.dgettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87361,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_12",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87362,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_D_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87363,
+    "url": "https://docs.python.org/3/c-api/conversion.html#c.Py_TOLOWER",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87364,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_10",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87365,
+    "url": "https://www.unicode.org/iso15924/",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87366,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CHAR_MAX",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87367,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getpreferredencoding",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87369,
+    "url": "https://docs.python.org/3/library/locale.html#locale.T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87371,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87372,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87373,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87374,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87375,
+    "url": "https://docs.python.org/3/library/locale.html#locale.atof",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87376,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87377,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_COLLATE",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87378,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87379,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_8",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87380,
+    "url": "https://docs.python.org/3/library/locale.html#locale.atoi",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87381,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_9",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87382,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_CTYPE",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87383,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87386,
+    "url": "https://docs.python.org/3/library/locale.html#locale.dcgettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87390,
+    "url": "https://docs.python.org/3/library/locale.html#locale.D_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87391,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_12",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87392,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_11",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87393,
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap08.html#tag_08_02",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87394,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_10",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87395,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CRNCYSTR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87397,
+    "url": "https://github.com/python/cpython/issues/120804#issue-2364875592",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87398,
+    "url": "https://github.com/python/cpython/issues/120804#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87399,
+    "url": "https://github.com/python/cpython/pull/120818",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87400,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/120804",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87403,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/120804",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87404,
+    "url": "https://github.com/python/cpython/pull/120805",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87405,
+    "url": "https://github.com/python/cpython/pull/121124",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87407,
+    "url": "https://github.com/python/cpython/pull/120895",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87409,
+    "url": "https://github.com/python/cpython/issues/120804#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87410,
+    "url": "https://github.com/python/cpython/pull/120893",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87411,
+    "url": "https://emscripten.org/docs/api_reference/html5.h.html#c.emscripten_request_animation_frame_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87412,
+    "url": "https://emscripten.org/docs/compiling/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87413,
+    "url": "https://emscripten.org/docs/porting/files/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87414,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-nodefs",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87415,
+    "url": "https://emscripten.org/docs/api_reference/html5.h.html#html5-h",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87416,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87417,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_async_call",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87418,
+    "url": "https://emscripten.org/docs/contributing/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87419,
+    "url": "https://emscripten.org/docs/compiling/Contrib-Ports.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87420,
+    "url": "https://emscripten.org/docs/porting/simd.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87421,
+    "url": "https://emscripten.org/docs/tools_reference/settings_reference.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87422,
+    "url": "https://emscripten.org/docs/contributing/contributing.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87423,
+    "url": "https://emscripten.org/docs/introducing_emscripten/emscripten_license.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87424,
+    "url": "https://emscripten.org/docs/optimizing/Optimizing-WebGL.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87425,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#implementing-an-asynchronous-main-loop-in-c-c",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87426,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/OpenGL-support.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87427,
+    "url": "https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87428,
+    "url": "https://emscripten.org/docs/api_reference/val.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87429,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html#addRunDependency",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87430,
+    "url": "https://emscripten.org/docs/compiling/Modularized-Output.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87431,
+    "url": "https://emscripten.org/docs/api_reference/module.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87432,
+    "url": "https://emscripten.org/docs/contributing/AUTHORS.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87433,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html#removeRunDependency",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87434,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#emscripten-h-browser-execution-environment",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87435,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#execution-lifecycle",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87436,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_set_main_loop_expected_blockers",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87437,
+    "url": "https://emscripten.org/docs/compiling/Deploying-Pages.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87438,
+    "url": "https://emscripten.org/docs/tools_reference/settings_reference.html#deprecated-settings",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87439,
+    "url": "https://emscripten.org/docs/compiling/Dynamic-Linking.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87440,
+    "url": "https://emscripten.org/docs/porting/setjmp-longjmp.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87441,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-idbfs",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87442,
+    "url": "https://emscripten.org/docs/tools_reference/emsdk.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87443,
+    "url": "https://github.com/emscripten-core/emscripten/blob/main/site/source/docs/porting/emscripten-runtime-environment.rst",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87444,
+    "url": "https://emscripten.org/docs/porting/guidelines/portability_guidelines.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87445,
+    "url": "https://emscripten.org/docs/porting/files/Synchronous-Virtual-XHR-Backed-File-System-Usage.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87446,
+    "url": "https://emscripten.org/docs/porting/exceptions.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87447,
+    "url": "https://emscripten.org/docs/compiling/WebAssembly.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87448,
+    "url": "https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87449,
+    "url": "https://emscripten.org/docs/tools_reference/emcmdprompt.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87450,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_push_main_loop_blocker",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87451,
+    "url": "https://emscripten.org/docs/introducing_emscripten/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87452,
+    "url": "https://emscripten.org/docs/porting/guidelines/api_limitations.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87453,
+    "url": "https://emscripten.org/docs/api_reference/fetch.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87454,
+    "url": "https://emscripten.org/docs/api_reference/bind.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87455,
+    "url": "https://emscripten.org/docs/optimizing/Optimizing-Code.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87456,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#file-systems",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87457,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/WebGPU-support.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87458,
+    "url": "https://emscripten.org/docs/porting/Audio.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87459,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87460,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#FS.createPreloadedFile",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87461,
+    "url": "https://emscripten.org/docs/api_reference/wasm_workers.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87462,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/EGL-Support-in-Emscripten.html#egl-support-in-emscripten",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87463,
+    "url": "https://emscripten.org/docs/api_reference/proxying.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87464,
+    "url": "https://emscripten.org/docs/porting/connecting_cpp_and_javascript/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87465,
+    "url": "https://emscripten.org/docs/tools_reference/emcc.html#emcc-preload-file",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87466,
+    "url": "https://emscripten.org/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87467,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html#HEAPU32",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87468,
+    "url": "https://emscripten.org/docs/getting_started/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87469,
+    "url": "https://emscripten.org/docs/porting/connecting_cpp_and_javascript/WebIDL-Binder.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87470,
+    "url": "https://emscripten.org/docs/optimizing/Profiling-Toolchain.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87471,
+    "url": "https://emscripten.org/docs/contributing/developers_guide.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87472,
+    "url": "https://emscripten.org/docs/introducing_emscripten/about_emscripten.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87473,
+    "url": "https://emscripten.org/docs/debugging/Sanitizers.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87474,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#browser-main-loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87475,
+    "url": "https://emscripten.org/docs/tools_reference/settings_reference.html#legacy-settings",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87476,
+    "url": "https://emscripten.org/docs/api_reference/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87477,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#input-output",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87478,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87479,
+    "url": "https://emscripten.org/docs/building_from_source/configuring_emscripten_settings.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87480,
+    "url": "https://github.com/emscripten-core/emscripten",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87481,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#emscripten-runtime-environment",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87482,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/index.html#multimedia-and-graphics-index",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87483,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87484,
+    "url": "https://emscripten.org/docs/site/about.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87485,
+    "url": "https://discord.gg/53u3EKq",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87486,
+    "url": "https://emscripten.org/docs/porting/guidelines/browser_limitations.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87487,
+    "url": "https://emscripten.org/docs/building_from_source/verify_emscripten_environment.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87488,
+    "url": "https://emscripten.org/docs/compiling/GitLab.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87489,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#emscripten-h-asynchronous-file-system-api",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87490,
+    "url": "https://emscripten.org/docs/site/glossary.html#term-SDL",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87491,
+    "url": "https://emscripten.org/docs/api_reference/console.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87492,
+    "url": "https://emscripten.org/docs/porting/files/file_systems_overview.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87493,
+    "url": "https://emscripten.org/docs/introducing_emscripten/release_notes.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87494,
+    "url": "https://emscripten.org/docs/api_reference/fiber.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87495,
+    "url": "https://emscripten.org/docs/tools_reference/emcc.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87496,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_set_main_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87497,
+    "url": "https://emscripten.org/docs/tools_reference/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87498,
+    "url": "https://emscripten.org/docs/introducing_emscripten/Talks-and-Publications.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87499,
+    "url": "https://github.com/emscripten-core/emscripten/discussions",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87500,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/EGL-Support-in-Emscripten.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87501,
+    "url": "https://emscripten.org/docs/api_reference/trace.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87502,
+    "url": "https://emscripten.org/docs/compiling/CrossOriginStorage.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87503,
+    "url": "https://emscripten.org/docs/porting/guidelines/api_limitations.html#api-limitations",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87504,
+    "url": "https://emscripten.org/docs/getting_started/Tutorial.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87505,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_resume_main_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87506,
+    "url": "https://emscripten.org/genindex.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87507,
+    "url": "https://emscripten.org/docs/getting_started/downloads.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87508,
+    "url": "https://emscripten.org/docs/porting/asyncify.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87509,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#using-asyncify-to-yield-to-the-browser",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87510,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87511,
+    "url": "https://emscripten.org/docs/porting/files/index.html#packaging-code-index",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87512,
+    "url": "https://emscripten.org/docs/compiling/Building-Projects.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87513,
+    "url": "https://emscripten.org/docs/building_from_source/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87514,
+    "url": "https://emscripten.org/docs/building_from_source/toolchain_what_is_needed.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87515,
+    "url": "https://emscripten.org/docs/porting/guidelines/function_pointer_issues.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87516,
+    "url": "https://emscripten.org/docs/porting/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87517,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_pause_main_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87518,
+    "url": "https://emscripten.org/docs/api_reference/wasm_audio_worklets.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87519,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#emscripten-runtime-environment-howto-main-loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87520,
+    "url": "https://emscripten.org/docs/introducing_emscripten/community.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87521,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-memfs",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87522,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/OpenGL-support.html#opengl-support",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87523,
+    "url": "https://emscripten.org/docs/api_reference/stack.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87524,
+    "url": "https://emscripten.org/docs/getting_started/bug_reports.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87525,
+    "url": "https://emscripten.org/docs/porting/pthreads.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87526,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#emscripten-memory-representation",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87527,
+    "url": "https://emscripten.org/docs/porting/files/packaging_files.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87528,
+    "url": "https://emscripten.org/docs/porting/files/packaging_files.html#packaging-files",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87529,
+    "url": "https://emscripten.org/docs/porting/networking.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87530,
+    "url": "https://emscripten.org/docs/getting_started/test-suite.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87531,
+    "url": "https://emscripten.org/docs/api_reference/advanced-apis.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87532,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87533,
+    "url": "https://emscripten.org/docs/compiling/Running-html-files-with-emrun.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87534,
+    "url": "https://emscripten.org/docs/porting/Debugging.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87535,
+    "url": "https://emscripten.org/docs/porting/guidelines/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87536,
+    "url": "https://emscripten.org/docs/getting_started/FAQ.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87537,
+    "url": "https://emscripten.org/docs/porting/asyncify.html#yielding-to-main-loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87538,
+    "url": "https://emscripten.org/docs/api_reference/html5.h.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://emscripten.org/_static/emscripten_logo_full.svg",
+    "alt": "Emscripten",
+    "pageTitle": "Emscripten Runtime Environment - Emscripten 6.0.12-git (dev) documentation",
+    "pageUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "src": "https://emscripten.org/_static/emscripten_logo_full.svg",
+    "alt": "Emscripten",
+    "pageTitle": "Emscripten Runtime Environment - Emscripten 6.0.12-git (dev) documentation",
+    "pageUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2030983?s\u003d64\u0026u\u003d827383e693d61abebcd9669fb8c5f39b79a17c81\u0026v\u003d4",
+    "alt": "nnja",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2030983?s\u003d64\u0026u\u003d827383e693d61abebcd9669fb8c5f39b79a17c81\u0026v\u003d4",
+    "alt": "@nnja",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
