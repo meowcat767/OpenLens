@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 320,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/",
+    "title": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "content": "Ga naar hoofdinhoud Homepage Auto Volkswagen Volkswagen Tiguan Volkswagen Tiguan 1 / 4 btnLabelPrevbtnLabelNext Sterke punten Comfortabel onderstel Ruim en praktisch interieur Veel keuze in aandrijflijnen Zwakke punten Hoge nieuwprijs Veel bediening via touchscreen Plug-in hybride is zwaar Toon aanbod Toon aanbod Volkswagen Tiguan: volwassen en breed inzetbare SUV De Volkswagen Tiguan van de derde generatie is groter, slimmer en efficiënter dan ooit. De compacte SUV combineert moderne techniek met veel ruimte en comfort. Hij is er als mild hybrid en als plug-in hybrid in combinatie met krachtige benzinemotoren. Oudere Tiguans zijn er ook met dieselmotor. Lees verder. Marktpositie | Technische gegevens | Varianten | Doelgroep | Alternatieven | Review | Problemen en terugroepacties Volkswagen Tiguan : een overzicht Bekijk hier de actuele prijzen voor de Volkswagen Tiguan : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 46.252,-* Occasions vanaf:€ 2.739,-* *Laagste prijs op AutoScout24 in de afgelopen maand Volkswagen Tiguan voor een topprijs Ontdek de beste aanbiedingen, vergelijk interessante modellen en vind de Volkswagen Tiguan die perfect aansluit op uw wensen en behoeften. Vind de Volkswagen Tiguan op AutoScout24 Volkswagen Tiguan aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Volkswagen Tiguan1.4 TSI Sport\u0026Style. Navi. Stoelverwarming! € 9.949 04/2014 85.003 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3771 AGBarneveld Volkswagen Tiguan1.4 TSI Connected Series Panoramadak Massage € 13.950 01/2017 160.234 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 1506 SZZaandam Volkswagen Tiguan1.4 TSI Comfort\u0026Design Pano / navi /cruise € 5.999 01/2012 198.482 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4905 AAOosterhout Volkswagen Tiguan1.4 TSI 160 PK DSG Sport\u0026Style ✅ Trekhaak ✅ Navi ✅ € 12.890 04/2015 110.965 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 1741 NASchagen Volkswagen Tiguan1.5 TSI ACT R-Line 150pk *** MEENEEMPRIJS *** | Le € 20.945 05/2018 97.178 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6229 PBMaastricht Volkswagen Tiguan1.4 TSI Sport\u0026Style 4Motion, Stoelverw., PDC V+A, € 11.450 04/2014 136.320 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3771 NBBarneveld Volkswagen Tiguan1.4 TSI Comfort\u0026Design Ecc/Audio/Pdc/Trekhaak € 6.945 03/2012 185.505 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8024 ADZwolle Volkswagen Tiguan1.4 TSI Sport\u0026Style/STOELVW/NAVI/PDC/ € 10.950 06/2015 138.102 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7345 DNWenum-wiesel Volkswagen Tiguan1.4 TSI Sport\u0026Style | Clima | Cruise | Navi | Park € 7.800 05/2015 246.141 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 ECStadskanaal Volkswagen Tiguan2.0 TDI R-Line Leer Panoramadak Trekhak 20 inch Ve € 19.950 10/2017 168.050 km Diesel - (l/100 km) 2,8 Autobedrijf NL 7011 EWGaanderen Volkswagen Tiguan1.4 TSI eHybrid 3X R-LINE Black Style pano camera € 25.9001 12/2021 116.351 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7468 DKEnter Volkswagen Tiguan1.4 TSI Comfort\u0026Design Edition € 11.995 01/2016 129.128 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3641 RPMijdrecht Volkswagen Tiguan1.4 TSI eHybrid Automaat / Navigatie full map / Cl € 25.4501 07/2022 67.422 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1704 RMHeerhugowaard Volkswagen Tiguan1.4 TSI eHybrid Elegance Business | Stoelverwarmin € 26.7001 08/2022 88.420 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4004 JVTiel Volkswagen Tiguan1.4 TSI ACT AUTOMAAT NAVI LED BTW AUTO € 11.9501 € 12.699,- 09/2017 227.959 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 7327 JZApeldoorn Volkswagen Tiguan1.5 TSI DSG LIFE URBAN SPORT CAMERA/ELEK-KLEP/ACC/ € 29.9501 05/2023 59.977 km Benzine 0,00 l/100 km (gem.) 2,8 Autobedrijf NL 7532 SWEnschede Volkswagen Tiguan1.4 TSI R-Line | Alcantara | CarPlay | Navigatie | € 11.885 € 12.885,- 02/2013 99.581 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 7711 EPNieuwleusen Volkswagen Tiguan1.4 TSI Sport\u0026Style cruise, airco, pano, navi € 8.450 08/2012 162.422 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7892 ABKlazienaveen Volkswagen Tiguan1.4 TSI eHybrid 3 x R-Line Pano 360 Keyless Matrix € 34.950 02/2023 47.634 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1351 AGAlmere Volkswagen Tiguan1.5 TSI 3x R-Line - IQ-L l Pano l Trekhaak l 360ca € 32.495 01/2021 69.253 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1688 JHNibbixwoud Volkswagen Tiguan occasions bekijkenVolkswagen Tiguan nieuwe auto\u0027s bekijken Volkswagen Tiguan in Amsterdam bekijkenVolkswagen Tiguan in Rotterdam bekijkenVolkswagen Tiguan in Den Haag bekijkenVolkswagen Tiguan in Utrecht bekijkenVolkswagen Tiguan in Eindhoven bekijkenVolkswagen Tiguan in Groningen bekijken Bouwjaar2027 - 2008 Actuele advertenties2.996 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2016 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 16.900 en er zijn 118 beschikbare adverte",
+    "scrapedAt": "2026-10-08 18:57:52.961837"
+  },
+  {
+    "id": 319,
+    "url": "https://www.autoscout24.nl/lst/c/sedan",
+    "title": "Sedan occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Sedan occasion kopen Filteren Alles reset Merk en model Uitvoering Carrosserievorm Sedan Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren2 Nederland Sedan Zoekopdracht opslaan BMW 318 3-serie 318i Executive Bewaar 17 € 1.950 Nieuw 09/2004 189.341 km Benzine 105 kW (143 PK) Autohandel Honing, Klant is Koning!! Autohandel HoningNL-3812 RJ AMERSFOORT + Meer voertuigen Volvo S70 2.5 Luxury-Line, APK, LEES TEKST Bewaar 11 € 400 Zeer populair 05/1998 357.549 km Benzine 106 kW (144 PK) Donk Marlin AutomotiveNL-7317 BE APELDOORN Lexus IS 250 Business|2.5 V6 Handbak|Leder|CarPlay|Xenon|NAP Bewaar 31 € 6.995 Nieuw 03/2008 260.663 km Benzine 153 kW (208 PK) Bij ons vrijblijvend welkom voor een proefrit. :) Autobedrijf Vaneker Verkoop B.V.NL-1969 LE HEEMSKERK BMW 316 3 Serie 316d LCI 5-Deurs | Clima Airco | Cruise Co Bewaar 30 € 6.999 11/2011 165.862 km Diesel 85 kW (116 PK) Sportstoelen, Airconditioning, LED verlichting, Startonderbreker, Lichtmetalen velgen, Getinte ramen, Regensensor, Elektrische ramen AUTO SPANL-7317 AZ APELDOORN Mercedes-Benz C 200 K. Classic \u0027Automaat\u0027 Cruise! Bewaar 29 € 3.750 Nieuw 06/2004 219.966 km Benzine 120 kW (163 PK) Met onderhoudshistorie, Trekhaak, Isofix, Airconditioning, Centrale vergrendeling, Boordcomputer, Automatische klimaatregeling, Elektrisch verstelbare buitenspiegels Autobedrijf Van der ZwanNL-7772 TT HARDENBERG + Meer voertuigen Volkswagen Passat CC 1.8 TSI 4p. Bewaar 19 € 5.950 09/2010 168.659 km Benzine 118 kW (160 PK) Autohandel Honing, Klant is Koning!! Autohandel HoningNL-3812 RJ AMERSFOORT + Meer voertuigen Volkswagen Jetta 1.4 TSI Hybrid Highline, Automaat, Climate, PDC V+ Bewaar 30 € 7.850 Nieuw 12/2013 148.963 km Elektro/Benzine 110 kW (150 PK) Koudijs Auto\u0027sNL-3771 NB Barneveld + Meer voertuigen Audi A8 4.0 TFSI S8 Quattro / ABT / Audi-Exclusive / BTW a Bewaar 50 € 129.9001 03/2024 49.761 km Elektro/Benzine 420 kW (571 PK) Sportstoelen, Stoelventilatie, Luchtvering, Head-up display, Regensensor, Airconditioning, Massagestoelen, Getinte ramen Car Atelier B.V.NL-5047 TL TILBURG + Meer voertuigen BMW 318 3 Serie 318i LCI CARPLAY Xenon M-sport Clima Cruis Bewaar 31 € 8.999 05/2010 159.889 km Benzine 105 kW (143 PK) Trekhaak, Getinte ramen, Stoelverwarming, Sportstoelen, Xenon verlichting, Startonderbreker, LED verlichting, Apple CarPlay AUTO SPANL-7317 AZ APELDOORN + Meer voertuigen Volvo Amazon Volvo Amazon - LPG | trekhaak | overdrive |121 / B18 | belastingvrij Bewaar 16 € 8.900 Nieuw 06/1967 142.310 km LPG 63 kW (85 PK) ParticulierNL-6212XJ Maastricht Mercedes-Benz S 63 AMG S63 E Performance | Burmester - EARS - AIRMATIC Bewaar 48 € 159.950 03/2024 24.114 km Elektro/Benzine 590 kW (802 PK) Head-up display, Stoelventilatie, Digitale radio-ontvangst, Keyless Entry, Android Auto, Luchtvering, Elektrische stoelverstelling, Verwarming zetels achter Koster \u0026 Hogeslag AutomotiveNL-8281 JK GENEMUIDEN + Meer voertuigen Mercedes-Benz C 220 CDI AMG|C63 Pakket|Pano Bewaar 22 € 15.500 Nieuw 05/2016 268.002 km Diesel 125 kW (170 PK) Parkeerhulp met camera, Sportonderstel, Panorama dak, Sportstoelen, LED verlichting, Verblindingsvrij grootlicht, Elektrische achterklep, Grootlichtassistent Amra CarsNL-3439 JE NIEUWEGEIN + Meer voertuigen Cadillac CTS 3.2 V6 Leuke Stoere wagen Bewaar 25 € 1.999 07/2004 211.222 km Benzine 160 kW (218 PK) CardepotNL-5048 AZ TILBURG Daimler Super V8 4.0 Bewaar 28 € 2.999 11/1999 302.644 km Benzine 267 kW (363 PK) CardepotNL-5048 AZ TILBURG Peugeot 208 Pure tech Bewaar 10 € 1.400 Nieuw 02/2015 202.202 km Benzine 60 kW (82 PK) ParticulierNL-5349AL Oss Mercedes-Benz CLA 180 AMG EDITION / AMBIENTE / CLIMA / PDC / LEDER/STOF Bewaar 41 € 17.900 12/2017 101.697 km Benzine 90 kW (122 PK) Sportonderstel, Getinte ramen, Garantie, Sportstoelen, Parkeerhulp voor, Lichtmetalen velgen, Navigatiesysteem, Parkeerhulp met camera Der Wagen B.V.NL-3846 CL HARDERWIJK + Meer voertuigen Volkswagen Passat CC 3.6 V6 FSI 4Motion Schuif/kanteldak. Xenon Leer 5. Bewaar 39 € 6.194 Nieuw 11/2008 215.692 km Benzine 220 kW (299 PK) LED dagrijverlichting, Garantie, Stoelverwarming, Open dak, Alarm, Centrale deurvergrendeling met afstandsbediening, Bluetooth, Hill-Hold Control Van Den Boog AutomotiveNL-2803 PA GOUDA BMW 320 Sedan \"E30 with a 2.7 Stroker\" \"With a 2.7 Stroker Bewaar 26 € 8.500 Nieuw 01/1985 219.556 km Benzine -/- Gallery AalderingNL-6971 AP BRUMMEN Mercedes-Benz A 180 Business Solution AMG | MBUX | LED | Camera | Crui Bewaar 43 € 19.995 12/2020 157.203 km Benzine 100 kW (136 PK) 1e Eigenaar Volledig Dealeronderhouden DTM carsNL-3861 PV NIJKERK Audi A4 Limousine 1.8 TFSI Pro Line Business, AIRCO, NAP, Bewaar 16 € 3.950 06/2008 235.941 km Benzine 88 kW (120 PK) Met onderhoudshistorie, Multifunctioneel stuurwiel, Alarm, Lederen stuurwiel, Lichtmetalen velgen, Radio, Elektris",
+    "scrapedAt": "2026-10-08 18:57:51.735897"
+  },
+  {
+    "id": 318,
+    "url": "https://www.autoscout24.nl/lst/fiat/500",
+    "title": "Koop Fiat 500 occasions op AutoScout24",
+    "content": "Ga naar hoofdinhoud Filteren Alles reset Merk en model Fiat 500 Uitvoering Carrosserievorm Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren3 Fiat 500 Nederland Zoekopdracht opslaan Fiat 500 1.2 8V 69 ch Pop Bewaar 13 € 2.990 05/2013 133.000 km Benzine 51 kW (69 PK) Zij-airbags, Elektrische ramen, Elektrisch verstelbare buitenspiegels, Achter airbag ParticulierNL-3316 Dordrecht Fiat 500 1.2 Lounge Automaat Panoramadak. Bewaar 19 € 3.998 Nieuw 08/2009 148.652 km Benzine 51 kW (69 PK) Lichtmetalen velgen, Airconditioning, Panorama dak, Startonderbreker, Alarm, Centrale deurvergrendeling met afstandsbediening, Met onderhoudshistorie, Elektrische ramen Autobedrijf J. van Toorn B.V.NL-3132 HJ VLAARDINGEN Fiat 500 500 1.2 Naked Bewaar 8 € 3.150 01/2008 115.380 km Benzine 51 kW (69 PK) Radio, Panorama dak, Elektrische ramen, Airconditioning, Lederen stuurwiel ParticulierNL-6267 Eijsden-Margraten Fiat 500 1.2 Lounge Bewaar 7 € 2.950 02/2008 91.487 km Benzine 51 kW (69 PK) Airconditioning, Lichtmetalen velgen, Alarm, Panorama dak, Stuurbekrachtiging, Radio, Centrale deurvergrendeling met afstandsbediening, Elektrische ramen Autocentre Van Buuren B.V.NL-2803 PV GOUDA Fiat 500 500 1.2 Pop Bewaar 12 € 3.800 09/2010 81.681 km Benzine 51 kW (69 PK) Open dak, Airconditioning, Parkeerhulp achter, Hoofd airbag, Elektrische ramen, Lederen stuurwiel, Elektrisch verstelbare buitenspiegels ParticulierNL-8072 Nunspeet Fiat 500 0.9 TwinAir Sport Automaat - Airco, Half Leer, Lic Bewaar 25 € 4.845 Nieuw 04/2011 134.203 km Benzine 63 kW (86 PK) Garantie, Airconditioning, Lichtmetalen velgen, Getinte ramen, Sportstoelen, Spoiler, Elektrische ramen, Multifunctioneel stuurwiel Autobedrijf ZielemanNL-7711 AL NIEUWLEUSEN Fiat 500 0.9 TwinAir Turbo Lounge | Panoramadak | Airco | C Bewaar 20 € 8.245 02/2018 71.340 km Benzine 59 kW (80 PK) Lichtmetalen velgen, Panorama dak, Cruisecontrol, Bandenspanningscontrole, Multifunctioneel stuurwiel, Lederen stuurwiel, Bluetooth, LED verlichting Autobedrijf van Herick B.V.NL-3771 MT BARNEVELD + Meer voertuigen Fiat 500 0.9 TwinAir | automaat |Blu dipinto di Blu | incl. Bewaar 14 € 6.950 03/2013 32.418 km Benzine 63 kW (86 PK) Airconditioning, Lichtmetalen velgen, Met onderhoudshistorie, Sportstoelen, Multifunctioneel stuurwiel, Spoiler, Radio, Parkeerhulp achter L.van Vugt Auto’sNL-4715 CC RUCPHEN Fiat 500 1.2 Lounge airco parkeersensoren elektrische ramen Bewaar 14 € 3.500 Nieuw 01/2012 134.485 km Benzine 51 kW (69 PK) Lichtmetalen velgen, Alarm, Multifunctioneel stuurwiel, Parkeerhulp achter, Airconditioning, Panorama dak, Automatische klimaatregeling, Mistlampen Auto ReuverNL-5953 KL REUVER Fiat 500 1.2 Lounge Pano|Leder|Xenon|Clima|LMV Bewaar 40 € 7.950 Nieuw 10/2015 53.489 km Benzine 51 kW (69 PK) Bi-Xenon koplampen, Lichtmetalen velgen, Automatische klimaatregeling, Open dak, Panorama dak, LED dagrijverlichting, Elektrische ramen, Met onderhoudshistorie Flevo MobielNL-8251 GM DRONTEN + Meer voertuigen Fiat 500 1.2 Pop Bovag Garantie Airco Bewaar 27 € 3.950 08/2008 128.367 km Benzine 51 kW (69 PK) Airconditioning, Airbag bestuurder, Nieuwe APK, Electronic Stability Program, Navigatiesysteem, Radio, Elektrisch verstelbare buitenspiegels, Startonderbreker Autobedrijf KelvinringNL-2952 BG ALBLASSERDAM Fiat 500 0.9 TwinAir T 500S - Carplay Bewaar 12 € 4.500 04/2014 139.000 km Benzine 59 kW (80 PK) Open dak, Radio, Start/Stop-systeem, Airbag bestuurder, Digitale radio-ontvangst, Aanraakscherm, Multifunctioneel stuurwiel, Apple CarPlay ParticulierNL-1971ra IJmuiden Fiat 500 Abarth 1.4 T-Jet Competizione |Carplay |LED |NAP✅ Bewaar 20 € 8.995 Nieuw 05/2010 126.088 km Benzine 132 kW (179 PK) Elektrische ramen, Alarm, Lichtsensor, Sportpakket, Getinte ramen, Sportonderstel, Apple CarPlay, Bluetooth ParticulierNL-1831 Alkmaar Fiat 500 1.2 Lounge navi cruise el ramen 83183 km Bewaar 18 € 5.945 10/2017 83.183 km Benzine 51 kW (69 PK) 6 MAANDEN GRATIS GARANTIE! Autohûs Drachten B.V.NL-9206 AK DRACHTEN Fiat 500 0.9 TwinAir Lounge 03-\u002711 109 dkm !! Bewaar 13 € 3.450 Nieuw 03/2011 109.640 km Benzine 63 kW (86 PK) Panorama dak, Alarm, Lichtmetalen velgen, Multifunctioneel stuurwiel, Elektrisch verstelbare buitenspiegels, Met onderhoudshistorie, Lederen stuurwiel, Radio Moreise AutomobielenNL-1834 CE SINT-PANCRAS Fiat 500 0.9 TwinAir |Airco| Bewaar 13 € 2.950 06/2011 167.590 km Benzine 63 kW (86 PK) Airconditioning, Met onderhoudshistorie, Startonderbreker, Alarm, Lichtmetalen velgen, Spoiler, Niet-rokers auto, Sportstoelen Automax Automotive B.V.NL-7821 AH EMMEN + Meer voertuigen Fiat 500 0.9 TwinAir Turbo 80PK Popstar | Airco | LM velgen Bewaar 17 € 7.945 12/2016 46.482 km Benzine 59 kW (80 PK) Lichtmetalen velgen, Stuurbekrachtiging, Elektrisch verstelbare buitenspiegels, Centrale deurvergrendeling met afstandsbediening, Multifunction",
+    "scrapedAt": "2026-10-08 18:57:50.359631"
+  },
+  {
+    "id": 317,
+    "url": "https://www.autoscout24.nl/informeren/",
+    "title": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "content": "Ga naar hoofdinhoud AutoScout24 Magazine AutonieuwsAutotestsAdvies Autonieuws Ontdek meer Dankzij deze Zweedse uitvinding gaan EV-batterijen langer mee AutoScout24 · 08-10-2026 · 2 min. Leestijd Lees meer Dankzij deze Zweedse uitvinding gaan EV-batterijen langer mee Zonder deze auto was Skoda eeuwig in zijn Oostblok-imago blijven hangen AutoScout24 · 08-10-2026 · 4 min. Leestijd Lees meer Zonder deze auto was Skoda eeuwig in zijn Oostblok-imago blijven hangen Waarom de échte 911-fan baalt dat-ie in Nederland woont – en dat heeft niks met bpm te maken AutoScout24 · 08-10-2026 · 2 min. Leestijd Lees meer Waarom de échte 911-fan baalt dat-ie in Nederland woont – en dat heeft niks met bpm te maken Autotests Ontdek meer Maserati GranCabrio Folgore (2026) getest: tussen vreugde en verdriet Thomas Vogelhuber · 08-10-2026 · 6 min. Leestijd Lees meer Maserati GranCabrio Folgore (2026) getest: tussen vreugde en verdriet BMW 3 Serie G50 (2027): de middenklasse sedan blijft zichzelf trouw Thomas Vogelhuber · 08-10-2026 · 7 min. Leestijd Lees meer BMW 3 Serie G50 (2027): de middenklasse sedan blijft zichzelf trouw Audi A6 allroad (2026) getest: hybride of diesel – wie wint? Rudolf Bögel · 06-10-2026 · 9 min. Leestijd Lees meer Audi A6 allroad (2026) getest: hybride of diesel – wie wint? Leapmotor B03X getest: verrassend ruim en comfortabel voor een scherpe prijs Casper Hazebroek · 25-09-2026 · 8 min. Leestijd Lees meer Leapmotor B03X getest: verrassend ruim en comfortabel voor een scherpe prijs Advies Ontdek meer Onderhoudskosten elektrische auto: wat betaal je? AutoScout24 · 08-10-2026 · 14 min. Leestijd Lees meer Onderhoudskosten elektrische auto: wat betaal je? Hoe lang gaat de accu van een elektrische auto mee? AutoScout24 · 08-10-2026 · 16 min. Leestijd Lees meer Hoe lang gaat de accu van een elektrische auto mee? Problemen met je elektrische auto: herkennen en voorkomen AutoScout24 · 05-10-2026 · 15 min. Leestijd Lees meer Problemen met je elektrische auto: herkennen en voorkomen Naar boven",
+    "scrapedAt": "2026-10-08 18:57:48.958247"
+  },
+  {
+    "id": 316,
+    "url": "https://www.autoscout24.nl/auto/",
+    "title": "AutoScout24 Merk- en Modellenoverzicht",
+    "content": "Ga naar hoofdinhoud Homepage Auto Topmerken Ongeveer de helft van de populairste automerken heeft zijn roots in Duitsland, de andere helft is verdeeld over de rest van de wereld. Alle automerken vind je hier. Audi BMW Volvo Hyundai Kia Mercedes-Benz Skoda Peugeot Renault Tesla Toyota Volkswagen Populaire Modellen Sommige auto’s zijn wat geliefder dan andere. Dit zijn de populairste modellen van Nederland. Audi A1 Audi A3 Dacia Sandero Fiat 500 Mercedes A Klasse Peugeot 2008 Peugeot 208 Peugeot 308 Polestar 2 Renault Arkana Tesla Model 3 Toyota Yaris Motormerken en Scooters Terwijl bij auto\u0027s de Duitse merken leidend zijn, ziet het er bij motoren iets anders uit. De populairste merken komen vooral uit Japan, China en Italië. BMW Ducati Harley-Davidson Honda Husqvarna Kawasaki KTM Peugeot Suzuki Triumph Vespa Yamaha Elektrische auto\u0027s Wereldwijd is elektromobiliteit bezig aan een opmars en blijft het zich door ontwikkelen. De best verkopende elektrische modellen vind je hier. Audi e-tron BMW i8 Ford Mustang Mach-e Hyundai Kona Kia e-Niro Mercedes EQA Nissan Leaf Renault ZOE Tesla Model S Tesla Model X Volkswagen ID.3 Volvo XC40 Regionaal aanbod Niet iedereen heeft zin om van Groningen naar Maastricht te rijden om een auto te bekijken. Hier vind je op de snelste manier het aanbod van nieuwe en gebruikte auto\u0027s in jouw regio. Amsterdam Den Haag Eindhoven Groningen Limburg Maastricht Noord-Holland Rotterdam Tilburg Utrecht Zeeland Alle merken - Overzicht A Abarth AC Acura Aiways Aixam Alfa Romeo Alpina Aston Martin Audi Austin B Bentley BMW Brilliance Bugatti Buick BYD C Cadillac Caterham Chatenet Chevrolet Chrysler Citroen Corvette Cupra D Dacia Daewoo DAF Daihatsu Dodge Dongfeng Donkervoort DS Automobiles E Elektrische Auto F Ferrari Fiat Firefly Fisker Ford G Galloper GMC H Honda Hongqi Hummer Hyundai I Infiniti Isuzu Iveco J Jaecoo Jaguar Jeep K KGM Kia Koenigsegg L Lada Lamborghini Lancia Land Rover Leapmotor Lexus Ligier Lincoln Lotus Lucid Lynk \u0026 Co M Maserati Maybach Mazda McLaren Mercedes-Benz MG Microcar Mini Mitsubishi Morgan N Nio Nissan O Oldsmobile Omoda Opel P Pagani Peugeot Piaggio Polestar Pontiac Porsche R Renault Rolls-Royce Rover S Saab SEAT Skoda Smart Spyker SsangYong Subaru Suzuki T Tata Tesla Toyota Trabant Triumph TVR V VinFast Volkswagen Volvo Voyah W Wartburg Westfield X Xpeng Z Zeekr Zotye Modellen Alpine Jonge occasions Carrosserie 4x4 Sportauto Speciaal Top 10 populairste auto\u0027s in Nederland Aanhangers Brommobiel Autos per Carrosserie Engelse automerken Franse automerken Hybride auto’s Italiaanse automerken Japanse automerken Koreaanse automerken Personenauto’s op lpg in Nederland LPG-Wagen Nederlandse automerken Perfecte familieauto Spaanse automerken Tweedehands Auto Meer details Nieuwe Auto Prijzen Naar boven",
+    "scrapedAt": "2026-10-08 18:57:47.685521"
+  },
+  {
     "id": 315,
     "url": "https://www.autoscout24.nl/auto/tesla/",
     "title": "Alle informatie over het automerk Tesla bij AutoScout24.",
@@ -2185,26 +2220,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 316,
-    "url": "https://www.autoscout24.nl/auto/"
-  },
-  {
-    "id": 317,
-    "url": "https://www.autoscout24.nl/informeren/"
-  },
-  {
-    "id": 318,
-    "url": "https://www.autoscout24.nl/lst/fiat/500"
-  },
-  {
-    "id": 319,
-    "url": "https://www.autoscout24.nl/lst/c/sedan"
-  },
-  {
-    "id": 320,
-    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
   },
   {
     "id": 321,
@@ -50475,10 +50490,2410 @@ window.searchData = [
     "id": 19484,
     "url": "https://www.autoscout24.nl/lst/tesla/cit_eindhoven",
     "parentUrl": "https://www.autoscout24.nl/auto/tesla/"
+  },
+  {
+    "id": 19485,
+    "url": "https://www.autoscout24.nl/auto/koreaanse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19486,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zeeland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19487,
+    "url": "https://www.autoscout24.nl/auto/aiways/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19488,
+    "url": "https://www.autoscout24.nl/auto/lucid/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19489,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-208/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19490,
+    "url": "https://www.autoscout24.nl/auto/microcar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19491,
+    "url": "https://www.autoscout24.nl/auto/donkervoort/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19492,
+    "url": "https://www.autoscout24.nl/auto/seat/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19493,
+    "url": "https://www.autoscout24.nl/auto/tata/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19494,
+    "url": "https://www.autoscout24.nl/auto/sport-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19495,
+    "url": "https://www.autoscout24.nl/auto/lancia/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19496,
+    "url": "https://www.autoscout24.nl/auto/morgan/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19497,
+    "url": "https://www.autoscout24.nl/auto/cupra/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19498,
+    "url": "https://www.autoscout24.nl/auto/mg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19499,
+    "url": "https://www.autoscout24.nl/auto/lpg-wagen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19501,
+    "url": "https://www.autoscout24.nl/auto/cadillac/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19502,
+    "url": "https://www.autoscout24.nl/auto/voyah/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19504,
+    "url": "https://www.autoscout24.nl/moto/husqvarna/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19506,
+    "url": "https://www.autoscout24.nl/auto/brilliance/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19507,
+    "url": "https://www.autoscout24.nl/auto/#more-links",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19508,
+    "url": "https://www.autoscout24.nl/auto/piaggio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19509,
+    "url": "https://www.autoscout24.nl/auto/hybride-autos/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19510,
+    "url": "https://www.autoscout24.nl/moto/vespa/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19511,
+    "url": "https://www.autoscout24.nl/auto/hongqi/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19513,
+    "url": "https://www.autoscout24.nl/auto/dodge/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19514,
+    "url": "https://www.autoscout24.nl/auto/corvette/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19515,
+    "url": "https://www.autoscout24.nl/auto/trabant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19516,
+    "url": "https://www.autoscout24.nl/auto/firefly/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19517,
+    "url": "https://www.autoscout24.nl/auto/isuzu/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19520,
+    "url": "https://www.autoscout24.nl/auto/acura/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19521,
+    "url": "https://www.autoscout24.nl/auto/dacia/dacia-sandero/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19522,
+    "url": "https://www.autoscout24.nl/auto/subaru/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19523,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-brabant/tilburg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19524,
+    "url": "https://www.autoscout24.nl/auto/lpg-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19525,
+    "url": "https://www.autoscout24.nl/auto/pontiac/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19526,
+    "url": "https://www.autoscout24.nl/auto/4x4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19527,
+    "url": "https://www.autoscout24.nl/auto/ssangyong/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19528,
+    "url": "https://www.autoscout24.nl/moto/peugeot/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19531,
+    "url": "https://www.autoscout24.nl/auto/italiaanse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19532,
+    "url": "https://www.autoscout24.nl/auto/daewoo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19533,
+    "url": "https://www.autoscout24.nl/auto/ds-automobiles/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19534,
+    "url": "https://www.autoscout24.nl/auto/perfecte-familie-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19535,
+    "url": "https://www.autoscout24.nl/auto/brommobiel/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19536,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-2008/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19537,
+    "url": "https://www.autoscout24.nl/auto/chevrolet/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19538,
+    "url": "https://www.autoscout24.nl/auto/mazda/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19539,
+    "url": "https://www.autoscout24.nl/auto/mini/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19541,
+    "url": "https://www.autoscout24.nl/auto/nissan/nissan-leaf/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19542,
+    "url": "https://www.autoscout24.nl/auto/byd/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19543,
+    "url": "https://www.autoscout24.nl/auto/citroen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19544,
+    "url": "https://www.autoscout24.nl/auto/maserati/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19545,
+    "url": "https://www.autoscout24.nl/auto/pagani/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19546,
+    "url": "https://www.autoscout24.nl/auto/peugeot/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19547,
+    "url": "https://www.autoscout24.nl/auto/tvr/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19549,
+    "url": "https://www.autoscout24.nl/moto/triumph/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19551,
+    "url": "https://www.autoscout24.nl/moto/suzuki/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19552,
+    "url": "https://www.autoscout24.nl/auto/smart/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19554,
+    "url": "https://www.autoscout24.nl/auto/oldsmobile/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19555,
+    "url": "https://www.autoscout24.nl/moto/harley-davidson/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19556,
+    "url": "https://www.autoscout24.nl/auto/opel/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19557,
+    "url": "https://www.autoscout24.nl/moto/honda/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19558,
+    "url": "https://www.autoscout24.nl/auto/alfa-romeo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19560,
+    "url": "https://www.autoscout24.nl/auto/infiniti/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19561,
+    "url": "https://www.autoscout24.nl/auto/jaguar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19562,
+    "url": "https://www.autoscout24.nl/auto/suzuki/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19564,
+    "url": "https://www.autoscout24.nl/auto/aixam/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19565,
+    "url": "https://www.autoscout24.nl/auto/franse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19566,
+    "url": "https://www.autoscout24.nl/auto/categorie/nieuwe-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19568,
+    "url": "https://www.autoscout24.nl/auto/zeekr/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19569,
+    "url": "https://www.autoscout24.nl/auto/alpine/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19570,
+    "url": "https://www.autoscout24.nl/auto/bugatti/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19571,
+    "url": "https://www.autoscout24.nl/auto/ferrari/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19573,
+    "url": "https://www.autoscout24.nl/auto/mitsubishi/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19574,
+    "url": "https://www.autoscout24.nl/moto/ducati/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19575,
+    "url": "https://www.autoscout24.nl/auto/austin/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19576,
+    "url": "https://www.autoscout24.nl/auto/lynk-co/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19577,
+    "url": "https://www.autoscout24.nl/auto/westfield/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19578,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/limburg/maastricht/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19579,
+    "url": "https://www.autoscout24.nl/auto/fisker/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19580,
+    "url": "https://www.autoscout24.nl/auto/koenigsegg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19582,
+    "url": "https://www.autoscout24.nl/auto/ligier/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19583,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19584,
+    "url": "https://www.autoscout24.nl/auto/bentley/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19585,
+    "url": "https://www.autoscout24.nl/auto/chrysler/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19586,
+    "url": "https://www.autoscout24.nl/auto/jaecoo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19588,
+    "url": "https://www.autoscout24.nl/auto/toyota/toyota-yaris/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19590,
+    "url": "https://www.autoscout24.nl/auto/zotye/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19591,
+    "url": "https://www.autoscout24.nl/auto/honda/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19592,
+    "url": "https://www.autoscout24.nl/auto/nio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19593,
+    "url": "https://www.autoscout24.nl/auto/lexus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19594,
+    "url": "https://www.autoscout24.nl/auto/polestar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19595,
+    "url": "https://www.autoscout24.nl/auto/triumph/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19596,
+    "url": "https://www.autoscout24.nl/auto/caterham/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19597,
+    "url": "https://www.autoscout24.nl/auto/gmc/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19598,
+    "url": "https://www.autoscout24.nl/auto/xpeng/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19600,
+    "url": "https://www.autoscout24.nl/auto/buick/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19601,
+    "url": "https://www.autoscout24.nl/auto/daf/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19602,
+    "url": "https://www.autoscout24.nl/auto/japanse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19604,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-zoe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19605,
+    "url": "https://www.autoscout24.nl/auto/vinfast/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19606,
+    "url": "https://www.autoscout24.nl/auto/hyundai/hyundai-kona/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19607,
+    "url": "https://www.autoscout24.nl/auto/dongfeng/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19608,
+    "url": "https://www.autoscout24.nl/auto/lamborghini/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19609,
+    "url": "https://www.autoscout24.nl/auto/dacia/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19610,
+    "url": "https://www.autoscout24.nl/auto/kgm/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19611,
+    "url": "https://www.autoscout24.nl/auto/lotus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19612,
+    "url": "https://www.autoscout24.nl/auto/aston-martin/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19613,
+    "url": "https://www.autoscout24.nl/auto/lada/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19614,
+    "url": "https://www.autoscout24.nl/auto/omoda/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19616,
+    "url": "https://www.autoscout24.nl/auto/ac/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19618,
+    "url": "https://www.autoscout24.nl/auto/engelse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19619,
+    "url": "https://www.autoscout24.nl/auto/jeep/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19620,
+    "url": "https://www.autoscout24.nl/auto/leapmotor/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19622,
+    "url": "https://www.autoscout24.nl/auto/land-rover/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19624,
+    "url": "https://www.autoscout24.nl/auto/rover/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19625,
+    "url": "https://www.autoscout24.nl/moto/yamaha/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19626,
+    "url": "https://www.autoscout24.nl/auto/lincoln/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19627,
+    "url": "https://www.autoscout24.nl/auto/iveco/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19628,
+    "url": "https://www.autoscout24.nl/moto/ktm/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19629,
+    "url": "https://www.autoscout24.nl/moto/kawasaki/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19630,
+    "url": "https://www.autoscout24.nl/auto/mclaren/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19631,
+    "url": "https://www.autoscout24.nl/auto/nissan/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19638,
+    "url": "https://www.autoscout24.nl/auto/hummer/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19639,
+    "url": "https://www.autoscout24.nl/auto/skoda/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19640,
+    "url": "https://www.autoscout24.nl/auto/spyker/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19642,
+    "url": "https://www.autoscout24.nl/auto/hyundai/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19643,
+    "url": "https://www.autoscout24.nl/auto/aanhangers/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19644,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/utrecht/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19645,
+    "url": "https://www.autoscout24.nl/auto/polestar/polestar-2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19646,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-brabant/eindhoven/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19647,
+    "url": "https://www.autoscout24.nl/auto/daihatsu/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19648,
+    "url": "https://www.autoscout24.nl/auto/maybach/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19649,
+    "url": "https://www.autoscout24.nl/auto/abarth/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19650,
+    "url": "https://www.autoscout24.nl/auto/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19651,
+    "url": "https://www.autoscout24.nl/auto/wartburg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19652,
+    "url": "https://www.autoscout24.nl/auto/fiat/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19653,
+    "url": "https://www.autoscout24.nl/auto/rolls-royce/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19654,
+    "url": "https://www.autoscout24.nl/auto/nederlandse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19655,
+    "url": "https://www.autoscout24.nl/auto/galloper/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19656,
+    "url": "https://www.autoscout24.nl/auto/jonge-tweedehands-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19657,
+    "url": "https://www.autoscout24.nl/auto/10-populairste-autos-in-nederland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19658,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-arkana/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19659,
+    "url": "https://www.autoscout24.nl/auto/saab/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19661,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-xc40/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19662,
+    "url": "https://www.autoscout24.nl/auto/alpina/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19664,
+    "url": "https://www.autoscout24.nl/auto/spaanse-automerken/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19665,
+    "url": "https://www.autoscout24.nl/auto/chatenet/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19666,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-mustang/mustang-mach-e/",
+    "parentUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "id": 19667,
+    "url": "https://www.autoscout24.nl/informeren/autotests/maserati/grancabrio/maserati-grancabrio-folgore-2026-getest/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "id": 19671,
+    "url": "https://www.autoscout24.nl/informeren/autotests/bmw/3-series/bmw-3-serie-g50-2026-test-eerste-kennismaking/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "id": 19673,
+    "url": "https://www.autoscout24.nl/informeren/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "id": 19676,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/a6-allroad/audi-a6-allroad-2026-getest/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "id": 19678,
+    "url": "https://www.autoscout24.nl/informeren/autotests/leapmotor/b03x/leapmotor-b03x-2026-test/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "id": 19681,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/tr_handgeschakeld",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19682,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_grijs",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19684,
+    "url": "https://www.autoscout24.nl/lst/fiat/500#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19685,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/ft_elektrisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19686,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19687,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_zoetermeer",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19688,
+    "url": "https://www.autoscout24.nl/lst/fiat/uno",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19690,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_wit",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19691,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-500/fiat-500x/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19692,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_zwolle",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19693,
+    "url": "https://www.autoscout24.nl/autobedrijven/automax-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19694,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_zaanstad",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19695,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2026",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19696,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19697,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2023",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19698,
+    "url": "https://www.autoscout24.nl/lst/fiat/500-abarth",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19699,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_breda",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19700,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-500-hybrid/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19701,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/ft_elektro-benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19702,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_nijmegen",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19703,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2021",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19704,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-tipo/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19705,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-7000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19706,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2022",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19708,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2020",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19709,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19710,
+    "url": "https://www.autoscout24.nl/auto/abarth/abarth-500/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19711,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19712,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_apeldoorn",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19713,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-3000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19714,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_geel",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19715,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-5000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19716,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-500/fiat-500-abarth/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19717,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/tr_half-semi-automaat",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19718,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2014",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19719,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2015",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19720,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_haarlem",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19721,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2018",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19722,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2016",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19723,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2017",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19725,
+    "url": "https://www.autoscout24.nl/auto/fiat/suv/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19726,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-van-herick-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19727,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19728,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2011",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19729,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_enschede",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19730,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-12500-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19731,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19732,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_amersfoort",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19733,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_den-haag",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19734,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_tilburg",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19735,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19736,
+    "url": "https://www.autoscout24.nl/lst/fiat/500c",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19737,
+    "url": "https://www.autoscout24.nl/lst/fiat/600",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19738,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_den-bosch",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19739,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-panda/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19740,
+    "url": "https://www.autoscout24.nl/lst/fiat/500e",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19741,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/ot_oldtimer",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19742,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/ot_demo",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19743,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19744,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-10000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19745,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_blauw",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19746,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-8000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19747,
+    "url": "https://www.autoscout24.nl/lst/fiat/500l",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19748,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_haarlemmermeer",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19749,
+    "url": "https://www.autoscout24.nl/lst/ford/ka-ka%2B",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19750,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_arnhem",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19751,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-6000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19754,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19755,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_rood",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19757,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-punto/",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19758,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/bc_groen",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19759,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/re_2009",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19760,
+    "url": "https://www.autoscout24.nl/lst/fiat/500c-abarth",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19761,
+    "url": "https://www.autoscout24.nl/lst/fiat/500/cit_almere",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19762,
+    "url": "https://www.autoscout24.nl/lst/c/fiat-500-tot-4000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19763,
+    "url": "https://www.autoscout24.nl/lst/fiat/multipla",
+    "parentUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "id": 19764,
+    "url": "https://www.autoscout24.nl/autobedrijven/koudijs-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19765,
+    "url": "https://www.autoscout24.nl/lst/c/sedan#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19766,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-spa",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19767,
+    "url": "https://www.autoscout24.nl/autobedrijven/amra-cars",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19769,
+    "url": "https://www.autoscout24.nl/autobedrijven/happy-cars-unal",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19770,
+    "url": "https://www.autoscout24.nl/autobedrijven/autohandel-honing",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19771,
+    "url": "https://www.autoscout24.nl/autobedrijven/car-atelier-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19772,
+    "url": "https://www.autoscout24.nl/autobedrijven/der-wagen-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "id": 19775,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-kuga/?_gl\u003d1*1f6c6se*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODYxNzMkbzIkZzAkdDE3Nzg1ODY1MDAkajUzJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19776,
+    "url": "https://www.autoscout24.nl/lst/skoda/karoq",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19777,
+    "url": "https://www.autoscout24.nl/lst/skoda/kamiq",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19778,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-sportage/?_gl\u003d1*pxxmxt*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODYxNzMkbzIkZzAkdDE3Nzg1ODYyNzEkajU4JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19780,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19781,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-karoq/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19782,
+    "url": "https://www.autoscout24.nl/lst/c/suv-tot-20000-euro",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19783,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-4",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19784,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf-variant",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19787,
+    "url": "https://www.autoscout24.nl/lst/bmw/ix1",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19788,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/polo/vw-id-polo-2026-eerste-indruk/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19789,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19790,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19791,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-passat/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19793,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19794,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19795,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/volkswagen-tiguan-allspace/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19796,
+    "url": "https://www.autoscout24.nl/lst/c/suv-tot-10000-euro",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19797,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-e-golf/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19798,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/tiguan/review-volkswagen-tiguan-2025-vertrouwd-vernieuwd/?_gl\u003d1*b3vf8t*_up*MQ..*_ga*NzMyNzQyNjU1LjE3Nzg1ODA1Mjg.*_ga_BGSHTTTQ7W*czE3Nzg1ODA1MjckbzEkZzAkdDE3Nzg1ODA1MjckajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19799,
+    "url": "https://www.autoscout24.nl/auto/nissan/nissan-qashqai/?_gl\u003d1*18ittf5*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODYxNzMkbzIkZzAkdDE3Nzg1ODYzNzckajE1JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19800,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#problemen-en-terugroepacties",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19801,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-kamiq/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19802,
+    "url": "https://www.autoscout24.nl/lst/c/nieuwe-autos",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19803,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19804,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#varianten",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19805,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-arteon/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19806,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#conclusie-van-het-autoscout24-testteam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19807,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19808,
+    "url": "https://www.autoscout24.nl/auto/hyundai/hyundai-tucson/?_gl\u003d1*15bcefc*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODYxNzMkbzIkZzAkdDE3Nzg1ODYyMjMkajEwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19809,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#marktpositie",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19810,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19811,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tayron/?_gl\u003d1*xmgud3*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODg5NjYkbzMkZzAkdDE3Nzg1ODkwMzUkajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19812,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-3008/?_gl\u003d1*1xzzx8r*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODYxNzMkbzIkZzAkdDE3Nzg1ODYzMjEkajgkbDAkaDA",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19815,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19816,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-t-roc-gen2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19817,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/tiguan/volkswagen-tiguan-ehybrid-2024-review-zo-blijft-een-plug-in-hybride-uitermate-interessant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19819,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-bus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19820,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/model/review-volkswagen-id-7-2025-comfortabel-ruim-en-zuinig/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19821,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19822,
+    "url": "https://www.autoscout24.nl/auto/toyota/toyota-rav-4/?_gl\u003d1*1rnfjry*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODYxNzMkbzIkZzAkdDE3Nzg1ODYxNzQkajU5JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19823,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-t-cross/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19824,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/t-roc",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19825,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/tiguan/review-volkswagen-tiguan-2025-vertrouwd-vernieuwd/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19829,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-t-roc/?_gl\u003d1*1yrj7cx*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODg5NjYkbzMkZzAkdDE3Nzg1ODg5NjgkajU4JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19830,
+    "url": "https://terugroepregister.rdw.nl/Pages/Terugroepregister.aspx",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19832,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/id-buzz/volkswagen-id-buzz-actieradius-gemeten-bij-100-en-130-km/h/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19834,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#technische-gegevens",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19835,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#alternatieven",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19836,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-touareg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19837,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/#doelgroep",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19838,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19839,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/test-benzine-vs-elektrisch-volkswagen-tiguan-volkswagen-id-4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19840,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-beetle/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19842,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19843,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-touareg/?_gl\u003d1*1kb1y7*_up*MQ..*_ga*MTcxODA2OTYwNi4xNzc4NTgyMTMy*_ga_BGSHTTTQ7W*czE3Nzg1ODg5NjYkbzMkZzAkdDE3Nzg1ODkwODIkajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "id": 19844,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3LHieHu6pksORtSkWs997L/c60b6a473d863abb189a607c7c75f317/Volkswagen_Tiguan_1.jpg?w\u003d1100",
+    "alt": "Volkswagen Tiguan 1",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3LHieHu6pksORtSkWs997L/c60b6a473d863abb189a607c7c75f317/Volkswagen_Tiguan_1.jpg?w\u003d1100",
+    "alt": "Volkswagen Tiguan 1",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3VNubc8bontY3tFEhsGIAt/7cc49593c812a3b1dc000cd7bf43dab6/Volkswagen_Tiguan_2.jpg?w\u003d1100",
+    "alt": "Volkswagen Tiguan 2",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1QyMnYqJpvupMg0KCXTBoM/6a9741c5efb1a92f9bd7549d5a9ffac7/Volkswagen_Tiguan_3.jpg?w\u003d1100",
+    "alt": "Volkswagen Tiguan 3",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/TJCq0cnlzuc/maxresdefault.jpg",
+    "alt": "Bekijk de Volkswagen Tiguan op YouTube",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1WWln64i08fcS6TVIRxEVN/dbbfae42e9ac02cb9e51a6696bd7467f/Volkswagen_Tiguan_special_element.jpg?w\u003d1100",
+    "alt": "Volkswagen Tiguan special element",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5db46651-286b-4eb4-ab1c-cf206b2fd9c1_a4f5018f-f672-42f4-9174-1e0148979dc7.jpg/360x270.jpg",
+    "alt": "1.4 TSI Sport\u0026Style. Navi. Stoelverwarming!",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/06c24e6b-a305-4aba-a73c-1b6b3773f994_6697f500-86ac-4924-a212-c77b764361cc.jpg/360x270.jpg",
+    "alt": "1.4 TSI Connected Series Panoramadak Massage",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3cb6d2c7-d5d4-4f47-9c64-b4ae0be4b617_5190abdb-d2e8-42fa-bf53-ceda1761849d.jpg/360x270.jpg",
+    "alt": "1.4 TSI Comfort\u0026Design Pano / navi /cruise",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/faa862db-7320-493f-bb83-9c49951acaf0_6c106bfe-8ac4-45dd-baa8-eaf61feedf10.jpg/360x270.jpg",
+    "alt": "1.4 TSI 160 PK DSG Sport\u0026Style ✅ Trekhaak ✅ Navi ✅",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/96b6d31e-e839-4d99-b667-ea9ae4dfe9d4_457d5e6a-d9e3-4325-89f3-a76ce26921d6.jpg/360x270.jpg",
+    "alt": "1.5 TSI ACT R-Line 150pk *** MEENEEMPRIJS *** | Le",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/45ad07dc-0684-410d-b2b4-91b3a59fd7dc_3d0f7c95-c562-41d1-9e7a-d52cc1f862e4.jpg/360x270.jpg",
+    "alt": "1.4 TSI Sport\u0026Style 4Motion, Stoelverw., PDC V+A,",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/02d68d15-bdca-4f3a-9c01-9a54ca053dec_8172d533-7086-4722-b52e-944203c60712.jpg/360x270.jpg",
+    "alt": "1.4 TSI Comfort\u0026Design Ecc/Audio/Pdc/Trekhaak",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/263d0fc6-78ab-40c2-aa97-020a3b850764_41a5424f-7f9c-4662-b538-4e27f2b11275.jpg/360x270.jpg",
+    "alt": "1.4 TSI Sport\u0026Style/STOELVW/NAVI/PDC/",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6a212e8e-5d0e-44c8-ae71-c9fc2eac36fc_6b5e2a4d-7893-4370-9af1-58c7b5e1a677.jpg/360x270.jpg",
+    "alt": "1.4 TSI Sport\u0026Style | Clima | Cruise | Navi | Park",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2f5df7fe-7eac-4de2-8d54-d11ff591441d_6f18b081-6ea3-4af3-9d8f-9e1629be1074.jpg/360x270.jpg",
+    "alt": "2.0 TDI R-Line Leer Panoramadak Trekhak 20 inch Ve",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/439387e5-6f34-4951-9cb7-14ed72cce0e9_1297b5b4-0f61-47ac-9d0d-53ae8807d1cc.jpg/360x270.jpg",
+    "alt": "1.4 TSI eHybrid 3X R-LINE Black Style pano camera",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/41559dbb-a6f6-49c2-98cf-1d88a0354b37_a8c81d15-b280-4387-ba19-89c6298daf30.jpg/360x270.jpg",
+    "alt": "1.4 TSI Comfort\u0026Design Edition",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7c10b69d-d411-4a17-a256-681fb649c2cc_e223ec9a-fc3e-467a-abbc-dd67dee95078.jpg/360x270.jpg",
+    "alt": "1.4 TSI eHybrid Automaat / Navigatie full map / Cl",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/887ded3d-01c0-480f-a41c-aec7b52d0c59_07dfb2f4-00f5-410e-b9c5-b22a136e74f9.jpg/360x270.jpg",
+    "alt": "1.4 TSI eHybrid Elegance Business | Stoelverwarmin",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3891bf32-f9db-4335-b931-f86551acce73_e6c0fe23-f3cd-4a94-9667-6e748a198496.jpg/360x270.jpg",
+    "alt": "1.4 TSI ACT AUTOMAAT NAVI LED BTW AUTO",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6fa489a3-2bb2-474e-adf2-2dc21a5443ed_6f96bf0d-a4ab-40d9-99d5-d7a59ea3c3d6.jpg/360x270.jpg",
+    "alt": "1.5 TSI DSG LIFE URBAN SPORT CAMERA/ELEK-KLEP/ACC/",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/201e3cfa-94b5-4c15-b100-c90f43437a80_14e7925e-1815-446b-af91-6bffd9e0cc22.jpg/360x270.jpg",
+    "alt": "1.4 TSI R-Line | Alcantara | CarPlay | Navigatie |",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4ec972aa-d45f-4119-9d97-a2de73bde4a8_e0e11800-eaa2-4552-8da7-04f184471c14.jpg/360x270.jpg",
+    "alt": "1.4 TSI Sport\u0026Style cruise, airco, pano, navi",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/86e71f97-feee-4c28-954b-75392202ea47_9b39a867-dfe5-4e3e-8dd0-06880e61c269.jpg/360x270.jpg",
+    "alt": "1.4 TSI eHybrid 3 x R-Line Pano 360 Keyless Matrix",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d5a68ef3-d26a-408c-8166-a9af4a447173_a80997a8-eb49-4d9e-8d35-9fb97aa6486e.jpg/360x270.jpg",
+    "alt": "1.5 TSI 3x R-Line - IQ-L l Pano l Trekhaak l 360ca",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/19QogFCLlfCnS5b8C74DF1/48f45f8a13fe80fbe428e8fc63daad94/Volkswagen_Tiguan_Allspace_Frontansicht.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Tiguan Allspace",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/58TZAEKBY25epD5jNis4Ai/0ada830e3febd54b6f05373189cc12b6/VW_T-Roc_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen T‑Roc",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6cP9ciJSTMqBl7nS0gONSV/e1c6ca6170e833f5425c259c5950b7d2/vw-golf-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Golf",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5ohwRHJ9uWZebzjWtNi6eA/cf13212f3376a8cb87d85f3e215b382f/volkswagen_id_01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen ID.4",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1U7mR7StGwG9SdaRpQP8PB/a4f199ee256c0fc4c0de10990a20eaed/Audi_A6_Avant_e_tron3.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A6 Avant e-tron",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2x694cCCqHFLOqnYgk2oP6/6ed487f6ca29823c40f9ad9ec8e023a0/Audi_Q3_Sportback_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q3 Sportback",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/E2ga7mMxmLhCt4YAi0Wn3/2a04a6a7aa85804e3e10b5eec27a3ad7/skoda-kamiq-2020-2-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Skoda Kamiq",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4J4uOxNwJazdT7iokVqkxe/aac631aa7ebe3626d5875277333a7ea4/Skoda_Karoq.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Skoda Karoq",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7saxguAI2JiZbijFJjC6Zm/53ace5b34324a88b62985d6bdd387774/Audi_Q5_Sportback_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q5 Sportback",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3iZVDVmjez3KEugF4l3wAI/f66fd8a7d558fbd11c15a4852e4747f9/BMW-iX1-2023-1600-08.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "BMW iX1",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18LVPIXb8GhQdIAYhDaDeQ/db30365ff57775d46063d314b9b9db42/volkswagen-id-4-tiguan-2023-1.jpg?w\u003d1100",
+    "alt": "TEST benzine vs",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1nMQz7oXDIlLAZ1SsGes5z/df45e401832b58bdebb7d591dbd4b445/volkswagen-tiguan-ehybrid-2024-review-zo-blijft-een-plug-in-hybride-uitermate-interessant-2024-01.jpg?w\u003d1100",
+    "alt": "Volkswagen Tiguan eHybrid (2024) review: zo blijft een plug-in hybride uitermate interessant",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6eMXmfaZk03QPp08MlHV50/c283b4a6642bca853a31268972e3e8e1/CR-2_-_AutoScout24_-_Volkswagen_Tiguan_HEADER.jpg?w\u003d1100",
+    "alt": "Review – Volkswagen Tiguan (2025): vertrouwd vernieuwd",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6QrxRIGO4wQohPGqv1ExW3/7a647efa3acc830c9f09a4764411a367/vw-id-polo-2026-titel-tv.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6x8o0XhH6xvw5Qtmlgkco6/e0652515df6cfdfc8e8ab4bde67506c9/volkswagen-buzz-actieradius-2022-1.jpg?w\u003d1100",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5zaYaiVIgyOgjq6tOZ6kEg/0d025176b9ebd32e93afe5cf2237fb4e/volkswagen-id7-2024-review-foto17.jpg?w\u003d1100",
+    "alt": "Review – Volkswagen ID",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over de Volkswagen Tiguan bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-tiguan/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f235bf90-15a0-4c7f-bdf9-fdfe9aef5312_8bc64a8a-f475-4a32-9c31-dd965f97dc8a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/28190408-original-bf3d1617-4b7c-4a0b-b0f8-5374df04b5c9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/75fda48e-b276-4abf-906e-001faf259370_bf9b2030-b9f1-45ec-943d-a40d58e7e78e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cfd37bfa-fbc7-48a4-a6a9-bf2e1f13a9db_760612e6-2276-4b68-8706-002a3dd8b0cc.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/44682860-original-aea1f167-3da7-4bbf-bcdb-97a77287989c.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fa01d366-90b2-4166-8c86-4624f714eb9e_0ed62ff3-2087-4473-8d23-19d5d4b17ef9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9b11a29f-a1e8-437d-b49f-d99ce6b584a9_c9d23fe9-4df8-49da-b5c6-3d2152336514.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63503981-original-5620709b-c8d6-4854-95c9-58144178e077.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/78ddbce3-e1bd-49b4-acbb-a293d324d440_476e5016-6bf7-43fd-8e05-595883332e84.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/28190408-original-bf3d1617-4b7c-4a0b-b0f8-5374df04b5c9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/821d08a4-b975-44a5-8bbe-ed0e8018afb5_9fc5faa2-7e24-496d-9355-b2e6e0e8d759.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46302854-original-430749e4-a00a-4f5e-bd1c-caadd2a1be00.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/df9a00fb-bf82-44d8-9b23-22c63bf97c11_21dc2101-cbca-4f35-b499-bb7802e53560.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/45442307-original-ad615227-958f-43a4-8607-469c726ebecd.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f7ec19cd-c31e-41a1-936d-d4491d326549_7b8c0670-d45a-46a3-89ec-31c9f2454e4d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/58df785c-5d04-406f-9931-1d3483758dbc_35e78a36-f50d-4ee5-ba08-e40c4f83223e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cf04bdc8-b0fe-4050-a44a-183a215b9706_8e87ae47-ee88-40c1-9344-6a48346ae378.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15036567-original-da232dcb-d989-4412-9572-c05b0a8ade60.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cf5e036c-244e-4038-b0ba-c5da66a12635_831e4a4f-3a18-458c-b1d0-75aa7fbc3094.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3638d824-d01c-4e8b-ad44-706eec67637a_cff51365-6bb7-4415-b9de-a4c6bd281d46.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36223949-original-e348b3b3-873f-4f1b-92c6-5b1ba52e49e7.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1bbda555-59a3-471e-8679-766b4a07c6e5_4da752d2-8d56-4248-b34f-8e4942630e17.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36223949-original-e348b3b3-873f-4f1b-92c6-5b1ba52e49e7.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd6b85ea-3757-4a32-9792-8baee5b964f9_e07c555d-07dc-4b58-98f6-599da178d64d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ee872ee3-6208-4241-a1c1-0eab457d3851_00989a63-5f23-4092-b0ef-d27d9e6bdc73.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/44743975-original-fcf35560-8f84-4522-bcd3-0812ac3002c7.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/52e99849-2bc8-42dc-8df6-25209f231545_02b741c5-c02c-4686-a14c-e5fb74ec974c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/33917270-original-106c10fc-9c23-4f4c-b672-df012cf434ca.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2c61454f-cc2c-40f3-a57e-b1a1433fbf87_f9768ca3-323b-45d5-8f03-e62cc1edb724.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e052bda9-4e67-444b-baae-70ba43996d6b_306dbd49-37a6-44b9-b309-03234ed42a0c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/43695645-original-b4fcd4f8-6a29-4ce9-ba22-ea9b9d08a6ae.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8e8c0dc5-9abc-4a97-91db-9e810f53c1e9_bd17f9e0-77bf-43d7-9c28-a2b260628e65.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15138198-original-a0bb403e-43e1-4161-afd3-c9f72ed6a9d6/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Sedan occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/sedan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ef3cd3f9-5813-4e6b-9325-f57661b2a03b_ec7e0df0-9698-4b80-91ea-4775f98688aa.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/55e04ce9-1a5e-4f0a-8176-c04eedbff15c_06d66f3c-6b32-4042-bc09-9c507882e527.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15457348-original-eb97d02a-ba78-4414-bc26-76c5363c413e.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8920ae8b-8593-4f86-ab03-ba8071dd2d6b_5436fdaf-0d9d-401b-a6d8-990e3b983e11.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b46d83d8-691b-4bf3-9d05-747490cfce58_e990a9ee-6fb9-4698-8f9f-796d55d4b504.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/16349477-original-0962636a-5ca4-44b7-93a7-a4db78bec3f8/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/07b0bdf4-b393-4f77-a6fe-cc633230d293_a6fcebd5-d444-4052-b8f2-668c6b9ee0df.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/89/XGZ5pqUYCtfNBS4IW3qCpuANWdVaaEnz/7EIXX9UsoQj68K8XhADPcqGKi1OolLIo.jpg",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/390a7174-d609-45f0-89d6-f8a0d4f3e508_c033c113-72b7-4a86-975d-b3ed8296cc63.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11261-original-0cb90df1-edac-4e0c-ba01-01f85c3e33d7.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ec20b71b-fcfa-4f74-8bde-e1f9582ef879_51b42689-8c05-4ce0-982c-c2014a158746.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/29364806-original-2548f931-9832-4028-8bfe-e5a992f8ca3f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d04f251a-478f-4857-bb80-904017bae29a_35845119-0f7a-4682-8573-7aa1eed1378f.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/30715357-original-22bbf854-ea7c-4727-9e64-c5b79fa4ffe6.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6ed2e8af-607f-4348-bb31-0309585422d7_f089c82a-b634-4b82-b327-c81cb53d643d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fae82c63-a2d2-4e37-89ee-532d7f08e2f6_f4bd78ac-92f9-48a6-b2bd-691d7ffe3d77.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11214-original-6d39b4db-558d-44d1-8acf-fa88e9c5ca7c.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/54ea4941-08e9-472f-9650-69b636886c3c_77e00007-5f0a-4546-ad89-246bb6b0df3c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/20374034-original-6e835fd9-3341-4e70-a4ac-32621825b3ce.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/62183279-77f9-4bff-928b-322ec03c44df_b42ee981-9876-4506-b339-6e57449b3410.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3318ab44-7de7-41c1-b27d-425689f90875_2b6b384c-8875-4474-840b-9f36359fa81b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fab10f2e-aac6-4cc1-bbf3-caee2086ca98_4afecc7d-913d-4fd0-a95c-1a1f381187bc.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2a5b0dc1-a43a-4037-897e-37bf4be0b5a1_ff75e9bd-b13c-4da4-92a8-98b1388ab610.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7fc7e3e8-9d45-4702-889e-ea9899df9b2d_dbe4730a-aada-413c-a17f-8e615b88057d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36795699-original-43195073-2a77-41ea-9139-16605bc6ea85.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/26d2f70f-7eb4-4b13-9721-20c3958444e0_c747bbbd-2fc0-4e82-b3e8-b26bb4b43d40.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/29364806-original-2548f931-9832-4028-8bfe-e5a992f8ca3f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/59be8bac-d146-4960-9902-4f9eef439a11_beafee45-b8a7-4716-a578-fc2f55e00134.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/80333f69-f7d1-47a7-a3a7-e73a2acc7a85_393bc1ac-772e-4c1b-9df8-218085c57559.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ec5da10f-7514-445b-b8f7-a641b22e8f9e_25b75ff7-98c3-4c78-83a5-32a293573254.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Koop Fiat 500 occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/fiat/500"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2t3b1EkGvWaWl8tVwnrSzy/76f1f3f24e697994e188ef9be3534f42/magazin-header-logo-nl-v3.png?w\u003d1100",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1VZUQG3tReQyWXuqm1uf8b/b5b12b4ba95f23ce3d18a24f01f8b684/batterij-recycling-1-5d19f7-1-8968d2.webp?w\u003d460",
+    "alt": "batterij-recycling-1-5d19f7-1-8968d2.webp",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2BwyaEgc5cr2rfZMNhbQrK/f776ea604c1a7ca3c825bc6488ac8f10/skoda-octavia-turns-30-three-decades-of-a-brand-icon-1-13c0f605-17e2b0.webp?w\u003d460",
+    "alt": "skoda-octavia-turns-30-three-decades-of-a-brand-icon-1-13c0f605-17e2b0.webp",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5i5yDkuiK0AtMPlne3Fzd/960b6613b24697beec3e9690b051b144/339237-6000x3376-676d88.webp?w\u003d460",
+    "alt": "339237-6000x3376-676d88.webp",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4iLF9EhFUlsnUwTQC6rmdW/26c22745c072afc1d6ea4addb17778db/Maserati_GranCabrio_Folgore.jpg?w\u003d1100",
+    "alt": "Maserati GranCabrio Folgore.jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TWvU85ndS7k5qfHXYwkAj/64fe0526a90b152cb4067aa8bdb2c234/vogelhuber.avif",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4S85ys7qGu81YN0e6IYIZy/6559a7acfae6e78f2969f530e647924e/BMW_3er_G50__2027_.jpg?w\u003d460",
+    "alt": "BMW 3er G50 (2027).jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TWvU85ndS7k5qfHXYwkAj/64fe0526a90b152cb4067aa8bdb2c234/vogelhuber.avif",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4XJthcbW7ZoRZFbq02BHxD/2cd6773a2570d58b284d48e6715c9bc6/Audi_A6_allroad__2026_.jpg?w\u003d460",
+    "alt": "Audi A6 allroad (2026).jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Rt7oJEPDqUWuYy6Kvr8eR/a82c00d9997ced2df786c14de5128fda/boegel-avatar.jpg?w\u003d130",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2Y739pBW2Q6X0S5l0AyuIi/b23dc251b127295278da28dbf40d6aa6/AS24_Leapmotor_B03X_1.jpg?w\u003d460",
+    "alt": "AS24_Leapmotor_B03X_1.jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1xQLoscXlqUDgPiWAB6yat/3d4218a1d7a81441a5e00f0a3e3cc954/Casper_Hazebroek.jpeg?w\u003d130",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/o3LKf1OWXQQjqjr6JdKS3/fa4edccfee7177da6cf1f1e3cea128ca/Problemi_accensione_auto_diesel.jpg?w\u003d460",
+    "alt": "Problemi accensione auto diesel.jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7IO5Y4233eFegAVZlAFvqR/e4807df5367fb7c19b67e0e1464a65a1/Battery_factory.jpg?w\u003d460",
+    "alt": "Battery factory.jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1LygHxzbQW0vFTDBa0hkCf/1e8b0762715118e84b4deaf95dd1a59c/Hoofdfoto_pechverhelping_BMW.jpg?w\u003d460",
+    "alt": "Hoofdfoto pechverhelping BMW.jpg",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Advies, reviews, financiën - Alle informatie op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2UIrC84VZI2COCQ6fxiTlZ/e6e2b952adc7a4c8eb9486feb0fb6f2a/top-marken.jpg?w\u003d1100",
+    "alt": "Top-Marken",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7tmuBl3EqoFKnygiawwpjq/3752bdeb80f2f64244c74cb2ebf48a36/beliebte-modelle.jpg?w\u003d1100",
+    "alt": "Beliebte Modelle",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6AXtKHXQ1OveXugpBVMv4d/088bd404d469dbc1470d020e084d021b/motorradmarken-m.jpg?w\u003d1100",
+    "alt": "motorradmarken-m",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4rTUASY66Pi98TLeEJNwXa/267c03287ccca9373c81f19992e4b0ab/elektroautos.jpg?w\u003d1100",
+    "alt": "Elektroautos",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4pDTE9llRiVPAqTSFwr7jz/ce4bb659be3941a90456f201decd8d9f/netherlands_map.jpg?w\u003d1100",
+    "alt": "Regionaal aanbod",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "AutoScout24 Merk- en Modellenoverzicht",
+    "pageUrl": "https://www.autoscout24.nl/auto/"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
