@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 804,
+    "url": "https://docs.python.org/3/library/threading.html#threading.RLock",
+    "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be cle",
+    "scrapedAt": "2026-10-08 19:14:59.692833"
+  },
+  {
+    "id": 803,
+    "url": "https://github.com/python/cpython/issues/128563",
+    "title": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} A new tail-calling interpreter for significantly better interpreter performance #128563 New issue Copy link New issue Copy link Closed Closed A new tail-calling interpreter for significantly better interpreter performance#128563 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description Fidget-Spinner opened on Jan 6, 2025 Issue body actions Feature or enhancement Proposal Prior discussion at: faster-cpython/ideas#642 I propose adding a tail-calling interpreter to CPython for significantly better performance on compilers that support it. This idea is not new, and has been implemented by: Protobuf https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html Lua (Deegen) https://sillycross.github.io/2022/11/22/2022-11-22/ CPython currently has a few interpreters: A switch-case interpreter (MSVC) A computed goto interpreter (Clang, GCC) An uop interpreter. (Everything) The tail-calling interpreter will be the 4th that coexists with the rest. This means no compatibility concerns. Performance Preliminary benchmarks by me suggest excellent performance improvements --- 10% geometric mean speedup in pyperformance, with up to 40% speedup in Python-heavy benchmarks: https://gist.github.com/Fidget-Spinner/497c664eef389622d146d632990b0d21. These benchmarks were performed with clang-19 on both main and my branch, with ThinLTO and PGO, on AMD64 Ubuntu 22.04. PGO seems especially crucial for the speedups based on my testing. For those outside of CPython development: a 10% speedup is roughly equal to 2 minor CPython releases worth of improvements. For example, CPython 3.12 roughly sped up by 5%. The speedup is so significant that if accepted, the new interpreter will be faster than the current JIT compiler. CORRECTION NOTICE: We\u0027ve since found a compiler bug in LLVM 19 that artificially boosted the new interpreter\u0027s numbers. The numbers are closer to geomean 3-5% speedup. I apologize for reporting incorrect figures previously due to the compiler bug. Drawbacks Maintainability (this will introduce more code) Portability I will address maintainability by using the interpreter generator that was introduced as part of CPython 3.12. This generator will allow us to automatically generate most of the infrastructure needed for this change. Preliminary estimates suggest the generator will be only 200 lines of Python code, most of which is shared/copied/same conceptually as the other generators. For portability, this will fix itself (see the next section). Portability and Precedent At the moment, this is only supported by clang-19 for AArch64 and AMD64, with partial support on clang-18 and gcc-next, but likely bad performance on those. The reason is that we need both the __attribute__((musttail)) and __attribute__((preserve_none)) attributes for good performance. GCC only has gnu::musttail but not preserve_none. There has been prior precedence on adding compiler-specific optimizations for CPython. See for example the original computed goto issue by Antoine Pitrou https://bugs.python.org/issue4753. At the time, it was a new feature only on GCC and not on Clang, but we still added it anyways. Eventually a few years later, Clang also introduced the feature. The key point gcc will likely eventually catch up and add these features. EDIT: Added that it\u0027s only a likely case to have bad perf on GCC. Reading https://gcc.gnu.org/bugzilla/show_bug.cgi?id\u003d118328, I have not tested on GCC trunk. This is pure speculation that perf is bad. I can try with GCC eventually after the PR lands and we can test it from there. However, testing with clang with just musttail and no preserve_none, the performance was quite bad. Implementation plan Parse error labels in _PyEval_EvalFrameDefault. Implement the rest. Add likely/unlikely attributes to DEOPT_IF/EXIT_IF. Support GCC 15.0 if we determine the performance is good. Add option to Windows build script. Mention in Whats New. (Note: We NEED PGO, otherwise the perf is not very good on clang) Open new issue to add it as option on Windows build script. Open new issue to set it as auto detect on --enable-optimizations on configure. Open new issue on improving the code quality, by moving some parameters into other places to free up registers. Worries about new bugs Computed goto is well-tested, so worrying about the new interpreter being buggy is fair. I doubt logic bugs will be the primary one, as we are using the interpreter generator. This means we share common code between the base interpreter and the ",
+    "scrapedAt": "2026-10-08 19:14:58.407588"
+  },
+  {
+    "id": 802,
+    "url": "https://docs.python.org/3/library/warnings.html#warning-filter",
+    "title": "warnings — Warning control — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » warnings — Warning control | Theme Auto Light Dark | warnings — Warning control¶ Source code: Lib/warnings.py Warning messages are typically issued in situations where it is useful to alert the user of some condition in a program, where that condition (normally) doesn’t warrant raising an exception and terminating the program. For example, one might want to issue a warning when a program uses an obsolete module. Python programmers issue warnings by calling the warn() function defined in this module. (C programmers use PyErr_WarnEx(); see Exception Handling for details). Warning messages are normally written to sys.stderr, but their disposition can be changed flexibly, from ignoring all warnings to turning them into exceptions. The disposition of warnings can vary based on the warning category, the text of the warning message, and the source location where it is issued. Repetitions of a particular warning for the same source location are typically suppressed. There are two stages in warning control: first, each time a warning is issued, a determination is made whether a message should be issued or not; next, if a message is to be issued, it is formatted and printed using a user-settable hook. The determination whether to issue a warning message is controlled by the warning filter, which is a sequence of matching rules and actions. Rules can be added to the filter by calling filterwarnings() and reset to its default state by calling resetwarnings(). The printing of warning messages is done by calling showwarning(), which may be overridden; the default implementation of this function formats the message by calling formatwarning(), which is also available for use by custom implementations. See also logging.captureWarnings() allows you to handle all warnings with the standard logging infrastructure. Warning Categories¶ There are a number of built-in exceptions that represent warning categories. This categorization is useful to be able to filter out groups of warnings. While these are technically built-in exceptions, they are documented here, because conceptually they belong to the warnings mechanism. User code can define additional warning categories by subclassing one of the standard warning categories. A warning category must always be a subclass of the Warning class. The following warnings category classes are currently defined: Class Description Warning Base class for warning categories. It is a subclass of Exception. UserWarning Base class for warnings generated by user code. The default category for warn(). DeprecationWarning Base class for warnings about deprecated features when those warnings are intended for other Python developers (ignored by default, unless triggered by code in __main__). PendingDeprecationWarning Base class for warnings about features that will be deprecated in the future (ignored by default). SyntaxWarning Base class for warnings about dubious syntax (typically emitted when compiling Python source code, and hence may not be suppressed by runtime filters). RuntimeWarning Base class for warnings about dubious runtime behavior. FutureWarning Base class for warnings about deprecated features when those warnings are intended for end users of applications that are written in Python. ImportWarning Base class for warnings triggered during the process of importing a module (ignored by default). UnicodeWarning Base class for warnings related to Unicode. EncodingWarning Base class for warnings related to encodings. See Opt-in EncodingWarning for details. BytesWarning Base class for warnings related to bytes and bytearray. ResourceWarning Base class for warnings related to resource usage (ignored by default). Changed in version 3.7: Previously DeprecationWarning and FutureWarning were distinguished based on whether a feature was being removed entirely or changing its behaviour. They are now distinguished based on their intended audience and the way they’re handled by the default warnings filters. The Warnings Filter¶ The warnings filter controls whether warnings are ignored, displayed, or turned into errors (raising an exception). Conceptually, the warnings filter maintains an ordered list of filter specifications; any specific warning is matched against each filter specification in the list in turn until a match is found; the filter determines the disposition of the match. Each entry is a tuple of the form (action, message, category, module, lineno), where: action is one of the following strings: Value Disposition \"default\" print the first occurrence of matching warnings for each location (module + line number) where the warning is issued \"error\" turn matching warnings into exceptions \"ignore\" never print matching warnings \"always\" always print matching warnings \"all\" alias to “always” \"module\" print the first occurrence of matching warnings for each module where",
+    "scrapedAt": "2026-10-08 19:14:56.271677"
+  },
+  {
+    "id": 801,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#future",
+    "title": "7. Simple statements — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 7. Simple statements | Theme Auto Light Dark | 7. Simple statements¶ A simple statement is comprised within a single logical line. Several simple statements may occur on a single line separated by semicolons. The syntax for simple statements is: simple_stmt: expression_stmt\n             | assert_stmt\n             | assignment_stmt\n             | augmented_assignment_stmt\n             | annotated_assignment_stmt\n             | pass_stmt\n             | del_stmt\n             | return_stmt\n             | yield_stmt\n             | raise_stmt\n             | break_stmt\n             | continue_stmt\n             | import_stmt\n             | future_stmt\n             | global_stmt\n             | nonlocal_stmt\n             | type_stmt\n 7.1. Expression statements¶ Expression statements are used (mostly interactively) to compute and write a value, or (usually) to call a procedure (a function that returns no meaningful result; in Python, procedures return the value None). Other uses of expression statements are allowed and occasionally useful. The syntax for an expression statement is: expression_stmt: starred_expression\n An expression statement evaluates the expression list (which may be a single expression). In interactive mode, if the value is not None, it is converted to a string using the built-in repr() function and the resulting string is written to standard output on a line by itself (except if the result is None, so that procedure calls do not cause any output.) 7.2. Assignment statements¶ Assignment statements are used to (re)bind names to values and to modify attributes or items of mutable objects: assignment_stmt: (target_list \"\u003d\")+ (starred_expression | yield_expression)\ntarget_list:     target (\",\" target)* [\",\"]\ntarget:          identifier\n                 | \"(\" [target_list] \")\"\n                 | \"[\" [target_list] \"]\"\n                 | attributeref\n                 | subscription\n                 | \"*\" target\n (See section Primaries for the syntax definitions for attributeref and subscription.) An assignment statement evaluates the expression list (remember that this can be a single expression or a comma-separated list, the latter yielding a tuple) and assigns the single resulting object to each of the target lists, from left to right. Assignment is defined recursively depending on the form of the target (list). When a target is part of a mutable object (an attribute reference or subscription), the mutable object must ultimately perform the assignment and decide about its validity, and may raise an exception if the assignment is unacceptable. The rules observed by various types and the exceptions raised are given with the definition of the object types (see section The standard type hierarchy). Assignment of an object to a target list, optionally enclosed in parentheses or square brackets, is recursively defined as follows. If the target list is a single target with no trailing comma, optionally in parentheses, the object is assigned to that target. Else: If the target list contains one target prefixed with an asterisk, called a “starred” target: The object must be an iterable with at least as many items as there are targets in the target list, minus one. The first items of the iterable are assigned, from left to right, to the targets before the starred target. The final items of the iterable are assigned to the targets after the starred target. A list of the remaining items in the iterable is then assigned to the starred target (the list can be empty). Else: The object must be an iterable with the same number of items as there are targets in the target list, and the items are assigned, from left to right, to the corresponding targets. Assignment of an object to a single target is recursively defined as follows. If the target is an identifier (name): If the name does not occur in a global or nonlocal statement in the current code block: the name is bound to the object in the current local namespace. Otherwise: the name is bound to the object in the global namespace or the outer namespace determined by nonlocal, respectively. The name is rebound if it was already bound. This may cause the reference count for the object previously bound to the name to reach zero, causing the object to be deallocated and its destructor (if it has one) to be called. If the target is an attribute reference: The primary expression in the reference is evaluated. It should yield an object with assignable attributes; if this is not the case, TypeError is raised. That object is then asked to assign the assigned object to the given attribute; if it cannot perform the assignment, it raises an exception (usually but not necessarily AttributeError). Note: If the object is a class instance and the attribute reference occurs on both sides of the assignment operator, the right-hand side expression, a.x can access either an instanc",
+    "scrapedAt": "2026-10-08 19:14:54.992402"
+  },
+  {
+    "id": 800,
+    "url": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:14:53.766726"
+  },
+  {
+    "id": 799,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325",
+    "scrapedAt": "2026-10-08 19:14:52.681614"
+  },
+  {
     "id": 798,
     "url": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors",
     "title": "curses — Terminal handling for character-cell displays — Python 3.14.8 documentation",
@@ -5275,30 +5315,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 799,
-    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
-  },
-  {
-    "id": 800,
-    "url": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
-  },
-  {
-    "id": 801,
-    "url": "https://docs.python.org/3/reference/simple_stmts.html#future"
-  },
-  {
-    "id": 802,
-    "url": "https://docs.python.org/3/library/warnings.html#warning-filter"
-  },
-  {
-    "id": 803,
-    "url": "https://github.com/python/cpython/issues/128563"
-  },
-  {
-    "id": 804,
-    "url": "https://docs.python.org/3/library/threading.html#threading.RLock"
   },
   {
     "id": 805,
@@ -138119,10 +138135,547 @@ window.searchData = [
     "id": 102560,
     "url": "https://docs.python.org/3/library/curses.html#curses.window.hline",
     "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102915,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-global_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102916,
+    "url": "https://peps.python.org/pep-3132/",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102921,
+    "url": "https://peps.python.org/pep-3104/",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102922,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-target",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102927,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#attr-target-note",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102928,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-augop",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102931,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#annotated-assignment-statements",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102932,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-module",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102935,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-augmented_assignment_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102941,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#augmented-assignment-statements",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102948,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-del_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102955,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-assert_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102960,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-assignment_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102963,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-expression_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102964,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-raise_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102968,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-feature",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102969,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-augtarget",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102971,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/reference/simple_stmts.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102976,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#lexical-names-nonascii",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102977,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102978,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#simple-statements",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102984,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#future-statements",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102988,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-import_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102990,
+    "url": "https://peps.python.org/pep-0236/",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102995,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-type_params",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 102999,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-relative_module",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103000,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-nonlocal_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103003,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-continue_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103004,
+    "url": "https://docs.python.org/3/reference/import.html#relativeimports",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103006,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#soft-keywords",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103016,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-type_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103018,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-future_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103021,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-yield_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103024,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-break_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103033,
+    "url": "https://www.unicode.org/reports/tr15/#Norm_Forms",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103035,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-pass_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103046,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-return_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103050,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-annotated_assignment_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 103054,
+    "url": "https://docs.python.org/3/library/warnings.html#available-functions",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103057,
+    "url": "https://docs.python.org/3/library/warnings.html#default-warning-filter",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103060,
+    "url": "https://docs.python.org/3/library/logging.html#logging.captureWarnings",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103066,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/warnings.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103067,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exceptionhandling",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103069,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#coroutine",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103071,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.warn",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103074,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.showwarning",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103076,
+    "url": "https://docs.python.org/3/library/warnings.html#repeated-warning-suppression-criteria",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103077,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#warning-categories-as-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103081,
+    "url": "https://docs.python.org/3/library/warnings.html#temporarily-suppressing-warnings",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103085,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.resetwarnings",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103090,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.simplefilter",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103091,
+    "url": "https://docs.python.org/3/library/warnings.html#",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103100,
+    "url": "https://docs.python.org/3/library/warnings.html#warning-concurrent-safe",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103109,
+    "url": "https://docs.python.org/3/library/warnings.html#testing-warnings",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103114,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/warnings.py",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103116,
+    "url": "https://docs.python.org/3/library/warnings.html#available-context-managers",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103117,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.formatwarning",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103119,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.deprecated",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103121,
+    "url": "https://docs.python.org/3/library/warnings.html#overriding-the-default-filter",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103133,
+    "url": "https://docs.python.org/3/library/warnings.html#concurrent-safety-of-context-managers",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103135,
+    "url": "https://docs.python.org/3/library/warnings.html#the-warnings-filter",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103137,
+    "url": "https://docs.python.org/3/library/warnings.html#updating-code-for-new-versions-of-dependencies",
+    "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 103139,
+    "url": "https://github.com/python/cpython/pull/129754",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103140,
+    "url": "https://github.com/python/cpython/pull/129115",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103141,
+    "url": "https://github.com/python/cpython/pull/129113",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103142,
+    "url": "https://github.com/python/cpython/pull/129112",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103143,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128563",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103144,
+    "url": "https://github.com/python/cpython/pull/129078",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103145,
+    "url": "https://github.com/faster-cpython/ideas/issues/642",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103146,
+    "url": "https://reviews.llvm.org/D99517",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103148,
+    "url": "https://github.com/python/cpython/issues/128563#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103149,
+    "url": "https://github.com/python/cpython/pull/129417",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103150,
+    "url": "https://github.com/python/cpython/pull/129812",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103151,
+    "url": "https://bugs.python.org/issue4753",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103153,
+    "url": "https://github.com/python/cpython/pull/130911",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103154,
+    "url": "https://github.com/python/cpython/pull/129481",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103155,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128563",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103156,
+    "url": "https://github.com/python/cpython/issues/128563#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103157,
+    "url": "https://discuss.python.org/t/a-new-tail-calling-interpreter-for-significantly-better-interpreter-performance/76315",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103158,
+    "url": "https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103159,
+    "url": "https://gcc.gnu.org/bugzilla/show_bug.cgi?id\u003d118328",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103161,
+    "url": "https://reviews.llvm.org/D69024",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103163,
+    "url": "https://github.com/Fidget-Spinner",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103165,
+    "url": "https://gist.github.com/Fidget-Spinner/497c664eef389622d146d632990b0d21",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103166,
+    "url": "https://github.com/python/cpython/pull/129809",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103167,
+    "url": "https://github.com/python/cpython/pull/128718",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103168,
+    "url": "https://github.com/python/cpython/issues/128563#issue-2771530876",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103169,
+    "url": "https://github.com/python/cpython/pull/129608",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103170,
+    "url": "https://github.com/python/cpython/pull/129728",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103172,
+    "url": "https://sillycross.github.io/2022/11/22/2022-11-22/",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103173,
+    "url": "https://github.com/python/cpython/pull/129803",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103174,
+    "url": "https://github.com/python/cpython/pull/130908",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103175,
+    "url": "https://github.com/python/cpython/pull/129525",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.RLock"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.RLock"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?s\u003d64\u0026v\u003d4",
+    "alt": "Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?v\u003d4\u0026size\u003d48",
+    "alt": "@Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?s\u003d64\u0026v\u003d4",
+    "alt": "@Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "warnings — Warning control — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "warnings — Warning control — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
