@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1598,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task",
+    "title": "Coroutines and tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Coroutines and tasks | Theme Auto Light Dark | Coroutines and tasks¶ This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines¶ Source code: Lib/asyncio/coroutines.py Coroutines declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”: \u003e\u003e\u003e import asyncio\n\n\u003e\u003e\u003e async def main():\n...     print(\u0027hello\u0027)\n...     await asyncio.sleep(1)\n...     print(\u0027world\u0027)\n\n\u003e\u003e\u003e asyncio.run(main())\nhello\nworld\n Note that simply calling a coroutine will not schedule it to be executed: \u003e\u003e\u003e main()\n\u003ccoroutine object main at 0x1053bb7c8\u003e\n To actually run a coroutine, asyncio provides the following mechanisms: The asyncio.run() function to run the top-level entry point “main()” function (see the above example.) Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for another 2 seconds: import asyncio\nimport time\n\nasync def say_after(delay, what):\n    await asyncio.sleep(delay)\n    print(what)\n\nasync def main():\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    await say_after(1, \u0027hello\u0027)\n    await say_after(2, \u0027world\u0027)\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n\nasyncio.run(main())\n Expected output: started at 17:13:52\nhello\nworld\nfinished at 17:13:55\n The asyncio.create_task() function to run coroutines concurrently as asyncio Tasks. Let’s modify the above example and run two say_after coroutines concurrently: async def main():\n    task1 \u003d asyncio.create_task(\n        say_after(1, \u0027hello\u0027))\n\n    task2 \u003d asyncio.create_task(\n        say_after(2, \u0027world\u0027))\n\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # Wait until both tasks are completed (should take\n    # around 2 seconds.)\n    await task1\n    await task2\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n Note that expected output now shows that the snippet runs 1 second faster than before: started at 17:14:32\nhello\nworld\nfinished at 17:14:34\n The asyncio.TaskGroup class provides a more modern alternative to create_task(). Using this API, the last example becomes: async def main():\n    async with asyncio.TaskGroup() as tg:\n        task1 \u003d tg.create_task(\n            say_after(1, \u0027hello\u0027))\n\n        task2 \u003d tg.create_task(\n            say_after(2, \u0027world\u0027))\n\n        print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # The await is implicit when the context manager exits.\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n The timing and output should be the same as for the previous version. Added in version 3.11: asyncio.TaskGroup. Awaitables¶ We say that an object is an awaitable object if it can be used in an await expression. Many asyncio APIs are designed to accept awaitables. There are three main types of awaitable objects: coroutines, Tasks, and Futures. Coroutines Python coroutines are awaitables and therefore can be awaited from other coroutines: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Nothing happens if we just call \"nested()\".\n    # A coroutine object is created but not awaited,\n    # so it *won\u0027t run at all*.\n    nested()  # will raise a \"RuntimeWarning\".\n\n    # Let\u0027s do it differently now and await it:\n    print(await nested())  # will print \"42\".\n\nasyncio.run(main())\n Important In this documentation the term “coroutine” can be used for two closely related concepts: a coroutine function: an async def function; a coroutine object: an object returned by calling a coroutine function. Tasks Tasks are used to schedule coroutines concurrently. When a coroutine is wrapped into a Task with functions like asyncio.create_task() the coroutine is automatically scheduled to run soon: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Schedule nested() to run soon concurrently\n    # with \"main()\".\n    task \u003d asyncio.create_task(nested())\n\n    # \"task\" can now be used to cancel \"nested()\", or\n    # can simply be awaited to wait until it is complete:\n    await task\n\nasyncio.run(main())\n Futures A Future is a special low-level awaitable object that represents an eventual result of an asynchronous operation. When a Future object is awaited it means that the coroutine will wait until the Future is resolved in some other place. Future objects in asyncio are needed to allow callback-based code to be used with async/await. Normally there is no need to create Future objects at the application level code. Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited: async def main():\n    await function_that_returns_a_future_object()\n\n    # this is also valid:\n    await asyncio.gather(\n        function_that_returns_a_future_object(),\n        some_python_coroutine()\n    )\n A good exam",
+    "scrapedAt": "2026-10-08 19:49:31.24809"
+  },
+  {
+    "id": 1597,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:49:29.931886"
+  },
+  {
+    "id": 1596,
+    "url": "https://github.com/python/cpython/issues/119349",
+    "title": "Add a ctypes.util function to list loaded shared libraries · Issue #119349 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add a ctypes.util function to list loaded shared libraries #119349 New issue Copy link New issue Copy link Closed Closed Add a ctypes.util function to list loaded shared libraries#119349 Copy link Labels topic-ctypestype-featureA feature request or enhancementA feature request or enhancement Description WardBrian opened on May 21, 2024 Issue body actions Feature or enhancement Proposal: When writing code which loads dynamic libraries, it is often very useful to be able to query which shared libraries are already in use by the current process. There are a few well-known tricks to do this, but they all end up being platform dependent. For example, on Linux, you can use dl_iterate_phdr, and it seems that quite a bit of Python code does. This won’t work on macOS or Windows, which provide other functions for this same functionality. Julia provides this function in the standard library under Libdl.dllist. A Python re-implementation of the same platform-specific code can be found at GitHub - WardBrian/dllist: List DLLs loaded by the current process . This essentially just wraps the platform specific code in an if-else based on the runtime platform import dllist\nprint(dllist.dllist())\n# [\u0027linux-vdso.so.1\u0027, \u0027/lib/x86_64-linux-gnu/libpthread.so.0\u0027, \u0027/lib/x86_64-linux-gnu/libdl.so.2\u0027, ... I would like to take the next step toward adding a similar function to the standard library Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/a-ctypes-function-to-list-all-loaded-shared-libraries/36370 Linked PRs gh-119349: Add ctypes.util function to list loaded shared libraries #122946 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-ctypestype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:49:28.540748"
+  },
+  {
+    "id": 1595,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:49:25.989069"
+  },
+  {
+    "id": 1594,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive",
+    "title": "2. Using the Python Interpreter — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Tutorial » 2. Using the Python Interpreter | Theme Auto Light Dark | 2. Using the Python Interpreter¶ 2.1. Invoking the Interpreter¶ The Python interpreter is usually installed as /usr/local/bin/python3.14 on those machines where it is available; putting /usr/local/bin in your Unix shell’s search path makes it possible to start it by typing the command: python3.14\n to the shell. [1] Since the choice of the directory where the interpreter lives is an installation option, other places are possible; check with your local Python guru or system administrator. (E.g., /usr/local/python is a popular alternative location.) On Windows machines where you have installed Python from the Microsoft Store, the python3.14 command will be available. If you have the py.exe launcher installed, you can use the py command. See Python install manager for other ways to launch Python. Typing an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt causes the interpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the following command: quit(). The interpreter’s line-editing features include interactive editing, history substitution and code completion on most systems. Perhaps the quickest check to see whether command line editing is supported is typing a word in on the Python prompt, then pressing Left arrow (or Control-b). If the cursor moves, you have command line editing; see Appendix Interactive Input Editing and History Substitution for an introduction to the keys. If nothing appears to happen, or if a sequence like ^[[D or ^B appears, command line editing isn’t available; you’ll only be able to use backspace to remove characters from the current line. The interpreter operates somewhat like the Unix shell: when called with standard input connected to a tty device, it reads and executes commands interactively; when called with a file name argument or with a file as standard input, it reads and executes a script from that file. A second way of starting the interpreter is python -c command [arg] ..., which executes the statement(s) in command, analogous to the shell’s -c option. Since Python statements often contain spaces or other characters that are special to the shell, it is usually advised to quote command in its entirety. Some Python modules are also useful as scripts. These can be invoked using python -m module [arg] ..., which executes the source file for module as if you had spelled out its full name on the command line. When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing -i before the script. All command line options are described in Command line and environment. 2.1.1. Argument Passing¶ When known to the interpreter, the script name and additional arguments thereafter are turned into a list of strings and assigned to the argv variable in the sys module. You can access this list by executing import sys. The length of the list is at least one; when no script and no arguments are given, sys.argv[0] is an empty string. When the script name is given as \u0027-\u0027 (meaning standard input), sys.argv[0] is set to \u0027-\u0027. When -c command is used, sys.argv[0] is set to \u0027-c\u0027. When -m module is used, sys.argv[0] is set to the full name of the located module. Options found after -c command or -m module are not consumed by the Python interpreter’s option processing but left in sys.argv for the command or module to handle. 2.1.2. Interactive Mode¶ When commands are read from a tty, the interpreter is said to be in interactive mode. In this mode it prompts for the next command with the primary prompt, usually three greater-than signs (\u003e\u003e\u003e); for continuation lines it prompts with the secondary prompt, by default three dots (...). The interpreter prints a welcome message stating its version number and a copyright notice before printing the first prompt: $ python3.14\nPython 3.14 (default, April 4 2024, 09:25:04)\n[GCC 10.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n\u003e\u003e\u003e\n Continuation lines are needed when entering a multi-line construct. As an example, take a look at this if statement: \u003e\u003e\u003e the_world_is_flat \u003d True\n\u003e\u003e\u003e if the_world_is_flat:\n...     print(\"Be careful not to fall off!\")\n...\nBe careful not to fall off!\n For more on interactive mode, see Interactive Mode. 2.2. The Interpreter and Its Environment¶ 2.2.1. Source Code Encoding¶ By default, Python source files are treated as encoded in UTF-8. In that encoding, characters of most languages in the world can be used simultaneously in string literals, identifiers and comments — although the standard library only uses ASCII characters for identifiers, a convention that any portable code should follow. To display all these characters properly, your editor must recognize that the file is UTF-8, and ",
+    "scrapedAt": "2026-10-08 19:49:24.62475"
+  },
+  {
     "id": 1593,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -10710,26 +10745,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1594,
-    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
-  },
-  {
-    "id": 1595,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
-  },
-  {
-    "id": 1596,
-    "url": "https://github.com/python/cpython/issues/119349"
-  },
-  {
-    "id": 1597,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
-  },
-  {
-    "id": 1598,
-    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
   },
   {
     "id": 1599,
@@ -247801,10 +247816,171 @@ window.searchData = [
     "id": 343390,
     "url": "https://github.com/python/cpython/pull/123168",
     "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 345870,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345874,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#using-the-python-interpreter",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345882,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/tutorial/interpreter.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345886,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#tut-scripts",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345887,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#id2",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345888,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#id1",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345889,
+    "url": "https://docs.python.org/3/tutorial/interactive.html#tut-interacting",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345891,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-general",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 345895,
+    "url": "https://docs.python.org/3/using/windows.html#windows-store",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 346107,
+    "url": "https://github.com/WardBrian/dllist",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346109,
+    "url": "https://github.com/search?q\u003ddl_iterate_phdr+language%3APython\u0026type\u003dcode",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346110,
+    "url": "https://github.com/python/cpython/issues/119349#issue-2308972413",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346111,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/119349",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346113,
+    "url": "https://github.com/python/cpython/issues/119349#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346115,
+    "url": "https://github.com/WardBrian",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346116,
+    "url": "https://github.com/python/cpython/pull/122946",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346117,
+    "url": "https://github.com/python/cpython/issues/119349#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346118,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/119349",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 346119,
+    "url": "https://discuss.python.org/t/a-ctypes-function-to-list-all-loaded-shared-libraries/36370",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31640292?u\u003d4430b58d702322e2a8bd729e99d8cd90f1428caa\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@WardBrian",
+    "pageTitle": "Add a ctypes.util function to list loaded shared libraries · Issue #119349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add a ctypes.util function to list loaded shared libraries · Issue #119349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "2. Using the Python Interpreter — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "2. Using the Python Interpreter — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
