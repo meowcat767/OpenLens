@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1359,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#textwrap",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:38:36.918573"
+  },
+  {
+    "id": 1358,
+    "url": "https://github.com/python/cpython/issues/101588",
+    "title": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate pickle support for itertools #101588 New issue Copy link New issue Copy link Closed Closed Deprecate pickle support for itertools#101588 Copy link Assignees Description rhettinger opened on Feb 5, 2023 Issue body actions Pickle support was long ago added to some itertools. It was done mostly to support an atypical use case for a single company. It was implemented in a very inefficient manner, essentially replaying iteration from the beginning to the mid-stream state where it was frozen. The implementation was of low quality and had many bugs. Also, it was not a documented or advertised feature. Newer itertools don\u0027t support pickling and no one has noticed or cared. The popular third-party package more-itertools is implemented with generators which do not have pickle support — again, none of their users seems to have noticed or cared. IMO, this is just cruft that has made maintenance more difficult and we should get rid of it. As an undocumented feature, we could just remove it directly. But to be on the safe side, we can go through a deprecation cycle. Linked PRs GH-101588: Deprecate pickle/copy/deepcopy support in itertools #104965 [3.12] GH-101588: Deprecate pickle/copy/deepcopy support in itertools (GH-104965) #104997 GH-101588: Remove deprecated pickle/copy/deepcopy from itertools #118816 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees Yhg1s Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:38:35.512168"
+  },
+  {
+    "id": 1357,
+    "url": "https://github.com/python/cpython/issues/128427",
+    "title": "Support Nil and Max UUID formats from RFC 9562 · Issue #128427 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Support Nil and Max UUID formats from RFC 9562 #128427 New issue Copy link New issue Copy link Closed Closed Support Nil and Max UUID formats from RFC 9562#128427 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description ngnpope opened on Jan 2, 2025 Issue body actions Feature or enhancement Proposal: RFC 9562 defines Nil and Max UUID formats: https://www.rfc-editor.org/rfc/rfc9562.html#name-nil-uuid https://www.rfc-editor.org/rfc/rfc9562.html#name-max-uuid I\u0027ve often had a need to use these as placeholders, sentinels or dummy values and it would be nice to be able to write uuid.NIL and uuid.MAX instead of uuid.UUID(int\u003d0) and uuid.UUID(int\u003d2 ** 128 - 1) every time I need to reach for them. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: These have been referred to in #89083 (comment) and #89083 (comment). Linked PRs gh-128427: Add uuid.NIL and uuid.MAX #128429 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:38:33.200404"
+  },
+  {
+    "id": 1356,
+    "url": "https://github.com/python/cpython/issues/129515",
+    "title": "Syntax error on \u0027{z} if z is not None else pass\u0027 · Issue #129515 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Syntax error on \u0027{z} if z is not None else pass\u0027 #129515 New issue Copy link New issue Copy link Closed Closed Syntax error on \u0027{z} if z is not None else pass\u0027#129515 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description none-of-my-names-is-available opened on Jan 31, 2025 Issue body actions Bug report Bug description: My question is in the title.\n\nIn the tutorial, I read: Use \u0027pass\u0027 in places, where code is required syntactically, but none is needed.\nIn order to save indentations, I used the conditional assignement in some segment of code. But I only want to include z in the set x, if it is not None, because later, the None disturbs.\n\nSo my thesis is: The code in the title is syntactically correct, but still, I get a syntax error.\n\nThank you for your kind consideration CPython versions tested on: 3.10 Operating systems tested on: Windows Linked PRs gh-129515: Clarify syntax error messages for conditional expressions #129880 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects docs issues Status Todo Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:38:31.187931"
+  },
+  {
+    "id": 1355,
+    "url": "https://github.com/python/cpython/issues/103998",
+    "title": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation Erotemic commented Apr 29, 2023 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor This is an implementation of the idea proposed in #103997. It intercepts the argument passed to -c, and removes common leading whitespace from each line in the argument. Given an input string, the algorithm overview is: split the string into lines count the number of leading whitespace characters for each line keep track of the minimum leading spaces, but ignore lines that contain no non-whitespace characters. if number of common whitespace charcters is non-zero, then loop over all lines again and remove that number of leading spaces (again ignoring the lines that are entirely whitespace). rejoin the new lines into a new string and continue the pymain-run-command function with that. Big thanks to @sunmy2019 who really helped clean this PR up. Issue: Auto dedent -c arguments #103997 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-bot commented Apr 29, 2023 Copy link Copy Markdown Most changes to Python require a NEWS entry. Please add it using the blurb_it web app or the blurb command-line tool. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot mentioned this pull request Apr 29, 2023 Auto dedent -c arguments #103997 Closed bedevere-bot added the awaiting review label Apr 29, 2023 ghost commented Apr 29, 2023 • edited by ghost Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown All commit authors signed the Contributor License Agreement. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Erotemic force-pushed the dedent_pymain_command branch from 71c6b63 to 51c1320 Compare April 29, 2023 23:20 Erotemic commented Apr 30, 2023 Copy link Copy Markdown Contributor Author I was able to cobble my way through the C docs and write what I think is a reasonable attempt at a pure C dedent function (I forgot how fun -- albiet time consuming --- pointer logic can be). To highlight some of the corner cases that need to be accounted for, this is the test case I\u0027m using locally: python -c \"\nimport subprocess\n# Use $ to note when a line will have all whitespace\nlines \u003d \u0027\u0027\u0027\n         $\n\n  $\n    data \u003d \\\"\\\"\\\"\n    \n    this data has newlines above and below  $\n                            $\n\n    \\\"\\\"\\\"\n    if 1:         $\n        print(123)$\n\n    print(12345)\n    print(repr(data))\n\u0027\u0027\u0027.replace(\u0027$\u0027, \u0027\u0027)\nsubprocess.run([\u0027./python\u0027, \u0027-c\u0027, lines])\n\"\n I still haven\u0027t handled tabs, but I think my space logic is correct. I do need help vetting my C code and fixing the memory and security problems with it. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. sunmy2019 reviewed Apr 30, 2023 View reviewed changes Comment thread Modules/main.c Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. sunmy2019 commented Apr 30, 2023 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Delete all your wchar_t stuff. It is error-prone and unnecessary. Delete all your _unicode_dedent. It is lengthy. Do utf_8_bytes_dedent is much more concise and simpler. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. sunmy2019 reviewed May 1, 2023 View reviewed changes Comment thread Modules/main.c Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Modules/main.c Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. sunmy2019 commented May 1, 2023 Copy link Copy Markdown Member You should act fast since 3.12 release window will soon close. No new feature after May 8. https://peps.python.org/pep-0693/ Can you give me write access to your branch? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Erotemic force-pushed the dedent_pymain_command branch from 06667b7 to 9649590 Compare May 1, 2023 02:08 Erotemic commented May 1, 2023 Copy link Copy Markdown Contributor Author @sunmy2019 I gave you access to my cpython fork. 👍 1 sunmy2019 reacted with thumbs up emoji All reactions 👍 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. sunmy2019 commented May 1, 2023 Copy link Copy Markdown Member I got one thought: textwrap.dedent remove space and tabs. https://doc",
+    "scrapedAt": "2026-10-08 19:38:28.979089"
+  },
+  {
     "id": 1354,
     "url": "https://docs.python.org/3/library/sys.html#sys.base_prefix",
     "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
@@ -9065,26 +9100,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1355,
-    "url": "https://github.com/python/cpython/issues/103998"
-  },
-  {
-    "id": 1356,
-    "url": "https://github.com/python/cpython/issues/129515"
-  },
-  {
-    "id": 1357,
-    "url": "https://github.com/python/cpython/issues/128427"
-  },
-  {
-    "id": 1358,
-    "url": "https://github.com/python/cpython/issues/101588"
-  },
-  {
-    "id": 1359,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
   },
   {
     "id": 1360,
@@ -235011,10 +235026,1183 @@ window.searchData = [
     "id": 270037,
     "url": "https://docs.python.org/3/library/csv.html#",
     "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 272236,
+    "url": "https://github.com/python/cpython/pull/103998/commits/e88216b8f982bb2385aae3966ee96564bc802133",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272237,
+    "url": "https://github.com/sunmy2019",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272238,
+    "url": "https://github.com/python/cpython/pull/103998#event-17209731821",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272239,
+    "url": "https://github.com/python/cpython/pull/103998#ref-issue-1689709578",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272240,
+    "url": "https://github.com/python/cpython/pull/103998/commits/4c78c5772d0f47d5957cedb34574619e8101dfce",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272242,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F103998",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272243,
+    "url": "https://github.com/python/cpython/pull/103998#commits-pushed-16be08f",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272244,
+    "url": "https://github.com/python/cpython/pull/103998/commits/f9c969be644eda481c15595566cdb487127c0345",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272245,
+    "url": "https://github.com/python/cpython/pull/103998/commits/cd14a00bea12ba4dc326d008ec03ccbadfb2d627",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272247,
+    "url": "https://github.com/python/cpython/pull/103998#event-17317471660",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272248,
+    "url": "https://github.com/python/cpython/pull/103998#event-9131390235",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272249,
+    "url": "https://github.com/python/cpython/pull/103998/files/42b633095a2d9290eb7415243ce4d0aa1772f398#diff-5f4de3bbf22aa3cc7412333ded7d7729ae0ac23703551daecac350869768b4ef",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272250,
+    "url": "https://github.com/python/cpython/pull/103998/commits/8e5cc7fd9bc437c6f2befec6378a1cdb925b71da",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272251,
+    "url": "https://github.com/python/cpython/pull/103998#event-17312498156",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272253,
+    "url": "https://github.com/python/cpython/pull/103998/files/a19b67564eb07767e2fc53c99cb21b09c2173e38",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272254,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-2774403160",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272255,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-2777045549",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272257,
+    "url": "https://github.com/python/cpython/pull/103998/commits/3f4a78bf047ab45f452bf89a4d27ae4bdb64e171",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272258,
+    "url": "https://github.com/python/cpython/pull/103998/commits/bcb7c77866ec856fc59a21a020a2f7d6a0b72fd2",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272260,
+    "url": "https://github.com/hauntsaninja",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272265,
+    "url": "https://github.com/python/cpython/pull/103998/files/d1edb1b6f5a88019fdd20d50463a767d0b5dbb1f",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272267,
+    "url": "https://github.com/python/cpython/pull/103998/files/42b633095a2d9290eb7415243ce4d0aa1772f398#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272268,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-2794433208",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272269,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-2814133917",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272272,
+    "url": "https://github.com/python/cpython/pull/103998#commits-pushed-4c78c57",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272273,
+    "url": "https://github.com/python/cpython/commit/9649590d064f691d2793ea4fa1d54818969be17f",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272274,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529795453",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272275,
+    "url": "https://github.com/python/cpython/commit/51c13205e984e82498ff4610e6f38e9dc80b21d1",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272277,
+    "url": "https://github.com/Erotemic",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272279,
+    "url": "https://github.com/python/cpython/pull/103998/files/8e5cc7fd9bc437c6f2befec6378a1cdb925b71da",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272280,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1528892183",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272281,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529257903",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272282,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-2815105509",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272285,
+    "url": "https://github.com/python/cpython/pull/103998/commits/97f2079c46b68bd835f715435058e72bed891d23",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272286,
+    "url": "https://github.com/python/cpython/commit/fc0ec2988999be05db67186ca01ed6563ba27f9e",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272287,
+    "url": "https://github.com/python/cpython/pull/103998#event-17316403121",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272288,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1528960740",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272289,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529702472",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272290,
+    "url": "https://github.com/python/cpython/pull/103998#issue-1689713777",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272291,
+    "url": "https://github.com/python/cpython/pull/103998/files/07d2273ee1ad68689594a64e32c5e85b48facd97#diff-128fff16ea63b541718887f5c714e0c1a357414fe1146b4893ef699e8853e3b0",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272292,
+    "url": "https://github.com/python/cpython/pull/103998/files/8e5cc7fd9bc437c6f2befec6378a1cdb925b71da#diff-128fff16ea63b541718887f5c714e0c1a357414fe1146b4893ef699e8853e3b0",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272293,
+    "url": "https://github.com/python/cpython/pull/103998/commits/38d2a4ec693f2cea2192fd9ae3ab288e8297ef3a",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272294,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-2814450177",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272295,
+    "url": "https://github.com/python/cpython/commit/d336ac7ba8a9332e4581c91cb6671aa933ad69c2",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272296,
+    "url": "https://github.com/python/cpython/pull/103998/commits/924e0a6897f452ac1cf3161ae2d9202e2acaa992",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272297,
+    "url": "https://github.com/python/cpython/pull/103998/commits/4c4eca9bc6228b6eebfdca2d30fa94396de6c91a",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272298,
+    "url": "https://github.com/python/cpython/pull/103998/commits/d1edb1b6f5a88019fdd20d50463a767d0b5dbb1f",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272299,
+    "url": "https://github.com/python/cpython/commit/06667b7633a96d2af0537b858f1eb813e4950205",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272300,
+    "url": "https://github.com/python/cpython/pull/103998/commits/26f27a84cec932a1174cd04b37af6110c820c287",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272301,
+    "url": "https://github.com/python/cpython/commit/71c6b63674afb84157b93e7e5d35b62d54faf6d0",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272302,
+    "url": "https://github.com/python/cpython/pull/103998/commits/417eff8e6f7a96390c703a8d4ba601356118ea65",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272303,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-1407267558",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272304,
+    "url": "https://github.com/python/cpython/pull/103998#commits-pushed-cd14a00",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272305,
+    "url": "https://github.com/python/cpython/pull/103998/files/ca4058988b1521da9689bfc176fd273162e05515",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272306,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1528892248",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272307,
+    "url": "https://github.com/python/cpython/compare/71c6b63674afb84157b93e7e5d35b62d54faf6d0..51c13205e984e82498ff4610e6f38e9dc80b21d1",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272308,
+    "url": "https://github.com/python/cpython/pull/103998/commits/98c17e5dc1764d9aa66f9706d72eed269e2b9993",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272309,
+    "url": "https://github.com/python/cpython/pull/103998#event-9133769894",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272310,
+    "url": "https://github.com/RustPython/RustPython/issues/8055",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272311,
+    "url": "https://github.com/python/cpython/pull/103998/files#diff-79e40dbd94b164b5f42a960224cc7496e33c189b4c66a6810904eda7d703b6f2",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272312,
+    "url": "https://devguide.python.org/committing/#updating-news-and-what-s-new-in-python",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272314,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-2778018742",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272316,
+    "url": "https://github.com/python/cpython/pull/103998#ref-issue-4606819383",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272317,
+    "url": "https://github.com/pyutils/line_profiler/pull/338",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272318,
+    "url": "https://github.com/python/cpython/pull/103998/files/07d2273ee1ad68689594a64e32c5e85b48facd97",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272319,
+    "url": "https://github.com/python/cpython/pull/103998/files/42b633095a2d9290eb7415243ce4d0aa1772f398",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272320,
+    "url": "https://github.com/python/cpython/pull/103998/files/07d2273ee1ad68689594a64e32c5e85b48facd97#diff-34c966e7876d6f8bf801dd51896327e4f68bba02cddb95fbf3963f0b2e39c38a",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272321,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-2777860390",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272323,
+    "url": "https://github.com/python/cpython/pull/103998/commits/fb8985aaad69e3c346a8b5eaf2e56871b96028be",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272324,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-2814132460",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272326,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-1407067051",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272327,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529381109",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272328,
+    "url": "https://github.com/python/cpython/pull/103998#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272330,
+    "url": "https://github.com/python/cpython/pull/103998#event-17317471243",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272332,
+    "url": "https://github.com/roryyorke",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272334,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529756264",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272335,
+    "url": "https://github.com/python/cpython/pull/103998/commits/ed6e17bdd4792386ce625b49b21bbd410692f925",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272336,
+    "url": "https://github.com/python/cpython/pull/103998/files/d1edb1b6f5a88019fdd20d50463a767d0b5dbb1f#diff-34c966e7876d6f8bf801dd51896327e4f68bba02cddb95fbf3963f0b2e39c38a",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272338,
+    "url": "https://github.com/python/cpython/compare/06667b7633a96d2af0537b858f1eb813e4950205..9649590d064f691d2793ea4fa1d54818969be17f",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272339,
+    "url": "https://github.com/python/cpython/pull/103998",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272340,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529723086",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272341,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-2815102799",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272342,
+    "url": "https://github.com/python/cpython/pull/103998/files/42b633095a2d9290eb7415243ce4d0aa1772f398#diff-34c966e7876d6f8bf801dd51896327e4f68bba02cddb95fbf3963f0b2e39c38a",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272343,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1529248570",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272344,
+    "url": "https://github.com/python/cpython/pull/103998/files",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272345,
+    "url": "https://github.com/python/cpython/pull/103998/files/07d2273ee1ad68689594a64e32c5e85b48facd97#diff-a57ee532396617ef346e7894d31abf8794e752469fdf6fcd8cf0fd9076576ddc",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272346,
+    "url": "https://github.com/python/cpython/pull/103998/commits/42b633095a2d9290eb7415243ce4d0aa1772f398",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272347,
+    "url": "https://github.com/python/cpython/pull/103998#ref-pullrequest-3008873345",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272348,
+    "url": "https://github.com/python/cpython/pull/103998/commits/04435eb4a79ae5e3940cfa804f1011287b901f68",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272349,
+    "url": "https://github.com/python/cpython/pull/103998/files/07d2273ee1ad68689594a64e32c5e85b48facd97#diff-4a43d1556ef8ce73f2db37db2d9342d0754541a5fbc4a32ea95ef821c128d6e2",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272350,
+    "url": "https://github.com/python/cpython/pull/103998#event-9131401958",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272351,
+    "url": "https://github.com/python/cpython/pull/103998/commits/16be08fdf55f3bda8f272a2225a8920028bfb122",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272352,
+    "url": "https://github.com/python/cpython/pull/103998#event-17314574818",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272353,
+    "url": "https://github.com/python/cpython/pull/103998/commits/9f956726057b98cbe3f6e40a1620b56ab62de912",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272354,
+    "url": "https://github.com/python/cpython/pull/103998/commits/07d2273ee1ad68689594a64e32c5e85b48facd97",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272355,
+    "url": "https://github.com/python/cpython/pull/103998#pullrequestreview-2777784756",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272356,
+    "url": "https://github.com/python/cpython/pull/103998#issuecomment-1528920168",
+    "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 272359,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/129515",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272362,
+    "url": "https://github.com/python/cpython/pull/129880",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272363,
+    "url": "https://github.com/python/cpython/issues/129515#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272364,
+    "url": "https://github.com/python/cpython/issues/129515#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272365,
+    "url": "https://github.com/none-of-my-names-is-available",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272367,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/129515",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272368,
+    "url": "https://github.com/python/cpython/issues/129515#issue-2823432112",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 272369,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128427",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272370,
+    "url": "https://github.com/python/cpython/issues/89083#issuecomment-2303285259",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272371,
+    "url": "https://www.rfc-editor.org/rfc/rfc9562.html#name-max-uuid",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272372,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128427",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272374,
+    "url": "https://github.com/python/cpython/issues/128427#issue-2766610107",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272376,
+    "url": "https://github.com/ngnpope",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272377,
+    "url": "https://github.com/python/cpython/issues/128427#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272378,
+    "url": "https://github.com/python/cpython/issues/128427#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272380,
+    "url": "https://github.com/python/cpython/issues/89083#issuecomment-2304713522",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272381,
+    "url": "https://github.com/python/cpython/pull/128429",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272382,
+    "url": "https://www.rfc-editor.org/rfc/rfc9562.html#name-nil-uuid",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 272383,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/101588",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272384,
+    "url": "https://github.com/python/cpython/pull/104997",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272386,
+    "url": "https://github.com/python/cpython/issues/101588#top",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272388,
+    "url": "https://github.com/python/cpython/pull/104965",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272389,
+    "url": "https://github.com/python/cpython/pull/118816",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272390,
+    "url": "https://github.com/python/cpython/issues/101588#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272392,
+    "url": "https://github.com/python/cpython/issues/101588#issue-1571582024",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 272393,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/101588",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3949752?s\u003d64\u0026u\u003da137be5b5ea73c4e8ea264a37f38c4c60cb29e47\u0026v\u003d4",
+    "alt": "Yhg1s",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rhettinger",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3949752?s\u003d64\u0026u\u003da137be5b5ea73c4e8ea264a37f38c4c60cb29e47\u0026v\u003d4",
+    "alt": "@Yhg1s",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2855582?v\u003d4\u0026size\u003d48",
+    "alt": "@ngnpope",
+    "pageTitle": "Support Nil and Max UUID formats from RFC 9562 · Issue #128427 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Support Nil and Max UUID formats from RFC 9562 · Issue #128427 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/146201797?v\u003d4\u0026size\u003d48",
+    "alt": "@none-of-my-names-is-available",
+    "pageTitle": "Syntax error on \u0027{z} if z is not None else pass\u0027 · Issue #129515 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Syntax error on \u0027{z} if z is not None else pass\u0027 · Issue #129515 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d80\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d48\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10137?s\u003d80\u0026v\u003d4",
+    "alt": "@ghost",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/68870d968496bce047e3fa048dd4dcea846616f952ec14481efffa6e1ba845e6/68747470733a2f2f63707974686f6e2d636c61626f742e6865726f6b756170702e636f6d2f636c612d7369676e65642e737667",
+    "alt": "CLA signed",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d80\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d60\u0026v\u003d4",
+    "alt": "sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d60\u0026v\u003d4",
+    "alt": "sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d80\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d80\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d80\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d48\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d40\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d40\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d40\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d40\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d60\u0026v\u003d4",
+    "alt": "methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d60\u0026v\u003d4",
+    "alt": "methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d48\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d80\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d40\u0026u\u003d9e19667a0a93339c841b8ba4c58919180f4f1b85\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/110974?s\u003d40\u0026v\u003d4",
+    "alt": "@roryyorke",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d40\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d40\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d52\u0026v\u003d4",
+    "alt": "@Erotemic",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59365878?s\u003d52\u0026v\u003d4",
+    "alt": "@sunmy2019",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d52\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d52\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9677399?s\u003d52\u0026v\u003d4",
+    "alt": "@ofek",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d52\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d52\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d52\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103998"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
