@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 647,
+    "url": "https://www.python.org/psf/fiscal-sponsorees/",
+    "title": "Fiscal Sponsorees | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e About\u003e\u003e\u003e Fiscal Sponsorees The Python Software Foundation promotes, protects, and advances the Python programming language and supports and facilitates the growth of a diverse and international community of Python programmers. Part of that mission includes acting as a fiscal sponsor to mission-related Python events, groups, and projects. The PSF provides 501(c)(3) tax-exempt status to fiscal sponsorees and manages back office issues like cash flow, accounting, budgeting, insurance, and contract/legal support, as well as access to nonprofit discounts. You can support one of the PSF\u0027s fiscal sponsorees by using our unified Linktr.ee donation page or scroll down and donation to the project of your choice. Every donation, no matter how small, helps sustain Python events and projects! At this time, the Python Software Foundation is not accepting new fiscal sponsoree requests. When we are able to accept new fiscal sponsoree applications, we will update this page to provide information about the PSF\u0027s fiscal sponsorship program. Our general process begins with an email from your project to us. Next, we provide you a fiscal sponsorship questionnaire and materials about how the PSF supports fiscal sponsorees, as well as an introductory call to discuss how your event, group, or project fits with the PSF\u0027s charitable mission. Generally, we do pause reviews of new fiscal sponsorship requests the month before and after the annual PyCon US. Bandit Bandit is a prominent open source project that focuses on the field of application security in Python. Developed and maintained by a dedicated community of developers, Bandit is designed to identify and highlight potential security vulnerabilities and weaknesses within Python codebases. As a static code analysis tool, Bandit scans through the source code, leveraging a wide range of security checks and rules to detect common security issues, such as SQL injections, cross-site scripting (XSS) attacks, and insecure cryptographic implementations.. Your contribution sustains Bandit developers and maintainers. Bay Area Python Association (BAPyA) BAPyA is a group of Python community organizers in the San Francisco Bay Area dedicated to supporting local gatherings to learn and discuss Python. Please consider supporting the BAPyA community with a contribution. Boston Python Boston Python is one of the world\u0027s largest local Python user groups. We have a presentation night and a project night almost every month, and run weekend workshops to introduce beginners to Python. Your donation helps keep the Python community in Boston vibrant! ChiPy Founded in 2003, ChiPy (Chicago Python User Group) has over 1,000 active members with a focus on the Python Programming Language. Meetings are open to all levels! Our main meetings are on the 2nd Thursday of every month. We also offer several SIGs (Special Interest Groups) in Mentorship, Data Science, Web technologies, and Finance. Please consider supporting the Chicago Python community! Denver Python Users Group Denver Python Users Group welcomes those interested in learning about Python or connecting with other Python professionals. We have a smaller weekly Meetup for people to work on Python projects and a larger monthly Meetup with speakers and talks. You can help support ongoing meeting costs by donating! Jazzband Jazzband is a project that secures the long-term maintenance of Python projects that have passed their first life-cycle as single-author projects. Jazzband\u0027s intention is to break the cycle of loss of maintenance of established, well-tested, well-documented projects when their original author steps away (bus factor problem) using cooperative coding. You can support Jazzband to help keep Python projects alive. North Bay Python North Bay Python is a boutique, one-track conference held annually in Petaluma, CA. We take inclusion seriously and ensure our speakers come from a diverse, international lineup. To reduce costs for future attendees, consider donating to North Bay Python. Pallets Pallets develops and supports Flask, Jinja, Werkzeug, Click, and other Python libraries. These libraries power applications of all sizes around the world and are downloaded millions of times each month. Despite their popularity, the projects are primarily maintained by only a few developers. You can support Pallets\u0027 goal by donating via the PSF or Github Sponsors to grow the community and to create a sustainable group of contributors and users. PhillyPUG PhillyPUG, the Philadelphia Python Users\u0027 Group, has 3,200 members growing at a rate of one new member per day. The group holds regular events including project nights, lectures, lightning talks, and workshops to attract all levels of programmers from novices to experts. Your contribution helps support the cost of these events, including",
+    "scrapedAt": "2026-10-08 19:08:46.05823"
+  },
+  {
+    "id": 646,
+    "url": "https://www.pypi.org/",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects Publishing as a team? Use an organization account 910,673 projects 9,816,965 releases 21,867,907 files 1,124,415 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. Anthropic, PBC Visionary sponsor Bloomberg Visionary sponsor Hudson River Trading Visionary sponsor Meta Visionary sponsor NVIDIA Visionary sponsor Microsoft Sustainability sponsor Depot Continuous Integration AWS Cloud computing and Security Sponsor Datadog Monitoring Fastly CDN Google Download Analytics Sentry Error logging StatusPage Status page \"PyPI\", \"Python Package Index\", and the blocks logos are registered trademarks of the Python Software Foundation. © 2026 Python Software Foundation Site map Deployed from 7beb0c8",
+    "scrapedAt": "2026-10-08 19:08:44.819852"
+  },
+  {
+    "id": 645,
+    "url": "https://www.python.org/psf/about#how-do-i-reach-the-psf",
+    "title": "About the Python Software Foundation | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e About The Python Software Foundation is the organization behind the open source Python programming language. We are devoted to creating the conditions for Python and the Python community to grow and thrive. We fulfill our mission through these core activities: Infrastructure STRUCTURE AND STABILITY SO THE PYTHON LANGUAGE, ITS CONTRIBUTORS, AND USERS CAN THRIVE. We distribute Python, free of charge and available to all, for ever. We are the stewards of Python intellectual property—We establish PSF licenses, hold intellectual property rights to most Python releases, and protect Python-related trademarks. We put resources behind and help coordinate and improvements to the Python codebase and new Python releases. Community CONNECTION, DIVERSITY, SUPPORT, AND GROWTH FOR ALL WITHIN THE PYTHON COMMUNITY. We host PyCon US, the longest running annual event for celebrating, learning about, and coming together around Python. We give grants to groups around the world hosting events for and by Pythonistas supporting each other and welcoming newcomers. In 2024, the PSF awarded $655,000 USD to 257 groups or individuals in 61 countries around the world. We are responsible for establishing, maintaining, and enforcing the Python Code of Conduct, to work towards a Python community that is a safe and welcoming space for all. We provide and support resources to attract new Python users and keep the community growing, diverse, and healthy. We fiscally sponsor 20 Python-related community groups, conferences, and projects—including PyLadies, PyCascades, and Palletsto allow them to continue their contributions to the community with organizational infrastructure behind them. Investing in Python \u0026 Tools WE BUILD, SUPPORT, AND MAINTAIN CRITICAL PUBLIC GOODs FOR THE PYTHON COMMUNITY. We host PyPI, the Python package repository relied on by thousands of users with a huge range of projects. We\u0027ve brought on board a Packaging Project Manager to best serve PyPI users We\u0027ve added a full-time CPython Developer in Residence to our team, who amplifies volunteer contributors’ impact by processing CPython pull requests and tackling structural improvements. OUR SPONSORS DONATE TO THE PSF BECOME A MEMBER GET INVOLVED ANNUAL IMPACT REPORT NEWS \u0026 UPDATES PSF FAQ APPLY FOR A GRANT PYCON US The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 19:08:43.59403"
+  },
+  {
+    "id": 643,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2",
+    "title": "Donation for the PSF – Python Software Foundation",
+    "content": "Skip to content The Python Software Foundation is the 501(c)(3) charitable organization behind the Python programming language. Our mission is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. The PSF’s team is small, but mighty, and donations from individuals like you are critical to keeping our work going year after year. Your donations allow us to keep supporting Python and its community, in a range of ways including: CPYTHON: We hold and defend Python’s IP; we host python.org where Python is downloaded millions of times daily. We contribute directly to the language’s continuous improvement through our team of three CPython Developers-in-Residence. PYPI: We run the Python Package Index, a public service utilized by millions of users– supported by a full-time PyPI Support Specialist. On average pypi.org receives 6 million unique visitors per month, who download billions of files per day. PYCON US: We run PyCon US, the flagship annual Python conference, which brings together Python users from beginners to experts from around the world. PyCon US is the place where individuals, projects, and companies gather annually to learn and connect around all things Python. PyCon US is volunteer-driven, and always by the community, for the community. SECURITY: We proactively maintain and improve security for the full Python ecosystem through our Security Developer-in-Residence and PyPI Safety \u0026 Security Engineer. COMMUNITY GRANTS: We support worldwide events and groups in the thriving global Python community, providing grants to local Python groups around the world as well as travel grants to individuals to attend PyCon US. In 2024, we disbursed a record $952,000 in grants to 174 groups across 52 countries. FISCAL SPONSORSHIP: We act as fiscal sponsor to mission-related Python events, groups, and projects. We provide 501(c)(3) tax-exempt status to our fiscal sponsorees and manage back office issues like cash flow, accounting, budgeting, insurance, and contract/legal support, as well as access to nonprofit discounts. Thank you for your support! We are so grateful to be able to rely on our wonderful community. Suggested Donation Amount $25 $50 $100 $256 $500 $1000 - none - Other Donation Amount Optional: Checking this box covers the PSF\u0027s 3% processing fees and makes your gift go further. Thank you! Total Amount I want to contribute this amount every month year for installments You can specify the number of installments, or you can leave the number of installments blank if you want to make an open-ended commitment. In either case, you can choose to cancel at any time. Email Address * * Payment Options Payment Method Credit Card PayPal Stripe Checkout Physical check (USD only) Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepa",
+    "scrapedAt": "2026-10-08 19:08:42.142433"
+  },
+  {
+    "id": 641,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2",
+    "title": "Donation for the PSF – Python Software Foundation",
+    "content": "Skip to content The Python Software Foundation is the 501(c)(3) charitable organization behind the Python programming language. Our mission is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. The PSF’s team is small, but mighty, and donations from individuals like you are critical to keeping our work going year after year. Your donations allow us to keep supporting Python and its community, in a range of ways including: CPYTHON: We hold and defend Python’s IP; we host python.org where Python is downloaded millions of times daily. We contribute directly to the language’s continuous improvement through our team of three CPython Developers-in-Residence. PYPI: We run the Python Package Index, a public service utilized by millions of users– supported by a full-time PyPI Support Specialist. On average pypi.org receives 6 million unique visitors per month, who download billions of files per day. PYCON US: We run PyCon US, the flagship annual Python conference, which brings together Python users from beginners to experts from around the world. PyCon US is the place where individuals, projects, and companies gather annually to learn and connect around all things Python. PyCon US is volunteer-driven, and always by the community, for the community. SECURITY: We proactively maintain and improve security for the full Python ecosystem through our Security Developer-in-Residence and PyPI Safety \u0026 Security Engineer. COMMUNITY GRANTS: We support worldwide events and groups in the thriving global Python community, providing grants to local Python groups around the world as well as travel grants to individuals to attend PyCon US. In 2024, we disbursed a record $952,000 in grants to 174 groups across 52 countries. FISCAL SPONSORSHIP: We act as fiscal sponsor to mission-related Python events, groups, and projects. We provide 501(c)(3) tax-exempt status to our fiscal sponsorees and manage back office issues like cash flow, accounting, budgeting, insurance, and contract/legal support, as well as access to nonprofit discounts. Thank you for your support! We are so grateful to be able to rely on our wonderful community. Suggested Donation Amount $25 $50 $100 $256 $500 $1000 - none - Other Donation Amount Optional: Checking this box covers the PSF\u0027s 3% processing fees and makes your gift go further. Thank you! Total Amount I want to contribute this amount every month year for installments You can specify the number of installments, or you can leave the number of installments blank if you want to make an open-ended commitment. In either case, you can choose to cancel at any time. Email Address * * Payment Options Payment Method Credit Card PayPal Stripe Checkout Physical check (USD only) Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepa",
+    "scrapedAt": "2026-10-08 19:08:40.561824"
+  },
+  {
+    "id": 638,
+    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement",
+    "scrapedAt": "2026-10-08 19:08:38.64136"
+  },
+  {
     "id": 633,
     "url": "http://opendataservices.coop/",
     "title": "ODS",
@@ -4215,30 +4255,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 638,
-    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
-  },
-  {
-    "id": 641,
-    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
-  },
-  {
-    "id": 643,
-    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2"
-  },
-  {
-    "id": 645,
-    "url": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
-  },
-  {
-    "id": 646,
-    "url": "https://www.pypi.org/"
-  },
-  {
-    "id": 647,
-    "url": "https://www.python.org/psf/fiscal-sponsorees/"
   },
   {
     "id": 648,
@@ -100717,10 +100733,371 @@ window.searchData = [
     "id": 71136,
     "url": "https://opendataservices.coop/work/data-governance-frameworks-distributed-renewable-energy/",
     "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71138,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2#content",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
+  },
+  {
+    "id": 71140,
+    "url": "http://python.org/psf/",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
+  },
+  {
+    "id": 71146,
+    "url": "https://www.python.org/psf/faq/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71150,
+    "url": "https://www.python.org/psf/news-and-community/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71151,
+    "url": "https://python.org/downloads/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71153,
+    "url": "https://pypi.org/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71157,
+    "url": "https://python.org/psf/grants/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71158,
+    "url": "https://policies.python.org/python.org/code-of-conduct/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71184,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d47",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71185,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d46",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71187,
+    "url": "https://www.pypa.io/en/latest/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71188,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d48",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71189,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d43",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71191,
+    "url": "https://pycascades.com/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71193,
+    "url": "https://rockypython.org/denverpython/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71194,
+    "url": "http://www.pyrva.org/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71195,
+    "url": "http://www.pyhawaii.com/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71196,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d42",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71197,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d35",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71198,
+    "url": "http://www.meetup.com/phillypug/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71199,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d4",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71200,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d6",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71202,
+    "url": "https://github.com/sponsors/pallets",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71203,
+    "url": "https://www.pythonsd.org/index.html",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71204,
+    "url": "https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71205,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d15",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71206,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d10",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71207,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d11",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71208,
+    "url": "https://palletsprojects.com/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71209,
+    "url": "https://2020.pybeach.org/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71211,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d27",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71212,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d60",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71213,
+    "url": "https://twisted.org/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71214,
+    "url": "https://www.meetup.com/PSPPython/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71215,
+    "url": "https://www.pyohio.org",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71216,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d28",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71217,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d29",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71218,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d23",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71219,
+    "url": "https://github.com/PyCQA/bandit",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71220,
+    "url": "https://www.meetup.com/bostonpython/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71221,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d20",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71222,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d9",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71223,
+    "url": "https://github.com/sponsors/pypa",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71224,
+    "url": "https://jazzband.co/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71225,
+    "url": "https://northbaypython.org/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71226,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d55",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71227,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d59",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71228,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d54",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71229,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d53",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71230,
+    "url": "https://www.bapya.org/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71231,
+    "url": "http://www.pyladies.com/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71232,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d34",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 71233,
+    "url": "https://www.chipy.org/",
+    "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/psf/fiscal-sponsorees/fiscalsponsoreechart.png",
+    "alt": "Alt text",
+    "pageTitle": "Fiscal Sponsorees | Python Software Foundation",
+    "pageUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/psf/fiscal-sponsorees/Bandit_-_logotype-sm_15percent_20230825.png",
+    "alt": "Alt text",
+    "pageTitle": "Fiscal Sponsorees | Python Software Foundation",
+    "pageUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/0e16ff2846ab7bc04f1e52d760b072c987232f52/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f416e7468726f7069635f6c6f676f5f2d5f536c6174652e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/2056e7cc45e271b6b509980e9ff24b8b6346f2f4/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f626c6f6f6d626572672e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/7e24ecafc35532bbd56c7c91521ea6701110c742/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6872742e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/6f7cbf25b7d9ee146661528e012e8fa51d6f3337/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f4d6574615f6c6f636b75705f706f7369746976655f7072696d6172795f5247425f636f70795f68546b493532472e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/22baa32a7b36b109ce052634015d878f5d029280/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6e76696469612e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/34ebcaca9a4316e862f2f7641b12534f0cb81bf1/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6d6963726f736f66742e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/237c8773674b9f8beff9f894a07424e3b579cd6a/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d636f6c6f722d6c6f676f2d35567a75416e7a6b2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/f0e9bd2edb2aa1c533d61b0d4fda0ee761bef88a/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d636f6c6f722d6c6f676f2d416c6f43525230612e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/530379bec76c3440bd94a24092f49e27323ad0d7/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d636f6c6f722d6c6f676f2d71616563774a67722e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/9706778018adad6f5bf682f55d7bbc226abe551c/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d636f6c6f722d6c6f676f2d766c6d424c33654c2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/522342e78db3080c18697369dde99a0ed7925e86/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d636f6c6f722d6c6f676f2d32755437496c54702e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/f2a422796f8e4d51d60d7030b7973aa1651bd096/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d636f6c6f722d6c6f676f2d346e306a654878502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b0ba0741ac65afcb01ebb4bbf0634c54b8a15827/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d636f6c6f722d6c6f676f2d423232436b746e6b2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://www.pypi.org/"
+  },
   {
     "src": "https://opendataservices.coop/_astro/designing-a-more-joined-up-way-to-assess-policy-impact.DngMG0OV_2hrmkX.webp",
     "alt": "",
