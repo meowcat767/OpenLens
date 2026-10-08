@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1511,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.fromkeys",
+    "title": "Built-in Types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer litera",
+    "scrapedAt": "2026-10-08 19:45:37.735761"
+  },
+  {
+    "id": 1510,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id7",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:45:36.355504"
+  },
+  {
+    "id": 1509,
+    "url": "https://docs.python.org/3/library/shlex.html#module-shlex",
+    "title": "shlex — Simple lexical analysis — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Unix-specific services » shlex — Simple lexical analysis | Theme Auto Light Dark | shlex — Simple lexical analysis¶ Source code: Lib/shlex.py The shlex class makes it easy to write lexical analyzers for simple syntaxes resembling that of the Unix shell. This will often be useful for writing minilanguages, (for example, in run control files for Python applications) or for parsing quoted strings. The shlex module defines the following functions: shlex.split(s, comments\u003dFalse, posix\u003dTrue)¶ Split the string s using shell-like syntax. If comments is False (the default), the parsing of comments in the given string will be disabled (setting the commenters attribute of the shlex instance to the empty string). This function operates in POSIX mode by default, but uses non-POSIX mode if the posix argument is false. Changed in version 3.12: Passing None for s argument now raises an exception, rather than reading sys.stdin. shlex.join(split_command)¶ Concatenate the tokens of the list split_command and return a string. This function is the inverse of split(). \u003e\u003e\u003e from shlex import join\n\u003e\u003e\u003e print(join([\u0027echo\u0027, \u0027-n\u0027, \u0027Multiple words\u0027]))\necho -n \u0027Multiple words\u0027\n The returned value is shell-escaped to protect against injection vulnerabilities (see quote()). Added in version 3.8. shlex.quote(s)¶ Return a shell-escaped version of the string s. The returned value is a string that can safely be used as one token in a shell command line, for cases where you cannot use a list. Warning The shlex module is only designed for Unix shells. The quote() function is not guaranteed to be correct on non-POSIX compliant shells or shells from other operating systems such as Windows. Executing commands quoted by this module on such shells can open up the possibility of a command injection vulnerability. Consider using functions that pass command arguments with lists such as subprocess.run() with shell\u003dFalse. This idiom would be unsafe: \u003e\u003e\u003e filename \u003d \u0027somefile; rm -rf ~\u0027\n\u003e\u003e\u003e command \u003d \u0027ls -l {}\u0027.format(filename)\n\u003e\u003e\u003e print(command)  # executed by a shell: boom!\nls -l somefile; rm -rf ~\n quote() lets you plug the security hole: \u003e\u003e\u003e from shlex import quote\n\u003e\u003e\u003e command \u003d \u0027ls -l {}\u0027.format(quote(filename))\n\u003e\u003e\u003e print(command)\nls -l \u0027somefile; rm -rf ~\u0027\n\u003e\u003e\u003e remote_command \u003d \u0027ssh home {}\u0027.format(quote(command))\n\u003e\u003e\u003e print(remote_command)\nssh home \u0027ls -l \u0027\"\u0027\"\u0027somefile; rm -rf ~\u0027\"\u0027\"\u0027\u0027\n The quoting is compatible with UNIX shells and with split(): \u003e\u003e\u003e from shlex import split\n\u003e\u003e\u003e remote_command \u003d split(remote_command)\n\u003e\u003e\u003e remote_command\n[\u0027ssh\u0027, \u0027home\u0027, \"ls -l \u0027somefile; rm -rf ~\u0027\"]\n\u003e\u003e\u003e command \u003d split(remote_command[-1])\n\u003e\u003e\u003e command\n[\u0027ls\u0027, \u0027-l\u0027, \u0027somefile; rm -rf ~\u0027]\n Added in version 3.3. The shlex module defines the following class: class shlex.shlex(instream\u003dNone, infile\u003dNone, posix\u003dFalse, punctuation_chars\u003dFalse)¶ A shlex instance or subclass instance is a lexical analyzer object. The initialization argument, if present, specifies where to read characters from. It must be a file-/stream-like object with read() and readline() methods, or a string. If no argument is given, input will be taken from sys.stdin. The second optional argument is a filename string, which sets the initial value of the infile attribute. If the instream argument is omitted or equal to sys.stdin, this second argument defaults to “stdin”. The posix argument defines the operational mode: when posix is not true (default), the shlex instance will operate in compatibility mode. When operating in POSIX mode, shlex will try to be as close as possible to the POSIX shell parsing rules. The punctuation_chars argument provides a way to make the behaviour even closer to how real shells parse. This can take a number of values: the default value, False, preserves the behaviour seen under Python 3.5 and earlier. If set to True, then parsing of the characters ();\u003c\u003e|\u0026 is changed: any run of these characters (considered punctuation characters) is returned as a single token. If set to a non-empty string of characters, those characters will be used as the punctuation characters. Any characters in the wordchars attribute that appear in punctuation_chars will be removed from wordchars. See Improved Compatibility with Shells for more information. punctuation_chars can be set only upon shlex instance creation and can’t be modified later. Changed in version 3.6: The punctuation_chars parameter was added. See also Module configparser Parser for configuration files similar to the Windows .ini files. shlex Objects¶ A shlex instance has the following methods: shlex.get_token()¶ Return a token. If tokens have been stacked using push_token(), pop a token off the stack. Otherwise, read one from the input stream. If reading encounters an immediate end-of-file, eof is returned (the empty string (\u0027\u0027) in non-POSIX mode, and None in POSIX mode). shlex.push_token(str)¶ Push the argument onto the token stack. shle",
+    "scrapedAt": "2026-10-08 19:45:34.914023"
+  },
+  {
+    "id": 1508,
+    "url": "https://github.com/python/cpython/issues/103134",
+    "title": "Update multiprocessing.managers.ListProxy and multiprocessing.managers.DictProxy · Issue #103134 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Update multiprocessing.managers.ListProxy and multiprocessing.managers.DictProxy #103134 New issue Copy link New issue Copy link Closed Closed Update multiprocessing.managers.ListProxy and multiprocessing.managers.DictProxy#103134 Copy link Labels 3.13only security fixesonly security fixestopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Description invisibleroads opened on Mar 30, 2023 Issue body actions Feature or enhancement Standard lists accept clear as a shortcut for del xs[:] xs \u003d [\u0027a\u0027]\nxs.clear()\n However, multiprocessing.ListProxy omitted support for clear(). from multiprocessing import Manager\n\nwith Manager() as manager:\n    xs \u003d manager.list()\n    xs.clear()\n raises the following exception AttributeError: \u0027ListProxy\u0027 object has no attribute \u0027clear\u0027\n Pitch If clear is supported in a standard list, it should be supported in a multiprocessing list! Previous discussion This issue was not previously discussed. Linked PRs gh-103134: Update multiprocessing.managers.ListProxy and multiprocessing.managers.DictProxy #103133 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.13only security fixesonly security fixestopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Projects Multiprocessing issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:45:33.612977"
+  },
+  {
+    "id": 1507,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy",
+    "title": "Policies — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:45:31.111428"
+  },
+  {
     "id": 1506,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#id2",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -10115,26 +10150,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1507,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
-  },
-  {
-    "id": 1508,
-    "url": "https://github.com/python/cpython/issues/103134"
-  },
-  {
-    "id": 1509,
-    "url": "https://docs.python.org/3/library/shlex.html#module-shlex"
-  },
-  {
-    "id": 1510,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id7"
-  },
-  {
-    "id": 1511,
-    "url": "https://docs.python.org/3/library/stdtypes.html#dict.fromkeys"
   },
   {
     "id": 1512,
@@ -244231,10 +244246,245 @@ window.searchData = [
     "id": 312981,
     "url": "https://github.com/rindeal",
     "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 316745,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/103134",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316746,
+    "url": "https://github.com/python/cpython/issues/103134#top",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316748,
+    "url": "https://github.com/invisibleroads",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316749,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/103134",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316752,
+    "url": "https://github.com/python/cpython/issues/103134#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316753,
+    "url": "https://github.com/python/cpython/pull/103133",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316754,
+    "url": "https://github.com/python/cpython/issues/103134#issue-1648088592",
+    "parentUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 316756,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.join",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316758,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.wordchars",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316762,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/shlex.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316763,
+    "url": "https://docs.python.org/3/library/shlex.html#improved-shell-compatibility",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316764,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.read_token",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316766,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.pop_source",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316767,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.instream",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316769,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.whitespace",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316771,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.get_token",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316772,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.eof",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316773,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.debug",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316775,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.sourcehook",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316777,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.commenters",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316778,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.source",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316779,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.error_leader",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316781,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.push_source",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316782,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316785,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.escapedquotes",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316788,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/shlex.py",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316789,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.escape",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316790,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.punctuation_chars",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316796,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.whitespace_split",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316798,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.infile",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316799,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.token",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316803,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.push_token",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316808,
+    "url": "https://docs.python.org/3/library/shlex.html#",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316809,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.lineno",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 316811,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.shlex.quotes",
+    "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#dict.fromkeys"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#dict.fromkeys"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id7"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id7"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "shlex — Simple lexical analysis — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "shlex — Simple lexical analysis — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/266668?u\u003dc3a15aa304a9cf04ee9679f919bb2e2cd6145da3\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@invisibleroads",
+    "pageTitle": "Update multiprocessing.managers.ListProxy and multiprocessing.managers.DictProxy · Issue #103134 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Update multiprocessing.managers.ListProxy and multiprocessing.managers.DictProxy · Issue #103134 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
