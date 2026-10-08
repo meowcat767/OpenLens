@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 410,
+    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.spdx.json",
+    "title": "",
+    "content": "{ \"SPDXID\": \"SPDXRef-DOCUMENT\", \"creationInfo\": { \"created\": \"2026-04-07T15:11:42Z\", \"creators\": [ \"Person: Python Release Managers\", \"Tool: ReleaseTools-2133a4a21a9fe2acc68a130eaf615deae3c6080c\" ], \"licenseListVersion\": \"3.22\" }, \"dataLicense\": \"CC0-1.0\", \"documentNamespace\": \"https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.spdx.json\", \"files\": [ { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-COPYING\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"f1b1126ed7da8f2068302e7a692b0600e6f94b07\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87\" } ], \"fileName\": \"Modules/expat/COPYING\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-ascii.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"b0235fa3cf845a7d68e8e66dd344d5e32e8951b5\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"42f8b392c70366743eacbc60ce021389ccaa333598dd49eef6ee5c93698ca205\" } ], \"fileName\": \"Modules/expat/ascii.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-asciitab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"cbb53d16ca1f35ee9c9e296116efd222ae611ed9\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"1cc0ae749019fc0e488cd1cf245f6beaa6d4f7c55a1fc797e5aa40a408bc266b\" } ], \"fileName\": \"Modules/expat/asciitab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-expat.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"9dfd09a3be37618cbcea380c2374b2b8f0288f57\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"26805a0d1a7a6a5cd8ead9cf7f4da29f63f0547a9ad41e80dba4ed9fe1943140\" } ], \"fileName\": \"Modules/expat/expat.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-expat-external.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"da0328279276800cc747ea7da23886a3f402ccb3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"15a80e414e9e7c43edba64b1608a77c724387070138693f9e9bcca49c78a2df7\" } ], \"fileName\": \"Modules/expat/expat_external.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-iasciitab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"1b0e9014c0baa4c6254d2b5e6a67c70148309c34\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"ad8b01e9f323cc4208bcd22241df383d7e8641fe3c8b3415aa513de82531f89f\" } ], \"fileName\": \"Modules/expat/iasciitab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-internal.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"6a4a232233ba1034c3f2b459159d502e9b2d413b\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"c803935722f0dbdeeede7f040028fb119135e96dfad949479f8a5304b885bdd6\" } ], \"fileName\": \"Modules/expat/internal.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-latin1tab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"d335ecca380e331a0ea7dc33838a4decd93ec1e4\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"eab66226da100372e01e42e1cbcd8ac2bbbb5c1b5f95d735289cc85c7a8fc2ba\" } ], \"fileName\": \"Modules/expat/latin1tab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-nametab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"cf2bc9626c945826602ba9170786e9a2a44645e4\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"67dcf415d37a4b692a6a8bb46f990c02d83f2ef3d01a65cd61c8594a084246f2\" } ], \"fileName\": \"Modules/expat/nametab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-siphash.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"aca27f46d9fd387b63ce7ff2e4f172cad130b39b\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"f537add526ecda8389503b7ef45fb52b6217e4dc171dcc3a8dc6903ff6134726\" } ], \"fileName\": \"Modules/expat/siphash.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-utf8tab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"b77c8fcfb551553c81d6fbd94c798c8aa04ad021\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"8cd26bd461d334d5e1caedb3af4518d401749f2fc66d56208542b29085159c18\" } ], \"fileName\": \"Modules/expat/utf8tab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-winconfig.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"a3a8c44efd55dbf2cfea8fcee009ec63120ec0a3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"e70948500d34dfcba4e9f0b305319dfe2a937c7cbfb687905128b56e1a6f8b33\" } ], \"fileName\": \"Modules/expat/winconfig.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlparse.c\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"0c74fbd48dd515c58eeb65b7e71b29da94be4694\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"861e7a50ce81f9f16b42d32a9caa4f817d962b274b2929b579511c6f76d348d4\" } ], \"fileName\": \"Modules/expat/xmlparse.c\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlrole.c\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"7cff4d7210f046144f5fa635113f9c26f30fe3d3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"eaa6c327f9db4a5cec768d0c01927fea212d3ef4d4f970ebc0a98b9f3602784c\" } ], \"fileName\": \"Modules/expat/xmlrole.c\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlrole.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"ac2964cca107f62dd133bfd4736a9a17defbc401\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"92e41f373b67f6e0dcd7735faef3c3f1e2c17fe59e007e6b74beef6a2e70fa88\" } ], \"fileName\": \"Modules/expat/xmlrole.h\" },",
+    "scrapedAt": "2026-10-08 19:01:09.643806"
+  },
+  {
+    "id": 409,
+    "url": "https://www.python.org/downloads/release/python-3145rc1/",
+    "title": "Python Release Python 3.14.5rc1 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Note: Python 3.14.5rc1 has been superseded by Python 3.14.8. Release date: May 4, 2026 Python 3.14.5rc1 is a release candidate for the fifth maintenance release of 3.14, containing around 113 bugfixes, build improvements and documentation changes since 3.14.4. Garbage collector Notably, the garbage collector (GC) has changed in Python 3.14.5rc1. The incremental garbage collector shipped in Python 3.14.0-3.14.4 has been reverted back to the generational garbage collector from 3.13, due to a number of reports of significant memory pressure in production environments. See What\u0027s New and discuss.python.org for details. Call to action We strongly encourage testing of this release candidate, ahead of the planned 3.14.5 final on Friday 2026-05-08. As always, report any issues to the Python bug tracker. Please keep in mind that this is a preview release and its use is not recommended for production environments. Major new features of the 3.14 series, compared to 3.13 Some of the major new features and changes in Python 3.14 are: New features PEP 779: Free-threaded Python is officially supported PEP 649: The evaluation of annotations is now deferred, improving the semantics of using annotations. PEP 750: Template string literals (t-strings) for custom string processing, using the familiar syntax of f-strings. PEP 734: Multiple interpreters in the stdlib. PEP 784: A new module compression.zstd providing support for the Zstandard compression algorithm. PEP 758: except and except* expressions may now omit the brackets. Syntax highlighting in PyREPL, and support for color in unittest, argparse, json and calendar CLIs. PEP 768: A zero-overhead external debugger interface for CPython. UUID versions 6-8 are now supported by the uuid module, and generation of versions 3-5 are up to 40% faster. PEP 765: Disallow return/break/continue that exit a finally block. PEP 741: An improved C API for configuring Python. A new type of interpreter. For certain newer compilers, this interpreter provides significantly better performance. Opt-in for now, requires building from source. Improved error messages. Builtin implementation of HMAC with formally verified code from the HACL* project. A new command-line interface to inspect running Python processes using asynchronous tasks. The pdb module now supports remote attaching to a running Python process. For more details on the changes to Python 3.14, see What’s new in Python 3.14. Build changes PEP 761: Python 3.14 and onwards no longer provides PGP signatures for release artifacts. Instead, Sigstore is recommended for verifiers. Official macOS and Windows release binaries include an experimental JIT compiler. Official Android binary releases are now available. Incompatible changes, removals and new deprecations Incompatible changes Python removals and deprecations C API removals and deprecations Overview of all pending deprecations Python install manager The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases. More resources Online documentation PEP 745, 3.14 Release Schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community And now for something completely different I asked Rodrigo Girão Serrão for a fun π fact: Euler\u0027s identity says that eiπ + 1 \u003d 0 and is often cited as an equality of profound mathematical elegance, since it relates five of the most fundamental mathematical constants: 0, 1, π, e, and i. A mathematics professor at Stanford University has said \"like a Shakespearean sonnet that captures the very essence of love, or a painting that brings out the beauty of the human form that is far more than just skin deep, Euler\u0027s equation reaches down into the very depths of existence\". Source Enjoy the new release Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation. Full Changelog macOS Download macOS installer Windows Download Python install manager Source release Download XZ compressed source tarball Version Operating system Description File size Sigstore SBOM SHA-256 checksum Gzipped source tarball Source release 29.8 MB .sigstore SPDX 6d3e5301534e221e2a4e8add507fb1a20e31d3530d32eb618f3ae0a7170bc2f0 XZ compressed source tarball Source r",
+    "scrapedAt": "2026-10-08 19:01:08.264785"
+  },
+  {
+    "id": 408,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:01:07.118869"
+  },
+  {
+    "id": 407,
+    "url": "https://github.com/python/cpython/issues",
+    "title": "Issues · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Collapse sidebar Issues Change the issues type filter Issues New issue Search issues is:issue state:open is:issue state:open Clear filter Search Issues Open 6,999 (6,999) Closed Author Labels Projects Milestones Assignees Types Newest Comfortable display density Compact display density A minor problem with the section \"6.10.2. Membership test operations\" from the language reference. docs python/cpython#159034 · Filter by author JonothorDarry opened on Oct 8, 2026 3.13.16: test_math fails to import on musl (linked_to_musl() returns bool, compared to tuple) 3.13OS-unsupportedpendingteststype-bug python/cpython#159015 · Filter by author agners opened on Oct 8, 2026 3 Docs: tarfile.LinkFallbackError versionadded says 3.15, but it ships in 3.14.0 and 3.9.23+ docspending python/cpython#159013 · Filter by author ArtVsMark opened on Oct 8, 2026 2 Docs: socket.htons() and friends raise ValueError for negative input since 3.14 docs python/cpython#159012 · Filter by author ArtVsMark opened on Oct 8, 2026 1 Docs: threading says dummy thread objects are never deleted, outdated since 3.13 docs python/cpython#159011 · Filter by author ArtVsMark opened on Oct 8, 2026 1 Docs: -X disable_remote_debug is spelled with an underscore, but the interpreter only accepts disable-remote-debug docs python/cpython#159010 · Filter by author ArtVsMark opened on Oct 8, 2026 Windows: import hashlib loads user32.dll and the GDI DLLs through libcrypto; delay-load user32 buildextension-modulesOS-windowspendingtype-feature python/cpython#159008 · Filter by author azchohfi opened on Oct 8, 2026 2 Document Flet in macOS, iOS, and Android guides docs python/cpython#159003 · Filter by author FeodorFitsner opened on Oct 8, 2026 1 os.statx() ignores follow_symlinks\u003dFalse 3.15stdlibtype-bug python/cpython#158998 · Filter by author jjhelmus opened on Oct 7, 2026 1 Check that Emscripten free-threaded build works OS-emscriptentopic-free-threading python/cpython#158996 · Filter by author hoodmane opened on Oct 7, 2026 profiling.sampling reports third-party modules as stdlib when site-packages is inside the stdlib directory stdlibtopic-profilingtype-bug python/cpython#158986 · Filter by author sricursion opened on Oct 7, 2026 cProfile and profile: -m MODULE does not run MODULE as __main__ pendingstdlibtopic-profilingtype-bug python/cpython#158985 · Filter by author sricursion opened on Oct 7, 2026 1 xml.dom.minidom: writexml() treats a setAttribute(\"xmlns:p\", ...) attribute as a declaration of the default namespace stdlibtopic-XMLtype-bug python/cpython#158984 · Filter by author sricursion opened on Oct 7, 2026 Subscripting a generic alias without an argument for a parameter with a default fails stdlibtopic-typingtype-bug python/cpython#158981 · Filter by author sricursion opened on Oct 7, 2026 Windows cpXXX codecs: StreamReader raises TypeError (decode() missing \u0027final\u0027) 3.143.153.16OS-windowstype-bug python/cpython#158980 · Filter by author sricursion opened on Oct 7, 2026 textwrap.wrap() and fill() loop forever when the indent is wider than width stdlibtype-bug python/cpython#158979 · Filter by author sricursion opened on Oct 7, 2026 xml.dom.minidom: cloneNode() and importNode() raise NamespaceErr for DOM Level 1 nodes stdlibtopic-XMLtype-bug python/cpython#158978 · Filter by author sricursion opened on Oct 7, 2026 Unreliable imap test in test_multiprocessing with fixed sleep duration teststopic-multiprocessingtype-bug python/cpython#158975 · Filter by author nascheme opened on Oct 7, 2026 os.fork() child can hang inside PyOS_AfterFork_Child() on the warnings lock (3.14 regression) 3.143.153.16extension-modulestype-bug python/cpython#158973 · Filter by author krassowski opened on Oct 7, 2026 Free-threaded build never returns freed memory to the OS on macOS, even with gc.collect() and MIMALLOC_PURGE_DELAY\u003d0 interpreter-coreperformancetopic-free-threadingtype-bug python/cpython#158972 · Filter by author dotdandotunderscore opened on Oct 7, 2026 2 profiling.sampling --async-aware misses main interpreter tasks when subinterpreters exist stdlibtopic-profilingtopic-subprocesstype-bug python/cpython#158968 · Filter by author deadlovelll opened on Oct 7, 2026 LeakSanitizer reports leaked code object during SQLAlchemy editable build on 3.15 and main pendingtype-bug python/cpython#158963 · Filter by author ashm-dev opened on Oct 7, 2026 4 PyREPL corrupts attribute completion input on WSL/Windows Terminal OS-windowsstdlibtopic-repltype-bug python/cpython#158955 · Filter by author svankan opened on Oct 7, 2026 4 _pyio.BytesIO.readinto() advances the stream when passed a read-only buffer stdlibtopic-IOtype-bug python/cpython#158952 · Filter by author emerardd opened on Oct 7, 2026 Rework Modules/get",
+    "scrapedAt": "2026-10-08 19:01:05.886925"
+  },
+  {
+    "id": 406,
+    "url": "https://www.python.org/download/sbom/",
+    "title": "Software Bill-of-Materials Information | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Background Starting with the Python 3.12.2 release, CPython release artifacts include Software Bill-of-Materials (SBOM) documents. This page provides guidance on downloading and using Software Bill-of-Materials documents describing CPython release artifacts. Currently SBOM documents are only available for source code releases. What is a Software Bill-of-Materials (SBOM)? Software Bill-of-Materials documents are like a list of ingredients for a piece of software, describing each component, where the component was sourced from, and how each component was combined into the final software artifact. SBOM documents implement an ecosystem-independent format and can be used for supply chain management and tracking vulnerabilities in software. Getting started with CPython SBOMs CPython provides SBOM documents using the SPDX 2 standard and using JSON as the encoding format. Other formats like CycloneDX can be created using transformation tools like protobom, if desired. SBOM documents will use the artifact name that they describe as a base with the appropriate file extension for the format (ie .spdx.json) appended to the end. For example, when downloading the SBOM document for the source tarball Python-3.12.2.tgz the SBOM document will be named Python-3.12.2.tgz.spdx.json. SBOM documents can be downloaded from the Python release page or can be downloaded using an HTTP client. Below is an example of downloading the SBOM document using curl: $ curl --remote-name https://www.python.org/ftp/python/3.12.2/Python-3.12.2.tgz.spdx.json\n After downloading the SBOM document there should be a file named Python-3.12.2.tgz.spdx.json in your working directory. What\u0027s included in CPython\u0027s Software Bill-of-Materials? SBOM documents include a description of the contained software, including all of its dependencies. Some examples of information about the software are: Names and versions of all software components Software identifiers (like CPE and Package URLs) Download URLs for source code with checksums File names and content checksums Dependency relationships between each component CPython SBOMs satisfy the requirements listed in the NTIA Minimum Elements for a Software Bill of Materials. Software identifiers can be used for correlating software in use to vulnerability databases like the CVE database and Open Source Vulnerability database (OSV), typically done automatically using vulnerability scanning tools. For a complete list of historical vulnerabilities affecting CPython you can query the web frontend of the OSV database. New vulnerability advisories are published to these databases in addition to the security-announce@python.org mailing list. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 19:01:04.167668"
+  },
+  {
     "id": 405,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#pep-734-multiple-interpreters-in-the-standard-library",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -2815,26 +2850,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 406,
-    "url": "https://www.python.org/download/sbom/"
-  },
-  {
-    "id": 407,
-    "url": "https://github.com/python/cpython/issues"
-  },
-  {
-    "id": 408,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html"
-  },
-  {
-    "id": 409,
-    "url": "https://www.python.org/downloads/release/python-3145rc1/"
-  },
-  {
-    "id": 410,
-    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.spdx.json"
   },
   {
     "id": 411,
@@ -88185,10 +88200,382 @@ window.searchData = [
     "id": 37362,
     "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d25",
     "parentUrl": "https://www.python.org/psf/donations/python-dev/"
+  },
+  {
+    "id": 41078,
+    "url": "https://github.com/package-url/purl-spec",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41079,
+    "url": "https://github.com/bom-squad/protobom",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41080,
+    "url": "https://osv.dev/list?ecosystem\u003d\u0026q\u003dPSF",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41081,
+    "url": "https://www.python.org/downloads/release/python-3122/",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41082,
+    "url": "https://cyclonedx.org",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41083,
+    "url": "https://spdx.github.io/spdx-spec/v2.3/",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41084,
+    "url": "https://www.cve.org",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41085,
+    "url": "https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41086,
+    "url": "https://nvd.nist.gov/products/cpe",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41087,
+    "url": "https://mail.python.org/mailman3/lists/security-announce.python.org/",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41088,
+    "url": "https://osv.dev",
+    "parentUrl": "https://www.python.org/download/sbom/"
+  },
+  {
+    "id": 41090,
+    "url": "https://github.com/python/cpython/issues/158996",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41091,
+    "url": "https://github.com/python/cpython/issues/158952",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41092,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41093,
+    "url": "https://github.com/python/cpython/issues/159008",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41094,
+    "url": "https://github.com/python/cpython/issues/158975",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41095,
+    "url": "https://github.com/python/cpython/issues/158972",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41096,
+    "url": "https://github.com/python/cpython/issues/158973",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41098,
+    "url": "https://github.com/python/cpython/issues/159003",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41099,
+    "url": "https://github.com/python/cpython/issues/158948",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41100,
+    "url": "https://github.com/python/cpython/issues/158968",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41101,
+    "url": "https://github.com/python/cpython/issues/159010",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41102,
+    "url": "https://github.com/python/cpython/issues/159011",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41103,
+    "url": "https://github.com/python/cpython/issues/158985",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41104,
+    "url": "https://github.com/python/cpython/issues/158963",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41105,
+    "url": "https://github.com/python/cpython/issues/158986",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41106,
+    "url": "https://github.com/python/cpython/issues/158984",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41107,
+    "url": "https://github.com/python/cpython/issues/158981",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41108,
+    "url": "https://github.com/python/cpython/issues/159015",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41109,
+    "url": "https://github.com/python/cpython/issues/159034",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41110,
+    "url": "https://github.com/python/cpython/issues/159012",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41111,
+    "url": "https://github.com/python/cpython/issues/159013",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41112,
+    "url": "https://github.com/python/cpython/issues/158980",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41113,
+    "url": "https://github.com/python/cpython/issues/158978",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41114,
+    "url": "https://github.com/python/cpython/issues/158979",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41115,
+    "url": "https://github.com/python/cpython/issues#",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41116,
+    "url": "https://github.com/python/cpython/issues/158998",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41117,
+    "url": "https://github.com/python/cpython/issues/158955",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 41118,
+    "url": "https://github.com/python/cpython/issues#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 42358,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-win32.zip.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42361,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-amd64.exe",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42363,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42366,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-amd64.zip.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42367,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-arm64.zip",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42370,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-amd64.exe.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42371,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-win32.zip",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42374,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-arm64.exe",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42375,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-win32.zip.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42376,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1.exe",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42379,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-amd64.exe.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42382,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-amd64.zip.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42387,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-macos11.pkg",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42389,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-x86_64-linux-android.tar.gz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42393,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tar.xz.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42394,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-arm64.zip.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42395,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-macos11.pkg.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42396,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-arm64.exe.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42397,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-aarch64-linux-android.tar.gz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42403,
+    "url": "https://docs.python.org/3.14/whatsnew/3.14.html",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42406,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tar.xz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42407,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tgz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42408,
+    "url": "https://www.python.org/ftp/python/3.14.5/windows-3.14.5rc1.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42412,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1.exe.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42413,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42414,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tgz.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42417,
+    "url": "https://www.python.org/ftp/python/3.14.5/windows-3.14.5rc1.json.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42419,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tar.xz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42421,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-amd64.zip",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42425,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tgz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42429,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1.exe.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42430,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-arm64.zip.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 42436,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-arm64.exe.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
