@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1080,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join",
+    "title": "Bytes Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Bytes Objects | Theme Auto Light Dark | Bytes Objects¶ These functions raise TypeError when expecting a bytes parameter and called with a non-bytes parameter. CPython implementation detail: The internal buffer of PyBytesObject always includes an extra trailing null byte for compatibility with null terminated C strings. This extra byte is not counted in PyBytes_Size() nor in the various length and size arguments of the functions below. type PyBytesObject¶ This subtype of PyObject represents a Python bytes object. PyTypeObject PyBytes_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python bytes type; it is the same object as bytes in the Python layer. int PyBytes_Check(PyObject *o)¶ Return true if the object o is a bytes object or an instance of a subtype of the bytes type. This function always succeeds. int PyBytes_CheckExact(PyObject *o)¶ Return true if the object o is a bytes object, but not an instance of a subtype of the bytes type. This function always succeeds. PyObject *PyBytes_FromString(const char *v)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new bytes object with a copy of the string v as value on success, and NULL on failure. The parameter v must not be NULL; it will not be checked. PyObject *PyBytes_FromStringAndSize(const char *v, Py_ssize_t len)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new bytes object with a copy of the string v as value and length len on success, and NULL on failure. If v is NULL, the contents of the bytes object are uninitialized. PyObject *PyBytes_FromFormat(const char *format, ...)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Take a C printf()-style format string and a variable number of arguments, calculate the size of the resulting Python bytes object and return a bytes object with the values formatted into it. The variable arguments must be C types and must correspond exactly to the format characters in the format string. The following format characters are allowed: Format Characters Type Comment %% n/a The literal % character. %c int A single byte, represented as a C int. %d int Equivalent to printf(\"%d\"). [1] %u unsigned int Equivalent to printf(\"%u\"). [1] %ld long Equivalent to printf(\"%ld\"). [1] %lu unsigned long Equivalent to printf(\"%lu\"). [1] %zd Py_ssize_t Equivalent to printf(\"%zd\"). [1] %zu size_t Equivalent to printf(\"%zu\"). [1] %i int Equivalent to printf(\"%i\"). [1] %x int Equivalent to printf(\"%x\"). [1] %s const char* A null-terminated C character array. %p const void* The hex representation of a C pointer. Mostly equivalent to printf(\"%p\") except that it is guaranteed to start with the literal 0x regardless of what the platform’s printf yields. An unrecognized format character causes all the rest of the format string to be copied as-is to the result object, and any extra arguments discarded. [1] (1,2,3,4,5,6,7,8) For integer specifiers (d, u, ld, lu, zd, zu, i, x): the 0-conversion flag has effect even when a precision is given. PyObject *PyBytes_FromFormatV(const char *format, va_list vargs)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Identical to PyBytes_FromFormat() except that it takes exactly two arguments. PyObject *PyBytes_FromObject(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Return the bytes representation of object o that implements the buffer protocol. Note If the object implements the buffer protocol, then the buffer must not be mutated while the bytes object is being created. Py_ssize_t PyBytes_Size(PyObject *o)¶ Part of the Stable ABI. Thread safety: Atomic. Return the length of the bytes in bytes object o. Py_ssize_t PyBytes_GET_SIZE(PyObject *o)¶ Thread safety: Atomic. Similar to PyBytes_Size(), but without error checking. char *PyBytes_AsString(PyObject *o)¶ Part of the Stable ABI. Thread safety: Safe to call from multiple threads with external synchronization only. Return a pointer to the contents of o. The pointer refers to the internal buffer of o, which consists of len(o) + 1 bytes. The last byte in the buffer is always null, regardless of whether there are any other null bytes. The data must not be modified in any way, unless the object was just created using PyBytes_FromStringAndSize(NULL, size). It must not be deallocated. If o is not a bytes object at all, PyBytes_AsString() returns NULL and raises TypeError. char *PyBytes_AS_STRING(PyObject *string)¶ Thread safety: Safe to call from multiple threads with external synchronization only. Similar to PyBytes_AsString(), but without error checking. int PyBytes_AsStringAndSize(PyObject *obj, char **buffer, Py_ssize_t *length)¶ Part of the Stable ABI. Thread safety: Safe to call from multiple thread",
+    "scrapedAt": "2026-10-08 19:26:17.338124"
+  },
+  {
+    "id": 1079,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#inspect",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:26:16.006356"
+  },
+  {
+    "id": 1078,
+    "url": "https://github.com/python/cpython/issues/120029",
+    "title": "Some flags are not publicly exported by `symtablemodule.c` · Issue #120029 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Some flags are not publicly exported by symtablemodule.c #120029 New issue Copy link New issue Copy link Closed Closed Some flags are not publicly exported by symtablemodule.c#120029 Copy link Labels type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description picnixz opened on Jun 4, 2024 Issue body actions Bug report Bug description: The symtablemodule.c file does not export DEF_COMP_ITER, DEF_TYPE_PARAM and DEF_COMP_CELL. Those flags seem to have been added after the original ones so they were probably missed/forgotten. Here is a MWE for DEF_TYPE_PARAM: \u003e\u003e\u003e import symtable\n\u003e\u003e\u003e s \u003d symtable.symtable(\"class A[T]: pass\", \"?\", \"exec\")\n\u003e\u003e\u003e s.get_children()[0].lookup(\u0027T\u0027)\n\u003csymbol \u0027T\u0027: LOCAL, DEF_LOCAL\u003e By the way, there are tests that are missing for those cases in test_symtable, so I can also add the corresponding test. I\u0027m opening a PR now, but feel free to close it if you do not want to expose too many compiler flags (though, I fail to understand why you would do so). CPython versions tested on: CPython main branch Operating systems tested on: Linux Linked PRs gh-120029: export DEF_TYPE_PARAM compiler flag #120028 gh-120029: make symtable.Symbol.__repr__ correctly reflect the compiler\u0027s flags #120099 gh-120029: refactor symtable.c (remove deprecated macros and update some values) #120218 gh-120029: remove unused macros in symtable.c #120222 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:26:14.641376"
+  },
+  {
+    "id": 1077,
+    "url": "https://github.com/python/cpython/issues/123539",
+    "title": "Improve `SyntaxError` message for `import a as b.c` · Issue #123539 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Improve SyntaxError message for import a as b.c #123539 New issue Copy link New issue Copy link Closed Closed Improve SyntaxError message for import a as b.c#123539 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on Aug 31, 2024 Issue body actions Feature or enhancement Right now it shows: \u003e\u003e\u003e import a as b.c\n  File \"\u003cunknown\u003e\", line 1\n    import a as b.c\n                 ^\nSyntaxError: invalid syntax Proposed message: \u003e\u003e\u003e import a as b.c\n  File \"\u003cunknown\u003e\", line 1\n    import a as b.c\n                ^^^\nSyntaxError: cannot use import statement with attribute Refs #123440 I have a PR ready. Linked PRs gh-123539: Improve SyntaxError msg for import as with not a name #123629 gh-123539: Add new error message changes to \"Whats New\" #133344 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees sobolevn Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:26:12.367885"
+  },
+  {
+    "id": 1076,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b16decode",
+    "title": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Data Handling » base64 — Base16, Base32, Base64, Base85 Data Encodings | Theme Auto Light Dark | base64 — Base16, Base32, Base64, Base85 Data Encodings¶ Source code: Lib/base64.py This module provides functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data. This includes the encodings specified in RFC 4648 (Base64, Base32 and Base16), the Base85 encoding specified in PDF 2.0, and non-standard variants of Base85 used elsewhere. There are two interfaces provided by this module. The modern interface supports encoding bytes-like objects to ASCII bytes, and decoding bytes-like objects or strings containing ASCII to bytes. Both base-64 alphabets defined in RFC 4648 (normal, and URL- and filesystem-safe) are supported. The legacy interface does not support decoding from strings, but it does provide functions for encoding and decoding to and from file objects. It only supports the Base64 standard alphabet, and it adds newlines every 76 characters as per RFC 2045. Note that if you are looking for RFC 2045 support you probably want to be looking at the email package instead. Changed in version 3.3: ASCII-only Unicode strings are now accepted by the decoding functions of the modern interface. Changed in version 3.4: Any bytes-like objects are now accepted by all encoding and decoding functions in this module. Ascii85/Base85 support added. RFC 4648 Encodings¶ The RFC 4648 encodings are suitable for encoding binary data so that it can be safely sent by email, used as parts of URLs, or included as part of an HTTP POST request. base64.b64encode(s, altchars\u003dNone)¶ Encode the bytes-like object s using Base64 and return the encoded bytes. Optional altchars must be a bytes-like object of length 2 which specifies an alternative alphabet for the + and / characters. This allows an application to e.g. generate URL or filesystem safe Base64 strings. The default is None, for which the standard Base64 alphabet is used. May assert or raise a ValueError if the length of altchars is not 2. Raises a TypeError if altchars is not a bytes-like object. base64.b64decode(s, altchars\u003dNone, validate\u003dFalse)¶ Decode the Base64 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional altchars must be a bytes-like object or ASCII string of length 2 which specifies the alternative alphabet used instead of the + and / characters. A binascii.Error exception is raised if s is incorrectly padded. If validate is False (the default), characters that are neither in the normal base-64 alphabet nor the alternative alphabet are discarded prior to the padding check. If validate is True, these non-alphabet characters in the input result in a binascii.Error. For more information about the strict base64 check, see binascii.a2b_base64() May assert or raise a ValueError if the length of altchars is not 2. base64.standard_b64encode(s)¶ Encode bytes-like object s using the standard Base64 alphabet and return the encoded bytes. base64.standard_b64decode(s)¶ Decode bytes-like object or ASCII string s using the standard Base64 alphabet and return the decoded bytes. base64.urlsafe_b64encode(s)¶ Encode bytes-like object s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the encoded bytes. The result can still contain \u003d. base64.urlsafe_b64decode(s)¶ Decode bytes-like object or ASCII string s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the decoded bytes. base64.b32encode(s)¶ Encode the bytes-like object s using Base32 and return the encoded bytes. base64.b32decode(s, casefold\u003dFalse, map01\u003dNone)¶ Decode the Base32 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional casefold is a flag specifying whether a lowercase alphabet is acceptable as input. For security purposes, the default is False. RFC 4648 allows for optional mapping of the digit 0 (zero) to the letter O (oh), and for optional mapping of the digit 1 (one) to either the letter I (eye) or letter L (el). The optional argument map01 when not None, specifies which letter the digit 1 should be mapped to (when map01 is not None, the digit 0 is always mapped to the letter O). For security purposes the default is None, so that 0 and 1 are not allowed in the input. A binascii.Error is raised if s is incorrectly padded or if there are non-alphabet characters present in the input. base64.b32hexencode(s)¶ Similar to b32encode() but uses the Extended Hex Alphabet, as defined in RFC 4648. Added in version 3.10. base64.b32hexdecode(s, casefold\u003dFalse)¶ Similar to b32decode() but uses the Extended Hex Alphabet, as defined in RFC 4648. This version does not allow the digit 0 (zero) to the letter O (oh) and digit 1 (one) to",
+    "scrapedAt": "2026-10-08 19:26:10.031475"
+  },
+  {
     "id": 1075,
     "url": "https://docs.python.org/3/glossary.html#term-annotate-function",
     "title": "Glossary — Python 3.14.8 documentation",
@@ -7175,26 +7210,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1076,
-    "url": "https://docs.python.org/3/library/base64.html#base64.b16decode"
-  },
-  {
-    "id": 1077,
-    "url": "https://github.com/python/cpython/issues/123539"
-  },
-  {
-    "id": 1078,
-    "url": "https://github.com/python/cpython/issues/120029"
-  },
-  {
-    "id": 1079,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#inspect"
-  },
-  {
-    "id": 1080,
-    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
   },
   {
     "id": 1081,
@@ -197846,10 +197861,472 @@ window.searchData = [
     "id": 182213,
     "url": "https://github.com/python/cpython/pull/120027",
     "parentUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 183892,
+    "url": "https://rfc.zeromq.org/spec/32/",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183894,
+    "url": "https://docs.python.org/3/library/base64.html#base64-legacy",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183897,
+    "url": "https://pdfa.org/resource/iso-32000-2/",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183898,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/base64.py",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183899,
+    "url": "https://docs.python.org/3/library/base64.html#base64.urlsafe_b64decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183905,
+    "url": "https://docs.python.org/3/library/base64.html#base64.a85decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183907,
+    "url": "https://docs.python.org/3/library/base64.html#base64.z85encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183908,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b16encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183909,
+    "url": "https://docs.python.org/3/library/base64.html#base64.encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183912,
+    "url": "https://docs.python.org/3/library/base64.html#",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183913,
+    "url": "https://docs.python.org/3/library/base64.html#base64.standard_b64encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183914,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b85encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183917,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32hexencode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183919,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b64decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183923,
+    "url": "https://docs.python.org/3/library/base64.html#base64-rfc-4648",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183924,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b85decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183928,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183930,
+    "url": "https://docs.python.org/3/library/base64.html#base64-base-85",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183931,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b64encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183933,
+    "url": "https://docs.python.org/3/library/binascii.html#module-binascii",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183934,
+    "url": "https://docs.python.org/3/library/base64.html#base64.standard_b64decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183935,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32hexdecode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183936,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1924.html",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183938,
+    "url": "https://docs.python.org/3/library/base64.html#base64.z85decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183940,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183943,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1521.html",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183945,
+    "url": "https://docs.python.org/3/library/base64.html#base64.decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183946,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/base64.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183948,
+    "url": "https://docs.python.org/3/library/base64.html#base64.a85encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183949,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.Error",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183950,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.a2b_base64",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183951,
+    "url": "https://docs.python.org/3/library/base64.html#base64.urlsafe_b64encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 183954,
+    "url": "https://github.com/python/cpython/issues/123539#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183955,
+    "url": "https://github.com/python/cpython/pull/133344",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183957,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/123539",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183958,
+    "url": "https://github.com/python/cpython/issues/123539#issue-2498899530",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183960,
+    "url": "https://github.com/python/cpython/pull/123629",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183962,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-parser%22",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183963,
+    "url": "https://github.com/python/cpython/issues/123539#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183964,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/123539",
+    "parentUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 183966,
+    "url": "https://github.com/python/cpython/pull/120218",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183967,
+    "url": "https://github.com/python/cpython/pull/120028",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183969,
+    "url": "https://github.com/python/cpython/issues/120029#issue-2333277376",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183970,
+    "url": "https://github.com/python/cpython/pull/120099",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183971,
+    "url": "https://github.com/python/cpython/issues/120029#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183973,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/120029",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183974,
+    "url": "https://github.com/python/cpython/issues/120029#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183976,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/120029",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 183977,
+    "url": "https://github.com/python/cpython/pull/120222",
+    "parentUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 185218,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_AsStringAndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185220,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromString",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185221,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_ConcatAndDel",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185225,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185228,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185233,
+    "url": "https://docs.python.org/3/c-api/bytes.html#bytes-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185234,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Repr",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185235,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_DecodeEscape",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185236,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c._PyBytes_Resize",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185237,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromObject",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185238,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185240,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/bytes.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185246,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id3",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185247,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id2",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185248,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id1",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185252,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id9",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185253,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id8",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185254,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_GET_SIZE",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185256,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id7",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185257,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id6",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185258,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id5",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185259,
+    "url": "https://docs.python.org/3/c-api/bytes.html#id4",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185261,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromFormatV",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185262,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Concat",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185265,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_AS_STRING",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185266,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_AsString",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185269,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185271,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromStringAndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 185272,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Bytes Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Bytes Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#inspect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#inspect"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d48",
+    "alt": "@picnixz",
+    "pageTitle": "Some flags are not publicly exported by `symtablemodule.c` · Issue #120029 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Some flags are not publicly exported by `symtablemodule.c` · Issue #120029 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `import a as b.c` · Issue #123539 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `import a as b.c` · Issue #123539 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `import a as b.c` · Issue #123539 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Improve `SyntaxError` message for `import a as b.c` · Issue #123539 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
