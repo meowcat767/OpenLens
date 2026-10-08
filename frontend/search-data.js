@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1315,
+    "url": "https://github.com/python/cpython/issues/129965",
+    "title": "Add missing MIME types · Issue #129965 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add missing MIME types #129965 New issue Copy link New issue Copy link Closed Closed Add missing MIME types#129965 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Feb 10, 2025 Issue body actions Feature or enhancement Proposal: https://github.com/mikeckennedy/content-types identifies some common MIME types missing from the default mimetypes list. Running https://github.com/mikeckennedy/content-types/blob/main/samples/compare_to_builtin.py on Python 3.13 to identify some missing ones: ❯ uv run --python 3.13 --with content-types https://raw.githubusercontent.com/mikeckennedy/content-types/refs/heads/main/samples/compare_to_builtin.py\nCompare types in mimetypes vs content-types.\nThere are 5 types where mimetypes and content-types disagree\nmimetypes: .exe application/octet-stream, content-types: .exe application/x-msdownload\nmimetypes: .xml text/xml, content-types: .xml application/xml\nmimetypes: .wav audio/x-wav, content-types: .wav audio/wav\nmimetypes: .dll application/octet-stream, content-types: .dll application/x-msdownload\nmimetypes: .obj application/octet-stream, content-types: .obj model/obj\n\nThere are 0 types in mimetypes that are not in content-types\n\nThere are 31 types in content-types that are not in mimetypes\nin_ct_only\n.xlsx  -\u003e application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n.gz    -\u003e application/gzip\n.ods   -\u003e application/vnd.oasis.opendocument.spreadsheet\n.docx  -\u003e application/vnd.openxmlformats-officedocument.wordprocessingml.document\n.gltf  -\u003e model/gltf+json\n.rar   -\u003e application/vnd.rar\n.php   -\u003e application/x-httpd-php\n.7z    -\u003e application/x-7z-compressed\n.ogv   -\u003e video/ogg\n.odg   -\u003e application/vnd.oasis.opendocument.graphics\n.weba  -\u003e audio/webm\n.rpm   -\u003e application/x-rpm\n.odp   -\u003e application/vnd.oasis.opendocument.presentation\n.deb   -\u003e application/x-debian-package\n.epub  -\u003e application/epub+zip\n.woff2 -\u003e font/woff2\n.apk   -\u003e application/vnd.android.package-archive\n.glb   -\u003e model/gltf-binary\n.map   -\u003e application/json\n.tgz   -\u003e application/gzip\n.ttf   -\u003e font/ttf\n.otf   -\u003e font/otf\n.wmv   -\u003e video/x-ms-wmv\n.odt   -\u003e application/vnd.oasis.opendocument.text\n.ogg   -\u003e audio/ogg\n.pptx  -\u003e application/vnd.openxmlformats-officedocument.presentationml.presentation\n.m4a   -\u003e audio/mp4\n.m4v   -\u003e video/mp4\n.flac  -\u003e audio/flac\n.woff  -\u003e font/woff\n.stl   -\u003e model/stl With 3.14.0a4: ❯ uv run --python 3.14 --with content-types https://raw.githubusercontent.com/mikeckennedy/content-types/refs/heads/main/samples/compare_to_builtin.py\nCompare types in mimetypes vs content-types.\nThere are 5 types where mimetypes and content-types disagree\nmimetypes: .exe application/octet-stream, content-types: .exe application/x-msdownload\nmimetypes: .obj application/octet-stream, content-types: .obj model/obj\nmimetypes: .xml text/xml, content-types: .xml application/xml\nmimetypes: .wav audio/x-wav, content-types: .wav audio/wav\nmimetypes: .dll application/octet-stream, content-types: .dll application/x-msdownload\n\nThere are 13 types in mimetypes that are not in content-types\n.wmf : image/wmf\n.mka : audio/matroska\n.fits: image/fits\n.g3  : image/g3fax\n.eot : application/vnd.ms-fontobject\n.emf : image/emf\n.jp2 : image/jp2\n.jpm : image/jpm\n.jpx : image/jpx\n.t38 : image/t38\n.mk3d: video/matroska-3d\n.mkv : video/matroska\n.tfx : image/tiff-fx\n\nThere are 27 types in content-types that are not in mimetypes\nin_ct_only\n.m4v   -\u003e video/mp4\n.wmv   -\u003e video/x-ms-wmv\n.odt   -\u003e application/vnd.oasis.opendocument.text\n.deb   -\u003e application/x-debian-package\n.odp   -\u003e application/vnd.oasis.opendocument.presentation\n.gz    -\u003e application/gzip\n.xlsx  -\u003e application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n.map   -\u003e application/json\n.apk   -\u003e application/vnd.android.package-archive\n.gltf  -\u003e model/gltf+json\n.php   -\u003e application/x-httpd-php\n.glb   -\u003e model/gltf-binary\n.rpm   -\u003e application/x-rpm\n.epub  -\u003e application/epub+zip\n.odg   -\u003e application/vnd.oasis.opendocument.graphics\n.docx  -\u003e application/vnd.openxmlformats-officedocument.wordprocessingml.document\n.ods   -\u003e application/vnd.oasis.opendocument.spreadsheet\n.7z    -\u003e application/x-7z-compressed\n.stl   -\u003e model/stl\n.m4a   -\u003e audio/mp4\n.ogv   -\u003e video/ogg\n.flac  -\u003e audio/flac\n.rar   -\u003e application/vnd.rar\n.tgz   -\u003e application/gzip\n.pptx  -\u003e application/vnd.openxmlformats-officedocument.presentationml.presentation\n.ogg   -\u003e audio/ogg\n.weba  -\u003e audio/webm Let\u0027s add some of these, but check with IANA and relevant specs. For example, .wav is in RFC 2361 as audio/vnd.wave not audio/wav. We currently ha",
+    "scrapedAt": "2026-10-08 19:36:46.488589"
+  },
+  {
+    "id": 1314,
+    "url": "https://docs.python.org/3/library/typing.html#typing.BinaryIO",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:36:44.46935"
+  },
+  {
+    "id": 1313,
+    "url": "https://github.com/python/cpython/issues/128629",
+    "title": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add Py_PACK_VERSION macros #128629 New issue Copy link New issue Copy link Closed Closed Add Py_PACK_VERSION macros#128629 Copy link Assignees Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description encukou opened on Jan 8, 2025 Issue body actions Add these to limited API: Py_PACK_FULL_VERSION(x, y, z, level, serial): pack a version number from components into the format used by Py_VERSION_HEX and Py_LIMITED_API. For example, Py_PACK_FULL_VERSION(3, 14, 0, 0xA, 1) evaluates to 0x030E00A1. Py_PACK_VERSION(x, y): shorthand for Py_PACK_FULL_VERSION(x, y, 0, 0, 0), useful because the first two version components often determine ABI compatibility. These are primarily macros, but we will export library functions with the same names and functionality, for use in wrappers for non-C languages – for example, Python with ctypes. The functions take int arguments and return uint32_t. Inputs are masked (high bits are ignored). C API WG decision: capi-workgroup/decisions#47 Linked PRs gh-128629: Add Py_PACK_VERSION and Py_PACK_FULL_VERSION #128630 gh-128629: Add _Py_PACK_VERSION for CPython\u0027s own definitions #134247 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees encukou Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:36:43.146651"
+  },
+  {
+    "id": 1312,
+    "url": "https://github.com/python/cpython/issues/91349",
+    "title": "Use zlib-ng (fast!) rather than mainline stale zlib in binary releases · Issue #91349 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Use zlib-ng (fast!) rather than mainline stale zlib in binary releases #91349 New issue Copy link New issue Copy link Closed Closed Use zlib-ng (fast!) rather than mainline stale zlib in binary releases#91349 Copy link Labels OS-macOS-windowsbuildThe build process and cross-buildThe build process and cross-buildperformancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description gpshead opened on Apr 1, 2022 Issue body actions BPO 47193 Nosy @gpshead, @pfmoore, @tjguk, @zware, @zooba, @corona10, @arhadthedev Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-04-01.19:19:24.173\u003e\nlabels \u003d [\u00273.11\u0027, \u0027OS-windows\u0027, \u0027performance\u0027]\ntitle \u003d \u0027Use zlib-ng rather than zlib in binary releases\u0027\nupdated_at \u003d \u003cDate 2022-04-02.09:48:33.061\u003e\nuser \u003d \u0027https://github.com/gpshead\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-04-02.09:48:33.061\u003e\nactor \u003d \u0027corona10\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Windows\u0027]\ncreation \u003d \u003cDate 2022-04-01.19:19:24.173\u003e\ncreator \u003d \u0027gregory.p.smith\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 47193\nkeywords \u003d []\nmessage_count \u003d 1.0\nmessages \u003d [\u0027416508\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027gregory.p.smith\u0027, \u0027paul.moore\u0027, \u0027tim.golden\u0027, \u0027zach.ware\u0027, \u0027steve.dower\u0027, \u0027corona10\u0027, \u0027arhadthedev\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027needs patch\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027performance\u0027\nurl \u003d \u0027https://bugs.python.org/issue47193\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-91349: Replace zlib with zlib-ng in Windows build #131438 gh-91349: Adjust default compression level to 6 (down from 9) in gzip and tarfile #131470 gh-91349: Expose the crc32 function from the lzma library #131721 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels OS-macOS-windowsbuildThe build process and cross-buildThe build process and cross-buildperformancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Projects Compression issues 🗜 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:36:39.242527"
+  },
+  {
+    "id": 1311,
+    "url": "https://peps.python.org/pep-0626/",
+    "title": "PEP 626 – Precise line numbers for debugging and other tools. | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 626 – Precise line numbers for debugging and other tools. PEP 626 – Precise line numbers for debugging and other tools. Author: Mark Shannon \u003cmark at hotpy.org\u003e BDFL-Delegate: Pablo Galindo Salgado \u003cpablogsal at python.org\u003e Status: Final Type: Standards Track Created: 15-Jul-2020 Python-Version: 3.10 Post-History: 17-Jul-2020 Table of Contents Abstract Motivation Rationale Specification Tracing What is considered to be code for the purposes of tracing Example event sequences The f_lineno attribute The new co_lines() method of code objects Zero width ranges The co_linetable attribute The co_lnotab attribute Backwards Compatibility Examples of code for which the sequence of trace events will change pass statement in an if statement. Multiple pass statements. C API Out of process debuggers and profilers Performance Implications Reference Implementation Copyright References Abstract Python should guarantee that when tracing is turned on, “line” tracing events are generated for all lines of code executed and only for lines of code that are executed. The f_lineno attribute of frame objects should always contain the expected line number. During frame execution, the expected line number is the line number of source code currently being executed. After a frame has completed, either by returning or by raising an exception, the expected line number is the line number of the last line of source that was executed. A side effect of ensuring correct line numbers, is that some bytecodes will need to be marked as artificial, and not have a meaningful line number. To assist tools, a new co_lines attribute will be added that describes the mapping from bytecode to source. Motivation Users of sys.settrace and associated tools should be able to rely on tracing events being generated for all lines of code, and only for actual code. They should also be able to assume that the line number in f_lineno is correct. The current implementation mostly does this, but fails in a few cases. This requires workarounds in tooling and is a nuisance for alternative Python implementations. Having this guarantee also benefits implementers of CPython in the long term, as the current behaviour is not obvious and has some odd corner cases. Rationale In order to guarantee that line events are generated when expected, the co_lnotab attribute, in its current form, can no longer be the source of truth for line number information. Rather than attempt to fix the co_lnotab attribute, a new method co_lines() will be added, which returns an iterator over bytecode offsets and source code lines. Ensuring that the bytecode is annotated correctly to enable accurate line number information means that some bytecodes must be marked as artificial, and not have a line number. Some care must be taken not to break existing tooling. To minimize breakage, the co_lnotab attribute will be retained, but lazily generated on demand. Specification Line events and the f_lineno attribute should act as an experienced Python user would expect in all cases. Tracing Tracing generates events for calls, returns, exceptions, lines of source code executed, and, under some circumstances, instructions executed. Only line events are covered by this PEP. When tracing is turned on, line events will be generated when: A new line of source code is reached. A backwards jump occurs, even if it jumps to the same line, as may happen in list comprehensions. Additionally, line events will never be generated for source code lines that are not executed. What is considered to be code for the purposes of tracing All expressions and parts of expressions are considered to be executable code. In general, all statements are also considered to be executable code. However, when a statement is spread over several lines, we must consider which parts of a statement are considered to be executable code. Statements are made up of keywords and expressions. Not all keywords have a direct runtime effect, so not all keywords are considered to be executable code. For example, else, is a necessary part of an if statement, but there is no runtime effect associated with an else. For the purposes of tracing, the following keywords will not be considered to be executable code: del – The expression to be deleted is treated as the executable code. else – No runtime effect finally – No runtime effect global – Purely declarative nonlocal – Purely declarative All other keywords are considered to be executable code. Example event sequences In the following examples, events are listed as “name”, f_lineno pairs. The code 1.     global x\n2.     x \u003d a\n generates the following event: \"line\" 2\n The code 1.     try:\n2.        pass\n3.     finally:\n4.        pass\n generates the following events: \"line\" 1\n\"line\" 2\n\"line\" 4\n The code 1.      for (\n2.          x) in [1]:\n3.          pass\n4.      return\n generates the following events: \"line\" 2       # ",
+    "scrapedAt": "2026-10-08 19:36:37.031369"
+  },
+  {
     "id": 1310,
     "url": "https://docs.python.org/3/library/gettext.html#module-gettext",
     "title": "gettext — Multilingual internationalization services — Python 3.14.8 documentation",
@@ -8785,26 +8820,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1311,
-    "url": "https://peps.python.org/pep-0626/"
-  },
-  {
-    "id": 1312,
-    "url": "https://github.com/python/cpython/issues/91349"
-  },
-  {
-    "id": 1313,
-    "url": "https://github.com/python/cpython/issues/128629"
-  },
-  {
-    "id": 1314,
-    "url": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
-  },
-  {
-    "id": 1315,
-    "url": "https://github.com/python/cpython/issues/129965"
   },
   {
     "id": 1316,
@@ -233251,10 +233266,345 @@ window.searchData = [
     "id": 262505,
     "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.charset",
     "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 262506,
+    "url": "https://peps.python.org/pep-0626/#id2",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262507,
+    "url": "https://peps.python.org/pep-0626/#id1",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262508,
+    "url": "https://peps.python.org/pep-0626/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262509,
+    "url": "https://peps.python.org/pep-0626/#the-co-lnotab-attribute",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262510,
+    "url": "https://peps.python.org/pep-0626/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262511,
+    "url": "https://github.com/benfred/py-spy",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262512,
+    "url": "https://peps.python.org/pep-0626/#the-new-co-lines-method-of-code-objects",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262513,
+    "url": "https://peps.python.org/pep-0626/#what-is-considered-to-be-code-for-the-purposes-of-tracing",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262514,
+    "url": "https://peps.python.org/pep-0626/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262515,
+    "url": "https://peps.python.org/pep-0626/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262516,
+    "url": "https://peps.python.org/pep-0626/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262517,
+    "url": "https://peps.python.org/pep-0626/#references",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262518,
+    "url": "https://peps.python.org/pep-0626/#multiple-pass-statements",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262519,
+    "url": "https://peps.python.org/pep-0626/#performance-implications",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262520,
+    "url": "https://github.com/markshannon/cpython/tree/new-linetable-format-version-2",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262521,
+    "url": "https://peps.python.org/pep-0626/#tracing",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262522,
+    "url": "https://peps.python.org/pep-0626/#out-of-process-debuggers-and-profilers",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262523,
+    "url": "https://peps.python.org/pep-0626/#example-event-sequences",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262524,
+    "url": "https://peps.python.org/pep-0626/#the-co-linetable-attribute",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262525,
+    "url": "https://peps.python.org/pep-0626/#examples-of-code-for-which-the-sequence-of-trace-events-will-change",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262526,
+    "url": "https://peps.python.org/pep-0626/#c-api",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262527,
+    "url": "https://peps.python.org/pep-0626/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262528,
+    "url": "https://peps.python.org/pep-0626/#pass-statement-in-an-if-statement",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262529,
+    "url": "https://peps.python.org/pep-0626/#the-f-lineno-attribute",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262530,
+    "url": "https://peps.python.org/pep-0626/#specification",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262531,
+    "url": "https://peps.python.org/pep-0626/#zero-width-ranges",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 262532,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-mac%22",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262534,
+    "url": "https://github.com/python/cpython/pull/131438",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262535,
+    "url": "https://github.com/python/cpython/pull/131721",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262538,
+    "url": "https://bugs.python.org/issue47193",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262540,
+    "url": "https://github.com/orgs/python/projects/20",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262544,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/91349",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262545,
+    "url": "https://github.com/python/cpython/issues/91349#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262547,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/91349",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262549,
+    "url": "https://github.com/python/cpython/issues/91349#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262550,
+    "url": "https://github.com/python/cpython/pull/131470",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262551,
+    "url": "https://github.com/python/cpython/issues/91349#issue-1199078073",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 262556,
+    "url": "https://github.com/python/cpython/pull/128630",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262557,
+    "url": "https://github.com/python/cpython/issues/128629#issue-2775242365",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262558,
+    "url": "https://github.com/python/cpython/issues/128629#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262559,
+    "url": "https://github.com/capi-workgroup/decisions/issues/47",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262561,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128629",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262563,
+    "url": "https://github.com/python/cpython/issues/128629#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262565,
+    "url": "https://github.com/python/cpython/pull/134247",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262566,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128629",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 262913,
+    "url": "https://github.com/python/cpython/pull/132845",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262914,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/129965",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262915,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262916,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/129965",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262921,
+    "url": "https://github.com/python/cpython/issues/129965#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262922,
+    "url": "https://github.com/python/cpython/issues/129965#issue-2843097343",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262923,
+    "url": "https://github.com/mikeckennedy/content-types/blob/main/samples/compare_to_builtin.py",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262925,
+    "url": "https://github.com/python/cpython/pull/129969",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262926,
+    "url": "https://github.com/mikeckennedy/content-types",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 262927,
+    "url": "https://github.com/python/cpython/issues/129965#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Add missing MIME types · Issue #129965 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add missing MIME types · Issue #129965 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?v\u003d4\u0026size\u003d48",
+    "alt": "@gpshead",
+    "pageTitle": "Use zlib-ng (fast!) rather than mainline stale zlib in binary releases · Issue #91349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Use zlib-ng (fast!) rather than mainline stale zlib in binary releases · Issue #91349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91349"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
