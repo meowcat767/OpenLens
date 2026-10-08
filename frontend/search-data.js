@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 216,
+    "url": "https://kivy.org/",
+    "title": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "content": "Kivy: The Open Source Python App Development Framework. Build and distribute beautiful Python cross-platform GUI apps with ease. Kivy runs on Android, iOS, Linux, macOS and Windows. MIT License 17.0K Stars Get started! Kivy has been built to be easy to use, cross-platform and fast. With a single codebase, you will be able to deploy apps on Windows, Linux, macOS, iOS and Android. Business Friendly Kivy is released under the MIT License, is 100% free to use, and is professionally developed, backed and maintained. Companies and individuals are using Kivy for their projects every day. Kivy is kept open source thanks to its contributors and backers. {{organizations.length}} organizations are supporting Kivy: {{ organization.account.name }} {{organization.tier.name}} ${{organization.totalDonations.value}} Amount contributed See all the {{organizations.length}} organizations supporting Kivy on OpenCollective {{individuals.length}} individuals are supporting Kivy See all the {{individuals.length}} individuals supporting Kivy on OpenCollective Start supporting Kivy from $5 Kivy is a free and open source software and is maintained by the community. Sometimes, a small contribution, could help to keep the wheel spinning flawlessly. Support Kivy as a Backer (Starts from $5/mo) Support Kivy as a Sponsor (Starts from $100/mo) Need help? The Kivy community will love ❤️ to help. Join us on Discord Join us on kivy-users group Source code hosted on Github Contact us",
+    "scrapedAt": "2026-10-08 18:54:07.495104"
+  },
+  {
+    "id": 215,
+    "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/",
+    "title": "Saving the world with Open Data and Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Saving the world with Open Data and Python Written by James Baster, Open Data Services Co-op The policy side While it may seem to some developers that Open Data has been around forever and we probably don’t need to talk about it anymore, it’s important to remember why Open Data is something that people keenly push for. When an Open Data standard is created and promoted, it’s important to think why - what change is this trying to drive? What will people do with this data that they couldn’t do before? For instance, the Open Contracting Data Standard makes open the details of governments contracting out services and projects to private companies. It makes the data useable and tries to help people actually use it. By doing so, the aim is to root out corruption, open up the process to more bidders and drive efficiency, and save governments money. At Open Data Services we work on many standards - for instance, the Beneficial Ownership Data Standard opens data on people who ultimately own, control or benefit from companies around the world. As more and more countries try and cut down on tax avoidance, this data really helps. And that’s part of what we do - we work with our clients on their policy goals, and make sure that the Open Data standard they produce matches and builds on their policy goals. That’s how we can claim that our work saves the world - it’s great when we see people like ProZorro in Ukraine using Open Contracting Data to fight corruption and save their Goverment £1.2 billion. The Python Side We use Python as our tool of choice; from analysis in Jupyter with Google Colab notebooks to full Sphinx websites and the spreadsheets. Wait, the spreadsheets? Yup - spend any time in the world of Open Data and you’ll soon find that people love their spreadsheets. And while some developers will be rolling their eyes right now, it’s important to remember that for some people spreadsheets are a very powerful tool that enable them to do great data work they wouldn’t be able to do otherwise. So we have to embrace that, and this lead to one of the Python tools we have released as Open Source - Flatten Tool. Flatten Tool takes a JSON data file, and produces a spreadsheet of it’s contents. Of course a JSON data file may not be a flat structure and may have lists within lists and so on - we handle that by producing multiple sheets in an Excel file or multiple CSV files. Flatten Tool also takes a set of spreadsheets and produces a JSON file of your data. If you have a JSON Schema file describing your standard that helps. Also finally, we can take a JSON Schema file and produce a set of spreadsheet templates. This makes it easy for people to work with their favourite tools - spreadsheets - and for us to still be able to easily work with the data, both in terms of sending them data and dealing with data from them. Thanks to Python’s PyPi and pip, we include this as a library in other projects we do. We produce websites for the data standards we work on where people can upload some data - in it’s official JSON standard form, or as a spreadsheet - and we’ll take the data, analyse it and highlight problems and statistics with the data. We also offer conversion - so you can upload a spreadsheet and if it’s good, you can download a JSON file in the correct format. Thanks Python! At Open Data Services some of our members* are developers and some analysts - but even our analysts are very technical and are able to dive into the nitty gritty of issues with our developers. We don’t doubt that the welcoming Python language and ecosystem help with that - Thanks Python! Members? We are also a workers co-op - but that’s a story for another day! Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 18:54:06.048226"
+  },
+  {
+    "id": 214,
+    "url": "https://langchain.com/",
+    "title": "LangChain: the open agent platform to own your intelligence",
+    "content": "Interrupt is coming to London on October 13! Get tickets Try LangSmith Get a demo Meet LangSmith Engine Put insights to work Smarter after every launch We catch your drift Start building Get a demo Video ↗ Case study ↗ Video ↗ Video ↗ Video ↗ Video ↗ Case study ↗ Video ↗ Video ↗ Case study ↗ Video ↗ Build Test Deploy Monitor Iterate Govern Button Text Button Text Button Text Button Text Button Text This is some text inside of a div block. 123456 Build Build agents fast with or without code. Choose your model. Own your harness. Start with proven agent patterns, customize when you need control Own your harness, context, memory, and model choice Enable every team build to agents in natural language with Fleet Deep Agents LangGraph LangChain Fleet Test Validate behavior before you ship. Turn traces into realistic datasets and eval every step. Debug agent runs with step-by-step tracing Query complex traces in under a second with SmithDB Turn expert review into standardized evals Observability Evaluation Deploy Ship agents on infra built for long-running tasks, persistent state, and secure execution. Build the right UX with 30+ Agent Server endpoints Standardize on one deployment pattern org-wide Run agent-generated code in isolated sandboxes Deployment Sandboxes Context Hub Monitor Catch issues in production with online evals, dashboards, and alerts built for agents. Measure quality across production agent runs Catch regressions before users do Track cost, latency, errors, and tool behavior Observability Evaluation Iterate Compound agent intelligence through a feedback loop you own. Detect production issues automatically with Engine, the agent for agent engineering Find root causes and make targeted fixes Feed every fix back into your eval loop Engine Govern Enforce cost limits and detect sensitive data before damage happens. Control model calls, spend, and sensitive data with LLM Gateway Require human approval for sensitive agent actions Deploy in SaaS, BYOC, or self-hosted environments LLM Gateway Build with our open source frameworks Build agents fast with any model provider. Choose the right framework for the job from batteries included to low-level control. deepagents Build intelligent agents for open-ended work For highly autonomous, long-running agents Explore deepagents langchain Quick start agents with any model provider For building agents fast with templates Explore langchain langgraph Build reliable agents with low-level control For production agents that require some determinism Explore langgraph Learn from teams running agents in production More customer stories Klarna’s AI assistant reduced case resolution time by 80% with LangSmith Read Use Case Monday Service achieved 8.7x faster feedback loops for evals with LangSmith Read Use Case Podium reduced engineering escalations by 90% with LangSmith Read Use Case C.H. Robinson automated 5,500 orders per day, saving 600+ hours daily with LangSmith Read Use Case ServiceNow orchestrates agents across 8 customer stages using LangSmith Read Use Case More use cases Trusted by the largest builder community in AI 350M+ Monthly open source downloads 7K+ Active LangSmith customers 5 Of the Fortune 10 are LangSmith customers Get started with LangSmith Start building Get a demo Use LangSmith, the agent engineering platform, to improve every step of the agent development lifecycle.",
+    "scrapedAt": "2026-10-08 18:54:04.768788"
+  },
+  {
+    "id": 213,
+    "url": "https://blog.python.org/2026/05/python-3145rc1/",
+    "title": "Python 3.14.5 release candidate | Python Insider",
+    "content": "Python 3.14.5rc1 is a release candidate for the fifth maintenance release of 3.14, containing around 113 bugfixes, build improvements and documentation changes since 3.14.4. python.org/downloads/release/python-3145rc1 Garbage collector Notably, the garbage collector (GC) has changed in Python 3.14.5rc1. The incremental garbage collector shipped in Python 3.14.0-3.14.4 has been reverted back to the generational garbage collector from 3.13, due to a number of reports of significant memory pressure in production environments. See What’s New and discuss.python.org for details. Call to action We strongly encourage testing of this release candidate, ahead of the planned 3.14.5 final on Friday 2026-05-08. As always, report any issues to the Python bug tracker. Please keep in mind that this is a preview release and its use is not recommended for production environments. Major new features of the 3.14 series, compared to 3.13 Some of the major new features and changes in Python 3.14 are: New features PEP 779 : Free-threaded Python is officially supported PEP 649 : The evaluation of annotations is now deferred, improving the semantics of using annotations. PEP 750 : Template string literals (t-strings) for custom string processing, using the familiar syntax of f-strings. PEP 734 : Multiple interpreters in the stdlib. PEP 784 : A new module compression.zstd providing support for the Zstandard compression algorithm. PEP 758 : except and except* expressions may now omit the brackets. Syntax highlighting in PyREPL , and support for color in unittest , argparse , json and calendar CLIs. PEP 768 : A zero-overhead external debugger interface for CPython. UUID versions 6-8 are now supported by the uuid module, and generation of versions 3-5 are up to 40% faster. PEP 765 : Disallow return/break/continue that exit a finally block. PEP 741 : An improved C API for configuring Python. A new type of interpreter . For certain newer compilers, this interpreter provides significantly better performance. Opt-in for now, requires building from source. Improved error messages. Builtin implementation of HMAC with formally verified code from the HACL* project. A new command-line interface to inspect running Python processes using asynchronous tasks. The pdb module now supports remote attaching to a running Python process . For more details on the changes to Python 3.14, see What’s new in Python 3.14 . Build changes PEP 761 : Python 3.14 and onwards no longer provides PGP signatures for release artifacts. Instead, Sigstore is recommended for verifiers. Official macOS and Windows release binaries include an experimental JIT compiler . Official Android binary releases are now available. Incompatible changes, removals and new deprecations Incompatible changes Python removals and deprecations C API removals and deprecations Overview of all pending deprecations Python install manager The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases. More resources Online documentation PEP 745 , 3.14 Release Schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors ) and support the Python community And now for something completely different I asked Rodrigo Girão Serrão for a fun π fact: Euler’s identity says that eiπ + 1 \u003d 0 and is often cited as an equality of profound mathematical elegance, since it relates five of the most fundamental mathematical constants: 0, 1, π, e, and i. A mathematics professor at Stanford University has said “like a Shakespearean sonnet that captures the very essence of love, or a painting that brings out the beauty of the human form that is far more than just skin deep, Euler’s equation reaches down into the very depths of existence”. Source Enjoy the new release Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation. Regards from a cherry-blossoming Helsinki, Your release team, Hugo van Kemenade Ned Deily Steve Dower Łukasz Langa References37 PEPs PEP 779 PEP 649 PEP 750 PEP 734 PEP 784 PEP 758 PEP 768 PEP 765 PEP 741 PEP 761 PEP 745 Documentation What’s New Syntax highlighting in PyREPL unittest argparse json calendar UUID versions 6-8 new type of interpreter Improved error messages. Builtin implementation of HMAC new command-line interface remote attaching to a running Python process What’s new in Python 3.14 experimental JIT compiler Android binary releases Incompatible cha",
+    "scrapedAt": "2026-10-08 18:54:03.209868"
+  },
+  {
+    "id": 212,
+    "url": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html",
+    "title": "Python Software Foundation News: Reflecting on Five Years as the PSF’s First CPython Developer in Residence",
+    "content": "Monday, April 13, 2026 Reflecting on Five Years as the PSF’s First CPython Developer in Residence After nearly five wonderful years at the Python Software Foundation as the inaugural CPython Developer in Residence, it\u0027s time for me to move on. I feel honored and honestly so lucky to have had the opportunity to kick off the program that now includes several wonderful full-time engineers. I\u0027m glad to see the program left in good hands. The vacancy created by my departure will be filled after PyCon US as the PSF is currently focused on delivering a strong event. I\u0027m happy to share that Meta will continue to sponsor the CPython Developer in Residence role at least through mid-2027. The program is safe. Łukasz with PSF\u0027s Security Developer in Residence Seth Larson and PyPI Safety \u0026 Security Engineer Mike Fielder at PyCon US 2025 As a member of the Python Steering Council during Łukasz’s tenure as Developer in Residence, I express my personal gratitude for his dedication to the CPython project and the larger Python community. I know I echo the sentiment of everyone who has served on the Council during his time as DiR. He has defined what it means to be a Developer in Residence - a position that is incredibly important to the smooth operation of the CPython project, in large and small ways, visible and hidden. Our bi-weekly meetings gave the Steering Council a detailed, unique, and invaluable contemporaneous perspective on what’s happening in CPython. Łukasz leaves big shoes to fill, and we wish him all the best in his next endeavor. It’s comforting to know that he will continue to be a Python leader and member of the core team. -- Barry Warsaw; Python Steering Council member 2026 In my time as a developer in residence, I personally touched some pretty amazing projects like the transition to GitHub issues from bugs.python.org, the replacement of the mostly manual CLA process with an automated system, the introduction of free threading to Python, and the replacement of the interactive shell in the interpreter. And between the thousands of pull requests I\u0027ve reviewed or authored, and the many less glamorous tasks like content moderation and keeping the lights on when it comes to core workflow, I\u0027ve interacted with some amazing individuals. Some of them are core developers now. I\u0027ve witnessed the full-time paid developer in residence roster at the Python Software Foundation grow from one person to five. As for me, ever since seeing it for the first time in 2013, I had dreamed about moving permanently to Vancouver BC. This dream is coming true soon. As part of that move, I\u0027m joining Meta as a software engineer on the Python Language Foundation team. In any case, I\u0027m not disappearing from the open-source Python community. I\u0027ll be seeing you online and maybe even in person at Python-related conferences. Posted by Łukasz Langa at 4/13/2026 02:01:00 PM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (52) ► September (6) ► August (19) ► July (7) ► June (6) ► May (3) ▼ April (3) Announcing Python Software Foundation Fellow Membe... PyCon US 2026: Why we\u0027re asking you to think about... Reflecting on Five Years as the PSF’s First CPytho... ► March (1) ► February (3) ► January (4) ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► March (3) ► February (1) ► January (1) ► 2021 (42) ► December (3) ► November (4) ► October (3) ► September (2) ► August (1) ► July (2) ► June (4) ► May (12) ► April (5) ► March (1) ► February (4) ► January (1) ► 2020 (51) ► December (8) ► November (3) ► October (3) ► September (4) ► July (4) ► June (2) ► May (10) ► April (11) ► March (4) ► January (2) ► 2019 (45) ► December (3) ► November (3) ► October (3) ► September (4) ► August (3) ► July (3) ► June (5) ► May (11) ► April (1) ► March (2) ► February (5) ► January (2) ► 2018 (31) ► December (5) ► November (1) ► October (4) ► September (1) ► August (2) ► July (3) ► June (3) ► May (5) ► April (2) ► March (2) ► February (1) ► January (2) ► 2017 (32) ► December (3) ► November (2) ► October (4) ► September (6) ► August (2) ► July (2",
+    "scrapedAt": "2026-10-08 18:54:01.974316"
+  },
+  {
     "id": 211,
     "url": "https://blog.python.org/2026/05/python-3150-beta-1/",
     "title": "Python 3.15.0 beta 1 is here! | Python Insider",
@@ -1465,26 +1500,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 212,
-    "url": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
-  },
-  {
-    "id": 213,
-    "url": "https://blog.python.org/2026/05/python-3145rc1/"
-  },
-  {
-    "id": 214,
-    "url": "https://langchain.com/"
-  },
-  {
-    "id": 215,
-    "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/"
-  },
-  {
-    "id": 216,
-    "url": "https://kivy.org/"
   },
   {
     "id": 217,
@@ -39361,10 +39376,855 @@ window.searchData = [
     "id": 16493,
     "url": "https://docs.python.org/3.15/whatsnew/3.15.html#removed",
     "parentUrl": "https://blog.python.org/2026/05/python-3150-beta-1/"
+  },
+  {
+    "id": 16538,
+    "url": "https://about.facebook.com/meta/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "id": 16654,
+    "url": "https://blogger.googleusercontent.com/img/a/AVvXsEhtUayHgoeMYEyB6XwbVMZscpChzV4510xMgphpi29hahrGN-rmUW3GzIfn892orljnqRI7_P_EXA04oGyJWP1hm5uM9O233mYug1i8rEFbrb_aiHjKBNNRhL19cP1IL7ypxT099EbUjxsXkH7Q8lIlbJWPcoEfFU5so7svOtUvs0ABF75NeQ",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "id": 16660,
+    "url": "http://bugs.python.org",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "id": 16731,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d6125338349276685201\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "id": 16776,
+    "url": "https://discuss.python.org/t/reverting-the-incremental-gc-in-python-3-14-and-3-15/107014",
+    "parentUrl": "https://blog.python.org/2026/05/python-3145rc1/"
+  },
+  {
+    "id": 16782,
+    "url": "https://en.wikipedia.org/wiki/Euler\u0027s_identity",
+    "parentUrl": "https://blog.python.org/2026/05/python-3145rc1/"
+  },
+  {
+    "id": 16793,
+    "url": "https://mathspp.com/",
+    "parentUrl": "https://blog.python.org/2026/05/python-3145rc1/"
+  },
+  {
+    "id": 16801,
+    "url": "https://www.langchain.com/langgraph",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16802,
+    "url": "https://blog.langchain.com/customers-servicenow/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16803,
+    "url": "https://www.youtube.com/watch?v\u003dmxweSHetuN8",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16804,
+    "url": "https://www.langchain.com/deep-agents",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16805,
+    "url": "https://www.langchain.com/contact-sales",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16806,
+    "url": "https://blog.langchain.com/customers-klarna/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16807,
+    "url": "https://www.youtube.com/watch?v\u003dcx6_tb6HCeY",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16808,
+    "url": "https://docs.langchain.com/langsmith/prompt-context-hub",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16809,
+    "url": "https://www.youtube.com/watch?v\u003dlXZb21CfeIY",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16810,
+    "url": "https://blog.langchain.com/customers-monday/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16811,
+    "url": "https://www.youtube.com/watch?v\u003dUVeeNW_z068",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16812,
+    "url": "https://www.langchain.com/blog/customers-servicenow",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16813,
+    "url": "https://www.langchain.com/langchain",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16814,
+    "url": "https://www.langchain.com/langsmith/fleet",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16815,
+    "url": "https://www.langchain.com/langsmith/observability",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16816,
+    "url": "https://smith.langchain.com/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16817,
+    "url": "https://www.youtube.com/watch?v\u003dEAj0HBDGqaE",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16818,
+    "url": "https://www.langchain.com/customers",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16819,
+    "url": "https://www.langchain.com/langsmith/deployment",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16820,
+    "url": "https://www.langchain.com/blog/customers-monday",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16821,
+    "url": "https://www.langchain.com/langsmith/llm-gateway",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16822,
+    "url": "https://blog.langchain.com/customers-chrobinson/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16823,
+    "url": "https://www.langchain.com/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16824,
+    "url": "https://www.langchain.com/langsmith/sandboxes",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16825,
+    "url": "https://www.youtube.com/watch?v\u003dYy3JH6dDugc",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16826,
+    "url": "https://www.langchain.com/langsmith/engine",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16827,
+    "url": "https://blog.langchain.com/customers-podium/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16828,
+    "url": "https://www.youtube.com/watch?v\u003dkuXtW03cZEA",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16829,
+    "url": "https://www.langchain.com/blog/how-rippling-went-ai-native-across-every-product-in-6-months-with-deep-agents-and-langsmith",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16830,
+    "url": "https://www.langchain.com/#",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16831,
+    "url": "https://www.youtube.com/watch?v\u003dpy9d6zTl4Dc",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16832,
+    "url": "https://interrupt.langchain.com/london",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16833,
+    "url": "https://www.langchain.com/langsmith/evaluation",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 16849,
+    "url": "https://opencollective.com/kivy",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16850,
+    "url": "https://opencollective.com/kivy/contribute/sponsor-6730/checkout",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16851,
+    "url": "https://m.do.co/c/bba66856dc94",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16852,
+    "url": "https://opencollective.com/kivy/contribute/backer-6729/checkout",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16853,
+    "url": "https://www.kivy.org/docs/contact.html",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16854,
+    "url": "https://github.com/kivy",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16855,
+    "url": "https://chat.kivy.org",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16856,
+    "url": "https://kivy.org/doc/stable/gettingstarted/intro.html",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 16857,
+    "url": "https://groups.google.com/g/kivy-users",
+    "parentUrl": "https://kivy.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://kivy.org/static/images/icons/scale-balanced.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/star.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/kivy-colorwheel-examples.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-fast.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-company.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/contribute_coffee.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/help.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/discord.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/github.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/DO_Badge.png",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a5fabcd35c833ad1738ce2c_einstein-smoke-langchain.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a670b36585d346876e89449_733f80b86ab20ceeec551fc5c19f5f2c_newton-mobile.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a5f755831f70573692c9cb5_resting-newton.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a606c354df0819ae336d4b8_franklin-langchain_main.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a5fabcdb00e7cb6890c9aab_einstein-graphics-langchain.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a5f7558c1d15e92505400db_newton-rocket.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a606c0ac5e70a0e4ba97e12_9e9734c81515e2632fcf8556d38b99e6_franklin-langchain-bg.png",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699ef03498a1d51a63dad3ba_Listen%20logo.svg",
+    "alt": "Listen",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a91f25cfdec13d1945372e7_rillet-white.png",
+    "alt": "Rillet",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af60a3595f5918eb55b2f_logo_klarna-1.svg",
+    "alt": "Vanta",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a056e362caf179dbc8ecc60_clay_logo.png",
+    "alt": "clay",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af613b1e439fab3cbda6d_logo_klarna-2.svg",
+    "alt": "RIPPLING",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af61c4871f1baed6eb36d_logo_klarna-3.svg",
+    "alt": "lyft",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af648fc78763596e95934_logo_klarna-4.svg",
+    "alt": "Harvey",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8dd819b1b50d87a87a7e_logo_gitlab.svg",
+    "alt": "ABRIDGE",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a972fd99360de4bc5964fdb_expedia-white-1x.png",
+    "alt": "Expedia",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a70d15276db6b56dc2694b1_autodesk-logo-white.svg",
+    "alt": "Autodesk",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a2a6f957755e2245d259a0e_bms%20logo%20(2).svg",
+    "alt": "Bristol Myers Squibb",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03aa35f131c951040c55f_workday.svg",
+    "alt": "workday",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6ae78d3de70d5c3fd10_logo_Rakuten.svg",
+    "alt": "CISCO",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b07847c18efb637c5e1_mercor.svg",
+    "alt": "Mercor",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8e487c686f8fc51fd9b0_nu.svg",
+    "alt": "NU",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ace58968e58f476ce24_monday.svg",
+    "alt": "monday.com",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69f07e27d6b85b9690276be2_Nvidia%20logo.svg",
+    "alt": "Nvidia",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b15e423c55ca7219fec_bridgewater.svg",
+    "alt": "BRIDGEWATER",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699ecc28698fe26c8324c1b2_servicenow.svg",
+    "alt": "servicenow",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6a5bce126b2dc318630_logo_rakuten-1.svg",
+    "alt": "coinbase",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699ef03498a1d51a63dad3ba_Listen%20logo.svg",
+    "alt": "Listen",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a91f25cfdec13d1945372e7_rillet-white.png",
+    "alt": "Rillet",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af60a3595f5918eb55b2f_logo_klarna-1.svg",
+    "alt": "Vanta",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a056e362caf179dbc8ecc60_clay_logo.png",
+    "alt": "clay",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af613b1e439fab3cbda6d_logo_klarna-2.svg",
+    "alt": "RIPPLING",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af61c4871f1baed6eb36d_logo_klarna-3.svg",
+    "alt": "lyft",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af648fc78763596e95934_logo_klarna-4.svg",
+    "alt": "Harvey",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8dd819b1b50d87a87a7e_logo_gitlab.svg",
+    "alt": "ABRIDGE",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a972fd99360de4bc5964fdb_expedia-white-1x.png",
+    "alt": "Expedia",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a70d15276db6b56dc2694b1_autodesk-logo-white.svg",
+    "alt": "Autodesk",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699ef03498a1d51a63dad3ba_Listen%20logo.svg",
+    "alt": "Listen",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a91f25cfdec13d1945372e7_rillet-white.png",
+    "alt": "Rillet",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af60a3595f5918eb55b2f_logo_klarna-1.svg",
+    "alt": "Vanta",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a056e362caf179dbc8ecc60_clay_logo.png",
+    "alt": "clay",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af613b1e439fab3cbda6d_logo_klarna-2.svg",
+    "alt": "RIPPLING",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af61c4871f1baed6eb36d_logo_klarna-3.svg",
+    "alt": "lyft",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af648fc78763596e95934_logo_klarna-4.svg",
+    "alt": "Harvey",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8dd819b1b50d87a87a7e_logo_gitlab.svg",
+    "alt": "ABRIDGE",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a972fd99360de4bc5964fdb_expedia-white-1x.png",
+    "alt": "Expedia",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a70d15276db6b56dc2694b1_autodesk-logo-white.svg",
+    "alt": "Autodesk",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a2a6f957755e2245d259a0e_bms%20logo%20(2).svg",
+    "alt": "Bristol Myers Squibb",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03aa35f131c951040c55f_workday.svg",
+    "alt": "workday",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6ae78d3de70d5c3fd10_logo_Rakuten.svg",
+    "alt": "CISCO",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b07847c18efb637c5e1_mercor.svg",
+    "alt": "Mercor",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8e487c686f8fc51fd9b0_nu.svg",
+    "alt": "NU",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ace58968e58f476ce24_monday.svg",
+    "alt": "monday.com",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69f07e27d6b85b9690276be2_Nvidia%20logo.svg",
+    "alt": "Nvidia",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b15e423c55ca7219fec_bridgewater.svg",
+    "alt": "BRIDGEWATER",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699ecc28698fe26c8324c1b2_servicenow.svg",
+    "alt": "servicenow",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6a5bce126b2dc318630_logo_rakuten-1.svg",
+    "alt": "coinbase",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a2a6f957755e2245d259a0e_bms%20logo%20(2).svg",
+    "alt": "Bristol Myers Squibb",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03aa35f131c951040c55f_workday.svg",
+    "alt": "workday",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6ae78d3de70d5c3fd10_logo_Rakuten.svg",
+    "alt": "CISCO",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b07847c18efb637c5e1_mercor.svg",
+    "alt": "Mercor",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8e487c686f8fc51fd9b0_nu.svg",
+    "alt": "NU",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ace58968e58f476ce24_monday.svg",
+    "alt": "monday.com",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69f07e27d6b85b9690276be2_Nvidia%20logo.svg",
+    "alt": "Nvidia",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b15e423c55ca7219fec_bridgewater.svg",
+    "alt": "BRIDGEWATER",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699ecc28698fe26c8324c1b2_servicenow.svg",
+    "alt": "servicenow",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6a5bce126b2dc318630_logo_rakuten-1.svg",
+    "alt": "coinbase",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a759cbd01423e8a4b3ff5f0_Build.webp",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a759cbcd5a320264717feab_Group%202147239151.webp",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a759cbceec5583c65e03db5_Deploy.webp",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a759cbc7f4e6f918297b9d9_Deploy-1.webp",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a759cbc344a96974fd3f201_lse-wrap.webp",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a759cbc3f09e6a52abb2aac_Usage%20%E2%80%93%20UI%20Illustration.webp",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2ab3a27435f0af4607ce_83408050bc46f6f7d309df03d6155be9_graph-2.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2b2641d117b53e025af6_Frame%202147255016.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2ab36ec04bd906a45a47_04a211ab00b30e07dc51edffebd9aff2_graph.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2b26acc19233c104b1cd_logo.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2ab3357e0836fe4cdcac_70f00ac3114760cac8e792a9375a4814_graph-1.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6989c024c2d98286a8fb058f_Frame%202147255166-1.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03fbd88f7622a14049a2b_logo_klarna.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8bf31109c9aa556568_logo_rakuten.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8b008adda0b0b309fb_podium.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8b7bec6d94a146a30f_servicenow-1.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8b8dc42ed899d1fcaf_servicenow.svg",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2d053d82a375e355b0ab_Group%202147239175.avif",
+    "alt": "",
+    "pageTitle": "LangChain: the open agent platform to own your intelligence",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEhtUayHgoeMYEyB6XwbVMZscpChzV4510xMgphpi29hahrGN-rmUW3GzIfn892orljnqRI7_P_EXA04oGyJWP1hm5uM9O233mYug1i8rEFbrb_aiHjKBNNRhL19cP1IL7ypxT099EbUjxsXkH7Q8lIlbJWPcoEfFU5so7svOtUvs0ABF75NeQ\u003dw400-h400",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Reflecting on Five Years as the PSF’s First CPython Developer in Residence",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Reflecting on Five Years as the PSF’s First CPython Developer in Residence",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Reflecting on Five Years as the PSF’s First CPython Developer in Residence",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
   {
     "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
     "alt": "",
