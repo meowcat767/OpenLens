@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 300,
+    "url": "https://nos.nl/teletekst",
+    "title": "NOS.nl - NOS Teletekst",
+    "content": "Voorpagina Teletekst Teletekst pagina nummer OK Vorige Paginaniet beschikbaar Vorige subpaginaniet beschikbaar Volgende subpagina Volgende pagina 1234567890 Backspace Teletekst pagina 100                       NOS Teletekst 100 \n\n\n\n\n\n   \n\n   Yesilgöz noemt Rusland \"vijand\". 105 \n                                        \n   Stroomtarief flexibeler per 2029 109 \n                                        \n   Dertig doden na Russische aanval 128 \n                                        \n   Nobelprijs voor dichter Carson.. 127 \n                                        \n\n     nieuws     101   sport         600 \n     televisie  200   weer,verkeer  700 \n     radio      250   voetbal       800 \n     financieel 501   ondertiteling 888 \n                                        \n\n          copyright N O S  2026         \n nieuws     sport     tv gids     weer  \n Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:57:11.236274"
+  },
+  {
+    "id": 299,
+    "url": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "title": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "content": "NOS Sport•woensdag 6 mei 2026, 20:30 Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027 Deel dit artikel Toptennisster Aryna Sabalenka, de nummer één van de wereld bij de vrouwen, zegt een boycot niet langer uit te sluiten als het prijzengeld bij de vier grandslamtoernooien, de belangrijkste evenementen van het seizoen, niet omhoog gaat. \"Wij geven een show. Zonder ons zouden er geen toernooien zijn, zonder ons zou er geen entertainment zijn. Ik denk dat we beter betaald zouden moeten worden\", laat de Witrussin weten in Rome, waar het laatste voorbereidingstoernooi voor Roland Garros plaatsvindt. \"Op een gegeven moment zullen we moeten boycotten als dat de enige manier is om onze rechten te verdedigen.\" Eltingh begrijpt ophef \"Een boycot is sowieso altijd de slechtste oplossing bij onenigheid\", vindt Jacco Eltingh, oud-prof en tegenwoordig technisch directeur bij de KNLTB. Maar hij begrijpt wel dat de tennissers zich tekortgedaan voelen. \"Op het moment dat het publiek geen interesse meer toont en niet naar het stadion komt en daar dingen koopt, niet meer televisie kijkt of naar de radio luistert, dan zullen er geen bedrijven meer zijn die zich daaraan willen koppelen en zouden er geen uitzendrechten betaald worden. En dat komt wel door datgene wat er op de baan gebeurt. En dat zijn de spelers.\" Sabalenka uitte maandag samen met een groep wereldtoppers, onder wie ook Coco Gauff, Jannik Sinner en Carlos Alcaraz, haar \"diepe teleurstelling\" over het prijzengeld op Roland Garros dit jaar. Hoewel Roland Garros het prijzengeld voor de editie van dit jaar heeft verhoogd (met 9,5 procent tot 61,7 miljoen euro), zijn Sabalenka en haar collega\u0027s het niet eens met hun aandeel. \"Dat zal waarschijnlijk onder de 15 procent blijven, ver verwijderd van de gevraagde 22 procent.\" \u0027Eindjes aan elkaar knopen\u0027 De Amerikaanse Gauff, de nummer vier van de wereld, voegde eraan toe dat de oproep vooral betrekking heeft op de groep tennissers die lager op de wereldranglijst staan en daardoor van minder inkomsten verzekerd zijn. \"Kijk bijvoorbeeld naar zaken zoals sponsorinkomsten. Wij (de topspelers, red.) verdienen ook naast de baan geld, maar een speler uit de top tweehonderd moet echt de eindjes aan elkaar knopen.\" Veel grote namen De onderstaande spelers staan achter de oproep om de prijzengeldstructuur van Roland Garros aan te passen. Vrouwen: Aryna Sabalenka, Coco Gauff, Iga Swiatek, Jessica Pegula, Madison Keys, Jasmine Paolini, Emma Navarro, Zheng Qinwen, Paula Badosa en Mirra Andreeva. Mannen: Jannik Sinner, Carlos Alcaraz, Alexander Zverev, Taylor Fritz, Alex De Minaur, Casper Ruud, Daniil Medvedev, Andrey Rublev en Stefanos Tsitsipas. Novak Djokovic staat er niet bij, maar de 24-voudig grandslamkampioen is de afgelopen jaren een prominente voorvechter geweest voor het ophogen van het prijzengeld op de grootste toernooien. (Bron: Sky Sports) Eltingh bevestigt die zienswijze. \"Er gaat in het tennis best veel geld om. Maar dat gaat vooral naar een select groepje spelers. Ik denk dat zo\u0027n 150 tot 200 mannen en 100 tot 150 vrouwen kunnen zeggen: dit zijn mijn inkomsten geweest, dit mijn kosten en dan houd ik aan het eind van het jaar nog wat spaarcentjes over.\" \"Heel veel tennissers moeten er heel veel in investeren, zeker de eerste jaren. Sabalenka zegt ook dat het niet alleen om de topspelers gaat, maar met name ook voor buiten de top honderd. Dat is een beetje raar, want die komen niet eens rechtstreeks in het hoofdtoernooi. Maar als je heel eerlijk bent: als een bedrijf dit zou doen, zou er direct een staking van het personeel volgen.\" Eltingh ziet echter meer in overleg. \"Je moet het toch met deze mensen oplossen. Maar ook ik vind dat de grandslams te makkelijk autonome beslissingen kunnen nemen zonder dat ze daar door de ITF, of World Tennis zoals het tegenwoordig heet, op worden aangesproken. De spelers worden ook niet voldoende gehoord ten aanzien van hun wensen.\" Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:57:10.145851"
+  },
+  {
+    "id": 298,
+    "url": "https://nos.nl/livestream/2613619-kijk-en-luister-hier-naar-het-nos-radio-1-journaal",
+    "title": "Kijk (en luister) hier naar het NOS Radio 1 Journaal",
+    "content": "Deze livestream is afgelopen Houd onze site in de gaten voor nieuwe livestreams NOS Nieuws•zaterdag 9 mei 2026, 07:00 Kijk (en luister) hier naar het NOS Radio 1 Journaal Je wordt bijgepraat over het nieuws van dit moment en de grote nieuwsverhalen van de dag. Met context, duiding, reacties en analyses. Deze uitzending terugluisteren? Dat kan via de NPO Luister-app of op de website van NPO Radio 1. Livestream agenda aan het laden",
+    "scrapedAt": "2026-10-08 18:57:08.816294"
+  },
+  {
+    "id": 297,
+    "url": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro",
+    "title": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "content": "ANP NOS Nieuws•vrijdag 8 mei 2026, 17:30•Aangepast vrijdag 8 mei 2026, 18:36 Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro Deel dit artikel Het kabinet trekt in totaal 100 miljoen euro uit voor de compensatie van ondernemers in de vuurwerkbranche, die te lijden zal krijgen van het vuurwerkverbod dat voor de komende jaarwisseling moet ingaan. Dat laat staatssecretaris Bertram van Infrastructuur en Waterstaat weten. Het kabinet reserveert in eerste instantie 90 miljoen euro voor de compensatie van de winsten van de vuurwerkbranche. Maar omdat niet helemaal duidelijk is hoe hoog die gemiste winsten daadwerkelijk zullen zijn, is er uit voorzorg 10 miljoen euro extra gereserveerd. Verschil importeurs en verkopers Voor de compensatie van de vuurwerkimporteurs wordt meer geld vrijgemaakt dan voor de detailhandelaren. Dat komt doordat de vuurwerkhandel voor importeurs vaak hun hoofdactiviteit is, legt het kabinet uit. Detailhandelaren doen het vaak niet als hoofdactiviteit, maar als nevenactiviteit, betoogt het kabinet: zo verkopen tuincentra en fietsenzaken ook vuurwerk. Ruwweg krijgen importeurs voor de komende drie jaarwisselingen compensatie voor de winsten die ze niet kunnen maken. Bij detailhandelaren gaat het om één jaarwisseling, waar ze nog een extra bedrag bij krijgen. De vuurwerkbranche zei vorig jaar nog dat er 895 miljoen euro voor de compensatie zou moeten worden uitgetrokken, omdat een verbod tot een een enorme strop kan leiden. Dat bedrag ligt dus aanzienlijk hoger dan waar het kabinet nu mee komt. De vuurwerkbranche is teleurgesteld over hoe het kabinet tot dit besluit is gekomen. Belangrijke voorwaarde Nu de ministerraad heeft besloten dat er geld voor de compensatie wordt uitgetrokken, is ook aan de laatste voorwaarde voldaan die de Tweede Kamer aan de invoering van het vuurwerkverbod stelde. Dat betekent dat het aan het einde van dit jaar zou kunnen ingaan. De Kamer stemde een jaar geleden met ruime meerderheid in met een initiatiefwet van de Kamerleden Klaver (GroenLinks-PvdA) en Ouwehand (Partij voor de Dieren), waarin een algeheel vuurwerkverbod wordt geregeld. Een paar maanden later ging ook de Eerste Kamer akkoord. Wat houdt het vuurwerkverbod in? In Nederland is de verkoop en het afsteken van knalvuurwerk (F3) sinds december 2020 verboden. Het gaat daarbij bijvoorbeeld om rotjes, Chinese matten en losse vuurpijlen. Siervuurwerk (F2) mag tot nu toe nog wel, omdat dit in principe minder gevaarlijk is voor consumenten. Dat zijn de zogenoemde cakes, fonteintjes, grondbloemen en compoundboxen. Deze categorie wordt straks ook verboden. En dat betekent dat er alleen nog vuurwerk uit de categorie F1 verkocht mag worden: sterretjes en knalerwten. Georganiseerde groepen zoals clubs en buurtverenigingen mogen, onder strikte voorwaarden en met toestemming van de burgemeester, nog wel F2-vuurwerk afsteken. Het vuurwerkverbod heeft een lange aanloop gehad. De VVD hoorde lange tijd bij de tegenstanders, maar draaide vorig jaar na een roerige jaarwisseling met meer dan 8000 incidenten, waarbij veel geweld tegen politie en hulpverleners werd gebruikt. De partij stelde daarbij drie voorwaarden: behalve een compensatie voor de vuurwerkbranche eiste de partij dat er een effectief handhavingsplan zou komen en dat er hard zou worden opgetreden tegen illegaal vuurwerk. Met het landelijke vuurwerkverbod komt er een einde aan een lange traditie in Nederland, waarbij particulieren aan het eind van het jaar zelf vuurwerk mogen afsteken. Een deel van de gemeenten stelde de afgelopen jaren al een plaatselijk verbod of vuurwerkvrije zones in: \"Het is niet gepast hoe de staatssecretaris hiermee is omgegaan\", zegt Frans Köhler van Stichting VuurwerkCheck. De stichting was betrokken bij de gesprekken hierover, maar volgens Köhler was er geen sprake van onderhandelingen. \"Ze hebben naar ons verhaal geluisterd, verder is er niks met ons afgestemd en nu is dit bedrag gecommuniceerd.\" Hij denkt dat nog geen derde van het geld bij de vuurwerkverkooppunten terechtkomt. \"Ik verwacht dat tientallen, misschien wel honderden bedrijven failliet zullen gaan.\" Verder heeft hij twijfels of het vuurwerkverbod verlichting gaat brengen voor de handhavers. \"Ik gun het ze, maar het verbod zet ook de deur open voor de georganiseerde misdaad.\" De stichting beraadt zich nog op juridische stappen tegen het kabinet. Kers op de taart Een van de ondernemers die vanaf dit jaar stoppen met de verkoop van vuurwerk is Eddy Posno. Al meer dan 50 jaar verkoopt hij naast sportartikelen rondom de jaarwisseling ook vuurwerk. Hoewel hij het jammer vindt dat het vuurwerkverbod ingaat, is hij blij dat de vuurwerkverkoop niet zijn belangrijkste bron van inkomsten is. \"50 jaar geleden was dat wel anders, maar de sportwinkel groeide en nu is het vuurwerk een mooie kers op de taart.\" Net zoals veel verkopers moest hij een flinke investering doen om ervoor te zorgen dat hij aan de veiligheidseisen voldeed om vuurwerk op te slaan. Die heeft hij er in",
+    "scrapedAt": "2026-10-08 18:57:07.640216"
+  },
+  {
+    "id": 296,
+    "url": "https://nos.nl#carousel_end_kijken",
+    "title": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "content": "Blijf bij. NOS. Het belangrijkste nieuws Hoe buurtbewoners in Rotterdam de instorting van huizen wisten te voorkomen UEFA presenteert plan voor grondige hervorming bij FIFA, Ceferin wil UEFA-baas blijven Klimaattop in Fiji en Tuvalu grotendeels mislukt, landen blijven massaal thuis Uitgelicht Yesilgöz noemt Rusland nu \u0027de vijand\u0027 maar dat betekent \u0027niet ineens andere aanpak\u0027 De minister van Defensie zegt de dingen \"te benoemen zoals ze zijn\". KLM schrapt vluchten, vloot heeft onderhoud nodig Oude toestellen zijn stuk en reparatie duurt lang. Letten opgepakt bij Britse luchtmachtbasis Het onderzoek is door de contraterrorisme-afdeling van de politie in Londen overgenomen. Gouden standbeeld van naakte president Trump in Europees Parlement Het opmerkelijke standbeeld is gemaakt door een Deense kunstenaar, die de draak steekt met de Amerikaanse president. Zeker dertig doden bij Russische aanvallen op Oekraïense stad bij frontlinie Bommen kwamen neer in een straat waar twee stadsbussen reden. De Oekraïense president Zelensky spreekt van een aanval op een bushalte. Waterstand Rijn niet meer te peilen: bord uitgezet De peilbuis die aan het gebouw bij het bord hangt, hoort onder de waterspiegel te liggen om metingen te kunnen doen. Het water ligt inmiddels lager dan de peilbuis. Oud-chef Duitse inlichtingen speelde informatie mogelijk door aan China Volgens Der Spiegel onderzoekt de politie de contacten die de oud-topman onderhield met China. Politie deelt tientallen boetes uit om filmen van ongeluk A58 bij Oirschot De politie vraagt weggebruikers ook om respect te hebben voor slachtoffers van een ongeluk. \"Achter ieder incident schuilt een persoonlijk drama.\" Energieverbruik op piekuren vanaf 2029 voor iedereen duurder, dalgebruik goedkoper Met de nieuwe tarieven wordt de energierekening van huishoudens meer afhankelijk van hoeveel zij daadwerkelijk verbruiken. Zo moet er meer ruimte vrijkomen op het elektriciteitsnet. Nobelprijs voor Canadese dichter en hoogleraar klassieke talen Anne Carson Carson vertaalde veel klassieke Griekse literatuur. Kassa gaat toch door maar dan online: \u0027Fantastisch\u0027 Consumenten kunnen volgend jaar online naar Kassa kijken. Het is nog niet duidelijk hoe het nieuwe programma er precies uit komt te zien. Opnieuw iemand met westnijlvirus overleden, maar piek lijkt echt voorbij In totaal zijn er dit jaar tien mensen overleden die besmet waren met het westnijlvirus. Het totaal aantal besmettingen is opgelopen naar 59. Sport Bekijk meer Sport Fitte Oranjeselectie goed in vorm: \u0027Aardig wat speelsters die er een boel inschieten\u0027 In aanloop naar het tweeluik met Hongarije in de play-offs van de WK-kwalificatie is de stemming bij het Nederlands elftal opperbest. De selectie is fit en in goeden doen. PSV heeft vlak voor Heerenveen nog niet alle spelers terug, maar Bosz maakt zich niet druk PSV-trainer Peter Bosz meldt een dag voordat de eredivisie wordt hervat dat er na een interlandperiode van drie weken geen nieuwe blessuregevallen bij zijn gekomen. Hamstringblessure Brobbey niet ernstig, aldus zijn trainer bij Sunderland Oranje-spits Brian Brobbey viel al vroeg in het Nations League-duel met Duitsland uit, maar volgens Sunderland-trainer Régis Le Bris is er sprake van een \"kortdurende blessure\". Uit jouw regio Kies je regio Omroep Zeeland Zeelandbrug eerder open na bijna zes weken onderhoud RTV Utrecht Lars Balk (30) stopt na 176 interlands bij Oranje: \u0027De wil is er niet meer\u0027 Rijnmond Verkeer loopt langer vertraging op door werkzaamheden bij Suurhoffbrug Kies je regio Kijken Sla de carrousel \"Kijken\" over 0:34Homerun! Of nee, toch niet 0:20Huis omhoog 0:34Rampentraining 0:30Natte hond 0:50De laatste van Messi 0:45Metershoog 0:30Vliegles judoka 0:39Cornell in protest 0:37Bal op oog 0:36WK pap maken 0:25Jasje gooien 0:33Camping in brand 0:29Mijlpaal Van Dijk 0:42Hugs in space 0:51Zegen op dierendag 0:34Bruggen aangevallen 0:29Up 0:30Deken van mist 0:22Plat gezegd 0:38Protest met sleutels Slide 1 van 20 Live bij de NOS Bekijk meer Live bij de NOS live NOS Radio 1 Journaal vandaag, 19:50 NOS Journaal van 20.00 uur Binnenland morgen, 10:50 Bekendmaking Nobelprijs voor de Vrede Buitenland morgen, 16:00 WK judo: dag 6 Judo Verdiepen Krijgt Trump nu wel de Nobelprijs? Eerder iemand die hem kan weerstaan, zeggen experts Israëlische leger blijft Gaza verwoesten, veel vermiste lichamen zullen nooit gevonden worden Gijzelaar Maxim een jaar na zijn vrijlating uit Gaza: \u0027Ik zal nooit meer dezelfde persoon zijn\u0027 Opnieuw grote protesten én geweld in Frankrijk, wat zit erachter? Dode door pest \u0027geen reden tot zorg\u0027, maar Kremlin veroorzaakt twijfel over ernst 0:59 Zorgen over het OV in de regio: zo lang duurt een busreis van Brouwershaven naar Goes Podcast De Dag: Jane Doe en de opstand tegen elite-universiteit Cornell Spionagezaak schaadt reputatie Duitse inlichtingendienst 100 jaar Michelinsterren: wat maakt een restaurant Michelinwaardig - en wie bepaalt dat? 4:42 Zo gaat het eraan toe bij de noodopvang in ",
+    "scrapedAt": "2026-10-08 18:57:06.340176"
+  },
+  {
     "id": 295,
     "url": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken",
     "title": "Podcast De Stemming: spoednood, brievenbussen en koffievlekken",
@@ -2045,26 +2080,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 296,
-    "url": "https://nos.nl#carousel_end_kijken"
-  },
-  {
-    "id": 297,
-    "url": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
-  },
-  {
-    "id": 298,
-    "url": "https://nos.nl/livestream/2613619-kijk-en-luister-hier-naar-het-nos-radio-1-journaal"
-  },
-  {
-    "id": 299,
-    "url": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
-  },
-  {
-    "id": 300,
-    "url": "https://nos.nl/teletekst"
   },
   {
     "id": 301,
@@ -47205,10 +47220,642 @@ window.searchData = [
     "id": 18669,
     "url": "https://twitter.com/intent/tweet?text\u003dPodcast+De+Stemming%3A+spoednood%2C+brievenbussen+en+koffievlekken\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken\u0026via\u003dNOS",
     "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 18722,
+    "url": "https://nos.nl/nieuwsuur/artikel/2561597-vuurwerkbranche-wil-895-miljoen-euro-compensatie-bij-vuurwerkverbod",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18723,
+    "url": "https://api.whatsapp.com/send?text\u003dKabinet+compenseert+vuurwerkhandelaren+voor+100+miljoen+euro+https%3A%2F%2Fnos.nl%2Fartikel%2F2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18724,
+    "url": "https://nos.nl/artikel/2550795-politie-jaarwisseling-ontaardde-op-veel-plaatsen-in-geweld-en-vernieling",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18725,
+    "url": "https://nos.nl/artikel/2598427-vuurwerk-afsteken-blijft-mogelijk-voor-clubs-en-buurtverenigingen",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18726,
+    "url": "https://nos.nl/artikel/2561946-ruime-meerderheid-in-kamer-voor-algeheel-vuurwerkverbod-nsc-nu-ook-voor",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18727,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18728,
+    "url": "https://nos.nl/artikel/2561296-vuurwerkverbod-mogelijk-dichterbij-vvd-steunt-wetsvoorstel-onder-voorwaarden",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18729,
+    "url": "https://twitter.com/intent/tweet?text\u003dKabinet+compenseert+vuurwerkhandelaren+voor+100+miljoen+euro\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 18731,
+    "url": "https://twitter.com/intent/tweet?text\u003dOphef+over+prijzengeld+grandslams%3A+%27Maar+boycot+altijd+slechtste+oplossing%27\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 18732,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 18733,
+    "url": "https://nos.nl/artikel/2613021-toptennissers-verenigen-zich-tegen-diep-teleurstellend-prijzengeld-op-roland-garros",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 18734,
+    "url": "https://api.whatsapp.com/send?text\u003dOphef+over+prijzengeld+grandslams%3A+%27Maar+boycot+altijd+slechtste+oplossing%27+https%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 18736,
+    "url": "https://nos.nl/teletekst/109",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18737,
+    "url": "https://nos.nl/teletekst/702",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18738,
+    "url": "https://nos.nl/teletekst/800",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18739,
+    "url": "https://nos.nl/teletekst/888",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18740,
+    "url": "https://nos.nl/teletekst/128",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18741,
+    "url": "https://nos.nl/teletekst/700",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18742,
+    "url": "https://nos.nl/teletekst/601",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18743,
+    "url": "https://nos.nl/teletekst/105",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18744,
+    "url": "https://nos.nl/teletekst/127",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18745,
+    "url": "https://nos.nl/teletekst/600",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18746,
+    "url": "https://nos.nl/teletekst/501",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18748,
+    "url": "https://nos.nl/teletekst/101",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18749,
+    "url": "https://nos.nl/teletekst/200",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18750,
+    "url": "https://nos.nl/teletekst/100",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18751,
+    "url": "https://nos.nl/teletekst/100/2",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18752,
+    "url": "https://nos.nl/teletekst/250",
+    "parentUrl": "https://nos.nl/teletekst"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/5/7/k/V/t/e/VimcKJ4LtpJ5JaDPe8QdKyAeah6TFJWuVJTW2gb/0x0x2864x1611-1024x576.webp",
+    "alt": "Sabalenka sluit boycot grandslamtoernooien niet uit: \u0027Rechten verdedigen\u0027",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/C/g/5/Z/u/AUpNyTi2sp5QPN3riM3AedLh2q1sLa1WFUdw4VL/0x0x1920x1080-768x432.webp",
+    "alt": "Eltingh: \u0027Sabalenka heeft een punt, maar een boycot helpt de sport niet\u0027",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/8/v/y/2/9/aLPMCXQtrMq9FuN4aAxmHhiuCLFenPHGtxrupSo/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Kijk (en luister) hier naar het NOS Radio 1 Journaal",
+    "pageUrl": "https://nos.nl/livestream/2613619-kijk-en-luister-hier-naar-het-nos-radio-1-journaal"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/D/Y/J/8/1/2PXViARQaGNqtGPvNsH5aKfFm2HdjbWgtrpAXKh/0x0x4000x2250-1024x576.webp",
+    "alt": "Buurtbewoners van een wijk in Maasdam luidden 2026 in met vuurwerk",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/H/W/H/3/t/fX7B1KgNHMqdUfHoxpwfKFoKL9sCaYRQ8gAQh4o/198x176x2032x1143-768x432.webp",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/D/E/4/o/R/bKKFJ9HFY6XvtgypinJUtamWmY8iBE4F3EFmixA/8x268x3984x2241-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/8/U/P/P/G/KC1gfdUzyxBMnwQ9wxAbpR5UcFeeSpFCg8EvHG2/140x1x1800x1350-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/7/C/n/Z/4/1rj6VUZeCbGYrCXjaXHrw6dB5jsZDgi8Q3tzs3P/224x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/Q/w/S/rKAp7CWk2HrpDERCJAqdUKtZ5baaGDWpsCfzK51/0x46x3876x2907-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/G/p/k/5/4/xEmWcaeghXKGYuqyjoSePWiDeBZsouPK9qifUHg/0x208x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/F/8/B/K/r/JASivdBaM7qpiwz9u6LtaKq5edxycu8pCAZfYwA/118x1x904x678-480x360.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/D/6/h/y/S/8aWrsxrrxi2on4RYWL7zjxDwizTjWwcA6eL2Xgd/1187x1x2956x2217-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/F/D/7/c/i/Moqb7ez8MxLJkR3yxz9DDMBTCPwZKR1zmuwp4tN/1x0x472x354-288x216.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/5/B/p/s/8/jA8jGSpf9iR4cxSxeATrmPDoGwwYcGstKbdCtpz/267x0x1712x1284-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/o/c/R/G/p2whnUY9M9tbgRzMmVRBkCDEkCQdEUuig2AUw9g/1362x1x1308x981-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/B/x/6/8/8/NRvjtcEJmt8v2pC6QNkZWZCWYWEwr6VdaumrfHS/31x18x556x417-384x288.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/4/7/V/Y/h/6pzcDwfCTFQ8riJtmZxkCGG1cBtyGgj4hzC1QkK/221x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/8/W/k/c/A/nMrrLfWEe8BeCdCgoQswdKu7WCQuvaXDjk6RLyM/472x244x3396x2547-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/A/1/y/s/6/pQdFx3cq7rRW67MG9mumaXeJZHY7ikurzJavHc/1x1x1704x1278-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/C/L/e/w/X/3mmu7QLiTUUvsGjXLjPLYmikmSf6gjoBbD8esTv/314x0x3480x2610-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/m/y/4/6/PcThDq5sUr5U9VRqZHvwbzG1X8kcnTDUNKr8ygK/242x1x1436x1077-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/2/d/w/i/g/QzufEFWTz8V8DMuprYVnsZ7LWnayBfL5SMW671h/242x255x2808x2106-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/s/t/G/Z/a/KSxMwUY75xtVocP84XLxEr2Enf2pvEyJ4jLG4n/312x257x2804x2103-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/Zeeland/Regio_zeeland.svg",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/Utrecht/Regio_Utrecht.svg",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/ZH-Rijnmond/Regio_ZH-Rijnmond.svg",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/9/Y/J/K/B/9vnQL2GuLoXrK6HAvEDwjf1tQuhYpD7qSUYWMyq/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/G/2/x/v/m19b71VxtkeFyLJXgpv2yMmzucLVZqXDpbq2Kvp/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/G/d/x/L/r/j9FLNbVBMeVuzrjyK2N5QNRaJXtgnMrfvRgtHrc/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/A/S/s/a/x/rK8T8gGsZ1sEW3PTbQyt2sNGSBWC3YRLxwJ1aYH/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/C/c/s/f/p/qe6L4b6WVz4LfaFXKcDDFYuR34A19dTiKx2vunV/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/D/k/N/R/j/X6zVpYQB7hZtxcDkSjgT4tHBJ6SsA3JdmGxAEZU/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/F/y/s/L/w/sWTBvvqn1WoDyYQgjDDT2NWx1537BwySTqV2A95/0x0x1620x2160-576x768.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/H/8/B/F/w/HVc1NjeVHsNYJLuYPYV6PhAeZxjL4BrbFFGJQZG/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/2/Q/3/A/C/hdnWzzgokRmp5cJhJ6Bb2PatcY45a9CMHsUfPAr/0x1x1443x1924-576x768.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/H/D/t/R/8/AoDHortj2WzbwVTX1pqME9HK3o7dy8DamwfBtS/0x0x690x920-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/8/c/P/D/Q/m1jWu5mcvcZjrTgL1VrbPYMAPUCZMe62fYjY6Wy/0x0x603x804-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/A/P/t/k/K/MVGqiVHn7rP2XbbFaoCLMiEroygiPQ3UrEbKktX/1x1x804x1072-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/3/D/f/e/2/UhHLjnJVBQ2hE8SyUr2eddLG7BYJfjL8o4KVoTX/1x1x1437x1916-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/8/c/2/g/X/Re5VxGPS2Xchg8gy2YkjWkvFzM51fLBVQhhCkQn/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/2/G/8/v/J/GGwGaxSDmHQjuXKcoYbteBBR4ts8yYV3Fmz9U6u/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/9/F/d/A/m/LN3jt3S4cWGXiq8nk6Xyyact5NBZHWS8kPaeCma/0x1x1005x1340-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/4/L/Q/n/B/tbAxewTqPp8dKqp7ecigU75xovTB984eEmJfDGg/0x0x603x804-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/C/X/D/Q/H/nQuxWkqusBhedi1ZcSq9yFFrzAY9A732ftAcMEi/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/2/H/2/A/u/vEtmsURi3VNT6MVrAJKZSYCbaaFAZHud3a4XNPM/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/E/w/q/7/b/W4ddLdPwpJWr9Qy7aEtWCgDd7T4i3DQewQB5pUM/0x0x810x1080-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/F/P/q/Y/7/W7wdJvdk4bmpqCHXYqHCbPSCBZdrEYwb7cq5cv8/63x9x1792x1008-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/5/7/w/L/r/kF7gGADuHMLHyrLdHBt6o2gXfZj7XNG6YVopqzd/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/B/R/j/h/V/J84HM3Jhgz8S4BbjsvhwMCPiE4jwM1RfkoCUSWQ/464x334x2484x1863-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/6/s/e/9/N/GtFih2Q2FCQadfqRme3mqh29RLMKqX44MXGjkhH/106x0x3460x2595-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/A/a/k/R/8/PHhnkKhSrTuxAdKQVdFHwgAsEPGSUKDLzYT2mVG/266x0x2772x2079-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/E/E/B/y/p/MVGnEHcCefhRPQYdTNpzStHCMdPBhm3ms2gRMhr/1404x940x1268x951-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/3/U/4/j/b/zSt1FhnHzEz2u5oFYcuDTs9Jc1JF5gds1jPbVbe/784x1x2572x1929-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/C/A/t/K/Y/iDUXG47GFZWNyCQ1pWJXqJEkuFKcYL9CKb3g2fx/222x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/E/g/w/V/g/urJxSYJAFtakRni1DuzxyRUfjkYYrkbYfaq74w6/4x54x992x558-512x288.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/5/v/4/M/7/iKJ3VvJNAA9zGSW4Fc3vWfohgktN9VrQ5PUkWyk/1x0x1792x1008-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/5/z/Q/Z/1/CuaTqDHsnEQYB1mxiuRemDhv8FvWfozKuaGB53j/240x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/6/C/Z/9/K/HUkSz3VrsrcxdUUL8aDv891PbNzWHJzWb1LGGhG/442x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/3/J/u/p/q/fsRMCDf7wr2LPc7QgSGUwfWe6SNX58avEAskTej/224x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/H/4/p/h/H/FaSJ5vWovyodgtT283dbJsRzMsYfynVQXsyn4ed/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/5/h/d/L/h/ofZ5u2cZpVUALHXYaJ1xNDgRYPBJfMomvASd4y6/240x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://specials.app.nos.nl/sudan-verhalen/img/BREAKING_met_titel.jpg",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/F/o/g/C/5/rH7Wv6qBPpXEw6moNU2YwzWxhQiFPuFFaxFNTGw/0x1x1011x1348-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/G/x/P/Y/i/yvwVSwqSHJtqpALvRryuoWCWBiHvZzg2VwK8XJ3/0x0x996x1328-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/C/4/w/z/m/fZg8CP78JrwAExQ4F7Cgct86zCCh3R22k5RBc4A/0x1x1011x1348-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/6/d/Q/F/h/ou84yjiwVfJRWW1cuMem8dFgDvZ3upyFsSpmr9D/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/3/S/V/u/b/EMt7CtG4HqWWKnPxPP7J4xeASp39iRnMnqRBHWw/0x0x720x960-360x480.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/2/W/Y/4/F/rzvnR4EDAQeiaNUaVYsxeKEA4Uhdm7uoPs7by3P/0x1x1011x1348-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/G/r/1/o/B/emjofP2wMm5wFnW8zCsimQSfoYTeqadwpvxvLak/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/5/8/q/Q/V/G9zzMYLzLj2MV36ytrmehhvg3Pz8VQ5ZhFtbgQc/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/D/z/p/M/Q/VGpzmxcPZo962VxyYhBiUNC54iHdtvWtTGe4ZTv/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/H/g/z/Z/d/9uyDz7vFAxBqBfeDN6ExNhnGfW7Z2z2A1GXs6M1/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/C/p/b/R/F/4S5R2LjkSDtnA36PXpfB9YhuXkYPybFa39GTfRW/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/2/W/a/H/J/MNn89A1xJZfN4wknvkhjGsY5tgxyyAGm4tJA2Qs/0x1x1011x1348-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/4/Y/o/E/3/LXvTYtfRjWCKMPYTPFE5wsR6qEaQc1mKTVz5t8s/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/2/j/5/T/L/68k175mK85vw5Qdwr72fb2fTzBAcFqctxsV8Vj1/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/H/T/w/J/a/PBVf3SZVkNijNT6USH2YsWwW91tHthSC9wdM1cR/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/9/Y/U/a/h/WcFVxZkK1Lm1xYPm7MQKdkcmy364Yczk24GqGmQ/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/5/W/M/u/D/7stKMtxfcHLxaU6B26CRk3gksW8i4fAbCTRNovD/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/B/1/F/i/N/3Ga4rZ4a4KJ3JbEkdUmGhh2W9FHCM8Ak1dMC8Ej/0x1x1011x1348-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/8/C/W/2/3/m5zojHe7mFJqXjSYoQEk25Tx3RKJfNR6Fg7rZ8Y/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/G/8/h/W/p/ouoFtNaSQjUTzxrNaMPtupWibhVna87ooKzmnHJ/0x0x1080x1440-432x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
+    "pageUrl": "https://nos.nl#carousel_end_kijken"
+  },
   {
     "src": "https://images.cdn.nos.nl/2/F/8/c/o/7/fLfgDs3EktNEkpHHXDdjUQYpK3WYrvy5jm7QoaM/0x71x768x432-512x288.webp",
     "alt": "",
