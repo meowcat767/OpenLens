@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 577,
+    "url": "https://www.python.org/psf/fellows/",
+    "title": "PSF Fellow Membership | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. The deadline to nominate someone for Quarter 4 consideration is 11:59 p.m. UTC, November 20, 2026. Please send your nomination to: psf-fellow@python.org Your nomination should include: The name of the person you are nominating. Why you think they meet the Fellow criteria, i.e. how they have served the Python community. Please also include an email address for the person you are nominating. Example nomination: I, Marcia Nominator, propose that Marvin Pythonista be recognized as a Fellow of the Python Software Foundation, due to their significant contributions to the Python community as a co-founder of the PyCon Foobar regional conference, a lead organizer for the 2016 and 2017 editions of the Martian Python community\u0027s flagship Python conference, MarsPython and as a long-term contributor to international collaborative efforts amongst the Martian Python community. The PSF Fellow Work Group has decided to review nominations on a quarterly basis and we also established a criteria for handling the nominations. Here are the nominations timeline and criteria: Timeline: Please note these timelines are approximate, as administration of the program is based on PSF Staff capacity. First quarter: January to the end of March (01/01 - 31/03) Cut-off for nominations will be February 20. New fellows will be announced before March 31. Second quarter: April to the end of June (01/04 - 30/06) Cut-off for quarter two will be May 20. New fellows will be announced before June 30. Third quarter: July to the end of September (01/07 - 30/09) Cut-off for quarter three will be August 20. New fellows will be announced before end of September. Fourth quarter: October to the end of December (01/10 - 31/12) Cut-off for quarter four will be November 20. New fellows will be announced before December 31. Criteria: Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellows are eligible to vote in PSF elections. You can see the full list of Fellows at the PSF Fellows Roster page. For those who have served the Python community by creating and/or maintaining various engineering/design contributions, the following statement should be true: Nominated Person has served the Python community by making available code, tests, documentation, or design, either in a Python implementation or in a Python ecosystem project, that 1) shows technical excellence, 2) is an example of software engineering principles and best practices, and 3) has achieved widespread usage or acclaim. For those who have served the Python community by coordinating, organizing, teaching, writing, and evangelizing, the following statement should be true: Nominated Person has served the Python community through extraordinary efforts in organizing Python events, publicly promoting Python, and teaching and coordinating others. Nominated Person\u0027s efforts have shown leadership and resulted in long-lasting and substantial gains in the number and quality of Python users, and have been widely recognized as being above and beyond normal volunteering. If someone is not accepted to be a fellow in the quarter they were nominated for, they will remain an active nominee for 1 year for future consideration. It is suggested/recommended that the nominee have wide Python community involvement. Examples would be (not a complete list - just examples): Someone who has received a Community Service Award or Distinguished Service Award A developer that writes (more than one) documentation/books/tutorials for wider audience Someone that helps translate (more than one) documentation/books/tutorials for better inclusivity An instructor that teaches Python related tutorials in various regions Someone that helps organize local meet ups and also helps organize a regional conference Nominees should be aware of the Python community’s Code of Conduct and should have a record of fostering the community. Sitting members of the PSF Board of Directors can be nominated if they meet the above criteria. In all that this person does, Nominated Person is an example of what we aspire to be in the Python community. Welcome 2026 Q2 Fellow Members! Andy Terrel, Julius Nana Acheampong Boakye, Petr Viktorin, Sayantika Banik, Takanori Suzuki Welcome 2026 Q1 Fellow Members! Bill Deegan, El-Karece Asiedu, James Kanin Kearpimy, Jonas Obrist, Kristen McIntyre, Lucie Anglade, Phebe Polk, Philippe Gagnon, Sarah Kuchinsky, Simon Charette, Sony Valdez, Stan Ulbrych, Steve Yonkeu Welcome 2025 Q4 Fellow Members! Chris Brousseau, Dave Forgac, Inessa Pawson, James Abel, Karen Dalton, Mia Bajić, Tatiana Andrea Delgadillo Garzofino Welcome 2025 Q3 Fellow Members! Abhijeet Mote, Abigail Afi Gbadago, B",
+    "scrapedAt": "2026-10-08 19:07:06.621277"
+  },
+  {
+    "id": 576,
+    "url": "https://www.python.org/psf/membership/supporting/",
+    "title": "Supporting Membership | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Become a Supporting Member of the PSF! Sign up as a Supporting Member What does it mean to be a Supporting Member of the PSF? Supporting Members make an annual membership donation to the PSF to fund our work for the Python language and the Python community. Supporting Members have voting rights in annual PSF Board Elections and bylaw votes. Supporting Members provide an important share of the PSF’s annual revenue every year. Income from Supporting Memberships is independent of particular corporate interests, and helps hold us accountable to our most important stakeholders: our community members. Supporting Members are key to ensuring we can continue the work that is most important to the Python community, including hosting the Python Packaging Index, PyCon US, the CPython Developer in Residence, and our Grants program. A standard Supporting Membership is $99 per year, and you can sign up or renew here on our psfmember.org site. You will be asked to create a psfmember.org account if you do not already have one. Become a Supporting Member of the PSF - Sliding Scale Rate (NEW)! Sign Up as a PSF Supporting Member - Sliding Scale Rate What is the Supporting Membership Sliding Scale Rate? Supporting Members make an annual membership donation to the PSF to fund our work for the Python language and the Python community. Supporting Members have voting rights in annual PSF Board Elections and bylaw votes. Examples of why you might select a sliding scale Supporting Membership: You work in a country with lower average incomes than the US or Western Europe. You are a student. You are currently un- or underemployed. (These are just illustrative examples to help you select a rate! We won\u0027t ask for any information about the reason for your selection.) Your Supporting Membership will make you eligible to vote for candidates for the PSF Board of Directors, changes in the PSF bylaws, and other matters related to the infrastructure of the foundation. We value the participation of each member of the Python community and do not want financial barriers to keep individuals from participating as a member of the PSF. Please choose the amount that best fits your personal situation. Whatever donation is right for you, we are grateful for your support! We do ask that you be mindful that this membership option is available to promote accessibility and contribute to the PSF’s mission to support and facilitate the growth of a diverse and international community. We welcome everyone who wants to contribute, as we aspire to an environment where anyone can participate, and everyone can make a difference. Please note that Basic Membership is always free, and if you are eligible for the Contributing or Maintaining membership category, you can also receive voting membership at no cost by self-certifying here. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 19:07:05.390043"
+  },
+  {
+    "id": 574,
+    "url": "https://www.python.org/psf/mission/",
+    "title": "Mission | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e About\u003e\u003e\u003e Mission Statement The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. You can help fund the PSF by making a donation or becoming a member. The following is the official mission statement of the PSF: The Python Software Foundation (PSF) is a non-profit membership organization devoted to advancing open source technology related to the Python programming language. It qualifies under the US Internal Revenue Code as a tax-exempt 501(c)(3) scientific and educational public charity, and conducts its business according to the rules for such organizations. The PSF: Produces the core Python distribution, made available to the public free of charge. This includes the Python language itself, its standard libraries and documentation, installers, source code, educational materials, and assorted tools and applications. Establishes PSF licenses, ensuring the rights of the public to freely obtain, use, redistribute, and modify intellectual property held by the PSF. Works with the Open Source Initiative to ensure that PSF licenses conform to the Open Source Definition. Holds Python\u0027s intellectual property rights for releases 2.1 and following. Seeks to obtain the intellectual property rights for Python releases prior to 2.1, for relicensing under the PSF Python license, to relieve the legal burden on Python\u0027s users. The PSF may also seek rights to other Python-related software for relicensing under a PSF license. Protects the Python name, and the names, service marks and trademarks associated with all other intellectual property held by the PSF. Solicits and manages contributions to the Python codebase, and may perform these services on behalf of other open source Python-related codebases. Raises funds to support PSF programs and services. The regulations for public charity funding are complex. Some consequences are that the vast bulk of funding must come from private contributions (including sponsoring memberships) and public grants, must come from a broad base, and that no single private donor can supply a substantial percentage of the PSF\u0027s total funding. Additional revenue may be pursued in ways consistent with then-current rules for public charities and with Python\u0027s standing as an open source project. For example, the PSF may offer to sell conference proceedings, special Python distributions, or merchandise with distinctive insignia. Publicizes, promotes the adoption of, and facilitates the ongoing development of Python-related technology and educational resources. This includes, but is not limited to, maintaining a public web site, planning Python conferences, and offering grants to Python-related open source projects. Encourages and facilitates Python-related research in the public interest. \"Open source\" is defined as: freely available technology licensed under terms compatible with Version 1.9 (or later) of the Open Source Definition, as established by the Open Source Initiative (see https://opensource.org/). Note The mission statement above was approved by the PSF Board of Directors on March 2, 2002, and amended by the Board on August 15, 2006, and September 14, 2009 (brief version). See the PSF Board Resolutions page for details. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 19:07:04.015832"
+  },
+  {
+    "id": 573,
+    "url": "https://www.python.org/nominations/elections/",
+    "title": "Elections | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e Membership\u003e\u003e\u003e PSF Elections Elections Nominations Closed 2026 Python Packaging Council Election The 2026 inaugural election fills all five seats on the Packaging Council. The two candidates receiving the highest number of votes shall be designated Cohort A with a two year term, and the three candidates receiving the next highest number of votes shall be designated Cohort B with a one year term. View nominations Election began: Sept. 1, 2026 Nominations Opened: Tue, 28 Jul 2026 14:00:00 +0000 Nominations Closed: Tue, 11 Aug 2026 14:00:00 +0000 2026 Python Software Foundation Board Election There are four available seats for the upcoming term on the PSF Board. Cheuk Ting Ho, Christopher Neugebauer, Denny Perez, and Georgi Ker are at the end of their current terms. View nominations Election began: Sept. 1, 2026 Nominations Opened: Tue, 28 Jul 2026 14:00:00 +0000 Nominations Closed: Tue, 11 Aug 2026 14:00:00 +0000 2025 Python Software Foundation Board Election The following people were elected to the Board: Abigail Dogbe Jannis Leidel Sheena O’Connell Simon Willison View nominations Election began: Sept. 2, 2025 Nominations Opened: Tue, 29 Jul 2025 14:00:00 +0000 Nominations Closed: Tue, 12 Aug 2025 14:00:00 +0000 2024 Python Software Foundation Board Election The following people were elected to the Board: Tania Allard KwonHan Bae Cristián Maureira-Fredes View nominations Election began: July 2, 2024 Nominations Opened: Tue, 11 Jun 2024 14:00:00 +0000 Nominations Closed: Tue, 25 Jun 2024 14:00:00 +0000 2023 Python Software Foundation Board Election The following people were elected to the Board: Cheuk Ting Ho Denny Perez Georgi Ker Christopher Neugebauer KwonHan Bae View nominations Election began: June 20, 2023 Nominations Opened: Thu, 01 Jun 2023 00:00:00 +0000 Nominations Closed: Thu, 15 Jun 2023 23:59:59 +0000 2022 Python Software Foundation Board Election The following people were elected to the board: Kushal Das Jannis Leidel Dawn Wages Simon Willison View nominations Election began: June 20, 2022 Nominations Opened: Wed, 01 Jun 2022 16:00:00 +0000 Nominations Closed: Thu, 16 Jun 2022 12:00:00 +0000 2021 Bylaws Proposed Changes Election The following resolutions were approved: Section 5.15 Limits on Co-affiliation of Board Members Resolution approved by the board of directors RESOLVED, that the Python Software Foundation board approve the bylaw implementation of \u0027Section 5.15. Limits on Co-affiliation of Board Members\u0027 as proposed here, to be voted on by the membership during the next election. Context The board is focused on promoting a diverse and international community. Many directors work at organizations that are part of our community, sponsor the PSF, and/or volunteer in some other way. It happens occasionally that several board members are employed by the same organization, and this shouldn’t be an impediment for their service. At the same time the Board wants to guard against a situation where a single entity has complete control over the PSF by gaining a majority of the board seats. It’s not quite enough to declare allegiances and let voting members decide who to elect, because for example one company taking over another could result in a majority on the Board. The Bylaw changes aim to prevent such Board capture. Section 4.8. Fellows Resolution approved by the board of directors RESOLVED, that the Python Software Foundation board approve the bylaw updates to \u0027Section 4.8. Fellows\u0027 as proposed here, to be voted on by the membership during the next election. Context The PSF Board noticed that the current bylaws lacked the ability for the board to fully delegate Fellow approvals to the Fellows Work Group. Going forward, the board prefers an option to empower the WG (which is composed of only Fellow members) to accept nominations, vote on them, and officially approve them. If these changes are approved, the pull request will be made against the official bylaw repository. View nominations Election began: June 23, 2021 Nominations Opened: Wed, 30 Jun 2021 19:03:08 +0000 Nominations Closed: Wed, 30 Jun 2021 19:03:09 +0000 2021 Python Software Foundation Board Election The following people were elected to the board: Joannah Nanjekye Débora Azevedo Tania Allard View nominations Election began: June 8, 2021 Nominations Opened: Thu, 06 May 2021 08:00:00 +0000 Nominations Closed: Tue, 01 Jun 2021 08:00:00 +0000 2020 Python Software Foundation Board Election The following people were elected to the board: Nina Zakharenko Dustin Ingram Jeff Triplett Thomas Wouters View nominations Election began: June 8, 2020 Nominations Opened: Wed, 06 May 2020 08:00:00 +0000 Nominations Closed: Thu, 04 Jun 2020 12:02:02 +0000 2019 Python Software Foundation Board Election The following people were elected to the board: Lorena Mesa Kushal Das Marlene Mha",
+    "scrapedAt": "2026-10-08 19:07:02.666452"
+  },
+  {
+    "id": 572,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39",
+    "title": "Python Software Foundation Supporting Member – Sliding Scale – Python Software Foundation",
+    "content": "Skip to content PSF Supporting Members allow the Python Software Foundation to do the work you care most about. Your Supporting Membership provides crucial support to Python and the Python community, while giving you a voice in the direction of the PSF. The PSF has made a sliding scale option available for Supporting Membership, because we want to make membership more accessible for more people and to increase the size and diversity of our voting membership. We welcome you to sign up for a sliding scale Supporting Membership if the standard Supporting Membership rate presents a financial burden to you. Examples of why you might select a sliding scale membership: You work in a country with lower average incomes than the US or Western Europe. You are a student. You are currently unemployed. (These are just illustrative examples to help you select your rate! We will not request any information about the reason for your selection.) We just need to collect a few details to process your membership. Thank you for joining us and supporting the Python Software Foundation! PSF Supporting Member Please join Python Software Foundation as a Supporting Member! Select one of the options below: Membership * Supporting - Sliding Scale - $ 25.00 Supporting - Automatic Yearly Renewal Sliding Scale - $ 25.00 Please renew my membership automatically. Membership will renew automatically. Make an additional gift to the PSF $10 $25 $50 - none - Other Amount Optional: Checking this box covers the PSF\u0027s 3% processing fees. Thank you! Total Amount Email Address * Payment Options Payment Method Credit Card PayPal Stripe Checkout Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Email Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island North Macedonia Northern Mariana Islands Norway Oman Pakistan Palau Palestine, State of Panama Papua New Guinea Paraguay Peru Philippines Pitcairn Poland Portugal Puerto Rico Qatar Reunion Romania Russian Federation Rwanda Saint Barthélemy Saint Helena Saint Kitts and Nevis Saint Lucia Saint Martin (French part) Saint Pierre and Miquelon Saint Vincent and the Grenadines Samoa San Marino Sao Tome and Principe Saudi Arabia Senegal Serbia Serbia and Montenegro Seychelles Sierra Leone Singapore Sint Maarten (Dutch Part) Slovakia Slovenia Solomon Islands Somalia South Africa South Georgia and the South Sandwich Islands South Sudan Spain Sri Lanka Sudan Suriname Svalbard and Jan Mayen Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania, United Republic of Thailand Timor-Leste Togo Tokelau Tonga Trinidad and Tobago Tunisia Turkey Turkmenistan Turks and Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States Minor Outlying Islands Uruguay Uzbekistan Vanuatu Venezuela Viet Nam Virgin Islands, British Virgin Islands, U.S. Wallis and Futuna Western Sahara Yemen ",
+    "scrapedAt": "2026-10-08 19:07:01.397639"
+  },
+  {
     "id": 571,
     "url": "https://www.python.org/users/membership/",
     "title": "Sign In to Python.org",
@@ -3925,26 +3960,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 572,
-    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39"
-  },
-  {
-    "id": 573,
-    "url": "https://www.python.org/nominations/elections/"
-  },
-  {
-    "id": 574,
-    "url": "https://www.python.org/psf/mission/"
-  },
-  {
-    "id": 576,
-    "url": "https://www.python.org/psf/membership/supporting/"
-  },
-  {
-    "id": 577,
-    "url": "https://www.python.org/psf/fellows/"
   },
   {
     "id": 578,
@@ -98025,6 +98040,121 @@ window.searchData = [
     "id": 68805,
     "url": "https://psfmember.org/python-software-foundation-supporting-member-2/#content",
     "parentUrl": "https://psfmember.org/python-software-foundation-supporting-member-2/"
+  },
+  {
+    "id": 68810,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39#content",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39"
+  },
+  {
+    "id": 68811,
+    "url": "https://www.python.org/nominations/elections/2026-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68812,
+    "url": "https://www.python.org/nominations/elections/2026-python-packaging-council/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68814,
+    "url": "https://www.python.org/nominations/elections/2021-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68815,
+    "url": "https://www.python.org/nominations/elections/2024-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68817,
+    "url": "https://www.python.org/nominations/elections/2021-bylaws-proposed-changes/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68818,
+    "url": "https://github.com/VanL/psf-bylaws/compare/9666a3a397c30fa7c03526a413e28a3bcbd02462...limits-on-affiliation",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68819,
+    "url": "https://www.python.org/nominations/elections/2025-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68820,
+    "url": "https://www.python.org/nominations/elections/2022-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68821,
+    "url": "https://www.python.org/nominations/elections/2020-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68822,
+    "url": "https://www.python.org/nominations/elections/2019-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68823,
+    "url": "https://www.python.org/nominations/elections/2023-python-software-foundation-board/nominees/",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68824,
+    "url": "https://github.com/VanL/psf-bylaws/compare/9666a3a397c30fa7c03526a413e28a3bcbd02462...24a5abbde0b938492f6dcdaa5781388b9932fa72",
+    "parentUrl": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 68825,
+    "url": "https://www.python.org/psf/records/board/resolutions",
+    "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 68827,
+    "url": "https://www.python.org/psf/membership",
+    "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 68828,
+    "url": "https://www.python.org/psf/diversity/",
+    "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 68829,
+    "url": "https://opensource.org/",
+    "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 68830,
+    "url": "https://www.python.org/psf/donations",
+    "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 68831,
+    "url": "https://www.python.org/psf/about/",
+    "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 68832,
+    "url": "https://www.python.org/psf/membership/supporting/us.pycon.org",
+    "parentUrl": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 68835,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d1",
+    "parentUrl": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 68838,
+    "url": "https://www.python.org/psf/membership/supporting/pypi.org",
+    "parentUrl": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 68839,
+    "url": "https://www.python.org/psf/fellows/#criteria",
+    "parentUrl": "https://www.python.org/psf/fellows/"
   }
 ];
 
