@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1070,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.getsockname",
+    "title": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » socket — Low-level networking interface | Theme Auto Light Dark | socket — Low-level networking interface¶ Source code: Lib/socket.py This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms. Note Some behavior may be platform dependent, since calls are made to the operating system socket APIs. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The Python interface is a straightforward transliteration of the Unix system call and library interface for sockets to Python’s object-oriented style: the socket() function returns a socket object whose methods implement the various socket system calls. Parameter types are somewhat higher-level than in the C interface: as with read() and write() operations on Python files, buffer allocation on receive operations is automatic, and buffer length is implicit on send operations. See also Module socketserver Classes that simplify writing network servers. Module ssl A TLS/SSL wrapper for socket objects. Socket families¶ Depending on the system and the build options, various socket families are supported by this module. The address format required by a particular socket object is automatically selected based on the address family specified when the socket object was created. Socket addresses are represented as follows: The address of an AF_UNIX socket bound to a file system node is represented as a string, using the file system encoding and the \u0027surrogateescape\u0027 error handler (see PEP 383). An address in Linux’s abstract namespace is returned as a bytes-like object with an initial null byte; note that sockets in this namespace can communicate with normal file system sockets, so programs intended to run on Linux may need to deal with both types of address. A string or bytes-like object can be used for either type of address when passing it as an argument. Changed in version 3.3: Previously, AF_UNIX socket paths were assumed to use UTF-8 encoding. Changed in version 3.5: Writable bytes-like object is now accepted. A pair (host, port) is used for the AF_INET address family, where host is a string representing either a hostname in internet domain notation like \u0027daring.cwi.nl\u0027 or an IPv4 address like \u0027100.50.200.5\u0027, and port is an integer. For IPv4 addresses, two special forms are accepted instead of a host address: \u0027\u0027 represents INADDR_ANY, which is used to bind to all interfaces, and the string \u0027\u003cbroadcast\u003e\u0027 represents INADDR_BROADCAST. This behavior is not compatible with IPv6, therefore, you may want to avoid these if you intend to support IPv6 with your Python programs. For AF_INET6 address family, a four-tuple (host, port, flowinfo, scope_id) is used, where flowinfo and scope_id represent the sin6_flowinfo and sin6_scope_id members in struct sockaddr_in6 in C. For socket module methods, flowinfo and scope_id can be omitted just for backward compatibility. Note, however, omission of scope_id can cause problems in manipulating scoped IPv6 addresses. Changed in version 3.7: For multicast addresses (with scope_id meaningful) address may not contain %scope_id (or zone id) part. This information is superfluous and may be safely omitted (recommended). AF_NETLINK sockets are represented as pairs (pid, groups). Linux-only support for TIPC is available using the AF_TIPC address family. TIPC is an open, non-IP based networked protocol designed for use in clustered computer environments. Addresses are represented by a tuple, and the fields depend on the address type. The general tuple form is (addr_type, v1, v2, v3 [, scope]), where: addr_type is one of TIPC_ADDR_NAMESEQ, TIPC_ADDR_NAME, or TIPC_ADDR_ID. scope is one of TIPC_ZONE_SCOPE, TIPC_CLUSTER_SCOPE, and TIPC_NODE_SCOPE. If addr_type is TIPC_ADDR_NAME, then v1 is the server type, v2 is the port identifier, and v3 should be 0. If addr_type is TIPC_ADDR_NAMESEQ, then v1 is the server type, v2 is the lower port number, and v3 is the upper port number. If addr_type is TIPC_ADDR_ID, then v1 is the node, v2 is the reference, and v3 should be set to 0. A tuple (interface, ) is used for the AF_CAN address family, where interface is a string representing a network interface name like \u0027can0\u0027. The network interface name \u0027\u0027 can be used to receive packets from all network interfaces of this family. CAN_ISOTP protocol requires a tuple (interface, rx_addr, tx_addr) where both additional parameters are unsigned long integer that represent a CAN identifier (standard or extended). CAN_J1939 protocol requires a tuple (interface, name, pgn, addr) where additional parameters are 64-bit unsigned integer representing the ECU name, a 32-bit unsigned integer representing the Parameter Group Number (PGN), and an 8-bit integer repres",
+    "scrapedAt": "2026-10-08 19:25:50.938813"
+  },
+  {
+    "id": 1069,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#difflib",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:25:49.671502"
+  },
+  {
+    "id": 1068,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Union",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:25:48.344162"
+  },
+  {
+    "id": 1067,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetInt",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:25:47.084133"
+  },
+  {
+    "id": 1066,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passed a",
+    "scrapedAt": "2026-10-08 19:25:45.815934"
+  },
+  {
     "id": 1065,
     "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl",
     "title": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
@@ -7105,26 +7140,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1066,
-    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
-  },
-  {
-    "id": 1067,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetInt"
-  },
-  {
-    "id": 1068,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Union"
-  },
-  {
-    "id": 1069,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#difflib"
-  },
-  {
-    "id": 1070,
-    "url": "https://docs.python.org/3/library/socket.html#socket.socket.getsockname"
   },
   {
     "id": 1071,
@@ -197596,10 +197611,255 @@ window.searchData = [
     "id": 178729,
     "url": "https://datatracker.ietf.org/doc/html/rfc1738.html",
     "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178732,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/argparse.py",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178735,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.Action",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178740,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.RawTextHelpFormatter",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178745,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.set_defaults",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178755,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.Namespace",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178758,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_subparsers",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178759,
+    "url": "https://docs.python.org/3/library/optparse.html#choosing-an-argument-parser",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178761,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.RawDescriptionHelpFormatter",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178762,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/argparse.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178765,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.Action.__call__",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178766,
+    "url": "https://en.wikipedia.org/wiki/ANSI_escape_code",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178767,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentError",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178768,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.register",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178774,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.format_usage",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178775,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.parse_known_intermixed_args",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178778,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.BooleanOptionalAction",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178779,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.parse_args",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178784,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.Action.format_usage",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178788,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178802,
+    "url": "https://docs.python.org/3/library/argparse.html#args",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178809,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentTypeError",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178811,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.convert_arg_line_to_args",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178814,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.print_usage",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178815,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.get_default",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178818,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentDefaultsHelpFormatter",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178821,
+    "url": "https://docs.python.org/3/howto/argparse-optparse.html#upgrading-optparse-code",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178823,
+    "url": "https://docs.python.org/3/library/argparse.html#prefix-matching",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178828,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.parse_intermixed_args",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178830,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.error",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178832,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.exit",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178835,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.parse_known_args",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178845,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.MetavarTypeHelpFormatter",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178847,
+    "url": "https://docs.python.org/3/library/argparse.html#",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178848,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.format_help",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178849,
+    "url": "https://docs.python.org/3/library/argparse.html#namespace",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178855,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.print_help",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 178863,
+    "url": "https://docs.python.org/3/howto/argparse.html#argparse-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/socket.html#socket.socket.getsockname"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/socket.html#socket.socket.getsockname"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#difflib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#difflib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.Union"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.Union"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetInt"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetInt"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
