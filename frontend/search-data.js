@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1028,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr",
+    "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_UCS4",
+    "scrapedAt": "2026-10-08 19:24:11.290903"
+  },
+  {
+    "id": 1027,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.setName",
+    "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be cle",
+    "scrapedAt": "2026-10-08 19:24:10.029247"
+  },
+  {
+    "id": 1026,
+    "url": "https://github.com/python/cpython/issues/133306",
+    "title": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} add \\z as a synonym for \\Z in Python REs for standardization #133306 New issue Copy link New issue Copy link Closed Closed add \\z as a synonym for \\Z in Python REs for standardization#133306 Copy link Assignees Labels topic-regextype-featureA feature request or enhancementA feature request or enhancement Description mstevenbrown opened on May 2, 2025 Issue body actions Feature or enhancement Proposal: Hello - I’m with the Austin Common Standards Revision Group - the joint technical working group established to develop and maintain the core open systems interfaces that are the POSIX™ 1003.1 (and former 1003.2) standards, ISO/IEC 9945, and the core of the Single UNIX Specification. We have had a request to unify/rationalize the regex behaviors for “anchor at string beginning” (^ is the closest in POSIX) and “anchor at string end” ($ is the closest in POSIX). A description of this problem in depth can be found here and a table that scopes the varied solutions across varying languages can be found here. Our working group has come to the conclusion that \\A and \\z are widely implemented across many ecosystems and are the most “standard” solution to the issue. We are asking if the Python community would consider adding “\\z” as a synonym for “\\Z” in their regex lexicon. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/proposal-add-z-as-a-synonym-for-z-in-python-res-for-standardization/90378/1 Linked PRs gh-133306: Support \\z as a synonym for \\Z in regular expressions #133314 gh-133306: Use \\z instead of \\Z in regular expressions in the stdlib #133337 gh-133306: Use \\z instead of \\Z in fnmatch.translate() and glob.translate() #133338 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees serhiy-storchaka Labels topic-regextype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:24:08.800641"
+  },
+  {
+    "id": 1025,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#re",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:24:06.50912"
+  },
+  {
+    "id": 1024,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.MAX",
+    "title": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » uuid — UUID objects according to RFC 9562 | Theme Auto Light Dark | uuid — UUID objects according to RFC 9562¶ Source code: Lib/uuid.py This module provides immutable UUID objects (the UUID class) and functions for generating UUIDs corresponding to a specific UUID version as specified in RFC 9562 (which supersedes RFC 4122), for example, uuid1() for UUID version 1, uuid3() for UUID version 3, and so on. Note that UUID version 2 is deliberately omitted as it is outside the scope of the RFC. If all you want is a unique ID, you should probably call uuid1() or uuid4(). Note that uuid1() may compromise privacy since it creates a UUID containing the computer’s network address. uuid4() creates a random UUID. Depending on support from the underlying platform, uuid1() may or may not return a “safe” UUID. A safe UUID is one which is generated using synchronization methods that ensure no two processes can obtain the same UUID. All instances of UUID have an is_safe attribute which relays any information about the UUID’s safety, using this enumeration: class uuid.SafeUUID¶ Added in version 3.7. safe¶ The UUID was generated by the platform in a multiprocessing-safe way. unsafe¶ The UUID was not generated in a multiprocessing-safe way. unknown¶ The platform does not provide information on whether the UUID was generated safely or not. class uuid.UUID(hex\u003dNone, bytes\u003dNone, bytes_le\u003dNone, fields\u003dNone, int\u003dNone, version\u003dNone, *, is_safe\u003dSafeUUID.unknown)¶ Create a UUID from either a string of 32 hexadecimal digits, a 16-byte bytes object in big-endian order as the bytes argument, a 16-byte bytes object in little-endian order as the bytes_le argument, a tuple of six integers (32-bit time_low, 16-bit time_mid, 16-bit time_hi_version, 8-bit clock_seq_hi_variant, 8-bit clock_seq_low, 48-bit node) as the fields argument, or a single 128-bit integer as the int argument. When a string of hex digits is given, curly braces, hyphens, and a URN prefix are all optional. For example, these expressions all yield the same UUID: UUID(\u0027{12345678-1234-5678-1234-567812345678}\u0027)\nUUID(\u002712345678123456781234567812345678\u0027)\nUUID(\u0027urn:uuid:12345678-1234-5678-1234-567812345678\u0027)\nUUID(bytes\u003db\u0027\\x12\\x34\\x56\\x78\u0027*4)\nUUID(bytes_le\u003db\u0027\\x78\\x56\\x34\\x12\\x34\\x12\\x78\\x56\u0027 +\n              b\u0027\\x12\\x34\\x56\\x78\\x12\\x34\\x56\\x78\u0027)\nUUID(fields\u003d(0x12345678, 0x1234, 0x5678, 0x12, 0x34, 0x567812345678))\nUUID(int\u003d0x12345678123456781234567812345678)\n Exactly one of hex, bytes, bytes_le, fields, or int must be given. The version argument is optional; if given, the resulting UUID will have its variant and version number set according to RFC 9562, overriding bits in the given hex, bytes, bytes_le, fields, or int. Comparison of UUID objects are made by way of comparing their UUID.int attributes. Comparison with a non-UUID object raises a TypeError. str(uuid) returns a string in the form 12345678-1234-5678-1234-567812345678 where the 32 hexadecimal digits represent the UUID. UUID instances have these read-only attributes: UUID.bytes¶ The UUID as a 16-byte bytes object (containing the six integer fields in big-endian byte order). UUID.bytes_le¶ The UUID as a 16-byte bytes object (with time_low, time_mid, and time_hi_version in little-endian byte order). UUID.fields¶ A tuple of the six integer fields of the UUID, which are also available as six individual attributes and two derived attributes: Field Meaning UUID.time_low¶ The first 32 bits of the UUID. Only relevant to version 1. UUID.time_mid¶ The next 16 bits of the UUID. Only relevant to version 1. UUID.time_hi_version¶ The next 16 bits of the UUID. Only relevant to version 1. UUID.clock_seq_hi_variant¶ The next 8 bits of the UUID. Only relevant to versions 1 and 6. UUID.clock_seq_low¶ The next 8 bits of the UUID. Only relevant to versions 1 and 6. UUID.node¶ The last 48 bits of the UUID. Only relevant to version 1. UUID.time¶ The 60-bit timestamp as a count of 100-nanosecond intervals since Gregorian epoch (1582-10-15 00:00:00) for versions 1 and 6, or the 48-bit timestamp in milliseconds since Unix epoch (1970-01-01 00:00:00) for version 7. UUID.clock_seq¶ The 14-bit sequence number. Only relevant to versions 1 and 6. UUID.hex¶ The UUID as a 32-character lowercase hexadecimal string. UUID.int¶ The UUID as a 128-bit integer. UUID.urn¶ The UUID as a URN as specified in RFC 9562. UUID.variant¶ The UUID variant, which determines the internal layout of the UUID. This will be one of the constants RESERVED_NCS, RFC_4122, RESERVED_MICROSOFT, or RESERVED_FUTURE. UUID.version¶ The UUID version number (1 through 8, meaningful only when the variant is RFC_4122). Changed in version 3.14: Added UUID versions 6, 7 and 8. UUID.is_safe¶ An enumeration of SafeUUID which indicates whether the platform generated the UUID in a multiprocessing-safe way. Added in version 3.7. The uuid module defines the following",
+    "scrapedAt": "2026-10-08 19:24:05.173124"
+  },
+  {
     "id": 1023,
     "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module",
     "title": "zipimport — Import modules from Zip archives — Python 3.14.8 documentation",
@@ -6825,26 +6860,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1024,
-    "url": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
-  },
-  {
-    "id": 1025,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#re"
-  },
-  {
-    "id": 1026,
-    "url": "https://github.com/python/cpython/issues/133306"
-  },
-  {
-    "id": 1027,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
-  },
-  {
-    "id": 1028,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
   },
   {
     "id": 1029,
@@ -190491,10 +190506,412 @@ window.searchData = [
     "id": 164358,
     "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.archive",
     "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164363,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/uuid.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164366,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.SafeUUID",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164367,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-N",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164370,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4122.html",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164371,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.clock_seq",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164372,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.hex",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164373,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.RFC_4122",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164374,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.variant",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164375,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.NAMESPACE_DNS",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164376,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-name",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164378,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.is_safe",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164381,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.time_hi_version",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164386,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-namespace",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164391,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.time_low",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164392,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.getnode",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164395,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid1",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164396,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.clock_seq_low",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164397,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.7",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164398,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.8",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164399,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.5",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164400,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.SafeUUID.unsafe",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164401,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.6",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164402,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.3",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164403,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.4",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164404,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.version",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164405,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.1",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164406,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.time",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164407,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.RESERVED_NCS",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164408,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-C",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164409,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.int",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164410,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.9",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164412,
+    "url": "https://docs.python.org/3/library/uuid.html#",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164413,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid-factory-functions",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164415,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.bytes_le",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164416,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.time_mid",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164417,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.RESERVED_MICROSOFT",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164418,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.urn",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164419,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-uuid",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164420,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/uuid.py",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164424,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html#section-5.10",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164425,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.NAMESPACE_X500",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164426,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.NAMESPACE_URL",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164427,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.bytes",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164429,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164430,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.SafeUUID.unknown",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164431,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.fields",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164432,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-h",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164436,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-u",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164440,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-n",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164441,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.node",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164442,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.NAMESPACE_OID",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164443,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.RESERVED_FUTURE",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164444,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.SafeUUID.safe",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 164445,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.clock_seq_hi_variant",
+    "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 165684,
+    "url": "https://best.openssf.org/Correctly-Using-Regular-Expressions",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165685,
+    "url": "https://github.com/python/cpython/pull/133338",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165686,
+    "url": "https://github.com/mstevenbrown",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165687,
+    "url": "https://github.com/python/cpython/issues/133306#issue-3036308157",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165689,
+    "url": "https://github.com/python/cpython/pull/133337",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165690,
+    "url": "https://github.com/python/cpython/pull/133314",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165691,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/133306",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165692,
+    "url": "https://github.com/python/cpython/issues/133306#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165695,
+    "url": "https://github.com/python/cpython/issues/133306#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165696,
+    "url": "https://www.austingroupbugs.net/view.php?id\u003d1919",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165697,
+    "url": "https://discuss.python.org/t/proposal-add-z-as-a-synonym-for-z-in-python-res-for-standardization/90378/1",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165699,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/133306",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5108736?v\u003d4\u0026size\u003d48",
+    "alt": "@mstevenbrown",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
