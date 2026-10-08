@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 881,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon",
+    "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be cle",
+    "scrapedAt": "2026-10-08 19:18:09.146744"
+  },
+  {
+    "id": 880,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#ast",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:18:07.947997"
+  },
+  {
+    "id": 879,
+    "url": "https://www.w3.org/TR/epub-33/#app-media-type",
+    "scrapedAt": "2026-10-08 19:18:06.846776"
+  },
+  {
+    "id": 878,
+    "url": "https://github.com/python/cpython/issues/84978",
+    "title": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Expose PyFloat_AsDouble at Python level: operator.as_float? #84978 New issue Copy link New issue Copy link Closed Closed Expose PyFloat_AsDouble at Python level: operator.as_float?#84978 Copy link Labels 3.11only security fixesonly security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description mdickinson opened on May 28, 2020 Issue body actions BPO 40801 Nosy @mdickinson, @zware, @serhiy-storchaka PRs bpo-40801: Add operator.as_float #20481 gh-84978: Add float.from_number() and complex.from_number() #26827 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-05-28.09:23:06.760\u003e\nlabels \u003d [\u0027type-feature\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Expose PyFloat_AsDouble at Python level: operator.as_float?\u0027\nupdated_at \u003d \u003cDate 2021-06-21.12:00:00.034\u003e\nuser \u003d \u0027https://github.com/mdickinson\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-06-21.12:00:00.034\u003e\nactor \u003d \u0027serhiy.storchaka\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d []\ncreation \u003d \u003cDate 2020-05-28.09:23:06.760\u003e\ncreator \u003d \u0027mark.dickinson\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40801\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 11.0\nmessages \u003d [\u0027370181\u0027, \u0027370189\u0027, \u0027370233\u0027, \u0027370244\u0027, \u0027370247\u0027, \u0027370253\u0027, \u0027370255\u0027, \u0027370258\u0027, \u0027370259\u0027, \u0027370286\u0027, \u0027396234\u0027]\nnosy_count \u003d 3.0\nnosy_names \u003d [\u0027mark.dickinson\u0027, \u0027zach.ware\u0027, \u0027serhiy.storchaka\u0027]\npr_nums \u003d [\u002720481\u0027, \u002726827\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue40801\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-84978: expose __float__ dunder method as as_float #110460 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.11only security fixesonly security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:18:05.579237"
+  },
+  {
+    "id": 877,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:18:03.639388"
+  },
+  {
+    "id": 876,
+    "url": "https://github.com/python/cpython/issues/105201",
+    "title": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} PyIter_Next has ambiguous return value #105201 New issue Copy link New issue Copy link Closed Closed PyIter_Next has ambiguous return value #105201 Copy link Assignees Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description iritkatriel opened on Jun 1, 2023 Issue body actions As discussed in capi-workgroup/problems#1, we have some C API functions that have ambiguous return values, requiring the caller to query PyErr_Occurred() to find out whether there was an error. We will try to move away from those APIs to alternative ones whose return values non-ambiguously indicate whether there has been an error, without requiring the user to call PyErr_Occurred(). In this issue we will discuss the iterator API. PyIter_Next return NULL for both error and for the iterator being exhausted. PyErr_Occurred() distinguishes between the cases. Linked PRs gh-105201: Add PyIter_NextItem to replace PyIter_Next which has an ambiguous output #105202 gh-105201: Add PyIter_NextItem() #122331 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees erlend-aasland Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:18:02.335068"
+  },
+  {
     "id": 875,
     "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes",
     "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
@@ -5805,30 +5845,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 876,
-    "url": "https://github.com/python/cpython/issues/105201"
-  },
-  {
-    "id": 877,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
-  },
-  {
-    "id": 878,
-    "url": "https://github.com/python/cpython/issues/84978"
-  },
-  {
-    "id": 879,
-    "url": "https://www.w3.org/TR/epub-33/#app-media-type"
-  },
-  {
-    "id": 880,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#ast"
-  },
-  {
-    "id": 881,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
   },
   {
     "id": 882,
@@ -151200,10 +151216,187 @@ window.searchData = [
     "id": 122875,
     "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.selected_alpn_protocol",
     "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 124316,
+    "url": "https://github.com/python/cpython/issues/105201#top",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124317,
+    "url": "https://github.com/iritkatriel",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124318,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/105201",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124320,
+    "url": "https://github.com/python/cpython/issues/105201#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124322,
+    "url": "https://github.com/capi-workgroup/problems/issues/1",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124323,
+    "url": "https://github.com/python/cpython/issues/105201#issue-1736834171",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124325,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/105201",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124327,
+    "url": "https://github.com/python/cpython/pull/122331",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 124328,
+    "url": "https://github.com/python/cpython/pull/105202",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 125567,
+    "url": "https://bugs.python.org/issue40801",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125568,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.11%22",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125569,
+    "url": "https://github.com/python/cpython/pull/26827",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125570,
+    "url": "https://github.com/python/cpython/issues/84978#issue-1199037483",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125572,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/84978",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125573,
+    "url": "https://github.com/python/cpython/issues/84978#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125574,
+    "url": "https://github.com/zware",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125575,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/84978",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125577,
+    "url": "https://github.com/python/cpython/pull/110460",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125578,
+    "url": "https://github.com/python/cpython/issues/84978#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125579,
+    "url": "https://github.com/mdickinson",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 125582,
+    "url": "https://github.com/python/cpython/pull/20481",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#ast"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#ast"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?v\u003d4\u0026size\u003d48",
+    "alt": "@mdickinson",
+    "pageTitle": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "erlend-aasland",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
