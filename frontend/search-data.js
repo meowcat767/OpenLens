@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1623,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:50:43.706823"
+  },
+  {
+    "id": 1622,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:50:42.338157"
+  },
+  {
+    "id": 1621,
+    "url": "https://github.com/python/cpython/issues/121676",
+    "title": "Python implementation of `functools.reduce` accepts keyword arguments, while the C implementation does not · Issue #121676 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Python implementation of functools.reduce accepts keyword arguments, while the C implementation does not #121676 New issue Copy link New issue Copy link Closed Closed Python implementation of functools.reduce accepts keyword arguments, while the C implementation does not#121676 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description Eclips4 opened on Jul 13, 2024 Issue body actions Bug report Bug description: Steps to reproduce: printf \u0027*disabled*\\n_functools\\n\u0027 \u003e Modules/Setup.local\n./configure --with-pydebug \u0026\u0026 make -j\n./python\nPython 3.14.0a0 (heads/main:dc03ce797a, Jul 13 2024, 09:31:53) [GCC 13.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n\u003e\u003e\u003e import functools\n\u003e\u003e\u003e functools.reduce(function\u003dlambda x, y: x + y, sequence\u003d[1, 2, 3, 4, 5])\n15 Our docs mention functools.reduce as a function that accepts positional-only arguments. I have a PR ready to fix that. CPython versions tested on: CPython main branch Operating systems tested on: Linux Linked PRs gh-121676: Raise a DeprecationWarning if the Python implementation of functools.reduce is called with a keyword args #121677 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:50:40.948667"
+  },
+  {
+    "id": 1620,
+    "url": "https://github.com/python/cpython/issues/130396",
+    "title": "Implement stack overflow protection for linux based on actual stack depth · Issue #130396 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Implement stack overflow protection for linux based on actual stack depth #130396 New issue Copy link New issue Copy link Closed Closed Implement stack overflow protection for linux based on actual stack depth#130396 Copy link Labels OS-linuxinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Feb 21, 2025 Issue body actions Linux doesn\u0027t offer an API for determining the current stack bounds, at least not that I am aware of. This means we will need to probe the stack using a SIGSEGV handler and longjmp/setjump. It is somewhat ugly but should work. Actually, it looks like pthread_get_stackaddr_np might work, and avoid all the complexity of the signal handler. In theory, it should work for MacOS as well. Linked PRs GH-130396: Use computed stack limits on linux #130398 GH-130396: Broaden definition of \"optimized\" for gdb tests #130550 GH-130396: Increase trashcan overhead #130552 GH-130396: Include stack margin for debug windows builds #130554 [3.13] GH-130396: Treat clang -Og as optimized for gdb tests (GH-130550) #130572 [3.12] GH-130396: Treat clang -Og as optimized for gdb tests (GH-130550) #130573 [3.11] GH-130396: Treat clang -Og as optimized for gdb tests (GH-130550) (GH-130573) #130593 gh-130396: Fix thread sanitizer crashes on stack overflow tests #130966 GH-130396: Work around for broken pthread_get_stackaddr_np on Emscripten #131088 gh-130396: Move PYOS_LOG2_STACK_MARGIN to internal headers #135928 [3.14] gh-130396: Move PYOS_LOG2_STACK_MARGIN to internal headers (GH-135928) #136173 gh-130396: Remove _Py_ReachedRecursionLimitWithMargin() function #141951 gh-130396: Export _Py_ReachedRecursionLimitWithMargin() #142012 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels OS-linuxinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:50:38.797903"
+  },
+  {
+    "id": 1619,
+    "url": "https://github.com/python/cpython/issues/136931",
+    "title": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation hoodmane commented Jul 21, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Basic support for pyrepl in Emscripten. Limitations: requires JSPI no signal handling implemented As followup work, it would be nice to implement a webworker variant for when JSPI is not available and proper signal handling. Because it requires JSPI, it doesn\u0027t work in Safari. Firefox requires setting an experimental flag. All the Chromiums have full support since May. Until we make it work without JSPI, let\u0027s keep the original web_example around. cc @ambv Issue: Use new REPL for wasm demo #124621 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 2 ryanking13 and m-aciek reacted with thumbs up emoji 👎 1 pmp-p reacted with thumbs down emoji All reactions 👍 2 reactions 👎 1 reaction hoodmane requested review from ambv, corona10, erlend-aasland, freakboy3742, lysnikolaou and pablogsal as code owners July 21, 2025 14:05 bedevere-app Bot added the awaiting review label Jul 21, 2025 bedevere-app Bot mentioned this pull request Jul 21, 2025 Use new REPL for wasm demo #124621 Closed hoodmane force-pushed the pyrepl-emscripten branch from 26a2ae2 to 0f6928c Compare July 21, 2025 14:06 pythongh-124621: Emscripten: Support pyrepl … 733846c Basic support for pyrepl in Emscripten. Limitations:\n* requires JSPI\n* no signal handling implemented\n\nAs followup work, it would be nice to implement a webworker variant\nfor when JSPI is not available and proper signal handling.\n\nBecause it requires JSPI, it doesn\u0027t work in Safari. Firefox requires\nsetting an experimental flag. All the Chromiums have full support since\nMay. Until we make it work without JSPI, let\u0027s keep the original web_example\naround. hoodmane force-pushed the pyrepl-emscripten branch from 0f6928c to 733846c Compare July 21, 2025 14:08 Add blurb 50c9932 hoodmane commented Jul 21, 2025 Copy link Copy Markdown Contributor Author @adqm If you want to work on any of the followup tasks, let me know. I\u0027m happy to meet / provide suggestions as well if you need them. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. hoodmane commented Jul 21, 2025 Copy link Copy Markdown Contributor Author !buildbot emscripten All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot commented Jul 21, 2025 Copy link Copy Markdown 🤖 New build scheduled with the buildbot fleet by @hoodmane for commit 50c9932 🤖 Results will be shown at: https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F136931%2Fmerge The command will test the builders whose names match following regular expression: emscripten The builders matched are: WASM Emscripten PR All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. hoodmane added topic-repl Related to the interactive shell OS-emscripten labels Jul 21, 2025 Fix makefile c83eb65 hoodmane commented Jul 21, 2025 Copy link Copy Markdown Contributor Author !buildbot emscripten All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot commented Jul 21, 2025 Copy link Copy Markdown 🤖 New build scheduled with the buildbot fleet by @hoodmane for commit c83eb65 🤖 Results will be shown at: https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F136931%2Fmerge The command will test the builders whose names match following regular expression: emscripten The builders matched are: WASM Emscripten PR All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. hoodmane changed the title gh-124621: Emscripten: Support pyrepl gh-124621: Emscripten: Support pyrepl in browser Jul 21, 2025 ambv and others added 2 commits July 21, 2025 17:05 Be a little petty about color choices d764db8 Add some extra test skips 60e65f5 hoodmane commented Jul 21, 2025 Copy link Copy Markdown Contributor Author !buildbot emscripten All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot commented Jul 21, 2025 Copy link Copy Markdown 🤖 New build scheduled with the buildbot fleet by @hoodmane for commit 60e65f5 🤖 Results will be shown at: https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F136931%2Fmerge The command will test the builders whose names match following regular expression: emscripten The builders matched are: WASM Emscripten PR All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Implement",
+    "scrapedAt": "2026-10-08 19:50:36.406001"
+  },
+  {
     "id": 1618,
     "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_delete",
     "title": "Thread-local storage support — Python 3.14.8 documentation",
@@ -10885,26 +10920,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1619,
-    "url": "https://github.com/python/cpython/issues/136931"
-  },
-  {
-    "id": 1620,
-    "url": "https://github.com/python/cpython/issues/130396"
-  },
-  {
-    "id": 1621,
-    "url": "https://github.com/python/cpython/issues/121676"
-  },
-  {
-    "id": 1622,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
-  },
-  {
-    "id": 1623,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
   },
   {
     "id": 1624,
@@ -248186,10 +248201,1142 @@ window.searchData = [
     "id": 350477,
     "url": "https://docs.python.org/3/library/tokenize.html#tokenize.open",
     "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 351576,
+    "url": "https://github.com/Agent-Hellboy",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351578,
+    "url": "https://github.com/Agent-Hellboy/cpython/commit/7a4529e5614a0c92db784e50ecb141ac96e55f19",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351579,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-fb3e527",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351580,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3102049002",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351581,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3102049244",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351582,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-7a4529e",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351583,
+    "url": "https://github.com/python/cpython/commit/60e65f5292570eaf9fb9cb365436d661bbb39c03",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351585,
+    "url": "https://github.com/python/cpython/pull/136931#event-18729864099",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351586,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-9dad34c",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351587,
+    "url": "https://github.com/python/cpython/pull/136993",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351588,
+    "url": "https://github.com/hoodmane/cpython/commit/c933a6bb329bb97bc7e448388dad1b74f7ca4baa",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351590,
+    "url": "https://github.com/python/cpython/pull/136931#commits-pushed-d108ea7",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351591,
+    "url": "https://github.com/python/cpython/pull/136931#event-18748688355",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351592,
+    "url": "https://github.com/taegyunkim/cpython/commit/b0bec36ad9c0310e16f8b658a2a7f5737a142031",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351593,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3097180697",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351594,
+    "url": "https://github.com/python/cpython/pull/136931/commits/d764db8bf248b6fe244145b12b53593d0c121003",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351595,
+    "url": "https://github.com/python/cpython/pull/136931/commits/60e65f5292570eaf9fb9cb365436d661bbb39c03",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351596,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Atopic-repl",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351597,
+    "url": "https://github.com/miss-islington/cpython/commit/c933a6bb329bb97bc7e448388dad1b74f7ca4baa",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351598,
+    "url": "https://github.com/python/cpython/pull/136931#event-18730390853",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351599,
+    "url": "https://github.com/python/cpython/pull/136931#event-18748687553",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351602,
+    "url": "https://github.com/python/cpython/pull/136988",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351603,
+    "url": "https://github.com/python/cpython/pull/136931#event-18729865075",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351606,
+    "url": "https://github.com/python/cpython/commit/733846cfa64ce2e81508f568b995a3859ca924d4",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351607,
+    "url": "https://github.com/python/cpython/pull/136931#ref-issue-2551258728",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351608,
+    "url": "https://github.com/python/cpython/pull/136931#event-18729944666",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351609,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-0b06534",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351611,
+    "url": "https://github.com/python/cpython/pull/136931#ref-pullrequest-3252489768",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351612,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22needs%20backport%20to%203.14%22",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351614,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F136931",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351616,
+    "url": "https://github.com/ambv/cpython/commit/0b06534f745c2ba5b55c58b963af0830f03cbb17",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351617,
+    "url": "https://github.com/python/cpython/pull/136931#event-18749067722",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351618,
+    "url": "https://github.com/Agent-Hellboy/cpython/commit/fb3e527d9598945bc96e2803a0ac1c3a7a041c04",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351619,
+    "url": "https://github.com/python/cpython/compare/0f6928c5fceb499d9daa7a599906af55a4e5f961..733846cfa64ce2e81508f568b995a3859ca924d4",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351621,
+    "url": "https://github.com/taegyunkim/cpython/commit/f7e347d0075a7e27c1bf67a328cda511bbc851f5",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351622,
+    "url": "https://github.com/python/cpython/pull/136978",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351623,
+    "url": "https://github.com/taegyunkim",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351624,
+    "url": "https://github.com/python/cpython/pull/136931/commits/c83eb65b51bc7cd11272f794d11d2a1909f23042",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351625,
+    "url": "https://github.com/python/cpython/compare/26a2ae2c353b9cfaa944d939a5ec26b1d171fd08..0f6928c5fceb499d9daa7a599906af55a4e5f961",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351626,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3106615230",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351627,
+    "url": "https://github.com/python/cpython/pull/136931/commits/50c9932e977dfe5c0065600821a1dabfd5d7745c",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351628,
+    "url": "https://github.com/miss-islington/cpython/commit/be4c7c7417551a584bd0c9bc5367121a06032e7a",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351629,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3097180539",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351631,
+    "url": "https://github.com/adqm",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351632,
+    "url": "https://github.com/python/cpython/pull/136931/commits/733846cfa64ce2e81508f568b995a3859ca924d4",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351633,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-be4c7c7",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351634,
+    "url": "https://github.com/python/cpython/pull/136931#event-18729909675",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351635,
+    "url": "https://github.com/python/cpython/pull/136931/commits/d108ea738b52efca00596d28adf2664c29a77188",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351636,
+    "url": "https://github.com/python/cpython/pull/136931#pullrequestreview-3039679323",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351638,
+    "url": "https://github.com/python/cpython/pull/136931#issue-3248806715",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351640,
+    "url": "https://github.com/hoodmane/cpython/commit/1e83565b281bba76b2952551fd7a03d70d3d1de8",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351642,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3097050609",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351643,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3097050848",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351644,
+    "url": "https://github.com/python/cpython/pull/136931#event-18730626713",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351645,
+    "url": "https://github.com/python/cpython/commit/591019e1f2345d2f7520569c78927add5950a5ef",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351646,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3096973456",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351648,
+    "url": "https://github.com/python/cpython/pull/136931#pullrequestreview-3039108970",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351649,
+    "url": "https://github.com/python/cpython/pull/136931#pullrequestreview-3039674956",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351650,
+    "url": "https://github.com/python/cpython/commit/c83eb65b51bc7cd11272f794d11d2a1909f23042",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351651,
+    "url": "https://github.com/python/cpython/pull/136931#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351652,
+    "url": "https://github.com/python/cpython/tree/3.14",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351653,
+    "url": "https://github.com/python/cpython/commit/26a2ae2c353b9cfaa944d939a5ec26b1d171fd08",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351654,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-12d2f37",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351655,
+    "url": "https://github.com/python/cpython/pull/136931#event-18749005947",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351656,
+    "url": "https://github.com/python/cpython/pull/136931/commits/79424a49d1b03f64ebe9e47555f35126b01be41f",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351659,
+    "url": "https://github.com/python/cpython/pull/136931/commits/483c6ec1c0626ccaa66083e79264fc81724dde51",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351660,
+    "url": "https://github.com/python/cpython/commit/591019e1f2345d2f7520569c78927add5950a5ef#comments",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351661,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-1e83565",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351662,
+    "url": "https://github.com/python/cpython/pull/136931#event-18748689939",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351663,
+    "url": "https://github.com/python/cpython/commit/0f6928c5fceb499d9daa7a599906af55a4e5f961",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351664,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-f7e347d",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351665,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-b0bec36",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351666,
+    "url": "https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F136931%2Fmerge",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351667,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3102348957",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351668,
+    "url": "https://github.com/python/cpython/pull/136931#commits-pushed-d764db8",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351669,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3105569988",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351670,
+    "url": "https://github.com/python/cpython/commit/c933a6bb329bb97bc7e448388dad1b74f7ca4baa",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351671,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3097001856",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351672,
+    "url": "https://github.com/python/cpython/pull/136931#ref-commit-591019e",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351674,
+    "url": "https://github.com/python/cpython/pull/136931#pullrequestreview-3039676230",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351675,
+    "url": "https://github.com/python/cpython/commit/12d2f373b9f70ce43a985ada2832ca31ca66fc20",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351677,
+    "url": "https://github.com/python/cpython/pull/136931/files/79424a49d1b03f64ebe9e47555f35126b01be41f",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351678,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3102135973",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351679,
+    "url": "https://github.com/python/cpython/pull/136931",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351680,
+    "url": "https://github.com/python/cpython/blob/58d305cf387816c559602a95ba850856dc9b8129/.github/CODEOWNERS#L53",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351681,
+    "url": "https://github.com/hoodmane/cpython/commit/9dad34c7673a3bb0db7c97c42148c53e3121a24b",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351682,
+    "url": "https://github.com/python/cpython/pull/136931/files/79424a49d1b03f64ebe9e47555f35126b01be41f#diff-b5b7e4f5599916b2018e911ef423f9d3fd46cb71268e1a73c74a1c9ae2cb6791",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351683,
+    "url": "https://github.com/python/cpython/pull/136931#event-18748550975",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351684,
+    "url": "https://github.com/python/cpython/commit/50c9932e977dfe5c0065600821a1dabfd5d7745c",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351685,
+    "url": "https://github.com/python/cpython/pull/136931/files/79424a49d1b03f64ebe9e47555f35126b01be41f#diff-0ad74d36558b1a9c3f6191d87ddf5fcf3b65e12c74ce2b3e110a6d4730821991",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351686,
+    "url": "https://github.com/python/cpython/pull/136931#issuecomment-3097001461",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351687,
+    "url": "https://github.com/ambv/cpython/commit/c933a6bb329bb97bc7e448388dad1b74f7ca4baa",
+    "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 351689,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/130396",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351690,
+    "url": "https://github.com/python/cpython/pull/135928",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351691,
+    "url": "https://github.com/python/cpython/pull/130966",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351692,
+    "url": "https://github.com/python/cpython/issues/130396#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351695,
+    "url": "https://github.com/python/cpython/pull/131088",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351696,
+    "url": "https://github.com/python/cpython/issues/130396#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351697,
+    "url": "https://github.com/python/cpython/pull/130550",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351698,
+    "url": "https://github.com/python/cpython/pull/130572",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351699,
+    "url": "https://github.com/python/cpython/issues/130396#issue-2868599370",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351700,
+    "url": "https://github.com/python/cpython/pull/130593",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351701,
+    "url": "https://github.com/python/cpython/pull/130398",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351702,
+    "url": "https://github.com/python/cpython/pull/130552",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351703,
+    "url": "https://github.com/python/cpython/pull/130573",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351704,
+    "url": "https://github.com/python/cpython/pull/130554",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351707,
+    "url": "https://github.com/python/cpython/pull/141951",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351708,
+    "url": "https://github.com/python/cpython/pull/136173",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351709,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/130396",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351711,
+    "url": "https://github.com/python/cpython/pull/142012",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 351713,
+    "url": "https://github.com/python/cpython/issues/121676#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 351714,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/121676",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 351715,
+    "url": "https://github.com/python/cpython/issues/121676#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 351717,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/121676",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 351718,
+    "url": "https://github.com/python/cpython/pull/121677",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 351720,
+    "url": "https://github.com/python/cpython/issues/121676#issue-2406836268",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Eclips4",
+    "pageTitle": "Python implementation of `functools.reduce` accepts keyword arguments, while the C implementation does not · Issue #121676 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Python implementation of `functools.reduce` accepts keyword arguments, while the C implementation does not · Issue #121676 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Implement stack overflow protection for linux based on actual stack depth · Issue #130396 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Implement stack overflow protection for linux based on actual stack depth · Issue #130396 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d48\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/409059?s\u003d80\u0026v\u003d4",
+    "alt": "@miss-islington-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/409059?s\u003d80\u0026v\u003d4",
+    "alt": "@miss-islington-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/409059?s\u003d40\u0026v\u003d4",
+    "alt": "@miss-islington-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/549404?s\u003d80\u0026u\u003ded4638bd638e2cb5d48c4ba91fbb6f5d3a623af2\u0026v\u003d4",
+    "alt": "@adqm",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6655247?s\u003d40\u0026v\u003d4",
+    "alt": "@taegyunkim",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6655247?s\u003d40\u0026v\u003d4",
+    "alt": "@taegyunkim",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31388347?s\u003d40\u0026v\u003d4",
+    "alt": "@Agent-Hellboy",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31388347?s\u003d40\u0026v\u003d4",
+    "alt": "@Agent-Hellboy",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d40\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?s\u003d40\u0026v\u003d4",
+    "alt": "@lysnikolaou",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d40\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5110323?s\u003d40\u0026v\u003d4",
+    "alt": "@corona10",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d52\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/549404?s\u003d52\u0026v\u003d4",
+    "alt": "@adqm",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d52\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d52\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d52\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/136931"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
