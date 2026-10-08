@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1567,
+    "url": "https://github.com/python/cpython/issues/116897",
+    "title": "Deprecate support of false values in urllib.parse.parse_qsl() · Issue #116897 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate support of false values in urllib.parse.parse_qsl() #116897 New issue Copy link New issue Copy link Closed Closed Deprecate support of false values in urllib.parse.parse_qsl()#116897 Copy link Description serhiy-storchaka opened on Mar 16, 2024 Issue body actions urllib.parse.parse_qsl() returns [] for any false value. There were no tests for this, so it was broken by accident in #115771 and restored in #116764. Historically, the special case was needed to circumvent the fact that \u0027\u0027.split(\u0027\u0026\u0027) returns [\u0027\u0027] instead of []. parse_qsl(\u0027\u0027) and parse_qsl(b\u0027\u0027) should return []. But zero numbers and empty sequences (like parse_qsl(0) and parse_qsl([])) should be errors. So I propose to deprecate the current behavior for general false values and make them errors in future. There is an open question about None. There is a code in the wild that expects parse_qsl(None) to work. Although it is not difficult to add workarounds for this, it may be more convenient if None is accepted as a valid value. Linked PRs gh-116897: Deprecate generic false values in urllib.parse.parse_qsl() #116903 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:48:07.711799"
+  },
+  {
+    "id": 1566,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_paths",
+    "title": "sysconfig — Provide access to Python’s configuration information — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sysconfig — Provide access to Python’s configuration information | Theme Auto Light Dark | sysconfig — Provide access to Python’s configuration information¶ Added in version 3.2. Source code: Lib/sysconfig The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform. Configuration variables¶ A Python distribution contains a Makefile and a pyconfig.h header file that are necessary to build both the Python binary itself and third-party C extensions compiled using setuptools. sysconfig puts all variables found in these files in a dictionary that can be accessed using get_config_vars() or get_config_var(). Notice that on Windows, it’s a much smaller set. sysconfig.get_config_vars(*args)¶ With no arguments, return a dictionary of all configuration variables relevant for the current platform. With arguments, return a list of values that result from looking up each argument in the configuration variable dictionary. For each argument, if the value is not found, return None. sysconfig.get_config_var(name)¶ Return the value of a single variable name. Equivalent to get_config_vars().get(name). If name is not found, return None. Example of usage: \u003e\u003e\u003e import sysconfig\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027Py_ENABLE_SHARED\u0027)\n0\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027LIBDIR\u0027)\n\u0027/usr/local/lib\u0027\n\u003e\u003e\u003e sysconfig.get_config_vars(\u0027AR\u0027, \u0027CXX\u0027)\n[\u0027ar\u0027, \u0027g++\u0027]\n Installation paths¶ Python uses an installation scheme that differs depending on the platform and on the installation options. These schemes are stored in sysconfig under unique identifiers based on the value returned by os.name. The schemes are used by package installers to determine where to copy files to. Python currently supports nine schemes: posix_prefix: scheme for POSIX platforms like Linux or macOS. This is the default scheme used when Python or a component is installed. posix_home: scheme for POSIX platforms, when the home option is used. This scheme defines paths located under a specific home prefix. posix_user: scheme for POSIX platforms, when the user option is used. This scheme defines paths located under the user’s home directory (site.USER_BASE). posix_venv: scheme for Python virtual environments on POSIX platforms; by default it is the same as posix_prefix. nt: scheme for Windows. This is the default scheme used when Python or a component is installed. nt_user: scheme for Windows, when the user option is used. nt_venv: scheme for Python virtual environments on Windows; by default it is the same as nt. venv: a scheme with values from either posix_venv or nt_venv depending on the platform Python runs on. osx_framework_user: scheme for macOS, when the user option is used. Each scheme is itself composed of a series of paths and each path has a unique identifier. Python currently uses eight paths: stdlib: directory containing the standard Python library files that are not platform-specific. platstdlib: directory containing the standard Python library files that are platform-specific. platlib: directory for site-specific, platform-specific files. purelib: directory for site-specific, non-platform-specific files (‘pure’ Python). include: directory for non-platform-specific header files for the Python C-API. platinclude: directory for platform-specific header files for the Python C-API. scripts: directory for script files. data: directory for data files. User scheme¶ This scheme is designed to be the most convenient solution for users that don’t have write permission to the global site-packages directory or don’t want to install into it. Files will be installed into subdirectories of site.USER_BASE (written as userbase hereafter). This scheme installs pure Python modules and extension modules in the same location (also known as site.USER_SITE). posix_user¶ Path Installation directory stdlib userbase/lib/pythonX.Y platstdlib userbase/lib/pythonX.Y platlib userbase/lib/pythonX.Y/site-packages purelib userbase/lib/pythonX.Y/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase nt_user¶ Path Installation directory stdlib userbase\\PythonXY platstdlib userbase\\PythonXY platlib userbase\\PythonXY\\site-packages purelib userbase\\PythonXY\\site-packages include userbase\\PythonXY\\Include scripts userbase\\PythonXY\\Scripts data userbase osx_framework_user¶ Path Installation directory stdlib userbase/lib/python platstdlib userbase/lib/python platlib userbase/lib/python/site-packages purelib userbase/lib/python/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase Home scheme¶ The idea behind the “home scheme” is that you build and maintain a personal stash of Python modules. This scheme’s name is derived from the idea of a “home” directory on Unix, since it’s not unusual for a Unix user to make the",
+    "scrapedAt": "2026-10-08 19:48:05.163167"
+  },
+  {
+    "id": 1565,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Finalize",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:48:03.827784"
+  },
+  {
+    "id": 1564,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.program_name",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:48:02.489335"
+  },
+  {
+    "id": 1563,
+    "url": "https://github.com/python/cpython/issues/130907",
+    "title": "PEP 649 behavior for partially executed modules · Issue #130907 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} PEP 649 behavior for partially executed modules #130907 New issue Copy link New issue Copy link Closed Closed PEP 649 behavior for partially executed modules#130907 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description JelleZijlstra opened on Mar 6, 2025 Issue body actions Bug report Bug description: Consider this package: $ ls recmod/\n__main__.py\ta.py\t\tb.py\n$ cat recmod/__main__.py \nfrom . import a\n\nprint(a.__annotations__)\n$ cat recmod/a.py \nv1: int\n\nfrom . import b\n\nv2: int\n$ cat recmod/b.py \nfrom . import a\n\nprint(a.__annotations__)\n On 3.13, this produces: $ python3.13 -m recmod\n{\u0027v1\u0027: \u003cclass \u0027int\u0027\u003e}\n{\u0027v1\u0027: \u003cclass \u0027int\u0027\u003e, \u0027v2\u0027: \u003cclass \u0027int\u0027\u003e}\n But on main, we get this: $ ~/py/cpython/python.exe -m recmod\n{}\n{}\n This is because we only set the __annotate__ function at the end of the module execution, so when we access annotations on the partially executed module a (in b.py), there aren\u0027t any yet. But this also populates the __annotations__ cache, so even accesses to __annotations__ after a has been fully executed still return an empty dictionary. Should we fix this and how? I don\u0027t care much what happens if you access __annotations__ while the module is partially evaluated. However, it seems bad that such access poisons the cache forever. To fix that, we should make ModuleType.__annotations__ not cache its return value if the module is not yet fully evaluated. CPython versions tested on: CPython main branch Operating systems tested on: macOS Linked PRs gh-130907: Treat all module-level annotations as conditional #131550 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:48:01.09888"
+  },
+  {
     "id": 1562,
     "url": "https://github.com/python/cpython/issues/127987",
     "title": "TarFile.extractall(..., filter\u003d\u0027tar\u0027) arbitrary file chmod · Issue #127987 · python/cpython · GitHub",
@@ -10500,26 +10535,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1563,
-    "url": "https://github.com/python/cpython/issues/130907"
-  },
-  {
-    "id": 1564,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.program_name"
-  },
-  {
-    "id": 1565,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Finalize"
-  },
-  {
-    "id": 1566,
-    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_paths"
-  },
-  {
-    "id": 1567,
-    "url": "https://github.com/python/cpython/issues/116897"
   },
   {
     "id": 1568,
@@ -246636,10 +246651,130 @@ window.searchData = [
     "id": 336276,
     "url": "https://github.com/python/cpython/issues/127987#top",
     "parentUrl": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 336284,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/130907",
+    "parentUrl": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "id": 336285,
+    "url": "https://github.com/python/cpython/issues/130907#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "id": 336286,
+    "url": "https://github.com/python/cpython/issues/130907#issue-2899382473",
+    "parentUrl": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "id": 336287,
+    "url": "https://github.com/python/cpython/issues/130907#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "id": 336288,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/130907",
+    "parentUrl": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "id": 336848,
+    "url": "https://github.com/python/cpython/pull/115771",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 336849,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/116897",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 336851,
+    "url": "https://github.com/python/cpython/pull/116903",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 336852,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/116897",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 336853,
+    "url": "https://github.com/python/cpython/issues/116897#issue-2189912513",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 336854,
+    "url": "https://github.com/python/cpython/issues/116897#top",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 336856,
+    "url": "https://github.com/python/cpython/issues/116897#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/116897"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Deprecate support of false values in urllib.parse.parse_qsl() · Issue #116897 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate support of false values in urllib.parse.parse_qsl() · Issue #116897 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_paths"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_paths"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Finalize"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Finalize"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.program_name"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.program_name"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "PEP 649 behavior for partially executed modules · Issue #130907 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "PEP 649 behavior for partially executed modules · Issue #130907 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130907"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/141546?v\u003d4\u0026size\u003d48",
     "alt": "@jwilk",
