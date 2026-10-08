@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 850,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb",
+    "title": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debugger",
+    "scrapedAt": "2026-10-08 19:16:51.275618"
+  },
+  {
+    "id": 849,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:16:50.057433"
+  },
+  {
+    "id": 848,
+    "url": "https://github.com/python/cpython/issues/119613",
+    "title": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate Py_IS_NAN/INFINITY/FINITE? #119613 New issue Copy link New issue Copy link Closed Closed Deprecate Py_IS_NAN/INFINITY/FINITE?#119613 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on May 27, 2024 Issue body actions Feature or enhancement Proposal: isnan(), isinf() and isfinite() are part of C99, which is a requirement for 3.11+. Probably, it does make sense to deprecate (undocumented) public macros and switch codebase to use C stdlib functions. JFR: #119457 (comment) Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-119613: use C99+ functions instead of Py_IS_NAN/INFINITY/FINITE #119619 gh-119613: deprecate Py_IS_NAN/INFINITY and Py_IS_FINITE #119701 gh-119613: Soft deprecate the Py_MEMCPY() macro #120020 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:16:48.785332"
+  },
+  {
+    "id": 847,
+    "url": "https://docs.python.org/3/library/functions.html#open",
+    "title": "Built-in Functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and Byte",
+    "scrapedAt": "2026-10-08 19:16:46.486202"
+  },
+  {
+    "id": 846,
+    "url": "https://github.com/python/cpython/issues/118767",
+    "title": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Make bool(NotImplemented) into an error #118767 New issue Copy link New issue Copy link Closed Closed Make bool(NotImplemented) into an error#118767 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixes Description JelleZijlstra opened on May 8, 2024 Issue body actions See https://discuss.python.org/t/should-bool-notimplemented-become-an-error/51342 and #79893. Linked PRs gh-118767: Make bool(NotImplemented) raise TypeError #118775 gh-118767: Improve tests and docs for bool(NotImplemented) #118813 gh-118767: remove bool(NotImplemented) from pending-removal document #139526 [3.14] gh-118767: Remove bool(NotImplemented) from pending-removal document (GH-139526) #139599 [3.13] gh-118767: remove bool(NotImplemented) from pending-removal document (GH-139526) #139677 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees JelleZijlstra Labels 3.14bugs and security fixesbugs and security fixes Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:16:45.206226"
+  },
+  {
     "id": 845,
     "url": "https://datatracker.ietf.org/doc/html/rfc1494.html",
     "title": "RFC 1494 - Equivalences between 1988 X.400 and RFC-822 Message Bodies",
@@ -5595,26 +5630,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 846,
-    "url": "https://github.com/python/cpython/issues/118767"
-  },
-  {
-    "id": 847,
-    "url": "https://docs.python.org/3/library/functions.html#open"
-  },
-  {
-    "id": 848,
-    "url": "https://github.com/python/cpython/issues/119613"
-  },
-  {
-    "id": 849,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
-  },
-  {
-    "id": 850,
-    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
   },
   {
     "id": 851,
@@ -145330,10 +145345,192 @@ window.searchData = [
     "id": 114295,
     "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-1",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 114297,
+    "url": "https://github.com/python/cpython/issues/79893",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114300,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/118767",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114301,
+    "url": "https://github.com/python/cpython/issues/118767#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114302,
+    "url": "https://github.com/python/cpython/pull/139677",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114303,
+    "url": "https://github.com/python/cpython/pull/139526",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114304,
+    "url": "https://github.com/python/cpython/pull/118775",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114305,
+    "url": "https://github.com/python/cpython/pull/118813",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114306,
+    "url": "https://github.com/python/cpython/pull/139599",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114307,
+    "url": "https://github.com/python/cpython/issues/118767#issue-2285889747",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114308,
+    "url": "https://discuss.python.org/t/should-bool-notimplemented-become-an-error/51342",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114309,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/118767",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114310,
+    "url": "https://github.com/python/cpython/issues/118767#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114624,
+    "url": "https://github.com/python/cpython/issues/119613#issue-2319458234",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114626,
+    "url": "https://github.com/skirpichev",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114627,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/119613",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114629,
+    "url": "https://github.com/python/cpython/issues/119613#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114631,
+    "url": "https://github.com/python/cpython/issues/119613#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114632,
+    "url": "https://github.com/python/cpython/pull/119701",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114633,
+    "url": "https://github.com/python/cpython/pull/119457#discussion_r1615985599",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114634,
+    "url": "https://github.com/python/cpython/pull/119619",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114635,
+    "url": "https://github.com/python/cpython/pull/120020",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114636,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/119613",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#open"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#open"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
   {
     "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
     "alt": "IETF Logo",
