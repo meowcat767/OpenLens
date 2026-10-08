@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 290,
+    "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen",
+    "title": "Een jaar na een natuurbrand: kan een gebied zelf herstellen?",
+    "content": "Aan het laden NOS Nieuws•woensdag 6 mei 2026, 17:13 Een jaar na een natuurbrand: kan een gebied zelf herstellen? Een jaar na een grote natuurbrand in Ede, zijn de gevolgen voor dieren en planten goed zichtbaar. De vlammen verdwijnen relatief snel, maar laten in de natuur hun sporen nog jaren na. Aan het laden",
+    "scrapedAt": "2026-10-08 18:56:52.178031"
+  },
+  {
+    "id": 289,
+    "url": "https://nos.nl/op3",
+    "title": "NOS op 3",
+    "content": "Nieuws om te delen Je vindt ons hier en de hele dag op 3FM en FunX Je vindt ons hier en de hele dag op 3FM en FunX Onze verhalen Dit is NOS op 3, nieuws om te delen Vergelijkbaar misdrijf, andere straf: wat er allemaal meespeelt in de rechtbank Geen regels voor damp uit vapes: \u0027Totaal geen zicht op wat je binnenkrijgt\u0027 Onder de 30 en geen kinderwens: klinieken zien vraag naar sterilisatie toenemen Specials Spanning op het stroomnet Even voorstellen: Oranje Blik op slavernijexcuses Middellandze Zee en migratie Waarom is de oceaan beschermen zo moeilijk? De Democrachine Uit watersnood geboren 8 miljard mensen, op dat hele kleine stukje aarde Wie ben ik? | NOS op 3-eindejaarsgame Kies zelf hoe diep je erin duikt Vorige slide Volgende slide Achter de schermen Over NOS op 3 Wie zijn we en wat doen we?",
+    "scrapedAt": "2026-10-08 18:56:51.010083"
+  },
+  {
+    "id": 288,
+    "url": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
+    "title": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "content": "Pro Shots NOS Sport•vrijdag 8 mei 2026, 16:42 Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor Deel dit artikel De Formule 1-teams hebben een principeakkoord bereikt over het verder veranderen van de motorreglementen. Voor het seizoen van 2027 lijkt de koningsklasse van de autosport af te stappen van de 50/50-verdeling tussen vermogen uit de verbrandingsmotor en de elektrische aandrijving. In de nieuwe situatie gaat de verhouding richting de 60/40. In een online-bijeenkomst tussen de organisatie en de teams werden eerder doorgevoerde wijzigingen richting de Grand Prix van Miami geëvalueerd en besloten om de regels voor volgend jaar verder aan te passen. De elektrische motor zou vanaf 2027 50 kilowatt minder energie leveren, en de verbrandingsmotor wordt met dezelfde hoeveelheid krachtiger gemaakt. Ook kunnen er in het huidige seizoen nog extra wijzigingen worden gedaan. Kritiek In de eerste maanden van het huidige seizoen was er veel te doen om de nieuw ingevoerde reglementen. Sinds dit jaar is de elektrische motor belangrijker dan ooit. De helft van het vermogen komt uit deze motor, waardoor het beheren van de batterij een grote taak werd voor de coureurs. Het leidde tot situaties waarin rijders, zelfs in kwalificaties, moesten vertragen op het rechte stuk om energie te besparen. Bovendien bleken de grote snelheidsverschillen tussen auto\u0027s op vol vermogen en bolides zonder stroom voor gevaarlijke situaties te zorgen. Onder anderen Max Verstappen uitte veel kritiek op het reglement. Door de nieuwe regels kunnen auto\u0027s niet langer de hele ronde vol gas rijden. Voor de Grand Prix van Miami, die afgelopen weekend gewonnen werd door Kimi Antonelli, werden de regels al gewijzigd. Coureurs konden in de kwalificatie minder energie sparen en de \u0027boostknop\u0027, goed voor extra vermogen, werd iets minder krachtig. Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:49.916595"
+  },
+  {
+    "id": 287,
+    "url": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat",
+    "title": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "content": "ANP NOS Nieuws•donderdag 7 mei 2026, 16:42•Aangepast donderdag 7 mei 2026, 18:07 Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat? Deel dit artikel In 2024 werd er drie jaar cel geëist tegen Ali B en kreeg hij er twee. Nu, in hoger beroep, eiste het Openbaar Ministerie (OM) twee en een half jaar, maar heeft het gerechtshof hem drie jaar onvoorwaardelijke gevangenisstraf gegeven. Wat is er nu anders? De zaak tegen Ali B draait om vier strafbare feiten: twee aanrandingen en twee verkrachtingen, bij drie vrouwen. Hij werd in 2024 door de rechtbank in Haarlem vrijgesproken van de twee aanrandingen. Voor één van de verkrachtingen werd hij wel veroordeeld, maar de tweede beoordeelde de rechtbank destijds als poging tot verkrachting. Die laatste betrof zangeres Ellen ten Damme. Ali B heeft steeds gezegd aan alles onschuldig te zijn en ging in hoger beroep. Vandaag deed het hof uitspraak en veroordeelde hem dus tot drie jaar cel. Een hogere celstraf, ondanks een lagere eis van het OM. Dit keer was de eis van het OM een half jaar lager dan de vorige keer omdat de aanklagers wilden dat het hof rekening zou houden met de grote media-aandacht voor de zaak, die Ali B als erg zwaar had ervaren. Ook vindt het OM dat meeweegt dat hij nog geen strafblad heeft. Verder had het OM nu bij een van de aanrandingen om vrijspraak gevraagd. De tweede verkrachting Ali B is nu veroordeeld voor beide verkrachtingen. Het Hof oordeelt dat er bij Ellen ten Damme wel degelijk sprake was van verkrachting, en niet alleen een poging daartoe. De rechtbank was tot die conclusie gekomen omdat ze zich hevig had verzet en B uiteindelijk de kamer had uitgekregen, zei de voorzitter van het hof vandaag. Maar haar verklaringen dat B \"een beetje\" bij haar zou zijn binnengedrongen, is voor het hof juridisch gezien een voltooide verkrachting. Binnendringen is binnendringen kortom, ook terwijl ze zich hevig verzette. Bovendien zag het gerechtshof voldoende steunbewijs. Kort na de verkrachting vertelde Ten Damme haar manager dat B te ver was gegaan en over haar grens was gegaan. Ook zag de manager daarna de effecten bij haar. De zangeres gedroeg zich ineens timide, \"wezenloos en leeg\". Wat is verkrachting? Verkrachting is het ongewenst seksueel binnendringen van het lichaam (vagina, anus of mond), met een penis, vinger of voorwerp, waarbij toestemming ontbreekt. Tot enkele jaren geleden moest hierbij ook nog sprake zijn van dwang of geweld, maar dat is niet meer zo. Als er geen toestemming is, is dat doorslaggevend voor strafbaarheid. Wel houdt de rechter bij het opleggen van een straf vaak rekening met de mate waarin er sprake was van dwang. Ook als er eerst wel toestemming is, kan er sprake zijn van verkrachting als die toestemming later wordt ingetrokken. Deze definitie geldt ook binnen een huwelijk. Iemand dwingen om een ander te penetreren is ook verkrachting. Onder aanranding vallen alle andere gedwongen seksuele handelingen, zonder binnendringen van het lichaam. De andere verkrachting acht het hof, net als de rechtbank eerder, bewezen. Ook over de twee aanrandingen oordeelt het hof hetzelfde als de rechtbank. De verklaringen van beide vrouwen zijn wel geloofwaardig, maar er was niet genoeg steunbewijs om de aanrandingen wettig te bewijzen. In één geval was dat omdat het slachtoffer pas veel later iemand over het voorval had verteld. Zelf de publiciteit gezocht Voor het bepalen van de strafmaat wordt vaak gekeken naar soortgelijke zaken. Voor een verkrachting met \"beperkte mate van dwang\", zoals hier het geval was, wordt meestal een celstraf van twee jaar gegeven. Dat zou op vier jaar komen. Maar het hof heeft beide verkrachtingen apart beoordeeld. De ene was \"heftig, maar kort\". De tweede noemt het hof een \"langer durende aanval, waarbij ondanks hevig verzet toch is binnengedrongen\". De grote media-aandacht is voor het hof geen reden geweest om een lagere straf te geven. Ali B had kunnen weten dat deze delicten negatieve aandacht zouden kunnen opleveren, en heeft dat dus aan zichzelf te wijten, aldus het hof. Bovendien heeft hij zelf de publiciteit opgezocht. Zo is het gerechtshof tot een gevangenisstraf van drie jaar gekomen. De advocaat van Ali B heeft al laten weten dat hij in cassatie gaat, wat de laatste mogelijkheid is om de uitspraak aan te vechten. De zaak wordt dan niet opnieuw inhoudelijk behandeld; de Hoge Raad beoordeelt alleen of het recht op de goede manier is toegepast. In de video zie je hoe de rechter het vonnis tegen Ali B uitspreekt en motiveert: Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:48.696861"
+  },
+  {
+    "id": 286,
+    "url": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie",
+    "title": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "content": "Kevin Mazur NOS Nieuws•woensdag 6 mei 2026, 07:42 Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie Deel dit artikel Rudy Boumacorrespondent Verenigde Staten Stuur een e-mail naar Rudy Bouma Na de officiële aankondiging gisteren van hun 25ste album, Foreign Tongues, kwamen de Rolling Stones naar een monumentaal bankgebouw in de hippe wijk Williamsburg in New York. Daar lanceerden Mick Jagger (82), Keith Richards (82) en Ronnie Wood (78) hun nieuwe plaat, bijna drie jaar na de vorige. Vlak voordat het evenement begint, gluurt Jagger nog even door het gordijn naar de gasten en journalisten. \"Hoe is het publiek?\", vraagt hij aan tv-presentator en comedian Conan O\u0027Brien. Die herinnert zich dat Jagger dat de eerste keer dat hij hem interviewde ook al vroeg. Het illustreert het jeugdige enthousiasme van Jagger, Richards en Wood, die vol energie de vragen van O\u0027Brien beantwoorden. De stem van Jagger klinkt nu nauwelijks anders dan op opnames uit 1968, oordeelt O\u0027Brien. \"O, toen nam ik veel drugs\", grapt de leadzanger. Hij is te spreken over de studio in Londen. Daar nam de band in slechts een maand tijd veertien nummers op. \"Het was klein, ik kon goed zien wat Keith en Ronnie deden en dachten, dat werkte goed.\" Correspondent Rudy Bouma was erbij in New York: Vroeger deed de band maanden over het opnemen van een nieuw album, maar veel nummers zijn nog overgebleven van de vorige plaat: Hackney Diamonds uit 2023, waarmee de band de Grammy Award voor beste rockalbum won. De Stones hebben dan ook opnieuw samengewerkt met de jonge producer Andrew Watt (34). Over hoe de samenwerking tussen de uiteenlopende generaties is verlopen, wil hij achteraf niet veel kwijt. \"Het ging geweldig!\" Drumwerk van Watts Er ging een maandenlange teaser-campagne aan de lancering van Foreign Tongues vooraf. De afgelopen tijd was er onder meer een WhatsApp-groep, die leidde naar een website met cryptische aanwijzingen. Ook stonden in verschillende hoofdsteden billboards met alleen de albumtitel en het logo van de Stones. De titel is overigens een knipoog naar hun iconische logo. Verder werden fragmenten van nummers op sociale media geplaatst en werd de track Rough and Twisted al in een gelimiteerde oplage van duizend vinylplaten verkocht. De prijs: 10 euro en 7 cent, een verwijzing naar de lanceerdatum 10 juli. Andere bekende artiesten als Steve Winwood, Paul McCartney, Chad Smith van de Red Hot Chili Peppers en Robert Smith van The Cure werkten mee aan het album. Ook drumwerk van bandlid Charlie Watts is erop te horen, opgenomen vlak voordat hij in 2021 overleed. Zo kondigde de band het nieuwe album aan gisteren: The Rolling Stones - Foreign Tongues | Album Trailer(opent in nieuw venster) Op de albumcover vloeien de oude gezichten van de overgebleven leden Jagger, Richards en Woods in elkaar over. \"Veel fans hebben fantasieën over de Stones: dat ze sexy zijn\", zegt Nathaniel Quinn, die het beeld schilderde. \"Maar dit is hoe ze er nu uitzien.\" \u0027Mr. Ugly\u0027, noemt Mick Jagger het beeld van hun drie vermengde gezichten. Quinn kreeg tal van biedingen op het originele schilderij, maar de kunstenaar piekert er niet over het te verkopen. \u0027We zijn nog niet klaar\u0027 De Rolling Stones, begonnen in 1962, waren de rebelse tegenhangers van de keurige Beatles. Ze gelden als iconen van de rockmuziek, maar lieten ook een wit publiek kennis maken met blues en r\u0026b. Ze hielden ook van country, vertelt Jagger. \"We imiteren het niet, maar nemen de stijl over.\" Kevin Mazur De bandleden bij het lanceerevenement in New York De band verkocht meer dan 200 miljoen albums en is een van de bestverkopende bands aller tijden. Maar het is nog te vroeg om over hun nalatenschap te praten, zei Richards eerder. \"We zijn nog niet klaar. Er is één ding dat we nog niet hebben bereikt, en dat is uitzoeken hoelang je dit kunt volhouden.\" Richards is de enige van het trio die af en toe onverstaanbaar is tijdens het lanceerevenement in New York. \"Dit is de ergste echokamer waarin ik ooit heb gezeten\", zegt Richards over de akoestiek in het kerkachtige gebouw. Zijn opmerking zou ook kunnen slaan op de stroom complimenten die de bandleden krijgen van presentator O\u0027Brien. Acteur Leonardo DiCaprio en skiester Lindsey Vonn zitten vooraan in de zaal en klappen mee. Touren? Buiten wachten fans op de vertrekkende bandleden. Twintigers Drake en Duncan spelen zelf in een band en zijn mateloos geïnspireerd door de Stones. \"Hun muziek, stijl, kleding, alles!\" Jagger signeert hun albums, Woods en Richards lopen door. Op de vraag van de NOS of ze nog gaan touren, komt geen reactie. Sinds het slot van de Hackney Diamonds-tour in 2024 hebben de Stones niet meer opgetreden. Vorig jaar werden plannen voor een nieuwe Europese tournee geschrapt. Ook Rotterdam zou worden aangedaan, maar Richards, die lijdt aan artritis, kon zich er niet aan committeren. Toch lijkt er hoop voor de fans, blijkt uit de slotzin van hun persbericht. \"De Rolling Stones zijn hongerig om te bewijzen dat ze n",
+    "scrapedAt": "2026-10-08 18:56:47.451748"
+  },
+  {
     "id": 285,
     "url": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij",
     "title": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
@@ -1975,26 +2010,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 286,
-    "url": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
-  },
-  {
-    "id": 287,
-    "url": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
-  },
-  {
-    "id": 288,
-    "url": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
-  },
-  {
-    "id": 289,
-    "url": "https://nos.nl/op3"
-  },
-  {
-    "id": 290,
-    "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen"
   },
   {
     "id": 291,
@@ -46765,10 +46780,275 @@ window.searchData = [
     "id": 18569,
     "url": "https://api.whatsapp.com/send?text\u003dMagnier+wint+openingsetappe+Giro%2C+Groenewegen+onderuit+bij+massale+valpartij+https%3A%2F%2Fnos.nl%2Fartikel%2F2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij",
     "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "id": 18570,
+    "url": "https://nos.nl/artikel/2489439-na-jaren-weer-nieuwe-stones-plaat-vet-dat-ze-nog-steeds-bestaan",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18571,
+    "url": "https://twitter.com/intent/tweet?text\u003dOp+je+82ste+nog+hongerig%3A+Rolling+Stones+lanceren+nieuwe+album+vol+energie\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18572,
+    "url": "https://www.youtube.com/watch?v\u003dMrugmCIpAcA",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18573,
+    "url": "https://api.whatsapp.com/send?text\u003dOp+je+82ste+nog+hongerig%3A+Rolling+Stones+lanceren+nieuwe+album+vol+energie+https%3A%2F%2Fnos.nl%2Fartikel%2F2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18574,
+    "url": "https://nos.nl/artikel/2394994-rolling-stones-drummer-charlie-watts-80-overleden-een-van-de-beste-rockdrummers-ooit",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18575,
+    "url": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie#carousel_end_90980139",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18576,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18578,
+    "url": "https://nos.nl/artikel/2613243-rolling-stones-komen-met-nieuw-studioalbum",
+    "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18579,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18580,
+    "url": "https://nos.nl/artikel/2528585-ali-b-krijgt-twee-jaar-cel-voor-verkrachting-en-poging-tot-verkrachting",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18581,
+    "url": "https://twitter.com/intent/tweet?text\u003dLagere+eis%2C+hogere+straf+in+hoger+beroep+Ali+B%3A+hoe+zit+dat%3F\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18582,
+    "url": "https://nos.nl/artikel/2613453-ali-b-gaat-naar-hoge-raad-mag-procedure-afwachten-in-vrijheid",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18583,
+    "url": "https://api.whatsapp.com/send?text\u003dLagere+eis%2C+hogere+straf+in+hoger+beroep+Ali+B%3A+hoe+zit+dat%3F+https%3A%2F%2Fnos.nl%2Fartikel%2F2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18585,
+    "url": "https://twitter.com/intent/tweet?text\u003dMeer+Formule+1-wijzigingen+op+komst%3A+akkoord+over+minder+energie+uit+elektrische+motor\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18586,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18587,
+    "url": "https://api.whatsapp.com/send?text\u003dMeer+Formule+1-wijzigingen+op+komst%3A+akkoord+over+minder+energie+uit+elektrische+motor+https%3A%2F%2Fnos.nl%2Fartikel%2F2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18589,
+    "url": "https://www.youtube.com/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18590,
+    "url": "https://nos.nl/artikel/2531123-geen-regels-voor-damp-uit-vapes-totaal-geen-zicht-op-wat-je-binnenkrijgt",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18591,
+    "url": "https://nos.nl/op3/over-ons",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18592,
+    "url": "https://app.nos.nl/op3/stroomnet/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18593,
+    "url": "https://app.nos.nl/op3/8-miljard-mensen/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18594,
+    "url": "https://www.youtube.com/watch?v\u003dFL7ZO3B1PMQ",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18595,
+    "url": "https://nos.nl/artikel/2516323-onder-de-30-en-geen-kinderwens-klinieken-zien-vraag-naar-sterilisatie-toenemen",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18596,
+    "url": "https://app.nos.nl/op3/deltawerken",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18597,
+    "url": "https://www.twitch.tv/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18598,
+    "url": "https://app.nos.nl/op3/stikstof-uitgelegd/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18599,
+    "url": "https://www.instagram.com/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18600,
+    "url": "https://app.nos.nl/op3/verkiezingen-uitgelegd/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18601,
+    "url": "https://www.tiktok.com/@nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18602,
+    "url": "https://app.nos.nl/op3/wk-2023/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18603,
+    "url": "https://app.nos.nl/op3/slavernijverleden/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18604,
+    "url": "https://app.nos.nl/op3/wie-ben-ik/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18605,
+    "url": "https://nos.nl/artikel/2540117-vergelijkbaar-misdrijf-andere-straf-wat-er-allemaal-meespeelt-in-de-rechtbank",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18606,
+    "url": "https://app.nos.nl/op3/centraal-europese-route/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18607,
+    "url": "https://app.nos.nl/op3/oceaan-uitgediept/#/",
+    "parentUrl": "https://nos.nl/op3"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.nos.nl/img/op3/op3-youtube.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/E/e/n/L/L/8rQHMih5S7sXsxpYtrRxuap1b9Hw4C9Zpg53neF/220x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/F/2/a/n/H/Q3eh6UcyyA7ztFQvM8azF7oDPECGttU5dk5VDdL/0x0x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/B/F/o/C/Z/cfpPHDkGuPPqgLvnhxkaDSYJuPwYesKRqcghfj/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://static.nos.nl/img/op3/op3-team.jpg",
+    "alt": "Afbeelding van het maken van een video",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/6/M/j/J/f/hDPF3oJoij1reUTPCi8dwySgMtTxrXUqKfg2ShW/0x307x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/C/C/w/m/P/YE89U4LSHRSwr1HgNgWrzvmP29NvX2UsG2udQ8x/5x562x3984x2241-1024x576.webp",
+    "alt": "Het gerechtshof in Amsterdam, met de lege stoel van Ali B",
+    "pageTitle": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "pageUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/B/3/C/z/b/UgGVFeSqLvMexeAGrFqmdaiyR1AcPCE1qLnBeLu/0x0x1920x1080-768x432.webp",
+    "alt": "Rechter spreekt vonnis Ali B uit: \u0027Verkrachting van zowel Ellen als Naomi bewezen\u0027",
+    "pageTitle": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "pageUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/H/U/H/z/y/1VbNbkdZshf11q73NpQrPdVyxKBC5ewHbboE2R2/0x214x4000x2250-1024x576.webp",
+    "alt": "The Rolling Stones op de dag van de lancering van hun nieuwe album in New York",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/5/A/t/a/g/FYLEb9aREFUCr2NxWhkE5Bh8L2ZnDgs83CfXep4/0x0x2064x2752-576x768.webp",
+    "alt": "",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/G/a/p/C/i/PujnWpgiBgZfgyxtS4ihS9V3iYaJWoi2YrgvnLT/0x0x1920x1080-768x432.webp",
+    "alt": "Rolling Stones lanceren nieuw album: \u0027Je moet er voor werken\u0027",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "src": "https://i.ytimg.com/vi/MrugmCIpAcA/maxresdefault.jpg",
+    "alt": "The Rolling Stones - Foreign Tongues | Album Trailer",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/6/H/G/R/K/ofa4BfaTNV5fg9U1JGe9XBqSFiwNK47FAXwYooR/7x126x3840x2160-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/E/9/6/z/G/U9mwUsbVgQYb4eQZVPGXNzkyHSywSTimECjTCGf/0x0x4000x3000-768x576.webp",
+    "alt": "",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/G/N/a/6/P/Rz3QKfifWQsZY2MvfPYWLYpJ5nRB4BWMXzpnwnJ/0x0x4000x3000-768x576.webp",
+    "alt": "",
+    "pageTitle": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
+    "pageUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
   {
     "src": "https://images.cdn.nos.nl/8/6/t/r/Y/c/JBBBijikRnpDMFKB5qjJmGStmEeEifSQ6WbiCvw/0x0x4000x2250-1024x576.webp",
     "alt": "Magnier wint door valpartij ontsierde openingsetappe in Giro",
