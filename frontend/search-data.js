@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1203,
+    "url": "https://discuss.python.org/t/84319/123",
+    "title": "PEP 779: Criteria for supported status for free-threaded Python - #123 by corona10 - PEPs - Discussions on Python.org",
+    "content": "PEP 779: Criteria for supported status for free-threaded Python PEPs corona10 (Donghee Na) June 15, 2025, 10:00pm 123 Hi Thomas, The Steering Council (SC) approves PEP 779, with the effect of removing the “experimental” tag from the free-threaded build of Python 3.14. Along with this, the SC considers the following requirements must be addressed during Phase II. Meeting these ensures that free-threading support can mature into a safe and scalable default in future versions of Python. This is not an exhaustive list, and any other previous requirements should still be met. C API/ABI compatibility and Stable ABI for free-threading Any proposed changes that break existing API or ABI guarantees must be agreed to in advance with the C API Working Group. Limited C APIs for free-threading must provide a reliable foundation so that third-party library maintainers, particularly those who rely on the C API, can plan their support with confidence. The Steering Council also expects that Stable ABI for free-threading should be prepared and defined for Python 3.15. Requirements for new experimental projects within CPython New experimental projects within CPython must be compatible with, and should be based on the free-threading build. The SC encourages this direction to reduce engineering complexity caused by supporting both GIL and free-threaded builds. Performance and memory guard rails While the official target is to stay within 10% performance degradation, any changes expected to cause a slowdown of up to 15% should be discussed with the SC in advance. We expect a review of the specific changes contributing to such degradation to understand and evaluate their impact. Memory usage increases must stay below 15% compared to the GIL build. Similarly, any changes expected to increase memory above 15% (with a hard limit of 20%) should be discussed with the SC in advance. Documentation expectations Documentation must be clearly written and maintained. For Python users: What guarantees exist, and how are they affected by the free-threaded build on all APIs in all modules of the standard library. For both Python and C API developers: Documentation on signal-safety, thread-safety, and other concurrency-related guarantees in all APIs that are publicly exposed without exceptions. For CPython developers: Documentation on the impact of free-threading and how it should be taken into consideration while working on the language implementation. We recommend a central “free threading landing page”, location to be decided, which provides a guide to all the disparate documentation, PEPs, timelines, other decisions, and information regarding the free threading feature in Python. If https://py-free-threading.github.io/ is that site, we recommend making it an official page and improving its discoverability and visibility (e.g. possibly moving to the python.org domain). Preparation for high-level concurrency primitives The Python core team should begin considering and proposing higher-level concurrency primitives that users can use safely and effectively, without requiring a deep understanding of the underlying threading mechanism. And the SC wishes that this task should be prioritized once the above tasks are stable. We recommend using the concurrent package in the stdlib for this, where appropriate. Benchmark requirements All claims regarding performance, memory usage, and correctness must be supported by comprehensive and repeatable tests. These evaluations should be conducted using the existing benchmark infrastructure based on pyperformance. The SC encourages the community to contribute additional benchmarks, particularly those that are affected by or relevant to free-threading and which better represent real-world workloads, to ensure broad and realistic coverage. We are confident that the project is on the right path, and we appreciate the continued dedication from everyone working to make free-threading ready for broader adoption across the Python community. With these recommendations and the acceptance of this PEP, we as the Python developer community should broadly advertise that free-threading is a supported Python build option now and into the future, and that it will not be removed without following a proper deprecation schedule. As approved by the 3.14 Release Manager Hugo van Kemenade, we recommend officially removing the “experimental” tag from the CPython free-threading build with the 3.14 beta 3 release. Keep in mind that any decision to transition to Phase III, with free-threading as the default or sole build of Python is still undecided, and dependent on many factors both within CPython itself and the community. We leave that decision for the future. Donghee, on behalf of the Steering Council Note: This announcement has been updated to clarify terminology. For details, see the updated post. 55 Likes Python 3.14.0 beta 4 is here! PEP 803: Stable ABI for Free-Threaded Builds Python 3.14.0 beta 3 is here! 🚀 Introducing CPyth",
+    "scrapedAt": "2026-10-08 19:31:34.881529"
+  },
+  {
+    "id": 1202,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-features-in-the-c-api",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:31:32.624722"
+  },
+  {
+    "id": 1200,
+    "url": "https://docs.python.org/3/library/struct.html#module-struct",
+    "title": "struct — Interpret bytes as packed binary data — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Binary Data Services » struct — Interpret bytes as packed binary data | Theme Auto Light Dark | struct — Interpret bytes as packed binary data¶ Source code: Lib/struct.py This module converts between Python values and C structs represented as Python bytes objects. Compact format strings describe the intended conversions to/from Python values. The module’s functions and objects can be used for two largely distinct applications, data exchange with external sources (files or network connections), or data transfer between the Python application and the C layer. Note When no prefix character is given, native mode is the default. It packs or unpacks data based on the platform and compiler on which the Python interpreter was built. The result of packing a given C struct includes pad bytes which maintain proper alignment for the C types involved; similarly, alignment is taken into account when unpacking. In contrast, when communicating data between external sources, the programmer is responsible for defining byte ordering and padding between elements. See Byte Order, Size, and Alignment for details. Several struct functions (and methods of Struct) take a buffer argument. This refers to objects that implement the Buffer Protocol and provide either a readable or read-writable buffer. The most common types used for that purpose are bytes and bytearray, but many other types that can be viewed as an array of bytes implement the buffer protocol, so that they can be read/filled without additional copying from a bytes object. Functions and Exceptions¶ The module defines the following exception and functions: exception struct.error¶ Exception raised on various occasions; argument is a string describing what is wrong. struct.pack(format, v1, v2, ...)¶ Return a bytes object containing the values v1, v2, … packed according to the format string format. The arguments must match the values required by the format exactly. struct.pack_into(format, buffer, offset, v1, v2, ...)¶ Pack the values v1, v2, … according to the format string format and write the packed bytes into the writable buffer buffer starting at position offset. Note that offset is a required argument. A negative offset counts from the end of buffer. struct.unpack(format, buffer)¶ Unpack from the buffer buffer (presumably packed by pack(format, ...)) according to the format string format. The result is a tuple even if it contains exactly one item. The buffer’s size in bytes must match the size required by the format, as reflected by calcsize(). struct.unpack_from(format, /, buffer, offset\u003d0)¶ Unpack from buffer starting at position offset, according to the format string format. The result is a tuple even if it contains exactly one item. The buffer’s size in bytes, starting at position offset, must be at least the size required by the format, as reflected by calcsize(). A negative offset counts from the end of buffer. struct.iter_unpack(format, buffer)¶ Iteratively unpack from the buffer buffer according to the format string format. This function returns an iterator which will read equally sized chunks from the buffer until all its contents have been consumed. The buffer’s size in bytes must be a multiple of the size required by the format, as reflected by calcsize(). Each iteration yields a tuple as specified by the format string. Added in version 3.4. struct.calcsize(format)¶ Return the size of the struct (and hence of the bytes object produced by pack(format, ...)) corresponding to the format string format. Format Strings¶ Format strings describe the data layout when packing and unpacking data. They are built up from format characters, which specify the type of data being packed/unpacked. In addition, special characters control the byte order, size and alignment. Each format string consists of an optional prefix character which describes the overall properties of the data and one or more format characters which describe the actual data values and padding. Byte Order, Size, and Alignment¶ By default, C types are represented in the machine’s native format and byte order, and properly aligned by skipping pad bytes if necessary (according to the rules used by the C compiler). This behavior is chosen so that the bytes of a packed struct correspond exactly to the memory layout of the corresponding C struct. Whether to use native byte ordering and padding or standard formats depends on the application. Alternatively, the first character of the format string can be used to indicate the byte order, size and alignment of the packed data, according to the following table: Character Byte order Size Alignment @ native native native \u003d native standard none \u003c little-endian standard none \u003e big-endian standard none ! network (\u003d big-endian) standard none If the first character is not one of these, \u0027@\u0027 is assumed. Note The number 1023 (0x3ff in hexadecimal) has the following byte ",
+    "scrapedAt": "2026-10-08 19:31:31.300004"
+  },
+  {
+    "id": 1199,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exec_prefix",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:31:30.021484"
+  },
+  {
+    "id": 1198,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetSign",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:31:28.729914"
+  },
+  {
     "id": 1197,
     "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter",
     "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
@@ -8015,26 +8050,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1198,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetSign"
-  },
-  {
-    "id": 1199,
-    "url": "https://docs.python.org/3/library/sys.html#sys.exec_prefix"
-  },
-  {
-    "id": 1200,
-    "url": "https://docs.python.org/3/library/struct.html#module-struct"
-  },
-  {
-    "id": 1202,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-features-in-the-c-api"
-  },
-  {
-    "id": 1203,
-    "url": "https://discuss.python.org/t/84319/123"
   },
   {
     "id": 1204,
@@ -222536,10 +222551,263 @@ window.searchData = [
     "id": 230948,
     "url": "https://github.com/python/cpython/pull/127275#ref-commit-df18bb3",
     "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 231949,
+    "url": "https://docs.python.org/3/library/struct.html#struct.unpack_from",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231952,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.unpack_from",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231954,
+    "url": "https://docs.python.org/3/library/struct.html#struct-alignment",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231956,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.format",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231959,
+    "url": "https://docs.python.org/3/library/struct.html#struct.pack",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231962,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.size",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231963,
+    "url": "https://docs.python.org/3/library/struct.html#struct-examples",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231964,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.iter_unpack",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231967,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/struct.py",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231969,
+    "url": "https://docs.python.org/3/library/struct.html#struct.iter_unpack",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231971,
+    "url": "https://docs.python.org/3/library/struct.html#struct-standard-formats",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231974,
+    "url": "https://docs.python.org/3/library/struct.html#struct-format-strings",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231975,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/struct.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231981,
+    "url": "https://en.wikipedia.org/wiki/Half-precision_floating-point_format",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231983,
+    "url": "https://docs.python.org/3/library/struct.html#struct.pack_into",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231986,
+    "url": "https://en.wikipedia.org/wiki/IEEE_754-2008_revision",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231987,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.pack",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231988,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.pack_into",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231989,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct.unpack",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231991,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1700",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231993,
+    "url": "https://docs.python.org/3/library/struct.html#",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231995,
+    "url": "https://docs.python.org/3/library/struct.html#struct-native-formats",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 231999,
+    "url": "https://docs.python.org/3/library/struct.html#struct-interpret-bytes-as-packed-binary-data",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 232002,
+    "url": "https://docs.python.org/3/library/struct.html#struct.unpack",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 232009,
+    "url": "https://docs.python.org/3/library/struct.html#struct.calcsize",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 232012,
+    "url": "https://docs.python.org/3/library/struct.html#struct.error",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 232014,
+    "url": "https://docs.python.org/3/library/struct.html#struct.Struct",
+    "parentUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 233253,
+    "url": "https://discuss.python.org/c/peps/19",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233254,
+    "url": "https://discuss.python.org/u/corona10",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233256,
+    "url": "https://discuss.python.org/t/pep-803-stable-abi-for-free-threaded-builds-packaging-thread/104976/117",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233257,
+    "url": "https://discuss.python.org/t/pep-803-round-two-abi3t-stable-abi-for-free-threaded-builds/106181/26",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233258,
+    "url": "https://discuss.python.org/t/introducing-cpython-memory-tracker/96721",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233259,
+    "url": "https://discuss.python.org/t/pep-782-add-pybyteswriter-c-api/86617/15",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233260,
+    "url": "https://discuss.python.org/t/python-3-14-0-beta-4-is-here/98092",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233261,
+    "url": "https://discuss.python.org/t/pep-779-criteria-for-supported-status-for-free-threaded-python/84319?page\u003d7#post_123",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233262,
+    "url": "https://discuss.python.org/t/pep-779-criteria-for-supported-status-for-free-threaded-python/84319",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233263,
+    "url": "https://discuss.python.org/t/pep-779-criteria-for-supported-status-for-free-threaded-python/84319/140",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233265,
+    "url": "https://discuss.python.org/t/pep-803-stable-abi-for-free-threaded-builds-packaging-thread/104976/10",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233266,
+    "url": "https://discuss.python.org/t/pep-803-stable-abi-for-free-threaded-builds/103628/11",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233267,
+    "url": "https://discuss.python.org/t/python-3-14-0-beta-3-is-here/95843",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 233268,
+    "url": "https://py-free-threading.github.io/",
+    "parentUrl": "https://discuss.python.org/t/84319/123"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#new-features-in-the-c-api"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#new-features-in-the-c-api"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "struct — Interpret bytes as packed binary data — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "struct — Interpret bytes as packed binary data — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.exec_prefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.exec_prefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetSign"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetSign"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
