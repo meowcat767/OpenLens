@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 809,
+    "url": "https://docs.python.org/3/glossary.html#term-GIL",
+    "title": "Glossary — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A callable that can be called to retrieve the annotations of an object. Annotate functions are usually functions, automatically generated as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ Informally used to mean either an asynchronous generator function or an asynchronous generator iterator, depending on context. The formal terms asynchronous generator function and asynchronous generator iterator are uncommon in practice; “asynchronous generator” alone is almost always sufficient. asynchronous generator function¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. See PEP 525. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous ",
+    "scrapedAt": "2026-10-08 19:15:10.749336"
+  },
+  {
+    "id": 808,
+    "url": "https://docs.python.org/3/library/string.html#module-string",
+    "title": "string — Common string operations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Text Processing Services » string — Common string operations | Theme Auto Light Dark | string — Common string operations¶ Source code: Lib/string/__init__.py See also Text Sequence Type — str String Methods String constants¶ The constants defined in this module are: string.ascii_letters¶ The concatenation of the ascii_lowercase and ascii_uppercase constants described below. This value is not locale-dependent. string.ascii_lowercase¶ The lowercase letters \u0027abcdefghijklmnopqrstuvwxyz\u0027. This value is not locale-dependent and will not change. string.ascii_uppercase¶ The uppercase letters \u0027ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0027. This value is not locale-dependent and will not change. string.digits¶ The string \u00270123456789\u0027. string.hexdigits¶ The string \u00270123456789abcdefABCDEF\u0027. string.octdigits¶ The string \u002701234567\u0027. string.punctuation¶ String of ASCII characters which are considered punctuation characters in the C locale: !\"#$%\u0026\u0027()*+,-./:;\u003c\u003d\u003e?@[\\]^_`{|}~. string.printable¶ String of ASCII characters which are considered printable by Python. This is a combination of digits, ascii_letters, punctuation, and whitespace. Note By design, string.printable.isprintable() returns False. In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE). string.whitespace¶ A string containing all ASCII characters that are considered whitespace. This includes the characters space, tab, linefeed, return, formfeed, and vertical tab. Custom string formatting¶ The built-in string class provides the ability to do complex variable substitutions and value formatting via the format() method described in PEP 3101. The Formatter class in the string module allows you to create and customize your own string formatting behaviors using the same implementation as the built-in format() method. class string.Formatter¶ The Formatter class has the following public methods: format(format_string, /, *args, **kwargs)¶ The primary API method. It takes a format string and an arbitrary set of positional and keyword arguments. It is just a wrapper that calls vformat(). Changed in version 3.7: A format string argument is now positional-only. vformat(format_string, args, kwargs)¶ This function does the actual work of formatting. It is exposed as a separate function for cases where you want to pass in a predefined dictionary of arguments, rather than unpacking and repacking the dictionary as individual arguments using the *args and **kwargs syntax. vformat() does the work of breaking up the format string into character data and replacement fields. It calls the various methods described below. In addition, the Formatter defines a number of methods that are intended to be replaced by subclasses: parse(format_string)¶ Loop over the format_string and return an iterable of tuples (literal_text, field_name, format_spec, conversion). This is used by vformat() to break the string into either literal text, or replacement fields. The values in the tuple conceptually represent a span of literal text followed by a single replacement field. If there is no literal text (which can happen if two replacement fields occur consecutively), then literal_text will be a zero-length string. If there is no replacement field, then the values of field_name, format_spec and conversion will be None. The value of field_name is unmodified and auto-numbering of non-numbered positional fields is done by vformat(). get_field(field_name, args, kwargs)¶ Given field_name, convert it to an object to be formatted. Auto-numbering of field_name returned from parse() is done by vformat() before calling this method. Returns a tuple (obj, used_key). The default version takes strings of the form defined in PEP 3101, such as “0[name]” or “label.title”. args and kwargs are as passed in to vformat(). The return value used_key has the same meaning as the key parameter to get_value(). get_value(key, args, kwargs)¶ Retrieve a given field value. The key argument will be either an integer or a string. If it is an integer, it represents the index of the positional argument in args; if it is a string, then it represents a named argument in kwargs. The args parameter is set to the list of positional arguments to vformat(), and the kwargs parameter is set to the dictionary of keyword arguments. For compound field names, these functions are only called for the first component of the field name; subsequent components are handled through normal attribute and indexing operations. So for example, the field expression ‘0.name’ would cause get_value() to be called with a key argument of 0. The name attribute will be looked up after get_value() returns by calling the built-in getattr() function. If the index or keyword refers to an item that does not exist, then an IndexError or KeyError should be raised. check_unused_args(used_args, args, kwargs)¶ Implement checking for unused arguments if desired. The a",
+    "scrapedAt": "2026-10-08 19:15:09.494849"
+  },
+  {
+    "id": 807,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ByteString",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:15:08.304127"
+  },
+  {
+    "id": 806,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#unittest",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:15:07.091932"
+  },
+  {
+    "id": 805,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS",
+    "title": "Sequence Protocol — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not “steal” a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Pyt",
+    "scrapedAt": "2026-10-08 19:15:05.803337"
+  },
+  {
     "id": 804,
     "url": "https://docs.python.org/3/library/threading.html#threading.RLock",
     "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
@@ -5315,26 +5350,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 805,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
-  },
-  {
-    "id": 806,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
-  },
-  {
-    "id": 807,
-    "url": "https://docs.python.org/3/library/typing.html#typing.ByteString"
-  },
-  {
-    "id": 808,
-    "url": "https://docs.python.org/3/library/string.html#module-string"
-  },
-  {
-    "id": 809,
-    "url": "https://docs.python.org/3/glossary.html#term-GIL"
   },
   {
     "id": 810,
@@ -138600,10 +138615,560 @@ window.searchData = [
     "id": 103175,
     "url": "https://github.com/python/cpython/pull/129525",
     "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 103307,
+    "url": "https://docs.python.org/3/c-api/tuple.html#c.PyTupleObject",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103309,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Tuple",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103310,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_ITEM",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103313,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103317,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_SetSlice",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103319,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Concat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103320,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103323,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Length",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103325,
+    "url": "https://docs.python.org/3/c-api/mapping.html",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103326,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_GetSlice",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103327,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_DelSlice",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103329,
+    "url": "https://docs.python.org/3/c-api/sequence.html#sequence-protocol",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103331,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_GetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103332,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Repeat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103333,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_InPlaceRepeat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103334,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/sequence.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103336,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Count",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103341,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_DelItem",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103342,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_List",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103343,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_InPlaceConcat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103345,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Index",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103346,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_SetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103351,
+    "url": "https://docs.python.org/3/c-api/abstract.html",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103354,
+    "url": "https://docs.python.org/3/c-api/number.html",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 103355,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 104940,
+    "url": "https://docs.python.org/3/library/string.html#n-format-float",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104943,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.check_unused_args",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104944,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#grammar-token-python-grammar-digit",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104947,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-width",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104948,
+    "url": "https://docs.python.org/3/library/string.html#format-specification-mini-language",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104951,
+    "url": "https://docs.python.org/3/library/string.html#string.whitespace",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104952,
+    "url": "https://docs.python.org/3/library/string.html#formatstrings",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104953,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.capitalize",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104955,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal-context",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104956,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-element_index",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104958,
+    "url": "https://docs.python.org/3/library/string.html#string.Template.template",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104959,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-conversion",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104961,
+    "url": "https://peps.python.org/pep-0378/",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104963,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.get_field",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104966,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-type",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104967,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-grouping",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104968,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-format_spec",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104969,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-width_and_precision",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104972,
+    "url": "https://docs.python.org/3/library/string.html#string.capwords",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104974,
+    "url": "https://docs.python.org/3/library/string.html#string.hexdigits",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104975,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.parse",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104978,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-precision",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104981,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-precision_with_grouping",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104982,
+    "url": "https://peps.python.org/pep-0515/",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104983,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104987,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.format",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104988,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.format_field",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104989,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-field_name",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104990,
+    "url": "https://docs.python.org/3/library/string.html#string.punctuation",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104992,
+    "url": "https://peps.python.org/pep-3101/",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104993,
+    "url": "https://docs.python.org/3/library/string.html#helper-functions",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104994,
+    "url": "https://docs.python.org/3/library/string.html#string.digits",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104996,
+    "url": "https://docs.python.org/3/library/re.html#re.escape",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104998,
+    "url": "https://flufli18n.readthedocs.io/en/latest/",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 104999,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/string/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105000,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.get_value",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105002,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.convert_field",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105004,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-fill",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105006,
+    "url": "https://docs.python.org/3/library/string.html#string.octdigits",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105009,
+    "url": "https://peps.python.org/pep-0292/",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105011,
+    "url": "https://docs.python.org/3/library/string.html#string.Template.substitute",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105012,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-options",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105015,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-arg_name",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105016,
+    "url": "https://docs.python.org/3/library/string.html#formatexamples",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105018,
+    "url": "https://docs.python.org/3/library/string.html#template-strings-strings",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105019,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.isdecimal",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105021,
+    "url": "https://docs.python.org/3/library/string.html#string.Formatter.vformat",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105022,
+    "url": "https://docs.python.org/3/library/string.html#n-format-integer",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105024,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-sign",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105025,
+    "url": "https://docs.python.org/3/library/string.html#string.ascii_lowercase",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105026,
+    "url": "https://docs.python.org/3/library/string.html#custom-string-formatting",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105027,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-width_with_grouping",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105028,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#string-methods",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105029,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-format_spec",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105031,
+    "url": "https://docs.python.org/3/library/string.html#format-examples",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105033,
+    "url": "https://manpages.debian.org/locale(5)",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105034,
+    "url": "https://docs.python.org/3/library/string.html#string.Template.is_valid",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105035,
+    "url": "https://docs.python.org/3/library/string.html#string.ascii_letters",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105036,
+    "url": "https://docs.python.org/3/library/string.html#string-constants",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105037,
+    "url": "https://peps.python.org/pep-0682/",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105038,
+    "url": "https://docs.python.org/3/library/string.html#string.Template",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105041,
+    "url": "https://docs.python.org/3/library/string.html#string.printable",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105042,
+    "url": "https://docs.python.org/3/library/string.html#",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105045,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-spec-align",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105046,
+    "url": "https://docs.python.org/3/library/string.html#string.Template.safe_substitute",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105047,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#template-strings",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105048,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-index_string",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105049,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/string.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105052,
+    "url": "https://docs.python.org/3/library/string.html#string.ascii_uppercase",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105053,
+    "url": "https://docs.python.org/3/library/string.html#grammar-token-format-string-attribute_name",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105054,
+    "url": "https://docs.python.org/3/library/string.html#string.Template.get_identifiers",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105055,
+    "url": "https://docs.python.org/3/glossary.html#positional-only-parameter",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105056,
+    "url": "https://docs.python.org/3/library/string.html#format-string-syntax",
+    "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-GIL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-GIL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "string — Common string operations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "string — Common string operations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.ByteString"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.ByteString"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
