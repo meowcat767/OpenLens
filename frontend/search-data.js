@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 503,
+    "url": "http://kivy.org/",
+    "title": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "content": "Kivy: The Open Source Python App Development Framework. Build and distribute beautiful Python cross-platform GUI apps with ease. Kivy runs on Android, iOS, Linux, macOS and Windows. MIT License 17.0K Stars Get started! Kivy has been built to be easy to use, cross-platform and fast. With a single codebase, you will be able to deploy apps on Windows, Linux, macOS, iOS and Android. Business Friendly Kivy is released under the MIT License, is 100% free to use, and is professionally developed, backed and maintained. Companies and individuals are using Kivy for their projects every day. Kivy is kept open source thanks to its contributors and backers. {{organizations.length}} organizations are supporting Kivy: {{ organization.account.name }} {{organization.tier.name}} ${{organization.totalDonations.value}} Amount contributed See all the {{organizations.length}} organizations supporting Kivy on OpenCollective {{individuals.length}} individuals are supporting Kivy See all the {{individuals.length}} individuals supporting Kivy on OpenCollective Start supporting Kivy from $5 Kivy is a free and open source software and is maintained by the community. Sometimes, a small contribution, could help to keep the wheel spinning flawlessly. Support Kivy as a Backer (Starts from $5/mo) Support Kivy as a Sponsor (Starts from $100/mo) Need help? The Kivy community will love ❤️ to help. Join us on Discord Join us on kivy-users group Source code hosted on Github Contact us",
+    "scrapedAt": "2026-10-08 19:04:31.827697"
+  },
+  {
+    "id": 502,
+    "url": "http://docs.python.org/howto/sockets.html",
+    "title": "Socket Programming HOWTO — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python HOWTOs » Socket Programming HOWTO | Theme Auto Light Dark | Socket Programming HOWTO¶ Author: Gordon McMillan Abstract Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not really a tutorial - you’ll still have work to do in getting things operational. It doesn’t cover the fine points (and there are a lot of them), but I hope it will give you enough background to begin using them decently. Sockets¶ I’m only going to talk about INET (i.e. IPv4) sockets, but they account for at least 99% of the sockets in use. And I’ll only talk about STREAM (i.e. TCP) sockets - unless you really know what you’re doing (in which case this HOWTO isn’t for you!), you’ll get better behavior and performance from a STREAM socket than anything else. I will try to clear up the mystery of what a socket is, as well as some hints on how to work with blocking and non-blocking sockets. But I’ll start by talking about blocking sockets. You’ll need to know how they work before dealing with non-blocking sockets. Part of the trouble with understanding these things is that “socket” can mean a number of subtly different things, depending on context. So first, let’s make a distinction between a “client” socket - an endpoint of a conversation, and a “server” socket, which is more like a switchboard operator. The client application (your browser, for example) uses “client” sockets exclusively; the web server it’s talking to uses both “server” sockets and “client” sockets. History¶ Of the various forms of IPC, sockets are by far the most popular. On any given platform, there are likely to be other forms of IPC that are faster, but for cross-platform communication, sockets are about the only game in town. They were invented in Berkeley as part of the BSD flavor of Unix. They spread like wildfire with the internet. With good reason — the combination of sockets with INET makes talking to arbitrary machines around the world unbelievably easy (at least compared to other schemes). Creating a Socket¶ Roughly speaking, when you clicked on the link that brought you to this page, your browser did something like the following: # create an INET, STREAMing socket\ns \u003d socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# now connect to the web server on port 80 - the normal http port\ns.connect((\"www.python.org\", 80))\n When the connect completes, the socket s can be used to send in a request for the text of the page. The same socket will read the reply, and then be destroyed. That’s right, destroyed. Client sockets are normally only used for one exchange (or a small set of sequential exchanges). What happens in the web server is a bit more complex. First, the web server creates a “server socket”: # create an INET, STREAMing socket\nserversocket \u003d socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# bind the socket to a public host, and a well-known port\nserversocket.bind((socket.gethostname(), 80))\n# become a server socket\nserversocket.listen(5)\n A couple things to notice: we used socket.gethostname() so that the socket would be visible to the outside world. If we had used s.bind((\u0027localhost\u0027, 80)) or s.bind((\u0027127.0.0.1\u0027, 80)) we would still have a “server” socket, but one that was only visible within the same machine. s.bind((\u0027\u0027, 80)) specifies that the socket is reachable by any address the machine happens to have. A second thing to note: low number ports are usually reserved for “well known” services (HTTP, SNMP etc). If you’re playing around, use a nice high number (4 digits). Finally, the argument to listen tells the socket library that we want it to queue up as many as 5 connect requests (the normal max) before refusing outside connections. If the rest of the code is written properly, that should be plenty. Now that we have a “server” socket, listening on port 80, we can enter the mainloop of the web server: while True:\n    # accept connections from outside\n    (clientsocket, address) \u003d serversocket.accept()\n    # now do something with the clientsocket\n    # in this case, we\u0027ll pretend this is a threaded server\n    ct \u003d make_client_thread(clientsocket)\n    ct.start()\n There’s actually 3 general ways in which this loop could work - dispatching a thread to handle clientsocket, create a new process to handle clientsocket, or restructure this app to use non-blocking sockets, and multiplex between our “server” socket and any active clientsockets using select. More about that later. The important thing to understand now is this: this is all a “server” socket does. It doesn’t send any data. It doesn’t receive any data. It just produces “client” sockets. Each clientsocket is created in response to some other “client” socket doing a connect() to the host and port we’re bound to. As soon as we’ve created that clientsocket, we go back to listening for more connections. The two “clients” a",
+    "scrapedAt": "2026-10-08 19:04:30.131872"
+  },
+  {
+    "id": 501,
+    "url": "http://wiki.python.org/moin/WebProgramming",
+    "title": "WebProgramming",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Web Programming in Python This topic guide attempts to cover every aspect of programming Web applications (both clients and servers) using Python. Server Programming Topics concerned with writing providing Web applications, doing server-side programming, providing a Web site or pages which use Python in some way: WebFrameworks - for developing server-side Web applications in Python CgiScripts - information on writing CGI scripts/programs in Python when the WebFrameworks seem like too much work or aren\u0027t available at your provider WebServers - server solutions written in (or using) Python ContentManagementSystems - solutions specially designed for organising and publishing content WebServices - tools for accessing and providing functionality via APIs over the Web Client Programming Topics concerned with accessing Web applications, sites or pages using Python: WebBrowserProgramming - interfacing with existing browsers and browser technologies WebClientProgramming - writing clients, typically at a lower level than a full Web browser WebServices - tools for accessing and providing functionality via APIs over the Web Related Links Related topics of interest: WebStandardisation - working towards common solutions and APIs for Python Web programming DatabaseProgramming - guidance on available DatabaseInterfaces and related tools Templating - generating output, messages and more from Web applications BuildAnIntranet - advice on how one might go about developing and deploying an intranet solution Editorial Note This simplified start page replaces the previous \"comprehensive\" guide to Web programming. Unless adding a distinct category of Web programming, please add things like new frameworks to the appropriate page - not to this page. 2026-02-14 16:14",
+    "scrapedAt": "2026-10-08 19:04:28.824626"
+  },
+  {
+    "id": 500,
+    "url": "http://www.pygtk.org/",
+    "title": "",
+    "content": "",
+    "scrapedAt": "2026-10-08 19:04:27.511079"
+  },
+  {
+    "id": 499,
+    "url": "http://wiki.python.org/moin/NumericAndScientific",
+    "title": "NumericAndScientific",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Numeric and Scientific NumPy - http://www.numpy.org/ -- Numerical Python adds a fast, compact, multidimensional array facility to Python. NumPy is the successor to both Numeric and Numarray. Deprecated: Numeric -- Numerical Python adds a fast, compact, multidimensional array language facility to Python. (Note: superseded by NumPy) Deprecated: NumArray - http://stsdas.stsci.edu/numarray/index.html -- Numarray is a reimplementation of Numeric which adds the ability to efficiently manipulate large numeric arrays in ways similar to Matlab and IDL. (Note: superseded by NumPy) SciPy - http://www.scipy.org/ SciPy is an open source library of scientific tools for Python. SciPy supplements the popular NumPy module, gathering a variety of high level science and engineering modules together as a single package. SciPy includes modules for linear algebra, optimization, integration, special functions, signal and image processing, statistics, genetic algorithms, ODE solvers, and others. Numba - http://numba.pydata.org/ Numba is an open source, NumPy-aware Python compiler specifically suited to scientific codes. ad is an open-source Python package for transparently performing first- and second-order automatic differentiation calculations with any of the base numeric types (int, float, complex, etc.). Utility functions designed for working with SciPy optimization routines. APM Python - http://apmonitor.com/wiki/index.php/Main/PythonApp APMonitor is a nonlinear programming and optimization environment with an interface to Python. The software is available as a web-service through Python libraries for the solution of large-scale mathematical programming problems. SymPy - http://www.sympy.org/ SymPy is a symbolic manipulation package, written in pure Python. Its aim is to become a full featured CAS in Python, while keeping the code as simple as possible in order to be comprehensible and easily extensible. ALGLIB - http://www.alglib.net/ - numerical analysis library in C++ and C#, with Python and IronPython interfaces. Python Data Analysis Library - http://pandas.pydata.org/ - pandas is a library providing high-performance, easy-to-use data structures and data analysis tools for the Python . PyGSL - http://pygsl.sourceforge.net/ -- This project provides a python interface for the GNU scientific library (gsl). FuncDesigner - http://openopt.org/FuncDesigner FuncDesigner is Python module to rapidly build functions and get their derivatives via automatic differentiation. Also you can perform integration, interpolation, interval analysis, uncertainty analysis, solve eigenvalue problems, systems of linear/non-linear/ODE equations and numerical optimization problems coded in FuncDesigner by OpenOpt. OpenOpt - http://openopt.org - a framework for numerical optimization and systems of linear/non-linear equations. Connects to dozens of solvers (some are C- or Fortran-written). Can optimize FuncDesigner models with automatic differentiation. Provides graphic output of convergence, multifactor analysis tool for scientific experiments planning and some more numerical optimization \"MUST HAVE\" features. Also OpenOpt has Stochastic Programming and Optimization addon (commercial yet, free for small-scaled academic and research purposes) SpaceFuncs - http://openopt.org/SpaceFuncs - a tool for 2D, 3D, N-dimensional geometric modeling with possibilities of parametrized calculations, numerical optimization and solving systems of geometrical equations with automatic differentiation. !NLopt - http://ab-initio.mit.edu/nlopt - another library for nonlinear optimization, including many local/global optimization algorithms written in C, with a Python interface (as well as interfaces for several other languages). jHepWork - http://jwork.org/jhepwork - a multiplatform data-analysis framework written in Java. The main programming language is Jython, a clone of Python written in Java. Contains Java libraries for numerical calculations and visualisation of scientific graphs. Contains an interactive Python prompt. ScientificPython - http://dirac.cnrs-orleans.fr/ScientificPython/ -- ScientificPython is a collection of Python modules that are useful for scientific computing. In this collection you will find modules that cover basic geometry (vectors, tensors, transformations, vector and tensor fields), quaternions, automatic derivatives, (linear) interpolation, polynomials, elementary statistics, nonlinear least-squares fits, unit calculations, Fortran-compatible text formatting, 3D visualization via VRML, and two Tk widgets for simple line plots and 3D wiref",
+    "scrapedAt": "2026-10-08 19:04:25.773611"
+  },
+  {
     "id": 498,
     "url": "http://docs.python.org/2/library/imaplib.html",
     "title": "20.10. imaplib — IMAP4 protocol client — Python 2.7.18 documentation",
@@ -3450,26 +3485,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 499,
-    "url": "http://wiki.python.org/moin/NumericAndScientific"
-  },
-  {
-    "id": 500,
-    "url": "http://www.pygtk.org/"
-  },
-  {
-    "id": 501,
-    "url": "http://wiki.python.org/moin/WebProgramming"
-  },
-  {
-    "id": 502,
-    "url": "http://docs.python.org/howto/sockets.html"
-  },
-  {
-    "id": 503,
-    "url": "http://kivy.org/"
   },
   {
     "id": 504,
@@ -91726,10 +91741,851 @@ window.searchData = [
     "id": 66681,
     "url": "https://docs.python.org/2/library/imaplib.html#imap4-objects",
     "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66682,
+    "url": "https://wiki.python.org/moin/SymPy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66683,
+    "url": "http://openopt.org/StochasticProgramming",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66684,
+    "url": "http://pypi.python.org/pypi/mcerp",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66685,
+    "url": "http://www.cardiff.ac.uk/sdna",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66686,
+    "url": "http://packages.python.org/uncertainties/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66687,
+    "url": "http://www.bx.psu.edu/projects/esperr",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66688,
+    "url": "http://openopt.org/SpaceFuncs",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66689,
+    "url": "https://wiki.python.org/moin/MultiprecisionSoftwareDirectory.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66690,
+    "url": "http://trac.gispython.org/projects/PCL",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66691,
+    "url": "http://xapple.github.com/track/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66692,
+    "url": "http://stsdas.stsci.edu/numarray/index.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66693,
+    "url": "http://pydstool.sourceforge.net",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66694,
+    "url": "http://www.roguewave.com/products/imsl-numerical-libraries/pyimsl-studio.aspx",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66695,
+    "url": "https://wiki.python.org/moin/EyeLink.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66696,
+    "url": "https://wiki.python.org/moin/GmPy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66697,
+    "url": "http://luke.campagnola.me/code/pyqtgraph/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66698,
+    "url": "https://plot.ly/api/python",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66699,
+    "url": "https://wiki.python.org/moin/NumericBooks.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66700,
+    "url": "http://pypi.python.org/pypi/soerp",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66701,
+    "url": "http://bokeh.pydata.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66702,
+    "url": "http://bonsai.ims.u-tokyo.ac.jp/~mdehoon/software/cluster/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66703,
+    "url": "https://wiki.python.org/moin/NumPy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66704,
+    "url": "https://wiki.python.org/moin/NumericAndScientific(2f)Formats.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66705,
+    "url": "http://biopython.org/wiki/Main_Page",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66706,
+    "url": "https://wiki.python.org/moin/FuncDesigner.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66707,
+    "url": "https://wiki.python.org/moin/SciPy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66708,
+    "url": "http://www-itg.lbl.gov/gtg/projects/pyGlobus/index.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66709,
+    "url": "https://wiki.python.org/moin/OpenOpt.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66710,
+    "url": "http://pygts.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66711,
+    "url": "http://spacepy.lanl.gov/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66712,
+    "url": "https://root.cern.ch/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66713,
+    "url": "https://github.com/ganga-devs",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66714,
+    "url": "http://wiki.python.org/moin/PyACTS",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66715,
+    "url": "https://wiki.python.org/moin/scikit(2d)learn.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66716,
+    "url": "https://wiki.python.org/moin/PyLink.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66717,
+    "url": "http://bonsai.ims.u-tokyo.ac.jp/~mdehoon/software/cluster/software.htm#pycluster",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66718,
+    "url": "http://quandl.com",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66719,
+    "url": "https://wiki.python.org/moin/CategoryPythonInScience.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66720,
+    "url": "https://wiki.python.org/moin/FrontPage.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66721,
+    "url": "https://twiki.cern.ch/twiki/bin/view/ArdaGrid/DIANE",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66722,
+    "url": "http://pysal.org",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66723,
+    "url": "https://wiki.python.org/moin/PyChem.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66724,
+    "url": "https://kernc.github.io/backtesting.py/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66725,
+    "url": "http://www.eyelinkinfo.com/mount_software.php",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66726,
+    "url": "http://vistrails.org",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66727,
+    "url": "https://wiki.python.org/moin/SpaceFuncs.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66728,
+    "url": "https://wiki.python.org/moin/PyCogent.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66729,
+    "url": "http://g2.bx.psu.edu/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66730,
+    "url": "http://bitbucket.org/james_taylor/bx-python/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66731,
+    "url": "https://wiki.python.org/moin/PyMol.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66732,
+    "url": "https://wiki.python.org/moin/PyDSTool.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66734,
+    "url": "http://dirac.cnrs-orleans.fr/ScientificPython/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66735,
+    "url": "http://code.enthought.com/projects/mayavi/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66736,
+    "url": "http://pypi.python.org/pypi/ad",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66737,
+    "url": "http://www.alglib.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66738,
+    "url": "http://www.pymol.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66739,
+    "url": "http://code.google.com/p/wrapitk/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66740,
+    "url": "http://www.pythonware.com/products/pil",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66741,
+    "url": "http://openopt.org/FuncDesigner",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66742,
+    "url": "http://gmpy.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66743,
+    "url": "https://wiki.python.org/moin/mpmath.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66744,
+    "url": "http://astropy.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66746,
+    "url": "https://wiki.python.org/moin/NumericAndScientific(2f)Libraries.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66747,
+    "url": "http://scikit-learn.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66748,
+    "url": "https://wiki.python.org/moin/NumericAndScientific(2f)Plotting.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66749,
+    "url": "https://wiki.python.org/moin/Numeric.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66750,
+    "url": "https://wiki.python.org/moin/PyGTS.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66751,
+    "url": "http://pychem.sf.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66752,
+    "url": "http://apmonitor.com/wiki/index.php/Main/PythonApp",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66753,
+    "url": "http://sunpy.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66754,
+    "url": "http://gcl.ucsd.edu/peg/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66755,
+    "url": "https://wiki.python.org/moin/BigWig.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66756,
+    "url": "https://wiki.python.org/moin/mlpy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66757,
+    "url": "http://numfocus.org",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66758,
+    "url": "http://openopt.org/MultiFactorAnalysis",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66759,
+    "url": "http://itk.org",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66760,
+    "url": "https://wiki.python.org/moin/PyQt.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66761,
+    "url": "http://pycogent.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66762,
+    "url": "https://wiki.python.org/moin/Quandl.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66763,
+    "url": "https://wiki.python.org/moin/ScientificPython.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66764,
+    "url": "https://sambo-optimization.github.io",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66765,
+    "url": "http://continuum.io/downloads",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66766,
+    "url": "http://ab-initio.mit.edu/nlopt",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66767,
+    "url": "http://vtk.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66768,
+    "url": "http://calcrpnpy.sourceforge.net/clnum.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66769,
+    "url": "https://plot.ly/-",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66770,
+    "url": "https://wiki.python.org/moin/BedGraph.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66771,
+    "url": "https://wiki.python.org/moin/PyGSL.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66772,
+    "url": "http://salilab.org/modeller",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66773,
+    "url": "http://graph-tool.skewed.de",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66774,
+    "url": "http://packages.python.org/sppy/index.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66775,
+    "url": "https://wiki.python.org/moin/SimPy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66777,
+    "url": "http://www.numpy.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66778,
+    "url": "https://wiki.python.org/moin/sppy.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66779,
+    "url": "http://thuban.intevation.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66780,
+    "url": "http://www.cardiff.ac.uk/sdna/sdna-for-python-enthusiasts/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66781,
+    "url": "http://bmnh.org/~pf/p4.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66782,
+    "url": "http://www.sympy.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66783,
+    "url": "https://wiki.python.org/moin/jHepWork.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66785,
+    "url": "https://wiki.python.org/moin/NumArray.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66786,
+    "url": "http://crd.lbl.gov/~dhbailey/mpdist/index.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66787,
+    "url": "https://wiki.python.org/moin/PyACTS.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66788,
+    "url": "http://scikit-image.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66789,
+    "url": "http://mpmath.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66790,
+    "url": "https://www.quandl.com/tools/python",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66791,
+    "url": "https://wiki.python.org/moin/VisTrails.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66792,
+    "url": "http://www.tc.umn.edu/~ringx004/mapm-main.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66793,
+    "url": "http://numba.pydata.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66794,
+    "url": "https://wiki.python.org/moin/graph(2d)tool.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66795,
+    "url": "https://mlpy.fbk.eu/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66796,
+    "url": "http://jwork.org/jhepwork",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66797,
+    "url": "https://wiki.python.org/moin/IronPython.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66798,
+    "url": "http://pygsl.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66799,
+    "url": "http://gr-framework.org/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66800,
+    "url": "http://www.cgl.ucsf.edu/chimera/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66801,
+    "url": "http://glumpy.github.io/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66802,
+    "url": "https://launchpad.net/escript-finley",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66803,
+    "url": "http://simpy.sourceforge.net/index.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66804,
+    "url": "https://wiki.python.org/moin/MAPM.html",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66805,
+    "url": "http://openopt.org",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66806,
+    "url": "http://gts.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66807,
+    "url": "https://wiki.python.org/moin/DatabaseProgramming.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66808,
+    "url": "https://wiki.python.org/moin/Templating.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66809,
+    "url": "https://wiki.python.org/moin/WebBrowserProgramming.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66810,
+    "url": "https://wiki.python.org/moin/WebClientProgramming.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66811,
+    "url": "https://wiki.python.org/moin/CgiScripts.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66813,
+    "url": "https://wiki.python.org/moin/BuildAnIntranet.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66815,
+    "url": "https://wiki.python.org/moin/WebServices.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66816,
+    "url": "https://wiki.python.org/moin/WebServers.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66817,
+    "url": "https://wiki.python.org/moin/WebFrameworks.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66818,
+    "url": "https://wiki.python.org/moin/WebStandardisation.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66819,
+    "url": "https://wiki.python.org/moin/DatabaseInterfaces.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66820,
+    "url": "https://wiki.python.org/moin/ContentManagementSystems.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66821,
+    "url": "https://docs.python.org/3/howto/sockets.html#non-blocking-sockets",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66823,
+    "url": "https://docs.python.org/3/howto/sockets.html#creating-a-socket",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66824,
+    "url": "https://docs.python.org/3/howto/sockets.html#when-sockets-die",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66826,
+    "url": "https://docs.python.org/3/howto/sockets.html#ipc",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66829,
+    "url": "https://docs.python.org/3/howto/sockets.html#sockets",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66830,
+    "url": "https://docs.python.org/3/howto/sockets.html#history",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66835,
+    "url": "https://en.wikipedia.org/wiki/Endianness#Networking",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66836,
+    "url": "https://docs.python.org/3/howto/sockets.html#binary-data",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66839,
+    "url": "https://docs.python.org/3/howto/sockets.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66842,
+    "url": "https://docs.python.org/3/howto/sockets.html#using-a-socket",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66843,
+    "url": "https://docs.python.org/3/howto/sockets.html#",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66845,
+    "url": "https://docs.python.org/3/howto/sockets.html#disconnecting",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66846,
+    "url": "https://docs.python.org/3/howto/regex.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66847,
+    "url": "https://docs.python.org/3/howto/sockets.html#socket-programming-howto",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66848,
+    "url": "https://docs.python.org/3/howto/sorting.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66849,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/howto/sockets.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://kivy.org/static/images/icons/scale-balanced.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/star.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/kivy-colorwheel-examples.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-fast.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-company.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/contribute_coffee.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/help.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/discord.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/github.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/DO_Badge.png",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Socket Programming HOWTO — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Socket Programming HOWTO — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "WebProgramming",
+    "pageUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "NumericAndScientific",
+    "pageUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
   {
     "src": "https://docs.python.org/2/_static/py.png",
     "alt": "",
