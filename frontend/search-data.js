@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 561,
+    "url": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/",
+    "title": "Python for Financial Machine Learning at Union Investment | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Financial Machine Learning at Union Investment Written by Dr. Christian Mandery and Nikolas Gerlich, Union Investment Introduction Union Investment is one of Germany’s largest asset managers, managing a total of over US$ 350 billion for its customers in Germany and other European countries. As an active fundamental asset manager, we are always working on further improving our investment process. Employing novel data sources and information for our investment process in a world where more and more data is created and made available each day is key contributor to success in our business. Machine Learning with Python A promising way to integrate novel data in asset management is machine learning (ML), which allows to uncover patterns found within financial time series data and leverage these patterns for making even better investment decisions. Machine learning allows us to: Identify possible return drivers, either on the level of individual stocks or for a whole asset class such as the stock or the bond market, Predict key performance indicators, such as revenue, on a company level and Determine whether we can benefit from a specific data set and derive a value from it for our investment process. In order to create machine learning models for these tasks, we have developed our own machine learning platform MALINA – MAchine Learning for INvestment Applications – which is a tailor-made solution to create interpretable machine learning models for financial time series data. MALINA is developed solely using Python and consists of more than 30k lines of Python code. Within our MALINA framework, we created four decoupled modules: a machine learning module which allows us to define and benchmark models for financial time series data using different ML algorithms, a back testing module, which allows us to run back tests for trading strategies based on the developed ML models, a model interpretation module, which integrates our own interpretation methods for some of the machine learning algorithms available in the ML module and a web-based user interface that allows the user to define and benchmark models without the necessity of actually writing code. Especially module 3, the development of novel approaches for interpreting our machine learning models, is key to us. This module allows us to open the black box of machine learning and to understand our models and their predictions, which further helps us to uncover the patterns these models have learnt. Figure : Screenshot of our web-based user interface powered by Python and the Django framework. Python’s Outstanding Ecosystem In addition to the Python language itself, using Python allows us to rely heavily on proven open source libraries from the Python ecosystem such as Pandas, which provides a robust and powerful framework for managing and analyzing data, Scikit-Learn, which is the \"go-to\" package for machine learning in Python and by many considered to be the industry standard for machine learning at all, statsmodels and XGBoost, which extend the feature set of scikit-learn to provide advanced statistical models and gradient boosting, Django, an excellent and comprehensive framework to develop web applications which we built upon to create the web-based user interface and Sphinx, which is an excellent package to create documentation from Python DocStrings and allows us to automatically keep our documentation up with the development of our code. All these packages have the advantage of being well-known and widely established, which means that extensive amounts of documentation and discussion can be found online for each of them. In addition, each of these packages being available as open source software means that we can easily dive into the existing code. For, e.g., the machine learning algorithms provided by Scikit-Learn that means that we are able to develop our own extensions, such as custom-tailored interpretation methods – something that would not be possible when using a proprietary machine learning framework. In addition, many of the smaller packages available within Python ecosystem features have been very useful and saved us a lot of time when developing MALINA. One particular example here might be joblib, which makes it extremely easy to parallelize computations in a platform-agnostic manner without hassling about the details of the underlying OS. Finally, the cross-platform capabilities mean that we can easily port MALINA to a different platform. So, while for development we can stick to the Windows machines that are commonly used in our company, we can readily switch to a Linux system for using our MALINA framework in a production environment. Conclusion Machine learning offers exciting new possibilities in analyzing and predicting financial time series. Due to the nature of fin",
+    "scrapedAt": "2026-10-08 19:06:34.239177"
+  },
+  {
+    "id": 560,
+    "url": "https://www.python.org/success-stories/create/",
+    "title": "Sign In to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Sign In Login: Password: Forgot your password? Remember Me: Forgot Password? Sign In Register Don\u0027t have a Python.org account yet? Create new account",
+    "scrapedAt": "2026-10-08 19:06:33.017828"
+  },
+  {
+    "id": 559,
+    "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/",
+    "title": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Lincoln Loop: Building a sustainable business inspired by Python’s ethos Written by Peter Baumgartner, Lincoln Loop When our agency began in 2007, using Python on the web was still a rarity, but some new projects in the space were starting to pop up. TurboGears had gained popularity with its MVC approach, but it was another Python web framework, Django, that piqued my interest. I had worked previously with WordPress and Ruby on Rails, but neither felt like a long-term match. Trying to customize WordPress to build custom applications was like putting a square peg in a round hole, and Rails, the hot framework at the time, felt too magical and lacked sufficient documentation for me to really wrap my head around it. Django (and Python) clicked with me immediately. They were well documented, and because of Django\u0027s newsroom roots, I could build content platforms as well as rich web applications. Thanks largely to those technologies, Lincoln Loop has grown from a one-person local operation to a full-service global web agency with over 15 years of success. Why Python Is the Best Choice for Lincoln Loop We came to Python through Django but stuck with the programming language largely because of its philosophy. The language principles espoused by the Zen of Python not only describe how we should write code, but some became tenets of how we run our business. Ideas like “Practicality beats purity” and “Explicit is better than implicit” work far beyond the terminal. Following Python\u0027s ideals of practicality and explicitness not only makes our code better but also the end products we deliver to our clients. Another reason Python has worked out so well for our client projects is the rich ecosystem of open-source libraries available on PyPI. They let us focus on our client\u0027s unique business logic, and for everything else, we can leverage open-source libraries. The breadth of tooling available is staggering. We pull API clients, content management systems, image manipulation libraries, and even machine learning or data science toolkits from PyPI. We\u0027re excited to start seeing packages built in Rust show up on PyPI. Its recent adoption for performance-critical code paths means we get high-performance memory-safe code that can be accessed with a friendly Python API. It feels like we\u0027re getting to have our cake and eat it too! It\u0027s no wonder Python ranks as one of the most popular languages in developer surveys year after year. It’s a proven technology, and the “batteries included” approach gives us the building blocks we need to solve our clients\u0027 problems quickly and efficiently. Django Has Powered Development for Lincoln Loop Since 2007 Our agency was among the early adopters of Django. But since those early days, we’ve seen massive growth in the ecosystem. Once considered bleeding-edge technology, Django is now a stable, mature framework. Plus, it’s flexible enough to accommodate the needs of the wide variety of organizations we work with as partners. Python and Django have allowed us to create content management systems for large-scale publishers with tens of millions of daily page views as well as immersive educational experiences for prestigious universities. We’ve seen our client base transition from bootstrapped startups to enterprise organizations with billions of dollars in revenue. Python has been our foundation every step of the way. Unlike most of the tech world that jumps from framework to framework, embracing whatever is the hot new technology, Lincoln Loop has stayed focused on Python and Django. Consequently, we have an incredibly deep understanding of how to use them to solve our clients’ problems. The longevity of our tooling also means the solutions we build are sustainable. We have clients who have run the same technology stack (with upgrades along the way) for more than ten years. Python’s Core Advantage Comes Down to Community Open source software relies on its community for its success. Without a healthy community, the open-source ecosystem will eventually fizzle and fade. For us, the Python community may be its greatest advantage compared to other programming languages. If you go to a Python conference, you’ll find specialists with very diverse backgrounds. In addition to the web, you\u0027ll meet folks in research, data science, machine learning, and system operations. Most of the open source Python code from those different groups ends up in PyPI. Whatever your organization needs to do, it is likely that someone in the Python community has already written the code that will deliver the functionality you need. Since the language is so widely used, you have a lot of online resources available when you want to find help. Whether it is a blog post describing how to solve a specific problem, a deep-dive conference talk on a specific topic, or som",
+    "scrapedAt": "2026-10-08 19:06:31.562856"
+  },
+  {
+    "id": 558,
+    "url": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/",
+    "title": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python with Gretel.ai to Generate Synthetic Location Data Written by Alex Watson, co-founder and CPO, Gretel.ai, Gretel.ai Header Photo Credit: sylv1rob1 via ShutterStock* How Gretel.ai trained a FastCUT GAN using Python to generate realistic synthetic location data for any city in the world. Introduction At Gretel.ai, our mission is to make it fast and easy for developers and data scientists to create production-grade synthetic data. To achieve this, we’ve designed a series of APIs that allow anyone to get up and running within minutes so they can identify, transform and generate the data necessary to fuel the testing of modern software applications and AI/ML models. Python is the engine that powers much of Gretel’s research, development, and deployment of our APIs and toolkit. From a user experience perspective, Python’s extensive libraries and frameworks (e.g., Scikit-learn and TensorFlow for machine learning, Spacy for text processing, and Numpy for data exploration), its ability to handle complex data structures, and its turnkey integrations help us ensure Gretel’s platform is easy to use and extensible to any workflow or project. In this post, we highlight how–with the support of Python–we created a GAN location generator that can use map images and geolocation data to create new synthetic training data that can help the model predict where a human (or an e-bike in this case) might be, for any location in the world, with a high degree of statistical accuracy. This proof of concept for making better predictions by combining and contextualizing different types of data has applications across industries – such as improving medical diagnosis and financial market forecasts and even building realistic simulations in the metaverse. If you want to try this experiment yourself, all the tools, code, and data are open-sourced and available on GitHub. An Overview of the Process Generating realistic location data for users for testing or modeling simulations is a hard problem. Current approaches just create random locations inside a box, placing users in waterways or on top of buildings. This inability to make accurate, synthetic location data stifles a lot of innovative projects that require diverse and complex datasets to fuel their work. Gretel’s approach is to model this problem by encoding e-bike location data as pixels in an image, and then training that data as an image translation task similar to CycleGAN, Pix2pix, and StyleGAN. For this study, we used the newer contrastive unpaired translation (FastCUT) model that was created by the authors of pix2pix and CycleGAN as it’s memory-efficient, fast for training (i.e., useful for higher-res locations), and generalizes well with minimal parameter tuning. The Approach For this case study, we wanted to test if we could accurately predict the locations of scooters in one city based on training a GAN model using publicly available e-bike data from other cities. To do this, we first fed our model image data of different city maps, including DC, Denver, and San Diego, then separately trained the model on tabular data of e-bike locations throughout those cities, which included time-series data that captured the flow of e-bike traffic, too. Here is an example of what the raw data looks like before and after it was combined: Creating contextual learning by combining time-series and image data Three-Step Process There were three essential steps for training our model. First, we created the training data. To do this, we created a Domain A from a corpus of precise e-bike locations on a map, and a Domain B from the same maps, but without locations. Next, we trained our FastCUT model on our new training data (which includes both the labeled and unlabeled map images). This was accomplished by training the model on translating Domain B → Domain A. Lastly, once our initial model was trained, we generated our synthetic dataset, which we then used to further test and optimize the model’s predictions for realistic user locations for a new city map. This generative process required downloading new maps for a target location (Domain C), then running inference on the FastCUT model to predict scooter locations (in other words, translating Domain C → Domain A), and finally processing those images using OpenCV-Python to find e-bike locations and then convert them to geolocation (i.e., latitudinal/longitudinal) data points. With this information, we built our synthetic location dataset and we’re ready for testing. The Results: San Diego → San Francisco → Tokyo With our model trained on real-world San Diego e-bike data, we then repeated the same initial process of training our model with image data from various U.S. cities but then asked our model to predict the missing e-bike location data. The output was predictions t",
+    "scrapedAt": "2026-10-08 19:06:30.103356"
+  },
+  {
+    "id": 557,
+    "url": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/",
+    "title": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning Written by Andrei Stoian and Benoit Chevallier-Mames, Zama Zama creates open-source tools that bring Fully Homomorphic Encryption (FHE) to blockchain and AI developers. FHE is a cryptographic technique that enables computations on encrypted data without needing to decrypt it or access the private key. This approach is invaluable in industries requiring strong privacy protections—such as healthcare, finance, advertising, and defense. FHE not only ensures trust when outsourcing machine learning tasks to the cloud, but also facilitates collaborative analytics between multiple parties, all while keeping the data secure and private throughout the entire process. Concrete ML: a user-friendly Python Package with classical APIs To simplify the adoption of FHE, which involves a complex and resource-intensive technological stack, we developed tools that streamline the integration of FHE into applications. Since Python is the de facto standard for building machine learning (ML) applications, it was an obvious choice to create an open-source FHE library in Python. The library features APIs that closely resemble those of familiar ML libraries, making it accessible to machine learning practitioners. For classical machine learning models, we drew inspiration from the API of scikit-learn, the leading ML library that supports a wide range of models, including linear models, decision trees, and random forests. For deep learning models, we decided to support PyTorch through the intermediary of ONNX, the open standard for machine learning interoperability. Finally, for DataFrames, Concrete ML took inspiration from pandas. Building with Concrete ML Both our ML framework and FHE compiler are open-source. Recently, external developers have used our libraries to build exciting FHE applications, such as an encrypted version of Shazam where songs are encrypted before matching to a database, and an encrypted DNA ancestry analysis solution that keeps the DNA encrypted throughout the entire process. Ready to start building with FHE? Read the Concrete ML documentation Explore the comprehensive tutorials and demos About the authors Andrei Stoian, PhD, is head of the machine learning team at Zama. His main responsibility in this role is to oversee the development of Concrete ML, Zama\u0027s privacy preserving machine learning toolkit based on fully homomorphic encryption. In the past, Andrei worked on machine learning tools and algorithms for video analytics and satellite image processing on embedded systems. Andrei has co-authored more than 20 papers about machine learning applications and holds several patents. Benoit Chevallier-Mames is serving as VP of Cloud \u0026 Machine Learning at Zama. He has spent 20+ years between cryptographic research and secure implementations in a wide range of domains such as side-channel security, provable security, whitebox cryptography, and fully homomorphic encryption. Benoit has co-written 15+ peer-reviewed papers and is the co-author of 50+ patents. He holds a PhD from Ecole Normale Superieure / Paris University and a master\u0027s degree from CentraleSupelec. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:06:28.788724"
+  },
+  {
     "id": 556,
     "url": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/",
     "title": "Using Python to build a solution for instant tokenized real estate redemptions | Our Success Stories | Python.org",
@@ -3820,26 +3855,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 557,
-    "url": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
-  },
-  {
-    "id": 558,
-    "url": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
-  },
-  {
-    "id": 559,
-    "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
-  },
-  {
-    "id": 560,
-    "url": "https://www.python.org/success-stories/create/"
-  },
-  {
-    "id": 561,
-    "url": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
   },
   {
     "id": 562,
@@ -97515,10 +97530,155 @@ window.searchData = [
     "id": 68574,
     "url": "https://www.lofty.ai/",
     "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "id": 68577,
+    "url": "https://zama.ai",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68578,
+    "url": "https://github.com/zama-ai/concrete",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68581,
+    "url": "https://github.com/zama-ai/concrete-ml",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68583,
+    "url": "https://www.zama.ai/post/encrypted-shazam-using-fully-homomorphic-encryption-concrete-ml-tutorial",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68584,
+    "url": "http://scikit-learn.org/",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68586,
+    "url": "https://docs.zama.ai/concrete-ml/tutorials/showcase",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68588,
+    "url": "https://www.zama.ai/post/build-an-end-to-end-encrypted-23andme-genetic-testing-application-using-concrete-ml-fully-homomorphic-encryption",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68597,
+    "url": "https://gretel.ai/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68599,
+    "url": "https://github.com/gretelai/GAN-location-generator.git",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68600,
+    "url": "https://imgur.com/kUq1ITA",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68602,
+    "url": "https://imgur.com/tGWSqTL",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68609,
+    "url": "https://peps.python.org/pep-0020/#the-zen-of-python",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 68614,
+    "url": "https://survey.stackoverflow.co/2022/",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 68617,
+    "url": "https://lincolnloop.com",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 68622,
+    "url": "https://www.python.org/accounts/password/reset/",
+    "parentUrl": "https://www.python.org/success-stories/create/"
+  },
+  {
+    "id": 68623,
+    "url": "https://www.python.org/accounts/signup/",
+    "parentUrl": "https://www.python.org/success-stories/create/"
+  },
+  {
+    "id": 68627,
+    "url": "https://union-investment.com/home.html",
+    "parentUrl": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Success_Story_Screenshot_dv24mLv.png",
+    "alt": "Screenshot of our web-based user interface powered by Python and the Django framework.",
+    "pageTitle": "Python for Financial Machine Learning at Union Investment | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/lincoln_loop.jpg",
+    "alt": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos",
+    "pageTitle": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Header_Image_FEpYWhD.jpg",
+    "alt": "Using Python with Gretel.ai to Generate Synthetic Location Data",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/9C4n5BG.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/tGWSqTL.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/kUq1ITA.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/1.png",
+    "alt": "image1",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/2.png",
+    "alt": "image2",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/3.png",
+    "alt": "image3",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/4.png",
+    "alt": "image",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/successstory_algorand.png",
     "alt": "image",
