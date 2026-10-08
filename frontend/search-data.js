@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 295,
+    "url": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken",
+    "title": "Podcast De Stemming: spoednood, brievenbussen en koffievlekken",
+    "content": "NOS NOS Nieuws•vrijdag 8 mei 2026, 15:13 Podcast De Stemming: spoednood, brievenbussen en koffievlekken Deel dit artikel Joost Vullings en Marleen de Rooy bespreken de explosie die donderdagavond plaatsvond bij het partijkantoor van D66 in Den Haag. Hoe gaat de politiek hiermee om? Verder aandacht voor de dagelijkse demonstraties in verschillende gemeentes tegen azc\u0027s en spoednoodopvanglocaties, En intussen liepen de spanningen op tussen Amerika en Duitsland, nadat bondskanselier Merz bij een bijeenkomst op een middelbare school kritiek had op de Amerikaanse strategie van in de oorlog met Iran. Hoe kritisch zijn Nederlandse bewindslieden op het beleid van Trump? De Stemming Deze aflevering van De Stemming van Vullings en De Rooy is hier te beluisteren bij NPO Luister(opent in nieuw venster) Daar vind je ook alle vorige afleveringen(opent in nieuw venster). Net als bij alle andere bekende podcastkanalen(opent in nieuw venster). Over deze podcast Politiek journalisten Joost Vullings (EenVandaag, AVROTROS) en Marleen de Rooy (NOS) nemen elke vrijdag de Haagse week door, met scherpe analyses, geruchten en voorspellingen. Wil je reageren? Mail dan naar destemming@nos.nl. Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:57:01.596809"
+  },
+  {
+    "id": 294,
+    "url": "https://nos.nl/live",
+    "title": "NOS.nl - NOS Live",
+    "content": "Live bij de NOS Op dit moment zijn er geen livestreams Binnenkort te zien Alles Nieuws Sport Sla sportfilters over Turnen Voetbal Baanwielrennen Shorttrack Schaatsen Hockey Judo Futsal Korfbal Zwemmen Veldrijden Atletiek vandaag vandaag, 19:50 vandaag, 19:50 NOS Journaal van 20.00 uur vandaag, 21:55 vandaag, 21:55 Nieuwsuur over de slechte beveiliging bij het OM morgen morgen, 10:50 morgen, 10:50 Bekendmaking Nobelprijs voor de Vrede morgen, 16:00 morgen, 16:00 WK judo: dag 6 morgen, 19:45 morgen, 19:45 Euro Hockey League: Oranje-Rood - Real Club de Polo (m) morgen, 20:00 morgen, 20:00 Voetbal: WK-kwalificatie Hongarije - Nederland (v) zaterdag zaterdag, 16:00 zaterdag, 16:00 WK judo: dag 7 zondag zondag, 15:00 zondag, 15:00 Hockey: Den Bosch - Rotterdam (m) zondag, 16:00 zondag, 16:00 Euro Hockey League: Oranje-Rood - Wimbledon (m) maandag maandag, 17:00 maandag, 17:00 Persconferentie bondscoach Veurink dinsdag dinsdag, 20:45 dinsdag, 20:45 Voetbal: WK-kwalificatie Nederland - Hongarije (v) woensdag woensdag, 12:30 woensdag, 12:30 WK baanwielrennen donderdag donderdag, 11:00 donderdag, 11:00 WK baanwielrennen vrijdag 16 oktober vr 16 oktober, 11:00 vr 16 oktober, 11:00 WK baanwielrennen zaterdag 17 oktober za 17 oktober, 11:30 za 17 oktober, 11:30 WK baanwielrennen zondag 18 oktober zo 18 oktober, 07:30 zo 18 oktober, 07:30 WK baanwielrennen zo 18 oktober, 09:00 zo 18 oktober, 09:00 Marathon van Amsterdam dinsdag 20 oktober di 20 oktober, 19:30 di 20 oktober, 19:30 WK turnen: teamfinale (m) woensdag 21 oktober wo 21 oktober, 19:30 wo 21 oktober, 19:30 Futsal: WK-kwalificatie Nederland - Servië (m) wo 21 oktober, 19:30 wo 21 oktober, 19:30 WK turnen: teamfinale (v) donderdag 22 oktober do 22 oktober, 19:00 do 22 oktober, 19:00 EK korfbal: halve finale do 22 oktober, 19:30 do 22 oktober, 19:30 WK turnen: meerkampfinale (m) vrijdag 23 oktober vr 23 oktober, 19:30 vr 23 oktober, 19:30 WK turnen: meerkampfinale (v) zaterdag 24 oktober za 24 oktober, 14:00 za 24 oktober, 14:00 WK turnen: toestelfinales (m/v) za 24 oktober, 15:15 za 24 oktober, 15:15 EK korfbal: finale za 24 oktober, 19:00 za 24 oktober, 19:00 NK kortebaanzwemmen zo 25 oktober, 01:00 zo 25 oktober, 01:00 Shorttrack: World Tour Vancouver zondag 25 oktober zo 25 oktober, 14:00 zo 25 oktober, 14:00 WK turnen: toestelfinales (m/v) zo 25 oktober, 19:00 zo 25 oktober, 19:00 NK kortebaanzwemmen maandag 26 oktober ma 26 oktober, 01:00 ma 26 oktober, 01:00 Shorttrack: World Tour Vancouver donderdag 29 oktober do 29 oktober, 21:00 do 29 oktober, 21:00 Champions League: Manchester City - PSG (v) vrijdag 30 oktober vr 30 oktober, 18:00 vr 30 oktober, 18:00 Schaatsen: wereldbeker kwalificatietoernooi Heerenveen zaterdag 31 oktober za 31 oktober, 14:00 za 31 oktober, 14:00 Schaatsen: wereldbeker kwalificatietoernooi Heerenveen za 31 oktober, 18:30 za 31 oktober, 18:30 Shorttrack: World Tour Montreal zondag 1 november zo 1 november, 12:00 zo 1 november, 12:00 Schaatsen: wereldbeker kwalificatietoernooi Heerenveen zo 1 november, 18:30 zo 1 november, 18:30 Shorttrack: World Tour Montreal vrijdag 6 november vr 6 november, 20:00 vr 6 november, 20:00 Futsal: EK-kwalificatie Andorra - Nederland (m) zaterdag 7 november za 7 november, 15:00 za 7 november, 15:00 EK veldrijden (v) zondag 8 november zo 8 november, 15:00 zo 8 november, 15:00 EK veldrijden (m) woensdag 11 november wo 11 november, 18:45 wo 11 november, 18:45 Champions League: FC Barcelona - Arsenal (v) Meer laden",
+    "scrapedAt": "2026-10-08 18:57:00.431536"
+  },
+  {
+    "id": 293,
+    "url": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet",
+    "title": "Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet",
+    "content": "ANP NOS Nieuws•vrijdag 8 mei 2026, 14:24•Aangepast vrijdag 8 mei 2026, 15:07 Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet Deel dit artikel Met het sneller ongewenst verklaren van vreemdelingen en meer mogelijkheden om binnengrenzen strenger te controleren wil het kabinet alsnog een aantal maatregelen doorvoeren om het asielbeleid aan te scherpen. Premier Jetten kondigde het al aan en twee en een halve week na het stranden van de asielnoodmaatregelenwet in de Eerste Kamer zet het kabinet nu een eerste stap. Daarbij wil het kabinet via een zogenoemde nota van wijziging, het aanpassen van een bestaand wetsvoorstel, de mogelijkheden verruimen om personen sneller als ongewenst te verklaren, aldus minister Van den Brink (CDA) van Asiel. Hij wijst erop dat dat sneller gaat dan nieuwe wetgeving doorvoeren. Het gaat om mensen die in ons land asiel hebben aangevraagd, maar ook strafbare feiten hebben gepleegd. Zij moeten sneller dan nu ongewenst verklaard kunnen worden. Wie dan ondanks zo\u0027n ongewenstverklaring niet vertrekt kan voor een jaar in de gevangenis belanden. Het gaat straks ook om mensen die van buiten Europa komen. Meerdere misdaden Van den Brink denkt dat de maatregel kan helpen, hoewel hij niet kan niet zeggen om hoeveel mensen het zou gaan. \"We willen wel mensen asiel bieden, maar niet als je een misdaad pleegt\". Het gaat om misdrijven waar een gevangenisstraf van minimaal twee jaar op staat, of meerdere misdaden die daartoe optellen. Verder wil het kabinet het toezicht op de binnengrenzen aanscherpen en de Koninklijke Marechaussee meer mogelijkheden geven om effectiever op te treden. Het gaat niet zozeer om controles aan de grenzen zelf, zegt Van den Brink, maar om meer gerichte controles op wegen achter de grenzen. Of daar ook meer geld voor komt is niet duidelijk. Afschaffen van dwangsommen Van den Brink, die een paar weken geleden de wetten van zijn voorganger Faber door de Eerste Kamer moest loodsen -waarvan één het niet redde- heeft goede hoop dat een Kamermeerderheid deze maatregelen wel zal steunen. De norm is straks heel duidelijk, stelt Van den Brink: \"Iemand die strafbare feiten pleegt en ondanks een ongewenstheidverklaring terugkeert naar ons land gaat de cel in\". Het strafbaar stellen van alle mensen zonder verblijfsrecht ligt politiek gevoelig, niet alleen voor oppositiepartijen GroenLinks-PvdA en SGP, maar ook voor coalitiepartijen D66 en CDA. Dat onderdeel van de verworpen asielnoodmaatregelenwet, over \u0027terugkeerfrustreerders\u0027 zoals Van den Brink het noemt, komt later. Ook voor het afschaffen van dwangsommen voor de Immigratie- en Naturalisatiedienst, die nu kunnen worden opgelegd als de overheid te laat beslist over aanvragen, komt nog een voorstel. Politiek verslaggever Jorn Jonker: \"Het kabinet wil uitstralen dat het op dit terrein wel kan leveren. In dit dossier gaat het veel over beeldvorming. Via Europese afspraken wordt binnenkort al veel geregeld wat in de weggestemde wetten stond. Maar wat die wetten daarbovenop zouden regelen, willen ze alsnog in maatregelen gieten en zo het wegstemmen in de Eerste Kamer \u0027repareren\u0027. Dit is politiek het makkelijkste gedeelte daarvan en daarom kan het ook zo snel aangekondigd worden. De regeringspartijen hebben zich ook voorgenomen om mensen die niet meewerken aan hun vertrek strafbaar te stellen, maar hoe ze dat gaan doen is politiek veel lastiger. D66 wil bijvoorbeeld niet dat het te veel lijkt op het strafbaar stellen illegaliteit\". Van den Brink Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:59.337438"
+  },
+  {
+    "id": 292,
+    "url": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand",
+    "title": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "content": "AP / NOS NOS Nieuws•donderdag 7 mei 2026, 12:26 Berlijn autovrij? Plan voor referendum leidt tot felle weerstand Deel dit artikel Chiem Baldukcorrespondent Duitsland De Berlijnse deelstaatverkiezingen zijn pas in september, maar nu al hangt de Duitse hoofdstad vol met campagneposters. Het onderwerp is het misschien wel meest radicale verkeersplan ter wereld: een vrijwel autovrij Berlijn. Activisten willen een referendum hierover afdwingen, rechtse partijen voeren actief tegencampagne. Het is een wetsvoorstel waar een groep juristen, verkeerskundigen en groene activisten jaren aan gewerkt heeft. Het idee is om het autoverkeer flink te beperken binnen de ringspoorlijn, een gebied waar ongeveer 30 procent van de bijna vier miljoen Berlijners woont. Het gebied is met maar liefst 88 vierkante kilometer ongeveer zo groot als Eindhoven. Alle mensen zouden nog maar twaalf dagen per jaar met een auto in dit gebied mogen rijden. Uitzonderingen komen er voor hulpdiensten, taxi\u0027s, mensen met een beperking, goederenverkeer en mensen met cruciale beroepen. De rest is aangewezen op het ov, de fiets of benenwagen. NOS Het gebied waarover het gaat Het zou leiden tot minder verkeersongelukken, -overlast en -uitstoot. De ruimte die vrijkomt kan worden gebruikt voor fietspaden, groen en zitjes. \"Of speeltuintjes... of urban libraries\", dagdroomt Marie Wagner, een van de initiatiefnemers. \"En eindelijk kunnen kinderen veilig naar school fietsen.\" Tegenstanders wijzen op hogere verkeerslast op omliggende wijken en economische schade, doordat bedrijven zouden vertrekken en winkels slechter bereikbaar zijn. Dat wuift Wagner weg. \"Slechts 9 procent van inkopen binnen de ring wordt gedaan door mensen die met een auto reizen\", zegt ze. \"Bovendien heeft onderzoek uitgewezen dat aantrekkelijkere straten leiden tot meer consumptie, omdat mensen daar langer blijven.\" Wie wel de auto moet en mag gebruiken, zoals klusjesmannen, kunnen juist makkelijker door de stad bewegen, is het idee. Collega Gerald Stefani benadrukt dat de activisten niet tegen de auto an sich zijn. \"We willen het autogebruik niet afschaffen, maar reguleren. Ook blijft met twaalf autodagen per jaar nog veel mogelijk, zoals grote boodschappen en verhuizingen.\" Over de uitvoering maakt hij zich geen zorgen. \"Voor iedere rit zou je online een QR-code kunnen aanvragen.\" Weerstand in autostad Berlijn is een autostad. In de bloeiperiode rond 1900, de Gründerzeit, werden de kenmerkende Berlijnse huurblokken weids opgezet langs brede straten. Daar viel de auto later eenvoudig in te passen. Verwoesting door de Tweede Wereldoorlog, de bouw van de Berlijnse Muur en sloopdrift van naoorlogse stedenplanners maakten de weg vrij voor brede autowegen. AFP Zicht op het centrum van Berlijn, met op de voorgrond de kenmerkende Berlijnse woningbouw Het initiatief stuit op felle weerstand van de lokale politiek. Rechtse partijen als CDU, FDP en AfD hebben de stad volgehangen met posters met \u0027Autofrei? Nein!\u0027 en \u0027Auto verbieten verboten\u0027 (autoverbod verbieden). CDU-burgemeester Wegner spreekt van een \"goedbedoelde droom van een stedelijke idylle, maar die tot een nachtmerrie zal leiden\". Zijn partij staat op verlies bij de komende deelstaatverkiezing en wordt even groot gepeild als de Groenen en Die Linke, evenals de AfD. Het beeld van \u0027links\u0027 die je auto wil afpakken, is dan een campagnegeschenk. Daarom houden de linkse partijen zich waarschijnlijk afzijdig op dit thema; zij hebben geen posters opgehangen voor het verkeersreferendum. NOS / Chiem Balduk Campagneposters van de AfD (tegenstander) en de Tierschutzpartei (voorstander) De anti-campagne is juist behulpzaam, zegt Stefani. Het levert bekendheid op: \"Er zijn mensen die vanwege de CDU-posters juist komen ondertekenen\". Volgens Wagner willen vrijwel alle partijen het autogebruik terugdringen, maar durven ze geen grote stappen te zetten. \"De auto zit diep in de Duitse psyche\", zegt Stefani. \"Het is zo belangrijk geweest voor de Duitse economische ontwikkeling, dat veranderingen op autogebied automatisch weerstand oproepen. Dat zien we ook met de discussie over een maximumsnelheid.\" Het is spannender dan een krimi. Actievoerder Marie Wagner De actievoerders verkeren in het laatste stadium om een referendum in september af te dwingen: het ophalen van 174.000 handtekeningen. Dat ging in de wintermaanden moeizaam, maar nu is er een inhaalspurt. Met nog één dag te gaan lijkt het erop of eronder, zegt Marie Wagner. \"Het is spannender dan een krimi.\" Op het Alexanderplatz vragen de actievoerders Berlijners om hun handtekening. De één tekent direct (\"Het is zeker niet radicaal, de huidige vervuiling is radicaal!\"), de ander wuift het voorstel weg (\"Minder auto\u0027s prima, maar niet de mijne\"). Een vrouw twijfelt. Ze woont binnen de ring en heeft een auto. \"Voor boodschappen is het wel handig.\" Toch vindt ze het idee wel spannend. Na wat overtuigingskracht van de actievoerders tekent ze. \"Misschien goed, dan word ik eens gedwongen te fietsen.\" Deel ",
+    "scrapedAt": "2026-10-08 18:56:58.091648"
+  },
+  {
+    "id": 291,
+    "url": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "title": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "content": "NOS Nieuws•vrijdag 8 mei 2026, 09:10•Aangepast vrijdag 8 mei 2026, 10:27 Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027 Deel dit artikel Premier Jetten noemt het gooien van een vuurwerkbom door de brievenbus van het D66-partijkantoor \"een kansloze actie\". \"Vrij kansloos als je denkt dat je met dit soort acties politici kunt intimideren. We laten ons echt niet het zwijgen opleggen.\" Jetten sprak met de pers voor de start van de ministerraad: Jetten zei voor aanvang van de ministerraad dat er veel schade is, en dat de mensen die bij een sprekersavond van de Jonge Democraten aanwezig waren erg geschrokken zijn. \"Gelukkig is iedereen ongedeerd\", aldus de D66-leider. Kort na de aanslag werd een verdachte aangehouden. Het gaat om een 37-jarige man zonder vaste woon- of verblijfplaats, meldt de politie vanochtend. Hij zit nog vast. Vaker intimidatie Het was de tweede keer in negen maanden tijd dat het D66-bureau doelwit was van een actie. Rond het asielprotest op het Malieveld, in september, werd het bekogeld met stenen. Jetten wijst erop dat het niet alleen om D66 gaat, maar dat er \"elke week wel\" pogingen worden gedaan om bijvoorbeeld gemeenteraadsleden, burgemeesters, politie- of ambulancemensen te intimideren. \"Maar je zag gisteravond gelukkig ook dat de meeste Nederlanders heel duidelijk maken dat we dit in ons land absoluut niet accepteren en dat dit niet een land is waar je met geweld je zin kan krijgen. Dit past absoluut niet bij de Nederlandse normen en waarden.\" In september sprak Jetten, die toen nog geen premier was, over \"politiek geweld\". Die woorden wil hij nu niet gebruiken, omdat het motief achter de vuurwerkbom nog niet duidelijk is. Dat wordt nog onderzocht door de politie. \u0027Doelbewust naar D66\u0027 Het ging toen om een ander soort incident, zegt Jetten. \"Er stonden mensen met vlaggen voor het partijkantoor en er werd gefilmd terwijl de ruiten werden ingegooid\", dus het was meteen duidelijk wat de bedoeling was. Hij denkt overigens wel dat de dader doelbewust naar het pand van D66 is gelopen om juist daar een vuurwerkbom naar binnen te gooien. Maar op de exacte reden voor die actie wil hij niet vooruit lopen. \u0027Aanslag op democratie\u0027 VVD-leider Yesilgöz vindt het \"echt vreselijk\" wat er is gebeurd. \"Dit is bedoeld om mensen monddood te maken\" en dat kan wat haar betreft echt niet. \"Je gaat gewoon niet naar geweldsmiddelen grijpen.\" \"Je blijft met je poten van anderen af\", zegt Yesilgöz. \"Als je het ergens niet mee eens bent, ga stemmen, ga het debat aan. Er zijn een miljoen manieren in een democratie om je stem te laten horen.\" Ook andere bewindspersonen veroordelen de actie. CDA-minister Heerma spreekt van \"een aanslag op de democratie\". Hij ziet dat de drempel om te intimideren en geweld te gebruiken, lager lijkt te worden. \u0027Geschokt en verdrietig\u0027 Minister Van Weel van Justitie en Veiligheid vindt het \"schandalig dat een politieke partij wordt aangevallen in ons land\". Hij stelt dat de temperatuur in het politieke debat \"ontzettend hoog\" is. \"Dit is de bijl aan de wortel van de democratie.\" De Jonge Democraten, die gisteravond een bijeenkomst met ruim dertig mensen hadden in het D66-kantoor, zijn \"geschokt, woedend en verdrietig\". Zij spreken van \"een aanslag\"(opent in nieuw venster). \"Dit raakt niet alleen D66 of de JD, maar onze democratie. Wij laten ons niet intimideren.\" Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:56.865701"
+  },
+  {
     "id": 290,
     "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen",
     "title": "Een jaar na een natuurbrand: kan een gebied zelf herstellen?",
@@ -2010,26 +2045,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 291,
-    "url": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
-  },
-  {
-    "id": 292,
-    "url": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
-  },
-  {
-    "id": 293,
-    "url": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
-  },
-  {
-    "id": 294,
-    "url": "https://nos.nl/live"
-  },
-  {
-    "id": 295,
-    "url": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
   },
   {
     "id": 296,
@@ -46955,10 +46970,533 @@ window.searchData = [
     "id": 18607,
     "url": "https://app.nos.nl/op3/oceaan-uitgediept/#/",
     "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18608,
+    "url": "https://x.com/JongeDemocraten/status/2052650346288459950",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 18609,
+    "url": "https://api.whatsapp.com/send?text\u003dJetten+na+aanslag+op+D66-kantoor%3A+%27We+laten+ons+niet+intimideren%27+https%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 18610,
+    "url": "https://twitter.com/intent/tweet?text\u003dJetten+na+aanslag+op+D66-kantoor%3A+%27We+laten+ons+niet+intimideren%27\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 18611,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 18613,
+    "url": "https://twitter.com/intent/tweet?text\u003dBerlijn+autovrij%3F+Plan+voor+referendum+leidt+tot+felle+weerstand\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 18614,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 18615,
+    "url": "https://api.whatsapp.com/send?text\u003dBerlijn+autovrij%3F+Plan+voor+referendum+leidt+tot+felle+weerstand+https%3A%2F%2Fnos.nl%2Fartikel%2F2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 18617,
+    "url": "https://nos.nl/collectie/14015/artikel/2610602-energiecrisis-zet-plankgas-rijden-op-duitse-autobahn-op-politieke-agenda",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 18618,
+    "url": "https://nos.nl/artikel/2611423-eerste-kamer-tegen-veelbesproken-asielwet-minister-beticht-pvv-van-politieke-sabotage",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 18619,
+    "url": "https://twitter.com/intent/tweet?text\u003dKabinet+komt+met+eerste+nieuwe+maatregelen+na+stranden+asielnoodwet\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 18620,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 18622,
+    "url": "https://api.whatsapp.com/send?text\u003dKabinet+komt+met+eerste+nieuwe+maatregelen+na+stranden+asielnoodwet+https%3A%2F%2Fnos.nl%2Fartikel%2F2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 18623,
+    "url": "https://nos.nl/livestream/2631054-schaatsen-wereldbeker-kwalificatietoernooi-heerenveen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18625,
+    "url": "https://nos.nl/livestream/2629096-ek-veldrijden-m",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18627,
+    "url": "https://nos.nl/livestream/2629061-wk-baanwielrennen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18628,
+    "url": "https://nos.nl/livestream/2630567-champions-league-manchester-city-psg-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18629,
+    "url": "https://nos.nl/livestream/2629086-shorttrack-world-tour-vancouver",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18630,
+    "url": "https://nos.nl/livestream/2629074-wk-turnen-teamfinale-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18631,
+    "url": "https://nos.nl/livestream/2629091-shorttrack-world-tour-montreal",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18632,
+    "url": "https://nos.nl/livestream/2629084-marathon-van-amsterdam",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18633,
+    "url": "https://nos.nl/livestream/2633898-ek-korfbal-finale",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18635,
+    "url": "https://nos.nl/livestream/2629095-ek-veldrijden-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18636,
+    "url": "https://nos.nl/nieuwsuur/livestream/2634164-nieuwsuur-over-de-slechte-beveiliging-bij-het-om",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18639,
+    "url": "https://nos.nl/livestream/2629078-wk-turnen-toestelfinales-m-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18640,
+    "url": "https://nos.nl/livestream/2631056-schaatsen-wereldbeker-kwalificatietoernooi-heerenveen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18641,
+    "url": "https://nos.nl/livestream/2629092-shorttrack-world-tour-montreal",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18642,
+    "url": "https://nos.nl/livestream/2629076-wk-turnen-meerkampfinale-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18643,
+    "url": "https://nos.nl/livestream/2629073-wk-turnen-teamfinale-m",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18645,
+    "url": "https://nos.nl/livestream/2629060-wk-baanwielrennen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18646,
+    "url": "https://nos.nl/livestream/2629079-wk-turnen-toestelfinales-m-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18647,
+    "url": "https://nos.nl/livestream/2630571-champions-league-fc-barcelona-arsenal-v",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18648,
+    "url": "https://nos.nl/livestream/2629062-wk-baanwielrennen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18649,
+    "url": "https://nos.nl/livestream/2634135-ek-korfbal-halve-finale",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18650,
+    "url": "https://nos.nl/livestream/2631055-schaatsen-wereldbeker-kwalificatietoernooi-heerenveen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18652,
+    "url": "https://nos.nl/livestream/2629087-shorttrack-world-tour-vancouver",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18653,
+    "url": "https://nos.nl/livestream/2631201-futsal-ek-kwalificatie-andorra-nederland-m",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18655,
+    "url": "https://nos.nl/livestream/2629071-futsal-wk-kwalificatie-nederland-servie-m",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18658,
+    "url": "https://nos.nl/livestream/2629075-wk-turnen-meerkampfinale-m",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18659,
+    "url": "https://nos.nl/live#_R_14lmH1_",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18661,
+    "url": "https://nos.nl/livestream/2630019-nk-kortebaanzwemmen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18662,
+    "url": "https://nos.nl/livestream/2630020-nk-kortebaanzwemmen",
+    "parentUrl": "https://nos.nl/live"
+  },
+  {
+    "id": 18664,
+    "url": "https://pod.link/1202584124?view\u003dapps\u0026sort\u003dpopularity",
+    "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 18665,
+    "url": "https://npo.nl/luister/podcasts/102-de-stemming-van-vullings-en-van-der-wulp",
+    "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 18666,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken",
+    "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 18667,
+    "url": "https://api.whatsapp.com/send?text\u003dPodcast+De+Stemming%3A+spoednood%2C+brievenbussen+en+koffievlekken+https%3A%2F%2Fnos.nl%2Fartikel%2F2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken",
+    "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 18668,
+    "url": "https://npo.nl/luister/podcasts/102-de-stemming-van-vullings-en-de-rooy/140599",
+    "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 18669,
+    "url": "https://twitter.com/intent/tweet?text\u003dPodcast+De+Stemming%3A+spoednood%2C+brievenbussen+en+koffievlekken\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/2/F/8/c/o/7/fLfgDs3EktNEkpHHXDdjUQYpK3WYrvy5jm7QoaM/0x71x768x432-512x288.webp",
+    "alt": "",
+    "pageTitle": "Podcast De Stemming: spoednood, brievenbussen en koffievlekken",
+    "pageUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/5/7/w/L/r/kF7gGADuHMLHyrLdHBt6o2gXfZj7XNG6YVopqzd/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/G/C/J/8/d/aD9Uk5VZRegXegUg2eqsK5xDVvuBH224nTXHKRB/494x0x3000x2250-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/B/R/j/h/V/J84HM3Jhgz8S4BbjsvhwMCPiE4jwM1RfkoCUSWQ/464x334x2484x1863-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/6/s/e/9/N/GtFih2Q2FCQadfqRme3mqh29RLMKqX44MXGjkhH/106x0x3460x2595-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/F/d/S/Y/x/oJqqYYUmoYtuPbCgiGoikbqJLQad5zntAbLRzuA/1x0x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/2/4/c/j/i/MQWgahg6FoiNseeMLNg5ubstgfm6FTnARH45XdR/184x194x3296x2472-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/6/s/e/9/N/GtFih2Q2FCQadfqRme3mqh29RLMKqX44MXGjkhH/106x0x3460x2595-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/j/Y/J/v/o/zUhoQetonvL7trZrsGjK7tjNJyXeA8xZdEatHp/0x0x2824x2118-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/F/d/S/Y/x/oJqqYYUmoYtuPbCgiGoikbqJLQad5zntAbLRzuA/1x0x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/8/M/j/Z/h/DUKZFhsR89nJ8i2Nso5Fc3zztSU6UCCdGb2KSPC/224x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/2/4/c/j/i/MQWgahg6FoiNseeMLNg5ubstgfm6FTnARH45XdR/184x194x3296x2472-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/p/C/i/Mri8oR5iQmJE3GTfMFxoeieCunsDfNuMgCApjii/198x1x3604x2703-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/p/C/i/Mri8oR5iQmJE3GTfMFxoeieCunsDfNuMgCApjii/198x1x3604x2703-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/p/C/i/Mri8oR5iQmJE3GTfMFxoeieCunsDfNuMgCApjii/198x1x3604x2703-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/p/C/i/Mri8oR5iQmJE3GTfMFxoeieCunsDfNuMgCApjii/198x1x3604x2703-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/p/C/i/Mri8oR5iQmJE3GTfMFxoeieCunsDfNuMgCApjii/198x1x3604x2703-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/5/X/g/L/Q/88rjQ2WeQ767AjqTgbAs533GmENbqpZDxgwYPgp/270x0x3460x2595-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/G/U/L/L/s/RgUSYZzkDTFXXDDNLftFV1PyxRzaWAXtgSCxByM/152x0x3308x2481-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/6/y/c/L/a/zfy9KBQaafrcqp7YgpKivK9jneVU55MN3zXLnZ1/1x0x3500x2625-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/2/u/R/z/m/Nv86YZ6P5RMiudhTyZBQQEPVbpMXBrKLPh81Pai/383x1x3392x2544-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/D/x/F/G/b/61NJeJuEAvZenVGvomKXDyLqyxu63Vss6NaCe6S/130x0x2076x1557-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/G/U/L/L/s/RgUSYZzkDTFXXDDNLftFV1PyxRzaWAXtgSCxByM/152x0x3308x2481-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/2/u/R/z/m/Nv86YZ6P5RMiudhTyZBQQEPVbpMXBrKLPh81Pai/383x1x3392x2544-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/j/w/m/N/ATUooW2CrTyCzMhiZ9YyppkgVh9dYBAqENziWBs/393x0x3200x2400-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/D/x/F/G/b/61NJeJuEAvZenVGvomKXDyLqyxu63Vss6NaCe6S/130x0x2076x1557-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/D/J/w/n/jgf49QoT8iV6srv1vFMGuPNP8JPNuLNTNBekW6W/1x0x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/3/M/Z/F/L/kkUMx3vrrVFD4a66StmJki1p738gLazxVEy4mBZ/2x1x3568x2676-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/j/w/m/N/ATUooW2CrTyCzMhiZ9YyppkgVh9dYBAqENziWBs/393x0x3200x2400-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/D/J/w/n/jgf49QoT8iV6srv1vFMGuPNP8JPNuLNTNBekW6W/1x0x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/3/M/Z/F/L/kkUMx3vrrVFD4a66StmJki1p738gLazxVEy4mBZ/2x1x3568x2676-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/9/Q/F/5/n/SYwvCxaCtUtcZdM35k8mURZZ9kkHzfRVrAEjYWp/248x1x3004x2253-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/D/s/z/g/Kym5iPRjwLCznZkCAdiwCYNDpttexe9tQfiNLik/2x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/D/s/z/g/Kym5iPRjwLCznZkCAdiwCYNDpttexe9tQfiNLik/2x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/H/2/D/V/4/JYQGMGeb86HfrnKVRXRb4bFEwV5i16QsXpcmZgH/127x0x3744x2808-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/D/s/z/g/Kym5iPRjwLCznZkCAdiwCYNDpttexe9tQfiNLik/2x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/H/2/D/V/4/JYQGMGeb86HfrnKVRXRb4bFEwV5i16QsXpcmZgH/127x0x3744x2808-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/6/y/c/L/a/zfy9KBQaafrcqp7YgpKivK9jneVU55MN3zXLnZ1/94x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/6/E/j/X/S/Tb4LatbYgvCDoHxE8HhoaGF3LKoobr9CeK49JZh/224x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/J/B/6/R/S/nfEukuNqBbazNUnwJLhF7vyXmPb37b2BFjnZJVF/224x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/5/e/B/W/j/1Vo6Cp1pdHmfo4gPRUUX16wGzSB977fw8AZvy5V/0x0x3252x2439-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS.nl - NOS Live",
+    "pageUrl": "https://nos.nl/live"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/E/R/F/N/E/Bwjb3q4Z5LgobtY2Ur55ppHps4vv8APZ6HK7W4o/0x113x4000x2250-1024x576.webp",
+    "alt": "Asielminister Van den Brink kondigde vrijdag twee nieuwe maatregelen aan",
+    "pageTitle": "Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet",
+    "pageUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/D/y/H/C/N/daJaK5rnjifsiiBCsqoqo8C3FHWT5WAmNMgmq4L/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/F/e/o/8/T/2e6TzHrFRnQjdzc5KDLB2UhvYwp12teNKZqPD4k/1x1x1998x2664-576x768.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/k/a/L/r/fQiQVsvtrpwoL4yKE8WSZLuWoVRiBf63yYsjm71/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/H/2/6/e/d/Cno9JYkPasEiKZHnj6YsacNn37a52oudp5v8rg7/0x193x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/G/m/u/P/m/zUioW6xpTAqLUNNQ4Vh8u2fRSJtrbZSAZpvSSfE/235x46x1680x945-768x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/k/Q/N/S/Zm1853cHue1WqwyrY1YWBW1aiwkZRnURW61VMZU/0x0x1920x1080-768x432.webp",
+    "alt": "Minister-president Rob Jetten (D66) reageert op vuurwerkbom: \u0027Het is een kansloze actie\u0027",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
   {
     "src": "https://static.nos.nl/img/op3/op3-youtube.jpg",
     "alt": "",
