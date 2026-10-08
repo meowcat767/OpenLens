@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1338,
+    "url": "https://peps.python.org/pep-0757/",
+    "title": "PEP 757 – C API to import-export Python integers | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 757 – C API to import-export Python integers PEP 757 – C API to import-export Python integers Author: Sergey B Kirpichev \u003cskirpichev at gmail.com\u003e, Victor Stinner \u003cvstinner at python.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 13-Sep-2024 Python-Version: 3.14 Post-History: 14-Sep-2024 Resolution: 08-Dec-2024 Table of Contents Abstract Rationale Specification Layout API Export API Import API Optimize import for small integers Implementation Benchmarks Export: PyLong_Export() with gmpy2 Import: PyLongWriter_Create() with gmpy2 Backwards Compatibility Rejected Ideas Support arbitrary layout Don’t add PyLong_GetNativeLayout() function Provide mpz_import/export-like API instead Drop value field from the export API Discussions Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at the Export API and the PyLongWriter API. × See PEP 1 for how to propose changes. Abstract Add a new C API to import and export Python integers, int objects: especially PyLongWriter_Create() and PyLong_Export() functions. Rationale Projects such as gmpy2, SAGE and Python-FLINT access directly Python “internals” (the PyLongObject structure) or use an inefficient temporary format (hex strings for Python-FLINT) to import and export Python int objects. The Python int implementation changed in Python 3.12 to add a tag and “compact values”. In the 3.13 alpha 1 release, the private undocumented _PyLong_New() function had been removed, but it is being used by these projects to import Python integers. The private function has been restored in 3.13 alpha 2. A public efficient abstraction is needed to interface Python with these projects without exposing implementation details. It would allow Python to change its internals without breaking these projects. For example, implementation for gmpy2 was changed recently for CPython 3.9 and for CPython 3.12. Specification Layout API Data needed by GMP-like import-export functions. struct PyLongLayout Layout of an array of “digits” (“limbs” in the GMP terminology), used to represent absolute value for arbitrary precision integers. Use PyLong_GetNativeLayout() to get the native layout of Python int objects, used internally for integers with “big enough” absolute value. See also sys.int_info which exposes similar information to Python. uint8_t bits_per_digit Bits per digit. For example, a 15 bit digit means that bits 0-14 contain meaningful information. uint8_t digit_size Digit size in bytes. For example, a 15 bit digit will require at least 2 bytes. int8_t digits_order Digits order: 1 for most significant digit first -1 for least significant digit first int8_t digit_endianness Digit endianness: 1 for most significant byte first (big endian) -1 for least significant byte first (little endian) const PyLongLayout *PyLong_GetNativeLayout(void) Get the native layout of Python int objects. See the PyLongLayout structure. The function must not be called before Python initialization nor after Python finalization. The returned layout is valid until Python is finalized. The layout is the same for all Python sub-interpreters and so it can be cached. Export API struct PyLongExport Export of a Python int object. There are two cases: If digits is NULL, only use the value member. If digits is not NULL, use negative, ndigits and digits members. int64_t value The native integer value of the exported int object. Only valid if digits is NULL. uint8_t negative 1 if the number is negative, 0 otherwise. Only valid if digits is not NULL. Py_ssize_t ndigits Number of digits in digits array. Only valid if digits is not NULL. const void *digits Read-only array of unsigned digits. Can be NULL. If PyLongExport.digits is not NULL, a private field of the PyLongExport structure stores a strong reference to the Python int object to make sure that that structure remains valid until PyLong_FreeExport() is called. int PyLong_Export(PyObject *obj, PyLongExport *export_long) Export a Python int object. export_long must point to a PyLongExport structure allocated by the caller. It must not be NULL. On success, fill in *export_long and return 0. On error, set an exception and return -1. PyLong_FreeExport() must be called when the export is no longer needed. CPython implementation detail: This function always succeeds if obj is a Python int object or a subclass. On CPython 3.14, no memory copy is needed in PyLong_Export(), it’s just a thin wrapper to expose Python int internal digits array. void PyLong_FreeExport(PyLongExport *export_long) Release the export export_long created by PyLong_Export(). CPython implementation detail: Calling PyLong_FreeExport() is optional if export_long-\u003edigits is NULL. Import API The PyLongWriter API can be used to import an integer. struct PyLongWriter A Python int writer instance. The instance must be destroyed by PyLongWriter_F",
+    "scrapedAt": "2026-10-08 19:37:42.074762"
+  },
+  {
+    "id": 1337,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy_into",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:37:40.591313"
+  },
+  {
+    "id": 1336,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Contains",
+    "title": "Sequence Protocol — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not “steal” a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Pyt",
+    "scrapedAt": "2026-10-08 19:37:39.284978"
+  },
+  {
+    "id": 1334,
+    "url": "https://docs.python.org/3/reference/expressions.html#and",
+    "title": "6. Expressions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations of",
+    "scrapedAt": "2026-10-08 19:37:37.975115"
+  },
+  {
+    "id": 1333,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:37:36.617842"
+  },
+  {
     "id": 1332,
     "url": "https://github.com/python/cpython/issues/69639",
     "title": "Arithmetics with complex infinities is inconsistent with C/C++ · Issue #69639 · python/cpython · GitHub",
@@ -8925,26 +8960,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1333,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
-  },
-  {
-    "id": 1334,
-    "url": "https://docs.python.org/3/reference/expressions.html#and"
-  },
-  {
-    "id": 1336,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Contains"
-  },
-  {
-    "id": 1337,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy_into"
-  },
-  {
-    "id": 1338,
-    "url": "https://peps.python.org/pep-0757/"
   },
   {
     "id": 1339,
@@ -234191,10 +234206,324 @@ window.searchData = [
     "id": 266743,
     "url": "https://bugs.python.org/issue25453",
     "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 267428,
+    "url": "https://github.com/capi-workgroup/decisions/issues/31",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267429,
+    "url": "https://peps.python.org/pep-0757/#export-pylong-export-with-gmpy2",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267430,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongExport.value",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267431,
+    "url": "https://github.com/vstinner/cpython/pull/5",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267432,
+    "url": "https://peps.python.org/pep-0757/#id1",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267434,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongWriter_Finish",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267435,
+    "url": "https://peps.python.org/pep-0757/#layout-api",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267436,
+    "url": "https://github.com/flintlib/python-flint",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267437,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongWriter_Discard",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267438,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongWriter_Create",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267441,
+    "url": "https://peps.python.org/pep-0757/#specification",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267442,
+    "url": "https://gmplib.org/manual/Integer-Import-and-Export#index-mpz_005fexport",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267444,
+    "url": "https://gmplib.org/",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267445,
+    "url": "https://github.com/capi-workgroup/decisions/issues/35",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267446,
+    "url": "https://github.com/python/cpython/issues/111415",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267448,
+    "url": "https://peps.python.org/pep-0757/#optimize-import-for-small-integers",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267449,
+    "url": "https://peps.python.org/pep-0757/#provide-mpz-import-export-like-api-instead",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267450,
+    "url": "https://docs.python.org/dev/c-api/long.html#pylongwriter-api",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267451,
+    "url": "https://peps.python.org/pep-0757/#c.PyLong_GetNativeLayout",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267452,
+    "url": "https://peps.python.org/pep-0757/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267453,
+    "url": "https://peps.python.org/pep-0757/#c.PyLong_FreeExport",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267455,
+    "url": "https://discuss.python.org/t/63895",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267456,
+    "url": "https://github.com/aleaxit/gmpy/blob/9177648c23f5c507e46b81c1eb7d527c79c96f00/src/gmpy2_convert_gmp.c#L128-L156",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267457,
+    "url": "https://docs.python.org/3.14/c-api/long.html#c.PyLong_FromUInt64",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267458,
+    "url": "https://github.com/aleaxit/gmpy/blob/9177648c23f5c507e46b81c1eb7d527c79c96f00/src/gmpy2_convert_gmp.c#L42-L69",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267459,
+    "url": "https://docs.python.org/dev/c-api/long.html#export-api",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267460,
+    "url": "https://peps.python.org/pep-0757/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267462,
+    "url": "https://peps.python.org/pep-0757/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267463,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongWriter",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267464,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongExport.negative",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267465,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongLayout.bits_per_digit",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267466,
+    "url": "https://www.sagemath.org/",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267467,
+    "url": "https://github.com/aleaxit/gmpy/pull/495",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267468,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongLayout",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267470,
+    "url": "https://discuss.python.org/t/63895/79",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267471,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongExport.digits",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267472,
+    "url": "https://peps.python.org/pep-0757/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267473,
+    "url": "https://peps.python.org/pep-0757/#import-api",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267474,
+    "url": "https://peps.python.org/pep-0757/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267475,
+    "url": "https://peps.python.org/pep-0757/#c.PyLong_Export",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267478,
+    "url": "https://peps.python.org/pep-0757/#don-t-add-pylong-getnativelayout-function",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267479,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongExport",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267480,
+    "url": "https://peps.python.org/pep-0757/#support-arbitrary-layout",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267482,
+    "url": "https://github.com/python/cpython/pull/108604",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267483,
+    "url": "https://github.com/aleaxit/gmpy",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267487,
+    "url": "https://peps.python.org/pep-0757/#benchmarks",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267488,
+    "url": "https://peps.python.org/pep-0757/#drop-value-field-from-the-export-api",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267490,
+    "url": "https://peps.python.org/pep-0757/#import-pylongwriter-create-with-gmpy2",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267491,
+    "url": "https://peps.python.org/pep-0757/#discussions",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267492,
+    "url": "https://peps.python.org/pep-0757/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267493,
+    "url": "https://gmplib.org/manual/Integer-Import-and-Export#index-mpz_005fimport",
+    "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 267494,
+    "url": "https://peps.python.org/pep-0757/#c.PyLongExport.ndigits",
+    "parentUrl": "https://peps.python.org/pep-0757/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy_into"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy_into"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy_into"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Contains"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Contains"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#and"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#and"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/101771972?v\u003d4\u0026size\u003d48",
     "alt": "@FrancescoBiscani",
