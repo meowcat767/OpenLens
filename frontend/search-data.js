@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1003,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.kill_workers",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on",
+    "scrapedAt": "2026-10-08 19:23:07.248047"
+  },
+  {
+    "id": 1002,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_Version",
+    "title": "API and ABI Versioning — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » API and ABI Versioning | Theme Auto Light Dark | API and ABI Versioning¶ Build-time version constants¶ CPython exposes its version number in the following macros. Note that these correspond to the version code is built with. See Py_Version for the version used at run time. See C API Stability for a discussion of API and ABI stability across versions. PY_MAJOR_VERSION¶ The 3 in 3.4.1a2. PY_MINOR_VERSION¶ The 4 in 3.4.1a2. PY_MICRO_VERSION¶ The 1 in 3.4.1a2. PY_RELEASE_LEVEL¶ The a in 3.4.1a2. This can be 0xA for alpha, 0xB for beta, 0xC for release candidate or 0xF for final. PY_RELEASE_SERIAL¶ The 2 in 3.4.1a2. Zero for final releases. PY_VERSION_HEX¶ The Python version number encoded in a single integer. See Py_PACK_FULL_VERSION() for the encoding details. Use this for numeric comparisons, for example, #if PY_VERSION_HEX \u003e\u003d .... These macros are defined in Include/patchlevel.h. Run-time version¶ const unsigned long Py_Version¶ Part of the Stable ABI since version 3.11. The Python runtime version number encoded in a single constant integer. See Py_PACK_FULL_VERSION() for the encoding details. This contains the Python version used at run time. Use this for numeric comparisons, for example, if (Py_Version \u003e\u003d ...). Added in version 3.11. Bit-packing macros¶ uint32_t Py_PACK_FULL_VERSION(int major, int minor, int micro, int release_level, int release_serial)¶ Part of the Stable ABI since version 3.14. Return the given version, encoded as a single 32-bit integer with the following structure: Argument No. of bits Bit mask Bit shift Example values 3.4.1a2 3.10.0 major 8 0xFF000000 24 0x03 0x03 minor 8 0x00FF0000 16 0x04 0x0A micro 8 0x0000FF00 8 0x01 0x00 release_level 4 0x000000F0 4 0xA 0xF release_serial 4 0x0000000F 0 0x2 0x0 For example: Version Py_PACK_FULL_VERSION arguments Encoded version 3.4.1a2 (3, 4, 1, 0xA, 2) 0x030401a2 3.10.0 (3, 10, 0, 0xF, 0) 0x030a00f0 Out-of range bits in the arguments are ignored. That is, the macro can be defined as: #ifndef Py_PACK_FULL_VERSION\n#define Py_PACK_FULL_VERSION(X, Y, Z, LEVEL, SERIAL) ( \\\n   (((X) \u0026 0xff) \u003c\u003c 24) |                              \\\n   (((Y) \u0026 0xff) \u003c\u003c 16) |                              \\\n   (((Z) \u0026 0xff) \u003c\u003c 8) |                               \\\n   (((LEVEL) \u0026 0xf) \u003c\u003c 4) |                            \\\n   (((SERIAL) \u0026 0xf) \u003c\u003c 0))\n#endif\n Py_PACK_FULL_VERSION is primarily a macro, intended for use in #if directives, but it is also available as an exported function. Added in version 3.14. uint32_t Py_PACK_VERSION(int major, int minor)¶ Part of the Stable ABI since version 3.14. Equivalent to Py_PACK_FULL_VERSION(major, minor, 0, 0, 0). The result does not correspond to any Python release, but is useful in numeric comparisons. Added in version 3.14. Table of Contents API and ABI Versioning Build-time version constants Run-time version Bit-packing macros Previous topic Supporting Cyclic Garbage Collection Next topic Monitoring C API This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » API and ABI Versioning | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:23:06.03774"
+  },
+  {
+    "id": 1001,
+    "url": "https://github.com/python/cpython/issues/125916",
+    "title": "Allow `functools.reduce`s \u0027initial\u0027 to be a keyword argument · Issue #125916 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Allow functools.reduces \u0027initial\u0027 to be a keyword argument #125916 New issue Copy link New issue Copy link Closed #125917 Closed Allow functools.reduces \u0027initial\u0027 to be a keyword argument#125916 #125917 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description sayandipdutta opened on Oct 24, 2024 Issue body actions Feature or enhancement Proposal: functools.reduce takes function (generally a callable) and iterable, with an optional initial parameter: https://docs.python.org/3/library/functools.html#functools.reduce However, initial cannot be passed as a keyword argument, which reduces ;) readability, from functools import reduce\nfrom operator import sub\n\u003e\u003e\u003e reduce(sub, [1, 1, 2, 3, 5, 8], 21)\n1\n\u003e\u003e\u003e reduce(sub, [1, 1, 2, 3, 5, 8], initial\u003d21)\nTypeError: reduce() takes no keyword arguments Allowing initial as keyword argument will be more clear, and initial could also be passed as a keyword argument while making partial functions out of reduce. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/remove-positional-only-restriction-on-initial-parameter-of-reduce/68897 Linked PRs gh-125916: Allow functools.reduce \u0027initial\u0027 to be a keyword argument #125917 gh-125916: Adapt functools.reduce() to Argument Clinic #125999 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:23:04.793104"
+  },
+  {
+    "id": 1000,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run",
+    "title": "Runners — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Runners | Theme Auto Light Dark | Runners¶ Source code: Lib/asyncio/runners.py This section outlines high-level asyncio primitives to run asyncio code. They are built on top of an event loop with the aim to simplify async code usage for common wide-spread scenarios. Running an asyncio Program¶ asyncio.run(coro, *, debug\u003dNone, loop_factory\u003dNone)¶ Execute coro in an asyncio event loop and return the result. The argument can be any awaitable object. This function runs the awaitable, taking care of managing the asyncio event loop, finalizing asynchronous generators, and closing the executor. This function cannot be called when another asyncio event loop is running in the same thread. If debug is True, the event loop will be run in debug mode. False disables debug mode explicitly. None is used to respect the global Debug Mode settings. If loop_factory is not None, it is used to create a new event loop; otherwise asyncio.new_event_loop() is used. The loop is closed at the end. This function should be used as a main entry point for asyncio programs, and should ideally only be called once. It is recommended to use loop_factory to configure the event loop instead of policies. Passing asyncio.EventLoop allows running asyncio without the policy system. The executor is given a timeout duration of 5 minutes to shutdown. If the executor hasn’t finished within that duration, a warning is emitted and the executor is closed. Example: async def main():\n    await asyncio.sleep(1)\n    print(\u0027hello\u0027)\n\nasyncio.run(main())\n Added in version 3.7. Changed in version 3.9: Updated to use loop.shutdown_default_executor(). Changed in version 3.10: debug is None by default to respect the global debug mode settings. Changed in version 3.12: Added loop_factory parameter. Changed in version 3.14: coro can be any awaitable object. Note The asyncio policy system is deprecated and will be removed in Python 3.16; from there on, an explicit loop_factory is needed to configure the event loop. Runner context manager¶ class asyncio.Runner(*, debug\u003dNone, loop_factory\u003dNone)¶ A context manager that simplifies multiple async function calls in the same context. Sometimes several top-level async functions should be called in the same event loop and contextvars.Context. If debug is True, the event loop will be run in debug mode. False disables debug mode explicitly. None is used to respect the global Debug Mode settings. loop_factory could be used for overriding the loop creation. It is the responsibility of the loop_factory to set the created loop as the current one. By default asyncio.new_event_loop() is used and set as current event loop with asyncio.set_event_loop() if loop_factory is None. Basically, asyncio.run() example can be rewritten with the runner usage: async def main():\n    await asyncio.sleep(1)\n    print(\u0027hello\u0027)\n\nwith asyncio.Runner() as runner:\n    runner.run(main())\n Added in version 3.11. run(coro, *, context\u003dNone)¶ Execute coro in the embedded event loop. The argument can be any awaitable object. If the argument is a coroutine, it is wrapped in a Task. An optional keyword-only context argument allows specifying a custom contextvars.Context for the code to run in. The runner’s default context is used if context is None. Returns the awaitable’s result or raises an exception. This function cannot be called when another asyncio event loop is running in the same thread. Changed in version 3.14: coro can be any awaitable object. close()¶ Close the runner. Finalize asynchronous generators, shutdown default executor, close the event loop and release embedded contextvars.Context. get_loop()¶ Return the event loop associated with the runner instance. Note Runner uses the lazy initialization strategy, its constructor doesn’t initialize underlying low-level structures. Embedded loop and context are created at the with body entering or the first call of run() or get_loop(). Handling Keyboard Interruption¶ Added in version 3.11. When signal.SIGINT is raised by Ctrl-C, KeyboardInterrupt exception is raised in the main thread by default. However this doesn’t work with asyncio because it can interrupt asyncio internals and can hang the program from exiting. To mitigate this issue, asyncio handles signal.SIGINT as follows: asyncio.Runner.run() installs a custom signal.SIGINT handler before any user code is executed and removes it when exiting from the function. The Runner creates the main task for the passed coroutine for its execution. When signal.SIGINT is raised by Ctrl-C, the custom signal handler cancels the main task by calling asyncio.Task.cancel() which raises asyncio.CancelledError inside the main task. This causes the Python stack to unwind, try/except and try/finally blocks can be used for resource cleanup. After the main task is cancelled, asyncio.Runner.run() ra",
+    "scrapedAt": "2026-10-08 19:23:02.374777"
+  },
+  {
+    "id": 999,
+    "url": "https://github.com/python/cpython/issues/121798",
+    "title": "Add class method Decimal.from_number() · Issue #121798 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add class method Decimal.from_number() #121798 New issue Copy link New issue Copy link Closed Closed Add class method Decimal.from_number()#121798 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Jul 15, 2024 Issue body actions Feature or enhancement It is an alternate constructor which only accepts a single numeric argument. Unlike to Decimal.from_float() it accepts also Decimal. Unlike to the standard constructor, it does not accept strings and tuples. Similar to float.from_number() and complex.from_number() (see #84978) and Fraction.from_number() (see #121797). Linked PRs gh-121798: Add class method Decimal.from_number() #121801 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:23:01.110034"
+  },
+  {
     "id": 998,
     "url": "https://docs.python.org/3/library/sys.html#sys._is_immortal",
     "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
@@ -6650,26 +6685,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 999,
-    "url": "https://github.com/python/cpython/issues/121798"
-  },
-  {
-    "id": 1000,
-    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
-  },
-  {
-    "id": 1001,
-    "url": "https://github.com/python/cpython/issues/125916"
-  },
-  {
-    "id": 1002,
-    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_Version"
-  },
-  {
-    "id": 1003,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.kill_workers"
   },
   {
     "id": 1004,
@@ -168046,10 +168061,220 @@ window.searchData = [
     "id": 152735,
     "url": "https://github.com/python/cpython/issues/121797#top",
     "parentUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 153079,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/121798",
+    "parentUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 153080,
+    "url": "https://github.com/python/cpython/pull/121801",
+    "parentUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 153081,
+    "url": "https://github.com/python/cpython/issues/121798#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 153083,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/121798",
+    "parentUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 153086,
+    "url": "https://github.com/python/cpython/issues/121798#issue-2409095209",
+    "parentUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 153087,
+    "url": "https://github.com/python/cpython/issues/121798#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 153091,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153092,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153093,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner.run",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153095,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner.close",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153096,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153101,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#runners",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153104,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153107,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/runners.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153108,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner.get_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153109,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#running-an-asyncio-program",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153110,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#handling-keyboard-interruption",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153112,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.shutdown_default_executor",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153124,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/asyncio-runner.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153125,
+    "url": "https://docs.python.org/3/library/asyncio-task.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153128,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#runner-context-manager",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 153134,
+    "url": "https://github.com/python/cpython/issues/125916#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153136,
+    "url": "https://github.com/sayandipdutta",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153138,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125916",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153139,
+    "url": "https://discuss.python.org/t/remove-positional-only-restriction-on-initial-parameter-of-reduce/68897",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153140,
+    "url": "https://github.com/python/cpython/issues/125916#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153143,
+    "url": "https://github.com/python/cpython/pull/125917",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153144,
+    "url": "https://github.com/python/cpython/issues/125916#issue-2610791693",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153145,
+    "url": "https://github.com/python/cpython/pull/125999",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 153146,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125916",
+    "parentUrl": "https://github.com/python/cpython/issues/125916"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.kill_workers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.kill_workers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "API and ABI Versioning — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_Version"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "API and ABI Versioning — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_Version"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11913249?u\u003d12662003ff67e0459cee7b1795ae011996251b53\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sayandipdutta",
+    "pageTitle": "Allow `functools.reduce`s \u0027initial\u0027 to be a keyword argument · Issue #125916 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Allow `functools.reduce`s \u0027initial\u0027 to be a keyword argument · Issue #125916 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Runners — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Runners — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add class method Decimal.from_number() · Issue #121798 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add class method Decimal.from_number() · Issue #121798 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121798"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
