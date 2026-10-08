@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1343,
+    "url": "https://docs.python.org/3/library/tarfile.html#module-tarfile",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults to ",
+    "scrapedAt": "2026-10-08 19:37:54.836448"
+  },
+  {
+    "id": 1342,
+    "url": "https://github.com/python/cpython/issues/124296",
+    "title": "Remove `ma_version_tag` (PEP 699 / PEP 509) · Issue #124296 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Remove ma_version_tag (PEP 699 / PEP 509) #124296 New issue Copy link New issue Copy link Closed Closed Remove ma_version_tag (PEP 699 / PEP 509)#124296 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description colesbury opened on Sep 20, 2024 Issue body actions Feature or enhancement The accepted PEP 699 proposed removing the private ma_version_tag field from PyDictObject. Note that PEP 699 supersedes PEP 509, which originally proposed the field. Why now? The ma_version_tag field was deprecated in 3.12 and we are now working on 3.14, so I think this is in line with Python\u0027s backward compatibility policy from PEP 387. Cython and PyTorch (dynamo) and Nuitka have stopped using it for CPython 3.12+. I don\u0027t think ma_version_tag ever saw widespread usage. Cython was the major user mentioned in PEP 699. 1 I think the ma_version_tag updates have a non-negligible cost in the free-threaded build, and it\u0027s easier and simpler to remove it (if we\u0027re planning to do that anyways) than to make it more efficient It would be convenient to use some of the version tag bits for per-thread refcounting of globals and builtins. (See Mark\u0027s comment in Reference count contention with nested functions #124218 (comment)). If we are going to remove this in 3.14, I think doing so earlier in the development cycle is better. Dict Watchers The ma_version_tag field is also used for dict watchers (8 bits) and the tier2 mutation counter (4 bits). We will still want that functionality. cc @Fidget-Spinner @markshannon Linked PRs gh-124296: Remove private dictionary version tag (PEP 699) #124472 Footnotes I searched the top ~7500 sdists as well. The only other actual usage I saw was https://github.com/slezica/python-frozendict, which doesn\u0027t have a 3.11 or 3.12 C extension yet (but also functions as a pure-Python package). ↩ Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:37:53.553242"
+  },
+  {
+    "id": 1341,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_DisplayException",
+    "title": "Exception Handling — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Exception Handling | Theme Auto Light Dark | Exception Handling¶ The functions described in this chapter will let you handle and raise Python exceptions. It is important to understand some of the basics of Python exception handling. It works somewhat like the POSIX errno variable: there is a global indicator (per thread) of the last error that occurred. Most C API functions don’t clear this on success, but will set it to indicate the cause of the error on failure. Most C API functions also return an error indicator, usually NULL if they are supposed to return a pointer, or -1 if they return an integer (exception: the PyArg_* functions return 1 for success and 0 for failure). Concretely, the error indicator consists of three object pointers: the exception’s type, the exception’s value, and the traceback object. Any of those pointers can be NULL if non-set (although some combinations are forbidden, for example you can’t have a non-NULL traceback if the exception type is NULL). When a function must fail because some function it called failed, it generally doesn’t set the error indicator; the function it called already set it. It is responsible for either handling the error and clearing the exception or returning after cleaning up any resources it holds (such as object references or memory allocations); it should not continue normally if it is not prepared to handle the error. If returning due to an error, it is important to indicate to the caller that an error has been set. If the error is not handled or carefully propagated, additional calls into the Python/C API may not behave as intended and may fail in mysterious ways. Note The error indicator is not the result of sys.exc_info(). The former corresponds to an exception that is not yet caught (and is therefore still propagating), while the latter returns an exception after it is caught (and has therefore stopped propagating). Printing and clearing¶ void PyErr_Clear()¶ Part of the Stable ABI. Clear the error indicator. If the error indicator is not set, there is no effect. void PyErr_PrintEx(int set_sys_last_vars)¶ Part of the Stable ABI. Print a standard traceback to sys.stderr and clear the error indicator. Unless the error is a SystemExit, in that case no traceback is printed and the Python process will exit with the error code specified by the SystemExit instance. Call this function only when the error indicator is set. Otherwise it will cause a fatal error! If set_sys_last_vars is nonzero, the variable sys.last_exc is set to the printed exception. For backwards compatibility, the deprecated variables sys.last_type, sys.last_value and sys.last_traceback are also set to the type, value and traceback of this exception, respectively. Changed in version 3.12: The setting of sys.last_exc was added. void PyErr_Print()¶ Part of the Stable ABI. Alias for PyErr_PrintEx(1). void PyErr_WriteUnraisable(PyObject *obj)¶ Part of the Stable ABI. Call sys.unraisablehook() using the current exception and obj argument. This utility function prints a warning message to sys.stderr when an exception has been set but it is impossible for the interpreter to actually raise the exception. It is used, for example, when an exception occurs in an __del__() method. The function is called with a single argument obj that identifies the context in which the unraisable exception occurred. If possible, the repr of obj will be printed in the warning message. If obj is NULL, only the traceback is printed. An exception must be set when calling this function. Changed in version 3.4: Print a traceback. Print only traceback if obj is NULL. Changed in version 3.8: Use sys.unraisablehook(). void PyErr_FormatUnraisable(const char *format, ...)¶ Similar to PyErr_WriteUnraisable(), but the format and subsequent parameters help format the warning message; they have the same meaning and values as in PyUnicode_FromFormat(). PyErr_WriteUnraisable(obj) is roughly equivalent to PyErr_FormatUnraisable(\"Exception ignored in: %R\", obj). If format is NULL, only the traceback is printed. Added in version 3.13. void PyErr_DisplayException(PyObject *exc)¶ Part of the Stable ABI since version 3.12. Print the standard traceback display of exc to sys.stderr, including chained exceptions and notes. Added in version 3.12. void PyErr_Display(PyObject *unused, PyObject *value, PyObject *tb)¶ Part of the Stable ABI. Legacy variant of PyErr_DisplayException(). Print the exception value with its traceback to sys.stderr. If value has no traceback set, tb is used as its traceback. The first argument is ignored. If sys.stderr is None, nothing is printed. If sys.stderr is not set, the exception is dumped to the C stderr stream instead. Deprecated since version 3.12: Use PyErr_DisplayException() instead. Raising exceptions¶ These functions help you set the current thread’s error indicator. For convenience, some of these ",
+    "scrapedAt": "2026-10-08 19:37:51.4599"
+  },
+  {
+    "id": 1340,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsProactorEventLoopPolicy",
+    "title": "Policies — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:37:50.161091"
+  },
+  {
+    "id": 1339,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.abc",
+    "title": "importlib — The implementation of import — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names exte",
+    "scrapedAt": "2026-10-08 19:37:48.878586"
+  },
+  {
     "id": 1338,
     "url": "https://peps.python.org/pep-0757/",
     "title": "PEP 757 – C API to import-export Python integers | peps.python.org",
@@ -8960,26 +8995,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1339,
-    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.abc"
-  },
-  {
-    "id": 1340,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsProactorEventLoopPolicy"
-  },
-  {
-    "id": 1341,
-    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_DisplayException"
-  },
-  {
-    "id": 1342,
-    "url": "https://github.com/python/cpython/issues/124296"
-  },
-  {
-    "id": 1343,
-    "url": "https://docs.python.org/3/library/tarfile.html#module-tarfile"
   },
   {
     "id": 1344,
@@ -234466,10 +234481,150 @@ window.searchData = [
     "id": 267494,
     "url": "https://peps.python.org/pep-0757/#c.PyLongExport.ndigits",
     "parentUrl": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 268087,
+    "url": "https://github.com/cython/cython/blob/29462efacef571913efa31fb3f2897aa99b6b149/Cython/Utility/ModuleSetupCode.c#L381-L384",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268088,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/124296",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268089,
+    "url": "https://github.com/python/cpython/issues/124296#user-content-fnref-1-c37bd0857b7f71348a113eb4989c8634",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268090,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/124296",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268091,
+    "url": "https://github.com/python/cpython/issues/124296#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268092,
+    "url": "https://github.com/python/cpython/pull/124472",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268094,
+    "url": "https://github.com/python/cpython/issues/124296#issue-2539658965",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268095,
+    "url": "https://dev.to/hugovk/how-to-search-5000-python-projects-31gk",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268096,
+    "url": "https://github.com/python/cpython/issues/124296#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268097,
+    "url": "https://github.com/python/cpython/issues/124296#user-content-fn-1-c37bd0857b7f71348a113eb4989c8634",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268098,
+    "url": "https://github.com/python/cpython/issues/124218#issuecomment-2363771308",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268100,
+    "url": "https://github.com/slezica/python-frozendict",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268102,
+    "url": "https://github.com/Nuitka/Nuitka/blob/551166924fe58dfcdbce3a64dd53e474af876b1a/nuitka/build/include/nuitka/helper/dictionaries.h#L274-L276",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268107,
+    "url": "https://peps.python.org/pep-0387/#basic-policy-for-backwards-compatibility",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268110,
+    "url": "https://github.com/python/cpython/blob/342e654b8eda24c68da64cc21bc9583e480d9e8e/Include/cpython/dictobject.h#L25",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 268111,
+    "url": "https://github.com/pytorch/pytorch/blob/d2455b99fb4b50731f2ac0e26ee351d9b2f7623f/torch/csrc/dynamo/guards.cpp#L671-L685",
+    "parentUrl": "https://github.com/python/cpython/issues/124296"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#module-tarfile"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#module-tarfile"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?u\u003db622ef6e3c8ace6e7ffe49e1cf8ca164d94c0867\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@colesbury",
+    "pageTitle": "Remove `ma_version_tag` (PEP 699 / PEP 509) · Issue #124296 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Remove `ma_version_tag` (PEP 699 / PEP 509) · Issue #124296 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_DisplayException"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_DisplayException"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsProactorEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsProactorEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib.abc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib.abc"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
