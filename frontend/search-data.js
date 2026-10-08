@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 697,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-display",
+    "title": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debugger",
+    "scrapedAt": "2026-10-08 19:10:37.125468"
+  },
+  {
+    "id": 696,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish",
+    "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_UCS4",
+    "scrapedAt": "2026-10-08 19:10:35.952833"
+  },
+  {
+    "id": 695,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sys-monitoring",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:10:34.771888"
+  },
+  {
+    "id": 694,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON",
+    "title": "errno — Standard errno system symbols — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » errno — Standard errno system symbols | Theme Auto Light Dark | errno — Standard errno system symbols¶ This module makes available standard errno system symbols. The value of each symbol is the corresponding integer value. The names and descriptions are borrowed from linux/include/errno.h, which should be all-inclusive. errno.errorcode¶ Dictionary providing a mapping from the errno value to the string name in the underlying system. For instance, errno.errorcode[errno.EPERM] maps to \u0027EPERM\u0027. To translate a numeric error code to an error message, use os.strerror(). Of the following list, symbols that are not used on the current platform are not defined by the module. The specific list of defined symbols is available as errno.errorcode.keys(). Symbols available can include: errno.EPERM¶ Operation not permitted. This error is mapped to the exception PermissionError. errno.ENOENT¶ No such file or directory. This error is mapped to the exception FileNotFoundError. errno.ESRCH¶ No such process. This error is mapped to the exception ProcessLookupError. errno.EINTR¶ Interrupted system call. This error is mapped to the exception InterruptedError. errno.EIO¶ I/O error errno.ENXIO¶ No such device or address errno.E2BIG¶ Arg list too long errno.ENOEXEC¶ Exec format error errno.EBADF¶ Bad file number errno.ECHILD¶ No child processes. This error is mapped to the exception ChildProcessError. errno.EAGAIN¶ Try again. This error is mapped to the exception BlockingIOError. errno.ENOMEM¶ Out of memory errno.EACCES¶ Permission denied. This error is mapped to the exception PermissionError. errno.EFAULT¶ Bad address errno.ENOTBLK¶ Block device required errno.EBUSY¶ Device or resource busy errno.EEXIST¶ File exists. This error is mapped to the exception FileExistsError. errno.EXDEV¶ Cross-device link errno.ENODEV¶ No such device errno.ENOTDIR¶ Not a directory. This error is mapped to the exception NotADirectoryError. errno.EISDIR¶ Is a directory. This error is mapped to the exception IsADirectoryError. errno.EINVAL¶ Invalid argument errno.ENFILE¶ File table overflow errno.EMFILE¶ Too many open files errno.ENOTTY¶ Not a typewriter errno.ETXTBSY¶ Text file busy errno.EFBIG¶ File too large errno.ENOSPC¶ No space left on device errno.ESPIPE¶ Illegal seek errno.EROFS¶ Read-only file system errno.EMLINK¶ Too many links errno.EPIPE¶ Broken pipe. This error is mapped to the exception BrokenPipeError. errno.EDOM¶ Math argument out of domain of func errno.ERANGE¶ Math result not representable errno.EDEADLK¶ Resource deadlock would occur errno.ENAMETOOLONG¶ File name too long errno.ENOLCK¶ No record locks available errno.ENOSYS¶ Function not implemented errno.ENOTEMPTY¶ Directory not empty errno.ELOOP¶ Too many symbolic links encountered errno.EWOULDBLOCK¶ Operation would block. This error is mapped to the exception BlockingIOError. errno.ENOMSG¶ No message of desired type errno.EIDRM¶ Identifier removed errno.ECHRNG¶ Channel number out of range errno.EL2NSYNC¶ Level 2 not synchronized errno.EL3HLT¶ Level 3 halted errno.EL3RST¶ Level 3 reset errno.ELNRNG¶ Link number out of range errno.EUNATCH¶ Protocol driver not attached errno.ENOCSI¶ No CSI structure available errno.EL2HLT¶ Level 2 halted errno.EBADE¶ Invalid exchange errno.EBADR¶ Invalid request descriptor errno.EXFULL¶ Exchange full errno.ENOANO¶ No anode errno.EBADRQC¶ Invalid request code errno.EBADSLT¶ Invalid slot errno.EDEADLOCK¶ File locking deadlock error errno.EBFONT¶ Bad font file format errno.ENOSTR¶ Device not a stream errno.ENODATA¶ No data available errno.ETIME¶ Timer expired errno.ENOSR¶ Out of streams resources errno.ENONET¶ Machine is not on the network errno.ENOPKG¶ Package not installed errno.EREMOTE¶ Object is remote errno.ENOLINK¶ Link has been severed errno.EADV¶ Advertise error errno.ESRMNT¶ Srmount error errno.ECOMM¶ Communication error on send errno.EPROTO¶ Protocol error errno.EMULTIHOP¶ Multihop attempted errno.EDOTDOT¶ RFS specific error errno.EBADMSG¶ Not a data message errno.EOVERFLOW¶ Value too large for defined data type errno.ENOTUNIQ¶ Name not unique on network errno.EBADFD¶ File descriptor in bad state errno.EREMCHG¶ Remote address changed errno.ELIBACC¶ Can not access a needed shared library errno.ELIBBAD¶ Accessing a corrupted shared library errno.ELIBSCN¶ .lib section in a.out corrupted errno.ELIBMAX¶ Attempting to link in too many shared libraries errno.ELIBEXEC¶ Cannot exec a shared library directly errno.EILSEQ¶ Illegal byte sequence errno.ERESTART¶ Interrupted system call should be restarted errno.ESTRPIPE¶ Streams pipe error errno.EUSERS¶ Too many users errno.ENOTSOCK¶ Socket operation on non-socket errno.EDESTADDRREQ¶ Destination address required errno.EMSGSIZE¶ Message too long errno.EPROTOTYPE¶ Protocol wrong type for socket errno.ENOPROTOOPT¶ Protocol not available errno.EPROTONOSUPPORT¶ Protocol not ",
+    "scrapedAt": "2026-10-08 19:10:33.522311"
+  },
+  {
+    "id": 693,
+    "url": "https://github.com/python/cpython/issues/118924",
+    "title": "Remove `sqlite3.version` and `sqlite3.version_info` · Issue #118924 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Remove sqlite3.version and sqlite3.version_info #118924 New issue Copy link New issue Copy link Closed #118925 Closed Remove sqlite3.version and sqlite3.version_info#118924 #118925 Copy link Labels 3.14bugs and security fixesbugs and security fixestopic-sqlite3 Description hugovk opened on May 10, 2024 Issue body actions They were deprecated in 3.12 and set for removal in 3.14. Deprecate sqlite3.version and sqlite3.version_info #93370 gh-93370 : Deprecate sqlite3.version and sqlite3.version_info #93482 Linked PRs gh-118924: Remove sqlite3.version and sqlite3.version_info #118925 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestopic-sqlite3 Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:10:32.337625"
+  },
+  {
     "id": 692,
     "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW",
     "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
@@ -4540,26 +4575,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 693,
-    "url": "https://github.com/python/cpython/issues/118924"
-  },
-  {
-    "id": 694,
-    "url": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
-  },
-  {
-    "id": 695,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#sys-monitoring"
-  },
-  {
-    "id": 696,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
-  },
-  {
-    "id": 697,
-    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
   },
   {
     "id": 698,
@@ -113224,10 +113239,2305 @@ window.searchData = [
     "id": 76283,
     "url": "https://docs.python.org/3/library/dis.html#opcode-UNARY_NEGATIVE",
     "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76285,
+    "url": "https://github.com/python/cpython/issues/118924#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76286,
+    "url": "https://github.com/python/cpython/issues/118924#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76287,
+    "url": "https://github.com/python/cpython/pull/118925",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76288,
+    "url": "https://github.com/python/cpython/pull/93482",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76290,
+    "url": "https://github.com/hugovk",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76292,
+    "url": "https://github.com/python/cpython/issues/118924#issue-2290331121",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76293,
+    "url": "https://github.com/python/cpython/issues/93370",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76294,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/118924",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76295,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/118924",
+    "parentUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 76296,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ETXTBSY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76297,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECONNABORTED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76298,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EHOSTUNREACH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76299,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOKEY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76300,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPFNOSUPPORT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76302,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/errno.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76304,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EUNATCH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76305,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDQUOT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76306,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EMLINK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76308,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ERESTART",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76309,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROGUNAVAIL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76310,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#PermissionError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76311,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#TimeoutError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76312,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROCUNAVAIL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76313,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EINPROGRESS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76314,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELIBBAD",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76315,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTCONN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76316,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELNRNG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76317,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADRQC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76318,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPIPE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76319,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOMSG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76320,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENEEDAUTH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76321,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EAGAIN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76322,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EINVAL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76323,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADEXEC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76324,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EFBIG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76326,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EREMOTE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76327,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EAFNOSUPPORT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76328,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ERFKILL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76329,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENODATA",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76330,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOSR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76331,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROTOTYPE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76332,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELIBEXEC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76333,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECANCELED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76334,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EFTYPE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76335,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#InterruptedError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76336,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EL2HLT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76337,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EADDRNOTAVAIL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76338,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECONNREFUSED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76339,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENAVAIL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76340,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EROFS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76341,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADRPC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76342,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ETIME",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76343,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EKEYREVOKED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76344,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENETRESET",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76345,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENETUNREACH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76346,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ETIMEDOUT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76347,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADF",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76348,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTDIR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76349,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROGMISMATCH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76350,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76351,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#IsADirectoryError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76352,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76353,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESRCH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76354,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADSLT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76355,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EALREADY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76356,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTCAPABLE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76357,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EL3HLT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76358,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOSTR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76359,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDEVERR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76360,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROTO",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76361,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADFD",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76362,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBUSY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76363,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPERM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76364,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADMACHO",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76365,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EMSGSIZE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76367,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ConnectionRefusedError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76368,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELIBSCN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76369,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADARCH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76370,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBFONT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76371,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EISDIR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76374,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESTRPIPE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76375,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EOPNOTSUPP",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76376,
+    "url": "https://docs.python.org/3/library/os.html#os.strerror",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76377,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENFILE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76378,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESTALE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76379,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EADDRINUSE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76380,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECOMM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76381,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTBLK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76382,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76383,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESPIPE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76384,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#FileExistsError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76385,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENAMETOOLONG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76387,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOANO",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76388,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EXFULL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76389,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTSUP",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76390,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EMFILE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76391,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EEXIST",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76392,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EL2NSYNC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76393,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOPOLICY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76394,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EHOSTDOWN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76396,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EBADMSG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76397,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELIBACC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76398,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELOCKUNMAPPED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76399,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOENT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76400,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOBUFS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76401,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTACTIVE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76402,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ChildProcessError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76403,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESHLIBVERS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76404,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EINTR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76405,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDOM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76406,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EILSEQ",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76407,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ERPCMISMATCH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76408,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOMEDIUM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76410,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDESTADDRREQ",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76411,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTTY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76412,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOCSI",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76413,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EREMCHG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76415,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESHUTDOWN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76416,
+    "url": "https://docs.python.org/3/library/errno.html#errno.errorcode",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76418,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EACCES",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76419,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EISCONN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76420,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENODEV",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76421,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESOCKTNOSUPPORT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76422,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ETOOMANYREFS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76423,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EQFULL",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76424,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTSOCK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76425,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROCLIM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76426,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EFAULT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76427,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELIBMAX",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76428,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EWOULDBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76429,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTUNIQ",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76430,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTRECOVERABLE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76431,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EREMOTEIO",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76433,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOSPC",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76434,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECONNRESET",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76436,
+    "url": "https://docs.python.org/3/library/errno.html#errno.E2BIG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76438,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECHILD",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76439,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENETDOWN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76441,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENONET",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76442,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTNAM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76443,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPROTONOSUPPORT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76444,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOTEMPTY",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76445,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EPWROFF",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76446,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EADV",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76447,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EKEYEXPIRED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76448,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EMULTIHOP",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76449,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDOTDOT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76450,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EIO",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76451,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ECHRNG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76452,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EMEDIUMTYPE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76454,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENXIO",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76455,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ELOOP",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76456,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOATTR",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76457,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ConnectionResetError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76458,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EOWNERDEAD",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76460,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ProcessLookupError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76461,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EAUTH",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76462,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EXDEV",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76464,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ESRMNT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76465,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EKEYREJECTED",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76466,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EOVERFLOW",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76467,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#NotADirectoryError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76468,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOLCK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76469,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EIDRM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76470,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ConnectionAbortedError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76471,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDEADLK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76472,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EL3RST",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76473,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOMEM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76474,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EDEADLOCK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76475,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BrokenPipeError",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76476,
+    "url": "https://docs.python.org/3/library/errno.html#module-errno",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76477,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ERANGE",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76478,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOPKG",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76479,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EUSERS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76480,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EUCLEAN",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76481,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOSYS",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76482,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOLINK",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76483,
+    "url": "https://docs.python.org/3/library/errno.html#errno.ENOPROTOOPT",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 76484,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EISNAM",
+    "parentUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 77723,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_IS_COMPACT_ASCII",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77725,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_EQ",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77726,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.isascii",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77728,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeLatin1",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77729,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsASCIIString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77730,
+    "url": "https://docs.python.org/3/c-api/unicode.html#unicode-type",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77731,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF32",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77732,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_GetDefaultEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77733,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FindChar",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77734,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeASCII",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77735,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeMBCSStateful",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77736,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_IS_LOW_SURROGATE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77737,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SystemError",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77738,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_IS_READY",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77739,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISLINEBREAK",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77740,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISDIGIT",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77743,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Partition",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77744,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Replace",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77745,
+    "url": "https://docs.python.org/3/c-api/bool.html#c.Py_False",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77746,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/unicode.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77747,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUTF8AndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77748,
+    "url": "https://docs.python.org/3/c-api/unicode.html#file-system-encoding",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77749,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_GE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77750,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Str",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77751,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__str__",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77752,
+    "url": "https://docs.python.org/3/c-api/bytearray.html",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77753,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeLocale",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77755,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#identifiers",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77756,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.rpartition",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77757,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_RSplit",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77758,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF16",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77759,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_2BYTE_DATA",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77760,
+    "url": "https://docs.python.org/3/c-api/bytes.html#bytesobjects",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77761,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeIter_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77764,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_EncodeLocale",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77765,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_InternInPlace",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77766,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISDECIMAL",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77768,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_2BYTE_KIND",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77770,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_TODECIMAL",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77771,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_RPartition",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77772,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_EqualToUTF8AndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77773,
+    "url": "https://docs.python.org/3/c-api/unicode.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77774,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_FatalError",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77775,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_TOLOWER",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77776,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_RichCompare",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77777,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_New",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77779,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Splitlines",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77780,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Find",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77781,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77782,
+    "url": "https://docs.python.org/3/c-api/unicode.html#pyunicodewriter",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77784,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Resize",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77785,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISPRINTABLE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77786,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF16Stateful",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77787,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_WriteChar",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77788,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeMBCS",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77789,
+    "url": "https://docs.python.org/3/c-api/unicode.html#creating-and-accessing-unicode-strings",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77790,
+    "url": "https://peps.python.org/pep-0623/",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77791,
+    "url": "https://docs.python.org/3/c-api/unicode.html#built-in-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77792,
+    "url": "https://docs.python.org/3/c-api/unicode.html#unicode-escape-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77795,
+    "url": "https://docs.python.org/3/glossary.html#term-path-like-object",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77797,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyCompactUnicodeObject",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77799,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF8Stateful",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77800,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromStringAndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77801,
+    "url": "https://docs.python.org/3/c-api/unicode.html#unicodeobjects",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77802,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__getitem__",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77804,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISALNUM",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77805,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Repr",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77806,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FSConverter",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77807,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READ",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77808,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsLatin1String",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77809,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_IS_HIGH_SURROGATE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77811,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.rsplit",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77812,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_KIND",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77813,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AppendAndDel",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77815,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISUPPER",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77816,
+    "url": "https://docs.python.org/3/c-api/unicode.html#locale-encoding",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77817,
+    "url": "https://docs.python.org/3/c-api/unicode.html#latin-1-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77819,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_TOTITLE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77820,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISTITLE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77821,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77822,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_Malloc",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77823,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Fill",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77824,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeFSDefault",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77825,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_CompareWithASCIIString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77826,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsEncodedString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77827,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_EncodeCodePage",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77828,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeFSDefaultAndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77829,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DATA",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77830,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_GET_LENGTH",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77831,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeObject",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77832,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_LOW_SURROGATE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77833,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsWideCharString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77834,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_WRITE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77835,
+    "url": "https://docs.python.org/3/c-api/unicode.html#utf-32-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77836,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISALPHA",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77837,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_TONUMERIC",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77838,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_GT",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77839,
+    "url": "https://docs.python.org/3/library/os.html#os.PathLike",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77840,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUTF32String",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77842,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FSDecoder",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77844,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeCharmap",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77845,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Join",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77846,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Count",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77847,
+    "url": "https://en.wikipedia.org/wiki/Null_character",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77848,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_Free",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77850,
+    "url": "https://peps.python.org/pep-0383/",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77851,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_TODIGIT",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77852,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77855,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromEncodedObject",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77856,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_IS_SURROGATE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77857,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_IS_COMPACT",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77858,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISLOWER",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77859,
+    "url": "https://docs.python.org/3/c-api/unicode.html#raw-unicode-escape-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77860,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_EncodeLocale",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77861,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF8",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77862,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Append",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77863,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF7",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77864,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_NE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77866,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#LookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77870,
+    "url": "https://docs.python.org/3/c-api/unicode.html#character-map-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77871,
+    "url": "https://peps.python.org/pep-0393/",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77872,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUTF8String",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77873,
+    "url": "https://docs.python.org/3/c-api/unicode.html#utf-16-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77874,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_EncodeFSDefault",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77876,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromWideChar",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77879,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Split",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77880,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Compare",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77882,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_IsIdentifier",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77883,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromObject",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77884,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_CopyCharacters",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77885,
+    "url": "https://docs.python.org/3/c-api/unicode.html#wchar-t-support",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77887,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Tailmatch",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77888,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UCS2",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77889,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UCS1",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77891,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsRawUnicodeEscapeString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77892,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromOrdinal",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77893,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_InternFromString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77894,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyASCIIObject",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77895,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsCharmapString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77896,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF7Stateful",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77897,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeCodePageStateful",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77898,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Contains",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77899,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeRawUnicodeEscape",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77900,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_IS_ASCII",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77901,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_MAX_CHAR_VALUE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77902,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUCS4Copy",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77904,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_LE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77905,
+    "url": "https://docs.python.org/3/c-api/unicode.html#utf-7-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77906,
+    "url": "https://docs.python.org/3/c-api/unicode.html#mbcs-codecs-for-windows",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77907,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_BuildEncodingMap",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77908,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromKindAndData",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77909,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUnicodeEscapeString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77912,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_LT",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77913,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISSPACE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77916,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_GetLength",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77919,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.split",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77920,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Substring",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77921,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_TOUPPER",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77922,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromFormatV",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77927,
+    "url": "https://docs.python.org/3/c-api/unicode.html#deprecated-api",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77928,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77929,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUTF32Stateful",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77931,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Translate",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77934,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Concat",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77935,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_ReadChar",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77936,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_EqualToUTF8",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77937,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_4BYTE_KIND",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77938,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_HIGH_SURROGATE",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77940,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeLocaleAndSize",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77941,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytesObject",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77942,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_JOIN_SURROGATES",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77943,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.isprintable",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77944,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_DecodeUnicodeEscape",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77945,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_4BYTE_DATA",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77946,
+    "url": "https://docs.python.org/3/c-api/unicode.html#unicode-character-properties",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77947,
+    "url": "https://docs.python.org/3/c-api/bool.html#c.Py_True",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77948,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_REPLACEMENT_CHARACTER",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77950,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getdefaultencoding",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77952,
+    "url": "https://docs.python.org/3/c-api/unicode.html#methods-and-slot-functions",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77953,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.partition",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77954,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.Py_CLEANUP_SUPPORTED",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77956,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUCS4",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77957,
+    "url": "https://docs.python.org/3/c-api/tuple.html",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77958,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUTF16String",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77960,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_NotImplemented",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77961,
+    "url": "https://docs.python.org/3/c-api/unicode.html#unicode-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77962,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsWideChar",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77963,
+    "url": "https://docs.python.org/3/c-api/unicode.html#utf-8-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77964,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsMBCSString",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77965,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#MemoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77966,
+    "url": "https://docs.python.org/3/c-api/unicode.html#generic-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77967,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Decode",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77969,
+    "url": "https://docs.python.org/3/c-api/unicode.html#unicode-objects-and-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77970,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READ_CHAR",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77973,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Format",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77974,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE_ISNUMERIC",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77976,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_1BYTE_KIND",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77978,
+    "url": "https://docs.python.org/3/c-api/unicode.html#ascii-codecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77979,
+    "url": "https://docs.python.org/3/c-api/unicode.html#builtincodecs",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77980,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_New",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77981,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_CHECK_INTERNED",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77982,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_1BYTE_DATA",
+    "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 77987,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-run",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 77989,
+    "url": "https://docs.python.org/3/glossary.html#term-optimized-scope",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 77990,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-alias",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 77991,
+    "url": "https://docs.python.org/3/reference/datamodel.html#traceback-objects",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 77995,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-continue",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 77996,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-quit",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 77997,
+    "url": "https://docs.python.org/3/library/code.html#module-code",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78000,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-help",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78002,
+    "url": "https://docs.python.org/3/builtins/functions.html#eval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78003,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-disable",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78004,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.get_default_backend",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78005,
+    "url": "https://docs.python.org/3/library/bdb.html#module-bdb",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78006,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-jump",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78007,
+    "url": "https://docs.python.org/3/library/pdb.html#debugger-commands",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78008,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-unalias",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78009,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.post_mortem",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78010,
+    "url": "https://docs.python.org/3/library/pdb.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78011,
+    "url": "https://docs.python.org/3/builtins/functions.html#exec",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78012,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-ll",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78013,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-interact",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78014,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-tbreak",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78015,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.run",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78016,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-p",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78019,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-source",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78020,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pdb.py",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78022,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-m",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78025,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-up",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78027,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-c",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78029,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-next",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78030,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.runcall",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78032,
+    "url": "https://docs.python.org/3/library/pdb.html#",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78034,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.runeval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78038,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-return",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78039,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-break",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78040,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78041,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/pdb.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78042,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#global",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78043,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-where",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78044,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.set_default_backend",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78045,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-0",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78046,
+    "url": "https://docs.python.org/3/library/traceback.html#module-traceback",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78047,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-args",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78049,
+    "url": "https://docs.python.org/3/library/pdb.html#debugger-aliases",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78050,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-step",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78051,
+    "url": "https://docs.python.org/3/library/pdb.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78054,
+    "url": "https://docs.python.org/3/builtins/functions.html#print",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78055,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-restart",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78056,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-ignore",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78057,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-whatis",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78059,
+    "url": "https://docs.python.org/3/library/pdb.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78061,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.runeval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78063,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-condition",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78064,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-retval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78067,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.runcall",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78069,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-down",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78070,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-undisplay",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78071,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-pp",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78072,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-clear",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78073,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78074,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-list",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78076,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.run",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78079,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-debug",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78082,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.pm",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78083,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-until",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78085,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-enable",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 78089,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_exc",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sys-monitoring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sys-monitoring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "errno — Standard errno system symbols — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "errno — Standard errno system symbols — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Remove `sqlite3.version` and `sqlite3.version_info` · Issue #118924 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Remove `sqlite3.version` and `sqlite3.version_info` · Issue #118924 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118924"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
