@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1501,
+    "url": "https://github.com/python/cpython/issues/97514",
+    "title": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 #97514 New issue Copy link New issue Copy link Closed Closed Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919#97514 Copy link Assignees Labels 3.10 (EOL)end of lifeend of life3.11only security fixesonly security fixes3.12only security fixesonly security fixes3.9 (EOL)end of lifeend of liferelease-blockerstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or errortype-securityA security issueA security issue Description gpshead opened on Sep 23, 2022 Issue body actions TL;DR Python 3.9, 3.10, and 3.11.0rc2 on Linux may allow for a local privilege escalation attack in a non-default configuration when code uses the multiprocessing module and configures multiprocessing to use the forkserver start method. Details The Python multiprocessing library, when used with the forkserver start method on Linux, allows Python pickles to be deserialized from any user in the same machine local network namespace, which in many system configurations means any user on the same machine. Pickles can execute arbitrary code. Thus, this allows for local user privilege escalation to the user that any Python multiprocessing forkserver process is running as. The forkserver start method for multiprocessing is not the default start method. This issue is Linux specific because only Linux supports abstract namespace sockets. CPython before 3.9 does not make use of Linux abstract namespace sockets by default. This issue has been assigned CVE-2022-42919. Credit: This issue was discovered by Devin Jeanpierre (@ssbr) of Google. Are Python 3.7 and 3.8 affected? Not by default. Support for users manually specifying an abstract namespace AF_UNIX socket was added as a bugfix in 3.7.8 and 3.8.3, but users would need to make specific uncommon multiprocessing API calls specifying their own forkserver control socket path in order to do that in CPython before 3.9. What about code that explicitly asks for an abstract socket? Applications found to be making the uncommon multiprocessing API calls to explicitly use Linux abstract namespace sockets with a forkserver are believed to be rare and should have their own specific security issues filed. Workarounds From Python application or library code: import multiprocessing.util\nmultiprocessing.util.abstract_sockets_supported \u003d False This disables their use by default. You must execute that before anything else in your process has started making use of multiprocessing. If you can patch your CPython runtime itself: Remove these two lines from CPython\u0027s Lib/multiprocessing/connection.py: -        if util.abstract_sockets_supported:\n-            return f\"\\0listener-{os.getpid()}-{next(_mmap_counter)}\" (that is what our security bug fix commits do). Or, similar to the application level fix, edit Lib/multiprocessing/util.py to always set: - abstract_sockets_supported \u003d _platform_supports_abstract_sockets()\n+ abstract_sockets_supported \u003d False Alternatives to avoid the problem If your Linux Python application can be switched from multiprocessing\u0027s .set_start_method(\"forkserver\") to a start method such as \"spawn\" that will also avoid this issue. Scope of the bug fixes We are changing the default in Python 3.9 and higher to not use the Linux abstract namespace sockets by default. It would be ideal to add authentication to the forkserver control socket so that it isn\u0027t even relying on filesystem permissions. This is a more complicated change and is expected to be done as a feature in 3.12. Tasks Cherry pick the 3.11 commit to the 3.11.0 release. 4686d77 Merge the 3.9 PR. [3.9] gh-97514: Don\u0027t use Linux abstract sockets for multiprocessing (GH-98501) #98504 After 3.11.0 is out, make sure 3.11.1 won\u0027t have a duplicate news entry about this due to the branch vs 3.11.0 release branch Push @gpshead \u0027s PR(s) for proper forkserver socket authentication in 3.12. Linked PRs PR: gh-97514: Authenticate the forkserver control socket. #99309 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees ambv gpshead pablogsal Labels 3.10 (EOL)end of lifeend of life3.11only security fixesonly security fixes3.12only security fixesonly security fixes3.9 (EOL)end of lifeend of liferelease-blockerstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior",
+    "scrapedAt": "2026-10-08 19:45:03.181461"
+  },
+  {
+    "id": 1500,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:45:00.573572"
+  },
+  {
+    "id": 1499,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p",
+    "title": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debugger",
+    "scrapedAt": "2026-10-08 19:44:59.243156"
+  },
+  {
+    "id": 1498,
+    "url": "https://github.com/python/cpython/issues/133164",
+    "title": "Add a C API function to detect temporaries · Issue #133164 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add a C API function to detect temporaries #133164 New issue Copy link New issue Copy link Closed Closed Add a C API function to detect temporaries#133164 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description ngoldbaum opened on Apr 29, 2025 Issue body actions Feature or enhancement Proposal: NumPy has an optimization to detect temporaries created via the NumPy C API (e.g. in NumPy internals) and elide them. This can lead to a significant performance improvement for some operations. In numpy/numpy#28681, @colesbury proposed adding some code to handle the change to use stackrefs internally in CPython, which broke the NumPy temporary elision heuristics in 3.14. We later added that code more or less verbatim to the NumPy main branch: https://github.com/numpy/numpy/blob/d692fbccd98cb880812b32936e5f94fcfe55053f/numpy/_core/src/multiarray/temp_elide.c#L119-L152 This unblocks testing NumPy on the 3.14 beta but we should really have at least an unstable C API function we can call here rather than relying on CPython internals. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: #133140 (comment) Linked PRs gh-133164: Add PyUnstable_Object_IsUniqueReferencedTemporary C API #133170 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:44:57.861103"
+  },
+  {
+    "id": 1497,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html",
+    "title": "RFC 2177 - IMAP4 IDLE command",
+    "content": "Light Dark Auto Network Working Group                                           B. Leiba\nRequest for Comments: 2177               IBM T.J. Watson Research Center\nCategory: Standards Track                                      June 1997\n\n\n                           IMAP4 IDLE command \n\nStatus of this Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\n 1.   Abstract \n\n   The Internet Message Access Protocol [IMAP4] requires a client to\n   poll the server for changes to the selected mailbox (new mail,\n   deletions).  It\u0027s often more desirable to have the server transmit\n   updates to the client in real time.  This allows a user to see new\n   mail immediately.  It also helps some real-time applications based on\n   IMAP, which might otherwise need to poll extremely often (such as\n   every few seconds).  (While the spec actually does allow a server to\n   push EXISTS responses aysynchronously, a client can\u0027t expect this\n   behaviour and must poll.)\n\n   This document specifies the syntax of an IDLE command, which will\n   allow a client to tell the server that it\u0027s ready to accept such\n   real-time updates.\n\n 2.   Conventions Used in this Document \n\n   In examples, \"C:\" and \"S:\" indicate lines sent by the client and\n   server respectively.\n\n   The key words \"MUST\", \"MUST NOT\", \"SHOULD\", \"SHOULD NOT\", and \"MAY\"\n   in this document are to be interpreted as described in RFC 2060\n   [IMAP4].\n\n 3.   Specification \n\n   IDLE Command\n\n   Arguments:  none\n\n   Responses:  continuation data will be requested; the client sends\n               the continuation data \"DONE\" to end the command\n\n\n\nLeiba                       Standards Track                     [Page 1] RFC 2177                   IMAP4 IDLE command                  June 1997\n\n\n\n   Result:     OK - IDLE completed after client sent \"DONE\"\n               NO - failure: the server will not allow the IDLE\n                    command at this time\n              BAD - command unknown or arguments invalid\n\n   The IDLE command may be used with any IMAP4 server implementation\n   that returns \"IDLE\" as one of the supported capabilities to the\n   CAPABILITY command.  If the server does not advertise the IDLE\n   capability, the client MUST NOT use the IDLE command and must poll\n   for mailbox updates.  In particular, the client MUST continue to be\n   able to accept unsolicited untagged responses to ANY command, as\n   specified in the base IMAP specification.\n\n   The IDLE command is sent from the client to the server when the\n   client is ready to accept unsolicited mailbox update messages.  The\n   server requests a response to the IDLE command using the continuation\n   (\"+\") response.  The IDLE command remains active until the client\n   responds to the continuation, and as long as an IDLE command is\n   active, the server is now free to send untagged EXISTS, EXPUNGE, and\n   other messages at any time.\n\n   The IDLE command is terminated by the receipt of a \"DONE\"\n   continuation from the client; such response satisfies the server\u0027s\n   continuation request.  At that point, the server MAY send any\n   remaining queued untagged responses and then MUST immediately send\n   the tagged response to the IDLE command and prepare to process other\n   commands. As in the base specification, the processing of any new\n   command may cause the sending of unsolicited untagged responses,\n   subject to the ambiguity limitations.  The client MUST NOT send a\n   command while the server is waiting for the DONE, since the server\n   will not be able to distinguish a command from a continuation.\n\n   The server MAY consider a client inactive if it has an IDLE command\n   running, and if such a server has an inactivity timeout it MAY log\n   the client off implicitly at the end of its timeout period.  Because\n   of that, clients using IDLE are advised to terminate the IDLE and\n   re-issue it at least every 29 minutes to avoid being logged off.\n   This still allows a client to receive immediate mailbox updates even\n   though it need only \"poll\" at half hour intervals.\n\n\n\n\n\n\n\n\n\n\n\nLeiba                       Standards Track                     [Page 2] RFC 2177                   IMAP4 IDLE command                  June 1997\n\n\n   Example:    C: A001 SELECT INBOX\n               S: * FLAGS (Deleted Seen)\n               S: * 3 EXISTS\n               S: * 0 RECENT\n               S: * OK [UIDVALIDITY 1]\n               S: A001 OK SELECT completed\n               C: A002 IDLE\n               S: + idling\n               ...time passes; new mail arrives...\n               S: * 4 EXISTS\n               C: DONE\n               S: A002 OK IDLE terminated\n               ...another client expunges message 2 now...\n               C: A003",
+    "scrapedAt": "2026-10-08 19:44:55.624015"
+  },
+  {
     "id": 1496,
     "url": "https://docs.python.org/3/library/string.templatelib.html#module-string.templatelib",
     "title": "string.templatelib — Support for template string literals — Python 3.14.8 documentation",
@@ -10045,26 +10080,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1497,
-    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html"
-  },
-  {
-    "id": 1498,
-    "url": "https://github.com/python/cpython/issues/133164"
-  },
-  {
-    "id": 1499,
-    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
-  },
-  {
-    "id": 1500,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
-  },
-  {
-    "id": 1501,
-    "url": "https://github.com/python/cpython/issues/97514"
   },
   {
     "id": 1502,
@@ -243121,10 +243136,304 @@ window.searchData = [
     "id": 311974,
     "url": "https://www.sphinx-doc.org/en/master/authors.html#contributors",
     "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 312286,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312287,
+    "url": "https://datatracker.ietf.org/doc/draft-leiba-imap-idle/01/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312288,
+    "url": "https://datatracker.ietf.org/doc/rfc2177/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312289,
+    "url": "https://datatracker.ietf.org/doc/rfc2177/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312290,
+    "url": "https://www.rfc-editor.org/rfc/rfc2177.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312291,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#ref-IMAP4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312293,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2060",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312294,
+    "url": "https://www.rfc-editor.org/rfc/rfc2177.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312295,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312297,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312298,
+    "url": "https://datatracker.ietf.org/person/barryleiba@gmail.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312299,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312300,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312301,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312302,
+    "url": "https://datatracker.ietf.org/doc/html/draft-leiba-imap-idle-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312303,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312305,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 312306,
+    "url": "https://github.com/python/cpython/issues/133164#issue-3029123302",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312307,
+    "url": "https://github.com/numpy/numpy/issues/28681",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312309,
+    "url": "https://github.com/python/cpython/issues/133140#issuecomment-2839652603",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312310,
+    "url": "https://github.com/ngoldbaum",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312311,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/133164",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312313,
+    "url": "https://github.com/python/cpython/issues/133164#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312316,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/133164",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312317,
+    "url": "https://github.com/python/cpython/pull/133170",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312318,
+    "url": "https://github.com/python/cpython/issues/133164#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312319,
+    "url": "https://github.com/numpy/numpy/issues/28681#issuecomment-2810661401",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312320,
+    "url": "https://github.com/numpy/numpy/blob/d692fbccd98cb880812b32936e5f94fcfe55053f/numpy/_core/src/multiarray/temp_elide.c#L119-L152",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 312739,
+    "url": "https://github.com/python/cpython/blob/1699128c4891da3bbe23553d709261d88855b93f/Lib/multiprocessing/util.py#L126",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312740,
+    "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name\u003dCVE-2022-42919",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312741,
+    "url": "https://github.com/python/cpython/commit/4686d77a04570a663164c03193d9def23c89b122",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312744,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/97514",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312746,
+    "url": "https://github.com/python/cpython/pull/99309",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312747,
+    "url": "https://github.com/python/cpython/issues/97514#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312749,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/97514",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312751,
+    "url": "https://github.com/python/cpython/issues/97514#top",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312755,
+    "url": "https://github.com/python/cpython/issues/84031",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312757,
+    "url": "https://github.com/ssbr",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312759,
+    "url": "https://github.com/python/cpython/issues/97514#issue-1384215836",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312760,
+    "url": "https://github.com/python/cpython/pull/98504",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312761,
+    "url": "https://github.com/python/cpython/blob/1699128c4891da3bbe23553d709261d88855b93f/Lib/multiprocessing/connection.py#L79-L80",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312763,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22release-blocker%22",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "ambv",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d64\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "pablogsal",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?v\u003d4\u0026size\u003d48",
+    "alt": "@gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d64\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3126246?u\u003da3c7cd970c0e4cbc4498febe0de777a263c522c5\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ngoldbaum",
+    "pageTitle": "Add a C API function to detect temporaries · Issue #133164 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add a C API function to detect temporaries · Issue #133164 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133164"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
