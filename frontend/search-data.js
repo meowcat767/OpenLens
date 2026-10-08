@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1639,
+    "url": "https://github.com/python/cpython/issues/109523",
+    "title": "sys.stdin.read() throws a TypeError when stdin is set to be non-blocking · Issue #109523 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} sys.stdin.read() throws a TypeError when stdin is set to be non-blocking #109523 New issue Copy link New issue Copy link Closed Closed sys.stdin.read() throws a TypeError when stdin is set to be non-blocking#109523 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-IOtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description MartinHHProbst opened on Sep 17, 2023 Issue body actions Bug report Bug description: sys.stdin.read() throws a TypeError if stdin has been set to be non-blocking. The code below should just exit without issue. It throws a TypeError if no input is provided. #!/usr/bin/python3\n\nimport sys\nimport os\n\nos.set_blocking(sys.stdin.fileno(), False)\nsys.stdin.read() CPython versions tested on: 3.11 Operating systems tested on: Linux Linked PRs gh-109523: In _io_TextIOWrapper_read_impl skip decoding if bytes are None #121739 gh-109523: Reading text from a non-blocking stream with read may now raise a BlockingIOError if the operation cannot immediately return bytes. #122933 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-IOtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:51:27.965046"
+  },
+  {
+    "id": 1638,
+    "url": "https://docs.python.org/3/library/functions.html#format",
+    "title": "Built-in Functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and Byte",
+    "scrapedAt": "2026-10-08 19:51:25.782235"
+  },
+  {
+    "id": 1637,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:51:24.372888"
+  },
+  {
+    "id": 1636,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#datetime",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:51:23.050536"
+  },
+  {
+    "id": 1634,
+    "url": "https://github.com/python/cpython/issues/93096",
+    "title": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Decide the fate of undocumented script behavior of some modules #93096 New issue Copy link New issue Copy link Open Open Decide the fate of undocumented script behavior of some modules#93096 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtestsTests in the Lib/test dirTests in the Lib/test dirtype-featureA feature request or enhancementA feature request or enhancement Description arhadthedev opened on May 23, 2022 Issue body actions There are three dozens of standard modules that can be called via python -m and their documentation doesn\u0027t mention it. They can be grouped into five categories: kind of smoke tests: codecs: performs stdin:latin1 → utf-8 → latin1 → stdout passthrough edit: it just wraps stdin and stdout then just exits the script ( gh-93096: Remove python -m codecs #94233) curses.has_key: \"Compare the output of this implementation and the ncurses has_key, on platforms where has_key is already available\" pprint: measures performance ( gh-92546: Move pprint benchmark into pyperformance #94613 → Add a benchmark based on python -m pprint pyperformance#222) random: evaluates output statistics of supported generators full-fledged crossplatform utils for admin-like users and small automation: asyncio: like python but allows to use await in top-level script code cProfile, profile: runs a script under the profiler encodings.rot_13: a stream converter filecmp: a crossplatform file comparison utility fileinput: prints specified files one by another annotating lines with their source http.server: makes a directory available as a site; useful to quickly test a static site with relative links mimetypes: useful for batch processing of files (maybe) ( gh-93096: Make mimetypes CLI tool public #93097) modulefinder: the objdump but for Python source files netrc: prints content of .netrc for a current user pdb platform: returns a single line like Windows-10-10.0.19044-SP0; can be useful in automation quopri: a stream converter tabnanny wsgiref.simple_server - the same as http.server but for APIs; pases a single request and exits both: base64: a stream converter base64 -t encodes/decodes Aladdin:open sesame and tests if the result is the same as the original ( gh-93096: Remove python -m base64 -t #94230) demos with no real world application: curses.textpad: shows an input area; when a user closes it, prints the text back ftplib: a simple one-pass FTP downloader (uses ~/.netrc for login) getopt: just passes arguments to getopt() The module is no longer maintained after gh-106535: Soft deprecate the getopt module #105735 imaplib: sending emails to a dead end has no sence but can be used to check if a email client works or got broken shlex: parses stdin using shlex() and prints the list into stdout smtplib: a simple e-mail client xmlrpc.server: serves a datetime service complex matter; better leave untouched: idlelib.* tkinter.* turtledemo.* pstats Eggs and to-be-removed modules aren\u0027t listed. We need to decide what to do with all these undocumented categories. I propose the following: move smoke tests into test module with deduplication for full-fledged utils, add Command-Line Usage into the docs like in https://docs.python.org/3/library/ast.html#command-line-usage or https://docs.python.org/3/library/trace.html#command-line-usage move demos into the docs of the corresponding module Linked PRs gh-93096: Remove -t and -v flags from pickletools cli #131039 gh-93096: Remove -t and -v flags from pickle cli #131068 gh-93096: Load doctests in test_pickle #131069 [3.13] gh-93096: Load doctests in test_pickle (GH-131069) #131080 [3.12] gh-93096: Load doctests in test_pickle (GH-131069) #131081 gh-93096: Update and document pickle CLI #131097 gh-93096: Remove CLI interface for difflib #131099 gh-93096: Remove run block in heapq #131130 gh-93096: Load doctests in test_itertools #131133 [3.13] gh-93096: Load doctests in test_itertools (GH-131133) #131136 [3.12] gh-93096: Load doctests in test_itertools (GH-131133) #131137 gh-93096: Move random benchmark into pyperformance #131144 gh-93096: Update and document pickletools CLI #131273 gh-93096: fix test_mimetypes.test_guess_type_conflicting_with_mimetypes #131408 gh-93096: fix test_mimetypes.test_invocation_error tests on iOS ARM64 #132266 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtestsTests in the Lib/test dirTests in the Lib/test dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet De",
+    "scrapedAt": "2026-10-08 19:51:21.645914"
+  },
+  {
     "id": 1633,
     "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy",
     "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
@@ -10990,26 +11025,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1634,
-    "url": "https://github.com/python/cpython/issues/93096"
-  },
-  {
-    "id": 1636,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
-  },
-  {
-    "id": 1637,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
-  },
-  {
-    "id": 1638,
-    "url": "https://docs.python.org/3/library/functions.html#format"
-  },
-  {
-    "id": 1639,
-    "url": "https://github.com/python/cpython/issues/109523"
   },
   {
     "id": 1640,
@@ -249031,10 +249046,240 @@ window.searchData = [
     "id": 352688,
     "url": "https://www.man7.org/linux/man-pages/man1/uuidgen.1.html",
     "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 355044,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/93096",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355045,
+    "url": "https://github.com/python/cpython/pull/94233",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355046,
+    "url": "https://github.com/python/cpython/pull/131039",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355047,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/93096",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355049,
+    "url": "https://github.com/python/cpython/pull/94230",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355051,
+    "url": "https://github.com/python/cpython/pull/94613",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355052,
+    "url": "https://github.com/python/cpython/pull/131099",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355053,
+    "url": "https://github.com/python/cpython/pull/131133",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355054,
+    "url": "https://github.com/python/cpython/pull/132266",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355055,
+    "url": "https://github.com/python/cpython/pull/131097",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355056,
+    "url": "https://github.com/python/cpython/pull/131130",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355057,
+    "url": "https://github.com/python/cpython/pull/131273",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355058,
+    "url": "https://github.com/python/cpython/pull/131136",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355059,
+    "url": "https://github.com/python/cpython/pull/131137",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355060,
+    "url": "https://github.com/python/pyperformance/pull/222",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355061,
+    "url": "https://github.com/python/cpython/pull/131408",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355063,
+    "url": "https://github.com/python/cpython/pull/105735",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355064,
+    "url": "https://github.com/python/cpython/pull/93097",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355065,
+    "url": "https://github.com/python/cpython/pull/131144",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355066,
+    "url": "https://github.com/python/cpython/pull/131068",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355067,
+    "url": "https://github.com/python/cpython/pull/131069",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355069,
+    "url": "https://github.com/python/cpython/pull/131080",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355070,
+    "url": "https://github.com/python/cpython/pull/131081",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355072,
+    "url": "https://github.com/python/cpython/issues/93096#top",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355073,
+    "url": "https://github.com/python/cpython/issues/93096#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 355075,
+    "url": "https://github.com/python/cpython/issues/93096#issue-1244802104",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356902,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/109523",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356903,
+    "url": "https://github.com/python/cpython/pull/121739",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356904,
+    "url": "https://github.com/python/cpython/issues/109523#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356905,
+    "url": "https://github.com/python/cpython/pull/122933",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356908,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/109523",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356909,
+    "url": "https://github.com/MartinHHProbst",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356910,
+    "url": "https://github.com/python/cpython/issues/109523#issue-1899883336",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 356911,
+    "url": "https://github.com/python/cpython/issues/109523#top",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/98490638?v\u003d4\u0026size\u003d48",
+    "alt": "@MartinHHProbst",
+    "pageTitle": "sys.stdin.read() throws a TypeError when stdin is set to be non-blocking · Issue #109523 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "sys.stdin.read() throws a TypeError when stdin is set to be non-blocking · Issue #109523 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#format"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#format"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4881073?u\u003d02f1effcd378b0b5b57a7d3fae8ae55b5f0b0012\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@arhadthedev",
+    "pageTitle": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/93096"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
