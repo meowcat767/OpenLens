@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 922,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale",
+    "title": "locale — Internationalization services — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic cons",
+    "scrapedAt": "2026-10-08 19:19:46.223831"
+  },
+  {
+    "id": 921,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:19:45.012565"
+  },
+  {
+    "id": 920,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef",
+    "title": "Weak Reference Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Weak Reference Objects | Theme Auto Light Dark | Weak Reference Objects¶ Python supports weak references as first-class objects. There are two specific object types which directly implement weak references. The first is a simple reference object, and the second acts as a proxy for the original object as much as it can. int PyWeakref_Check(PyObject *ob)¶ Return non-zero if ob is either a reference or proxy object. This function always succeeds. int PyWeakref_CheckRef(PyObject *ob)¶ Return non-zero if ob is a reference object or a subclass of the reference type. This function always succeeds. int PyWeakref_CheckRefExact(PyObject *ob)¶ Return non-zero if ob is a reference object, but not a subclass of the reference type. This function always succeeds. int PyWeakref_CheckProxy(PyObject *ob)¶ Return non-zero if ob is a proxy object. This function always succeeds. PyObject *PyWeakref_NewRef(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing reference object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, this will raise TypeError and return NULL. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. PyObject *PyWeakref_NewProxy(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference proxy object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing proxy object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob weakly referenceable object, this will raise TypeError and return NULL. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)¶ Part of the Stable ABI since version 3.13. Get a strong reference to the referenced object from a weak reference, ref, into *pobj. On success, set *pobj to a new strong reference to the referenced object and return 1. If the reference is dead, set *pobj to NULL and return 0. On error, raise an exception and return -1. Added in version 3.13. PyObject *PyWeakref_GetObject(PyObject *ref)¶ Return value: Borrowed reference. Part of the Stable ABI. Return a borrowed reference to the referenced object from a weak reference, ref. If the referent is no longer live, returns Py_None. Note This function returns a borrowed reference to the referenced object. This means that you should always call Py_INCREF() on the object except when it cannot be destroyed before the last usage of the borrowed reference. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. PyObject *PyWeakref_GET_OBJECT(PyObject *ref)¶ Return value: Borrowed reference. Similar to PyWeakref_GetObject(), but does no error checking. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. int PyWeakref_IsDead(PyObject *ref)¶ Test if the weak reference ref is dead. Returns 1 if the reference is dead, 0 if it is alive, and -1 with an error set if ref is not a weak reference object. Added in version 3.14. void PyObject_ClearWeakRefs(PyObject *object)¶ Part of the Stable ABI. This function is called by the tp_dealloc handler to clear weak references. This iterates through the weak references for object and calls callbacks for those references which have one. It returns when all callbacks have been attempted. void PyUnstable_Object_ClearWeakRefsNoCallbacks(PyObject *object)¶ This is Unstable API. It may change without warning in minor releases. Clears the weakrefs for object without calling the callbacks. This function is called by the tp_dealloc handler for types with finalizers (i.e., __del__()). The handler for those objects first calls PyObject_ClearWeakRefs() to clear weakrefs and call their callbacks, then the finalizer, and finally this function to clear any weakrefs that may have been created by the finalizer. In most circumstances, it’s more appropriate to use PyObject_ClearWeakRefs() to clear weakrefs instead of this function. Added in version 3.13. Previous topic Pickle buffer objects Next topic Capsules This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » ",
+    "scrapedAt": "2026-10-08 19:19:43.760686"
+  },
+  {
+    "id": 919,
+    "url": "https://docs.python.org/3/library/threading.html#threading.current_thread",
+    "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be cle",
+    "scrapedAt": "2026-10-08 19:19:42.557013"
+  },
+  {
+    "id": 918,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-protocols",
+    "title": "pickle — Python object serialization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Persistence » pickle — Python object serialization | Theme Auto Light Dark | pickle — Python object serialization¶ Source code: Lib/pickle.py The pickle module implements binary protocols for serializing and de-serializing a Python object structure. “Pickling” is the process whereby a Python object hierarchy is converted into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy. Pickling (and unpickling) is alternatively known as “serialization”, “marshalling,” [1] or “flattening”; however, to avoid confusion, the terms used here are “pickling” and “unpickling”. Warning The pickle module is not secure. Only unpickle data you trust. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling. Never unpickle data that could have come from an untrusted source, or that could have been tampered with. Consider signing data with hmac if you need to ensure that it has not been tampered with. Safer serialization formats such as json may be more appropriate if you are processing untrusted data. See Comparison with json. Relationship to other Python modules¶ Comparison with marshal¶ Python has a more primitive serialization module called marshal, but in general pickle should always be the preferred way to serialize Python objects. marshal exists primarily to support Python’s .pyc files. The pickle module differs from marshal in several significant ways: marshal cannot be used to serialize user-defined classes and their instances. pickle can save and restore class instances transparently, however the class definition must be importable and live in the same module as when the object was pickled. The marshal serialization format is not guaranteed to be portable across Python versions. Because its primary job in life is to support .pyc files, the Python implementers reserve the right to change the serialization format in non-backwards compatible ways should the need arise. The pickle serialization format is guaranteed to be backwards compatible across Python releases provided a compatible pickle protocol is chosen and pickling and unpickling code deals with Python 2 to Python 3 type differences if your data is crossing that unique breaking change language boundary. Comparison with json¶ There are fundamental differences between the pickle protocols and JSON (JavaScript Object Notation): JSON is a text serialization format (it outputs unicode text, although most of the time it is then encoded to utf-8), while pickle is a binary serialization format; JSON is human-readable, while pickle is not; JSON is interoperable and widely used outside of the Python ecosystem, while pickle is Python-specific; JSON, by default, can only represent a subset of the Python built-in types, and no custom classes; pickle can represent an extremely large number of Python types (many of them automatically, by clever usage of Python’s introspection facilities; complex cases can be tackled by implementing specific object APIs); Unlike pickle, deserializing untrusted JSON does not in itself create an arbitrary code execution vulnerability. See also The json module: a standard library module allowing JSON serialization and deserialization. Data stream format¶ The data format used by pickle is Python-specific. This has the advantage that there are no restrictions imposed by external standards such as JSON (which can’t represent pointer sharing); however it means that non-Python programs may not be able to reconstruct pickled Python objects. By default, the pickle data format uses a relatively compact binary representation. If you need optimal size characteristics, you can efficiently compress pickled data. The module pickletools contains tools for analyzing data streams generated by pickle. pickletools source code has extensive comments about opcodes used by pickle protocols. There are currently 6 different protocols which can be used for pickling. The higher the protocol used, the more recent the version of Python needed to read the pickle produced. Protocol version 0 is the original “human-readable” protocol and is backwards compatible with earlier versions of Python. Protocol version 1 is an old binary format which is also compatible with earlier versions of Python. Protocol version 2 was introduced in Python 2.3. It provides much more efficient pickling of new-style classes. Refer to PEP 307 for information about improvements brought by protocol 2. Protocol version 3 was added in Python 3.0. It has explicit support for bytes objects and cannot be unpickled by Python 2.x. This was the default protocol in Python 3.0–3.7. Protocol version 4 was added in Python 3.4. It adds support for very large objects, pickling more kinds of objects, and some data format optimizations. This was the defau",
+    "scrapedAt": "2026-10-08 19:19:41.327312"
+  },
+  {
     "id": 917,
     "url": "https://docs.python.org/3/library/sys.html#sys._jit",
     "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
@@ -6090,26 +6125,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 918,
-    "url": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
-  },
-  {
-    "id": 919,
-    "url": "https://docs.python.org/3/library/threading.html#threading.current_thread"
-  },
-  {
-    "id": 920,
-    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
-  },
-  {
-    "id": 921,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
-  },
-  {
-    "id": 922,
-    "url": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
   },
   {
     "id": 923,
@@ -157101,10 +157116,520 @@ window.searchData = [
     "id": 132507,
     "url": "https://github.com/python/cpython/issues/122160#issue-2424849818",
     "parentUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 133153,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-picklable",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133156,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133159,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-persistent",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133160,
+    "url": "https://docs.python.org/3/library/pickletools.html#module-pickletools",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133162,
+    "url": "https://docs.python.org/3/library/pickle.html#object.__getnewargs__",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133163,
+    "url": "https://docs.python.org/3/library/pickle.html#consumer-api",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133166,
+    "url": "https://docs.python.org/3/library/pickle.html#persistence-of-external-objects",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133172,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler.reducer_override",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133173,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-restrict",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133174,
+    "url": "https://docs.python.org/3/library/pickle.html#relationship-to-other-python-modules",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133175,
+    "url": "https://docs.python.org/3/library/copyreg.html#module-copyreg",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133179,
+    "url": "https://docs.python.org/3/library/pickle.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133182,
+    "url": "https://docs.python.org/3/library/pickletools.html#pickletools.optimize",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133183,
+    "url": "https://docs.python.org/3/library/pickle.html#examples",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133184,
+    "url": "https://docs.python.org/3/library/pickletools.html#pickletools-cli",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133185,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/pickle.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133187,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.PickleBuffer.release",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133189,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler.fast",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133190,
+    "url": "https://docs.python.org/3/library/pickle.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133191,
+    "url": "https://docs.python.org/3/library/shelve.html#module-shelve",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133193,
+    "url": "https://docs.python.org/3/library/copyreg.html#copyreg.pickle",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133196,
+    "url": "https://peps.python.org/pep-3154/",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133202,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Unpickler",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133203,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.PickleBuffer.raw",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133205,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Unpickler.find_class",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133207,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.UnpicklingError",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133209,
+    "url": "https://docs.python.org/3/library/pickle.html#example",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133214,
+    "url": "https://docs.python.org/3/library/pickle.html#pickling-class-instances",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133215,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.PickleBuffer",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133216,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-dispatch",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133217,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.HIGHEST_PROTOCOL",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133218,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.loads",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133224,
+    "url": "https://docs.python.org/3/library/os.html#os.system",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133227,
+    "url": "https://docs.python.org/3/library/pickle.html#",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133228,
+    "url": "https://docs.python.org/3/library/pickle.html#handling-stateful-objects",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133230,
+    "url": "https://docs.python.org/3/library/pickle.html#out-of-band-buffers",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133231,
+    "url": "https://docs.python.org/3/library/pickle.html#restricting-globals",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133232,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.PickleError",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133235,
+    "url": "https://docs.python.org/3/library/pickle.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133239,
+    "url": "https://docs.python.org/3/library/pickle.html#comparison-with-marshal",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133240,
+    "url": "https://peps.python.org/pep-0307/",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133243,
+    "url": "https://docs.python.org/3/library/pickle.html#custom-reduction-for-types-functions-and-other-objects",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133244,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler.dispatch_table",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133246,
+    "url": "https://docs.python.org/3/library/pickle.html#object.__reduce__",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133247,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler.clear_memo",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133249,
+    "url": "https://docs.python.org/3/library/pickle.html#what-can-be-pickled-and-unpickled",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133250,
+    "url": "https://docs.python.org/3/library/pickle.html#dispatch-tables",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133252,
+    "url": "https://docs.python.org/3/library/pickle.html#object.__getnewargs_ex__",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133253,
+    "url": "https://docs.python.org/3/library/pickle.html#object.__reduce_ex__",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133254,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-state",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133255,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-oob",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133258,
+    "url": "https://docs.python.org/3/library/pickle.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133260,
+    "url": "https://docs.python.org/3/library/pickle.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133262,
+    "url": "https://docs.python.org/3/library/pickle.html#performance",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133263,
+    "url": "https://docs.python.org/3/library/pickle.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133264,
+    "url": "https://docs.python.org/3/library/pickle.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133265,
+    "url": "https://docs.python.org/3/library/pickle.html#module-interface",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133266,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.load",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133267,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler.persistent_id",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133268,
+    "url": "https://docs.python.org/3/library/pickle.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133270,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.DEFAULT_PROTOCOL",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133271,
+    "url": "https://docs.python.org/3/library/pickle.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133272,
+    "url": "https://docs.python.org/3/library/pickle.html#reducer-override",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133273,
+    "url": "https://docs.python.org/3/library/pickle.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133274,
+    "url": "https://docs.python.org/3/library/pickle.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133275,
+    "url": "https://docs.python.org/3/library/pickle.html#cmdoption-pickle-arg-pickle_file",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133276,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-inst",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133277,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pickle.py",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133281,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Unpickler.persistent_load",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133282,
+    "url": "https://docs.python.org/3/library/pickle.html#data-stream-format",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133283,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Unpickler.load",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133285,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle.Pickler.dump",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133287,
+    "url": "https://docs.python.org/3/library/pickle.html#provider-api",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133290,
+    "url": "https://docs.python.org/3/library/pickle.html#object.__getstate__",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133294,
+    "url": "https://peps.python.org/pep-0574/",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133297,
+    "url": "https://docs.python.org/3/library/pickle.html#object.__setstate__",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133298,
+    "url": "https://docs.python.org/3/library/pickle.html#comparison-with-json",
+    "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133432,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_CheckRefExact",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133433,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_NewProxy",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133437,
+    "url": "https://docs.python.org/3/c-api/capsule.html",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133440,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyUnstable_Object_ClearWeakRefsNoCallbacks",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133443,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_IsDead",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133448,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133449,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_NewRef",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133450,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_CheckRef",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133452,
+    "url": "https://docs.python.org/3/c-api/picklebuffer.html",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133464,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/weakref.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133465,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_CheckProxy",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133466,
+    "url": "https://docs.python.org/3/c-api/weakref.html#weak-reference-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133467,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyObject_ClearWeakRefs",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.current_thread"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.current_thread"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pickle — Python object serialization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pickle — Python object serialization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
