@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 582,
+    "url": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html",
+    "title": "Python Software Foundation News: Introducing the PSF Community Partner Program",
+    "content": "Tuesday, February 10, 2026 Introducing the PSF Community Partner Program The Python Software Foundation (PSF) is excited to announce the introduction of the PSF Community Partner Program. This new program is designed as an “in-kind” way for us to support Python events and initiatives with non-financial assistance through the use of the PSF logo and name, as well as promotional support via sharing qualified posts on PSF official social media accounts. The PSF looks forward to supporting Python community events and initiatives through this new program! The introduction of the PSF Community Partner Program grew out of our desire to find alternative ways to support the community during the pause of our Grants Program (read more about the resulting process below). Even so, we intend to continue offering this in-kind support program after the Grants Program reopens. Our big picture hope is that, over the long term, some community events and initiatives will continue to partner with the PSF while being financially dependent on sponsors and individual donors alone. The PSF is also working on the future of our Grants Program, including when and how we can reopen it in a way that ensures the program’s long-term sustainability while balancing the needs of the Python community. In light of the truly staggering outpouring of support from our community during the 2025 year-end fundraiser, we are now in a stronger position to reopen the Grants Program and are eager to give back in a thoughtful and sustainable way. More updates to come! As with the rollout of any new program, we anticipate small adjustments will need to be made for processes to flow smoothly and to ensure the program serves the Python community well. The PSF welcomes your comments, feedback, and suggestions regarding the new Community Partner Program on the corresponding Discuss thread. We also invite you to join our upcoming PSF Board or Grants Program Office Hour sessions to talk with the PSF Board and Staff synchronously. If you wish to send your feedback privately, please email grants@python.org. How the program will work The PSF Board delegated authority to the Grants Work Group (GWG) to review, approve, and deny applications for the Community Partner Program. Similar to the PSF Grants Program, the PSF must ensure that applicants meet certain criteria before being approved as a Community Partner. To qualify, an event or initiative must: Demonstrate a positive impact on the Python community Be Python-specific or primarily Python-related Have an established web presence, such as a dedicated website, Meetup page, or Luma page Have an enforceable Code of Conduct with clear reporting mechanisms in place Acknowledge and agree to the defined bounds of the Community Partner title as outlined in the application form The PSF Community Partner application process begins with a one-page form designed to collect the information needed for review by the GWG. The form gathers: Basic applicant details Information about the event or initiative Required acknowledgements related to trademark usage and an enforceable Code of Conduct A couple questions to better understand the event or initiative, support evaluation, or help the PSF gather relevant metrics Applicants are asked to submit their application at least six weeks before their event or initiative, with first-time applicants encouraged to apply eight weeks in advance. Applications may be submitted up to six months ahead of time, allowing the PSF to plan and provide timely promotional support. Once submitted, applications undergo an initial pre-review by PSF staff, who may follow up with clarifying questions as needed. The application will then be reviewed by the GWG, with consultation from the PSF Board in some cases and additional follow-up questions when necessary. Decisions will be communicated via the email address provided in the application. Accepted Community Partners will receive guidance on PSF logo usage, social media re-sharing, and an invitation to provide an optional report. How the program took shape Upon the pause of the PSF Grants Program, the PSF Board and Staff set out to understand how we can continue to support Python events and initiatives for the duration of the program\u0027s pause. We dedicated Board and Grants Office Hour sessions, gathered input on a Discuss thread, tracked our social media replies to the pause announcement, and talked with community members one-on-one to get a picture of the various needs of our community. From there, PSF Staff compiled the feedback to identify the common threads to weave them together into action. One of the most common themes uncovered is that while the financial assistance offered by our grants is incredibly valuable, the use of the PSF name that comes with grants also provides a strong signal of community trust–an official “stamp of approval”. This stamp of approval empowers Python events and initiatives to approach potential sponsors and is useful as a p",
+    "scrapedAt": "2026-10-08 19:07:17.747109"
+  },
+  {
+    "id": 581,
+    "url": "https://www.python.org/psf/volunteer",
+    "title": "Volunteer | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e Volunteer\u003e\u003e\u003e Volunteer for the PSF The Python Software Foundation needs your help building infrastructure for the PSF and PyCon US, helping with fundraising and advocacy, and running important parts of the Python community (mailing lists, website, job board, etc). Example Tasks Help find donors and sponsors Act as a PSF representative at a conference Do a mini-presentation on the PSF at your local users group Help with other initiatives, such as grants Participate in planning and organizing PyCon US Python Software Foundation Working Groups We also have PSF working groups comprised of volunteers. See the list of active working groups here. Please note that not all working groups are currently accepting new volunteers. Volunteer for PyCon US You can also volunteer for PyCon US. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 19:07:16.160126"
+  },
+  {
+    "id": 580,
+    "url": "https://www.python.org/events/python-events/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events More PyCon Greece 2026 12 Oct. 2026 – 13 Oct. 2026 Athens , Greece PyCon NL 2026 15 Oct. 2026 Utrecht, The Netherlands PyCon Ireland 2026 17 Oct. 2026 Dublin, Ireland PyCon Taiwan 17 Oct. 2026 – 18 Oct. 2026 Taipei City, Taiwan PyCon Panamá 2026 22 Oct. 2026 – 23 Oct. 2026 Panama City, Panama Swiss Python Summit 2026 22 Oct. 2026 – 23 Oct. 2026 Rapperswil, Switzerland Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-10-08 19:07:14.928219"
+  },
+  {
+    "id": 579,
+    "url": "https://www.python.org/events/python-user-group/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events More Django Girls Ho 2026 22 Oct. 2026 – 23 Oct. 2026 Ho, Ghana Python Leiden User Group 12 Nov. 2026 6:15pm UTC – 9pm UTC Leiden, The Netherlands Python Meeting Düsseldorf: Sprint 14 Nov. 2026 – 15 Nov. 2026 Düsseldorf, Germany Django Girls Sogakope 2026 20 Nov. 2026 – 21 Nov. 2026 Sogakope, Ghana Python Camp Workshop 10 Dec. 2026 Peshawar, Pakistan PyLadies Rivers In-Person Python Workshop 12 Feb. 2027 – 13 Feb. 2027 Port Harcourt, Rivers State, Nigeria Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-10-08 19:07:13.690924"
+  },
+  {
+    "id": 578,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32",
+    "title": "PSF Contributing Membership Self-Certification – Python Software Foundation",
+    "content": "Skip to content Email Please fill in all fields below to self-certify and apply as a PSF Contributing Member. You must be a basic member before you apply to be a contributing member. You can become a basic member here: https://www.python.org/users/membership/. PSF Contributing Members are people who dedicate at least five hours per month volunteering on Python-related projects that advance the mission of the PSF. Python-related projects can be open-source software projects using Python that you contribute to, Python user groups / conferences you organize, etc. As a PSF Contributing Member you have voting rights in the PSF. You can choose not to make use of your voting rights. The name, affiliation, Working Group and Project associations of PSF Contributing Members will be published to the PSF membership once a suitable mechanism for doing so has been determined. The Board of Directors of the Python Software Foundation reserves the right to decline an application should it be determined that the self-certification was made in bad faith. Please check our bylaws for details on the terms used in this form: https://www.python.org/psf/bylaws/ Membership Category Membership * Contributing Total Amount Email Address * Account Please enter a Username to create an account. If you already have an account please login before completing this form. Username * Check Availability Punctuation is not allowed in a Username with the exception of periods, hyphens and underscores. Self-Certification Are you currently a PSF Basic Member? If not, please go to https://www.python.org/users/membership/ first, and register there. Current Basic Member * Yes No List your given name(s) here First Name * Please state your surname here. Last Name * Please provide the name of any relevant employers, or companies in which you have a financial interest. You may optionally list any other nonprofits, user groups, conferences, or other organizations that are relevant to your PSF membership. Use \"None\" in case you are not affiliated with any company. Affiliations * Please use the same address you used when registering as PSF Basic Member. PSF Basic Member Email Address * You must give a postal contact address for these membership categories according to PSF Bylaws Street Address City State or Province - select State/Province - Alabama Alaska American Samoa Arizona Arkansas Armed Forces Americas Armed Forces Europe Armed Forces Pacific California Colorado Connecticut Delaware District of Columbia Florida Georgia Guam Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Northern Mariana Islands Ohio Oklahoma Oregon Pennsylvania Puerto Rico Rhode Island South Carolina South Dakota Tennessee Texas United States Minor Outlying Islands Utah Vermont Virgin Islands Virginia Washington West Virginia Wisconsin Wyoming Postal Code Country * - select Country - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island North Macedonia Northern Mariana Islands Norway Oman Pakistan Palau",
+    "scrapedAt": "2026-10-08 19:07:12.430252"
+  },
+  {
     "id": 577,
     "url": "https://www.python.org/psf/fellows/",
     "title": "PSF Fellow Membership | Python Software Foundation",
@@ -3960,26 +3995,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 578,
-    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
-  },
-  {
-    "id": 579,
-    "url": "https://www.python.org/events/python-user-group/"
-  },
-  {
-    "id": 580,
-    "url": "https://www.python.org/events/python-events/"
-  },
-  {
-    "id": 581,
-    "url": "https://www.python.org/psf/volunteer"
-  },
-  {
-    "id": 582,
-    "url": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
   },
   {
     "id": 586,
@@ -98155,10 +98170,152 @@ window.searchData = [
     "id": 68839,
     "url": "https://www.python.org/psf/fellows/#criteria",
     "parentUrl": "https://www.python.org/psf/fellows/"
+  },
+  {
+    "id": 68841,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32#content",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68842,
+    "url": "https://psfmember.org/wp-login.php?action\u003dlostpassword",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68843,
+    "url": "https://psfmember.org/wp-login.php",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68845,
+    "url": "https://www.google.com/url?q\u003dhttps://www.python.org/psf/bylaws/\u0026sa\u003dD\u0026source\u003deditors\u0026ust\u003d1617395614724000\u0026usg\u003dAFQjCNHpatTHxCzqoDeLb7D-a3JhhQFpbA",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68846,
+    "url": "https://psfmember.org/wp-login.php?redirect_to\u003dhttps%3A%2F%2Fpsfmember.org%2Fcivicrm%2Fcontribute%2Ftransact%2F%3Freset%3D1%26amp%3Bid%3D32",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68847,
+    "url": "https://www.google.com/url?q\u003dhttps://www.python.org/users/membership/\u0026sa\u003dD\u0026source\u003deditors\u0026ust\u003d1617395614724000\u0026usg\u003dAFQjCNE_u_gEG2CIDcvDboVGq57gppd8QA",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68848,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32#",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 68852,
+    "url": "https://www.python.org/events/python-user-group/?page\u003d2",
+    "parentUrl": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 68853,
+    "url": "https://www.python.org/events/python-user-group/2213/",
+    "parentUrl": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 68854,
+    "url": "https://www.python.org/events/python-user-group/2212/",
+    "parentUrl": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 68855,
+    "url": "https://www.python.org/events/python-user-group/2248/",
+    "parentUrl": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 68857,
+    "url": "https://www.python.org/events/python-user-group/2152/",
+    "parentUrl": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 68866,
+    "url": "https://www.python.org/events/python-events/?page\u003d2",
+    "parentUrl": "https://www.python.org/events/python-events/"
+  },
+  {
+    "id": 68868,
+    "url": "https://www.python.org/events/python-events/2169/",
+    "parentUrl": "https://www.python.org/events/python-events/"
+  },
+  {
+    "id": 68879,
+    "url": "https://www.python.org/psf/volunteer/",
+    "parentUrl": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 68880,
+    "url": "https://www.python.org/psf/volunteer/pycon/",
+    "parentUrl": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 68881,
+    "url": "https://www.python.org/psf/workgroups/",
+    "parentUrl": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 68886,
+    "url": "https://pyfound.blogspot.com/2025/08/the-psf-has-paused-our-grants-program.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 68905,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d6515804499381184590\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 68926,
+    "url": "https://forms.gle/6HyvLDpHEtGSpfK97",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 68950,
+    "url": "https://www.python.org/sponsors/application/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 68973,
+    "url": "http://donate.python.org",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 69010,
+    "url": "https://discuss.python.org/t/introducing-the-psf-community-partner-program-for-python-events-initiatives/106095",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 69016,
+    "url": "https://pyfound.blogspot.com/2024/02/introducing-psf-grants-office-hours.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 69061,
+    "url": "https://www.python.org/psf/community-partners/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 69118,
+    "url": "https://pyfound.blogspot.com/2025/10/a-new-psf-board-another-year-of-psf.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Introducing the PSF Community Partner Program",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Introducing the PSF Community Partner Program",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Snowflake_Partner_Hyper.jpeg",
     "alt": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python",
