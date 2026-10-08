@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1654,
+    "url": "https://github.com/python/cpython/issues/122549",
+    "title": "Add `platform.invalidate_caches` for invalidating cached results · Issue #122549 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add platform.invalidate_caches for invalidating cached results #122549 New issue Copy link New issue Copy link Closed Closed Add platform.invalidate_caches for invalidating cached results#122549 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description picnixz opened on Aug 1, 2024 Issue body actions Feature or enhancement Proposal: In #122525, it was observed that many functions of the platform module use cached results. This is, in practice, preferrable, but it should also be possible, if needed, to invalidate cached results. One use case is when the host name changes (i.e., one of the uname() components change). Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-122549: Allow to invalidate platform\u0027s cached results #122547 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:52:14.166105"
+  },
+  {
+    "id": 1653,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_L2CAP",
+    "title": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » socket — Low-level networking interface | Theme Auto Light Dark | socket — Low-level networking interface¶ Source code: Lib/socket.py This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms. Note Some behavior may be platform dependent, since calls are made to the operating system socket APIs. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The Python interface is a straightforward transliteration of the Unix system call and library interface for sockets to Python’s object-oriented style: the socket() function returns a socket object whose methods implement the various socket system calls. Parameter types are somewhat higher-level than in the C interface: as with read() and write() operations on Python files, buffer allocation on receive operations is automatic, and buffer length is implicit on send operations. See also Module socketserver Classes that simplify writing network servers. Module ssl A TLS/SSL wrapper for socket objects. Socket families¶ Depending on the system and the build options, various socket families are supported by this module. The address format required by a particular socket object is automatically selected based on the address family specified when the socket object was created. Socket addresses are represented as follows: The address of an AF_UNIX socket bound to a file system node is represented as a string, using the file system encoding and the \u0027surrogateescape\u0027 error handler (see PEP 383). An address in Linux’s abstract namespace is returned as a bytes-like object with an initial null byte; note that sockets in this namespace can communicate with normal file system sockets, so programs intended to run on Linux may need to deal with both types of address. A string or bytes-like object can be used for either type of address when passing it as an argument. Changed in version 3.3: Previously, AF_UNIX socket paths were assumed to use UTF-8 encoding. Changed in version 3.5: Writable bytes-like object is now accepted. A pair (host, port) is used for the AF_INET address family, where host is a string representing either a hostname in internet domain notation like \u0027daring.cwi.nl\u0027 or an IPv4 address like \u0027100.50.200.5\u0027, and port is an integer. For IPv4 addresses, two special forms are accepted instead of a host address: \u0027\u0027 represents INADDR_ANY, which is used to bind to all interfaces, and the string \u0027\u003cbroadcast\u003e\u0027 represents INADDR_BROADCAST. This behavior is not compatible with IPv6, therefore, you may want to avoid these if you intend to support IPv6 with your Python programs. For AF_INET6 address family, a four-tuple (host, port, flowinfo, scope_id) is used, where flowinfo and scope_id represent the sin6_flowinfo and sin6_scope_id members in struct sockaddr_in6 in C. For socket module methods, flowinfo and scope_id can be omitted just for backward compatibility. Note, however, omission of scope_id can cause problems in manipulating scoped IPv6 addresses. Changed in version 3.7: For multicast addresses (with scope_id meaningful) address may not contain %scope_id (or zone id) part. This information is superfluous and may be safely omitted (recommended). AF_NETLINK sockets are represented as pairs (pid, groups). Linux-only support for TIPC is available using the AF_TIPC address family. TIPC is an open, non-IP based networked protocol designed for use in clustered computer environments. Addresses are represented by a tuple, and the fields depend on the address type. The general tuple form is (addr_type, v1, v2, v3 [, scope]), where: addr_type is one of TIPC_ADDR_NAMESEQ, TIPC_ADDR_NAME, or TIPC_ADDR_ID. scope is one of TIPC_ZONE_SCOPE, TIPC_CLUSTER_SCOPE, and TIPC_NODE_SCOPE. If addr_type is TIPC_ADDR_NAME, then v1 is the server type, v2 is the port identifier, and v3 should be 0. If addr_type is TIPC_ADDR_NAMESEQ, then v1 is the server type, v2 is the lower port number, and v3 is the upper port number. If addr_type is TIPC_ADDR_ID, then v1 is the node, v2 is the reference, and v3 should be set to 0. A tuple (interface, ) is used for the AF_CAN address family, where interface is a string representing a network interface name like \u0027can0\u0027. The network interface name \u0027\u0027 can be used to receive packets from all network interfaces of this family. CAN_ISOTP protocol requires a tuple (interface, rx_addr, tx_addr) where both additional parameters are unsigned long integer that represent a CAN identifier (standard or extended). CAN_J1939 protocol requires a tuple (interface, name, pgn, addr) where additional parameters are 64-bit unsigned integer representing the ECU name, a 32-bit unsigned integer representing the Parameter Group Number (PGN), and an 8-bit integer repres",
+    "scrapedAt": "2026-10-08 19:52:11.877316"
+  },
+  {
+    "id": 1652,
+    "url": "https://docs.python.org/3/library/logging.html#module-logging",
+    "title": "logging — Logging facility for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » logging — Logging facility for Python | Theme Auto Light Dark | logging — Logging facility for Python¶ Source code: Lib/logging/__init__.py Important This page contains the API reference information. For tutorial information and discussion of more advanced topics, see Basic Tutorial Advanced Tutorial Logging Cookbook This module defines functions and classes which implement a flexible event logging system for applications and libraries. The key benefit of having the logging API provided by a standard library module is that all Python modules can participate in logging, so your application log can include your own messages integrated with messages from third-party modules. Here’s a simple example of idiomatic usage: # myapp.py\nimport logging\nimport mylib\nlogger \u003d logging.getLogger(__name__)\n\ndef main():\n    logging.basicConfig(filename\u003d\u0027myapp.log\u0027, level\u003dlogging.INFO)\n    logger.info(\u0027Started\u0027)\n    mylib.do_something()\n    logger.info(\u0027Finished\u0027)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    main()\n # mylib.py\nimport logging\nlogger \u003d logging.getLogger(__name__)\n\ndef do_something():\n    logger.info(\u0027Doing something\u0027)\n If you run myapp.py, you should see this in myapp.log: INFO:__main__:Started\nINFO:mylib:Doing something\nINFO:__main__:Finished\n The key feature of this idiomatic usage is that the majority of code is simply creating a module level logger with getLogger(__name__), and using that logger to do any needed logging. This is concise, while allowing downstream code fine-grained control if needed. Logged messages to the module-level logger get forwarded to handlers of loggers in higher-level modules, all the way up to the highest-level logger known as the root logger; this approach is known as hierarchical logging. For logging to be useful, it needs to be configured: setting the levels and destinations for each logger, potentially changing how specific modules log, often based on command-line arguments or application configuration. In most cases, like the one above, only the root logger needs to be so configured, since all the lower level loggers at module level eventually forward their messages to its handlers. basicConfig() provides a quick way to configure the root logger that handles many use cases. The module provides a lot of functionality and flexibility. If you are unfamiliar with logging, the best way to get to grips with it is to view the tutorials (see the links above and on the right). The basic classes defined by the module, together with their attributes and methods, are listed in the sections below. Loggers expose the interface that application code directly uses. Handlers send the log records (created by loggers) to the appropriate destination. Filters provide a finer grained facility for determining which log records to output. Formatters specify the layout of log records in the final output. Logger Objects¶ Loggers have the following attributes and methods. Note that Loggers should NEVER be instantiated directly, but always through the module-level function logging.getLogger(name). Multiple calls to getLogger() with the same name will always return a reference to the same Logger object. The name is potentially a period-separated hierarchical value, like foo.bar.baz (though it could also be just plain foo, for example). Loggers that are further down in the hierarchical list are children of loggers higher up in the list. For example, given a logger with a name of foo, loggers with names of foo.bar, foo.bar.baz, and foo.bam are all descendants of foo. In addition, all loggers are descendants of the root logger. The logger name hierarchy is analogous to the Python package hierarchy, and identical to it if you organise your loggers on a per-module basis using the recommended construction logging.getLogger(__name__). That’s because in a module, __name__ is the module’s name in the Python package namespace. class logging.Logger¶ name¶ This is the logger’s name, and is the value that was passed to getLogger() to obtain the logger. Note This attribute should be treated as read-only. level¶ The threshold of this logger, as set by the setLevel() method. Note Do not set this attribute directly - always use setLevel(), which has checks for the level passed to it. parent¶ The parent logger of this logger. It may change based on later instantiation of loggers which are higher up in the namespace hierarchy. Note This value should be treated as read-only. propagate¶ If this attribute evaluates to true, events logged to this logger will be passed to the handlers of higher level (ancestor) loggers, in addition to any handlers attached to this logger. Messages are passed directly to the ancestor loggers’ handlers - neither the level nor filters of the ancestor loggers in question are considered. If this evaluates to false, logging messages are not passed to the handlers of ancest",
+    "scrapedAt": "2026-10-08 19:52:10.535002"
+  },
+  {
+    "id": 1651,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsSubclass",
+    "title": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The remain",
+    "scrapedAt": "2026-10-08 19:52:09.219313"
+  },
+  {
+    "id": 1650,
+    "url": "https://github.com/python/cpython/issues/119793",
+    "title": "Add a \"strict\" option for map() · Issue #119793 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add a \"strict\" option for map() #119793 New issue Copy link New issue Copy link Closed Closed Add a \"strict\" option for map()#119793 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description rhettinger opened on May 30, 2024 Issue body actions These two examples silently truncate the unmatched inputs: \u003e\u003e\u003e list(map(pow, [1, 2, 3], [2, 2, 2, 2]))\n[1, 4, 9]\n\u003e\u003e\u003e list(map(pow, [1, 2, 3, 4, 5], [2, 2, 2, 2]))\n[1, 4, 9, 16] The current workaround is: starmap(pow, zip(vec1, vec2, strict\u003dTrue))\n Ideally, map() should support this directly. The reasoning is the same reasoning that motivated the strict option for zip() Linked PRs gh-119793: Add optional length-checking to map() #120471 gh-119793: Prefer map(..., strict\u003dTrue) over starmap/zip in examples #126407 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:52:07.843417"
+  },
+  {
     "id": 1649,
     "url": "https://datatracker.ietf.org/doc/html/rfc7903.html",
     "title": "RFC 7903 - Windows Image Media Types",
@@ -11095,26 +11130,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1650,
-    "url": "https://github.com/python/cpython/issues/119793"
-  },
-  {
-    "id": 1651,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsSubclass"
-  },
-  {
-    "id": 1652,
-    "url": "https://docs.python.org/3/library/logging.html#module-logging"
-  },
-  {
-    "id": 1653,
-    "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_L2CAP"
-  },
-  {
-    "id": 1654,
-    "url": "https://github.com/python/cpython/issues/122549"
   },
   {
     "id": 1655,
@@ -250146,10 +250161,140 @@ window.searchData = [
     "id": 359118,
     "url": "http://msdn.microsoft.com/library/cc230514",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 359120,
+    "url": "https://github.com/python/cpython/issues/119793#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359121,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/119793",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359123,
+    "url": "https://github.com/python/cpython/issues/119793#issue-2326172729",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359124,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/119793",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359125,
+    "url": "https://github.com/python/cpython/pull/126407",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359128,
+    "url": "https://github.com/python/cpython/pull/120471",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359129,
+    "url": "https://github.com/python/cpython/issues/119793#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 359807,
+    "url": "https://github.com/python/cpython/issues/122549#top",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 359809,
+    "url": "https://github.com/python/cpython/pull/122547",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 359810,
+    "url": "https://github.com/python/cpython/issues/122549#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 359811,
+    "url": "https://github.com/python/cpython/issues/122549#issue-2441928607",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 359812,
+    "url": "https://github.com/python/cpython/issues/122525",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 359815,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/122549",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 359816,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/122549",
+    "parentUrl": "https://github.com/python/cpython/issues/122549"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d48",
+    "alt": "@picnixz",
+    "pageTitle": "Add `platform.invalidate_caches` for invalidating cached results · Issue #122549 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add `platform.invalidate_caches` for invalidating cached results · Issue #122549 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_L2CAP"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_L2CAP"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "logging — Logging facility for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/logging.html#module-logging"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "logging — Logging facility for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/logging.html#module-logging"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsSubclass"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsSubclass"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rhettinger",
+    "pageTitle": "Add a \"strict\" option for map() · Issue #119793 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add a \"strict\" option for map() · Issue #119793 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119793"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
