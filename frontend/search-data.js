@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 835,
+    "url": "https://facebook.github.io/zstd/",
+    "title": "Zstandard - Real-time data compression algorithm",
+    "content": "Support Ukraine 🇺🇦 Help Provide Humanitarian Aid to Ukraine . Zstandard Zstandard is a fast compression algorithm, providing high compression ratios. It also offers a special mode for small data, called dictionary compression. The reference library offers a very wide range of speed / compression trade-off, and is backed by an extremely fast decoder (see benchmarks below). Zstandard library is provided as open source software using a BSD license. Its format is stable and published as IETF RFC 8878. \u003ca name\u003d\"intro-video\"\u003e\u003c/a\u003e ## Watch Introductory Video \u003cdiv\u003e \u003ciframe width\u003d\"560\" height\u003d\"315\" src\u003d\"https://www.youtube.com/embed/k5XsiuxHv_A\" title\u003d\"Explain Like I\u0027m 5: ZSTD\" frameBorder\u003d\"0\" allow\u003d\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowFullScreen \u003e\u003c/iframe\u003e \u003c/div\u003e \u003ca name\u003d\"benchmarks\"\u003e\u003c/a\u003e Benchmarks ---------- For reference, several fast compression algorithms were tested and compared on a desktop featuring a Core i7-9700K CPU @ 4.9GHz and running Ubuntu 24.04 (`Linux 6.8.0-53-generic`), using [lzbench], an open-source in-memory benchmark by @inikep compiled with [gcc] 14.2.0, on the [Silesia compression corpus]. [lzbench]: https://github.com/inikep/lzbench [Silesia compression corpus]: https://sun.aei.polsl.pl//~sdeor/index.php?page\u003dsilesia [gcc]: https://gcc.gnu.org/ | Compressor name | Ratio | Compression| Decompress.| | --------------- | ------| -----------| ---------- | | **zstd 1.5.7 -1** | 2.896 | 510 MB/s | 1550 MB/s | | [zlib] 1.3.1 -1 | 2.743 | 105 MB/s | 390 MB/s | | brotli 1.1.0 -0 | 2.702 | 400 MB/s | 425 MB/s | | **zstd 1.5.7 --fast\u003d1** | 2.439 | 545 MB/s | 1850 MB/s | | **zstd 1.5.7 --fast\u003d3** | 2.241 | 635 MB/s | 1980 MB/s | | quicklz 1.5.0 -1 | 2.238 | 520 MB/s | 750 MB/s | | lzo1x 2.10 -1 | 2.106 | 650 MB/s | 780 MB/s | | [lz4] 1.10.0 | 2.101 | 675 MB/s | 3850 MB/s | | snappy 1.2.1 | 2.089 | 520 MB/s | 1500 MB/s | | lzf 3.6 -1 | 2.077 | 410 MB/s | 820 MB/s | [zlib]: https://www.zlib.net/ [lz4]: http://www.lz4.org/ The negative compression levels, specified with `--fast\u003d#`, offer faster compression and decompression speed in exchange for some loss in compression ratio compared to level 1, as seen in the table above. Zstd can trade compression speed for stronger compression ratios. It is configurable by small increment. Decompression speed is preserved and remain roughly the same at all settings, a property shared by most LZ compression algorithms, such as [zlib] or lzma. The following tests were run on a server running Linux Debian (`Linux version 4.14.0-3-amd64`) with a Core i7-6700K CPU @ 4.0GHz, using [lzbench], an open-source in-memory benchmark by @inikep compiled with [gcc] 7.3.0, on the [Silesia compression corpus]. | Compression Speed vs Ratio | Decompression Speed | | ---------------------------|-------------------- | | \u003cimg src\u003d\"https://raw.githubusercontent.com/facebook/zstd/v1.3.4/doc/images/CSpeed2.png\" alt\u003d\"Compression Speed vs Ratio\" style\u003d\"height:500px;\"\u003e | \u003cimg src\u003d\"https://raw.githubusercontent.com/facebook/zstd/v1.3.4/doc/images/DSpeed3.png\" alt\u003d\"Decompression Speed\" style\u003d\"height:500px;\"\u003e Several algorithms can produce higher compression ratio but at slower speed, falling outside of the graph. For a larger picture including very slow modes, [click on this link](https://raw.githubusercontent.com/facebook/zstd/master/doc/images/DCspeed5.png) . \u003ca name\u003d\"small-data\"\u003e\u003c/a\u003e ### The case for Small Data compression Previous charts provide results applicable to typical file and stream scenarios (several MB). Small data comes with different perspectives. The smaller the amount of data to compress, the more difficult it is to compress. This problem is common to all compression algorithms, and reason is, compression algorithms learn from past data how to compress future data. But at the beginning of a new data set, there is no \"past\" to build upon. To solve this situation, Zstd offers a __training mode__, which can be used to tune the algorithm for a selected type of data. Training Zstandard is achieved by provide it with a few samples (one file per sample). The result of this training is stored in a file called \"dictionary\", which must be loaded before compression and decompression. Using this dictionary, the compression ratio achievable on small data improves dramatically. The following example uses the `github-users` [sample set](https://github.com/facebook/zstd/releases/tag/v1.1.3), created from [github public API](https://developer.github.com/v3/users/#get-all-users). It consists of roughly 10K records weighting about 1KB each. Compression Ratio | Compression Speed | Decompression Speed ------------------|-------------------|-------------------- ![Compression Ratio](https://raw.githubusercontent.com/facebook/zstd/master/doc/images/dict-cr.png \"Compression Ratio\") | ![Compression Speed](https://raw.githubusercontent.com/facebook/zstd/master/doc/images/dict-cs.png \"Compression Speed\") | ![Decompression Speed](https://raw.githubu",
+    "scrapedAt": "2026-10-08 19:16:12.221366"
+  },
+  {
+    "id": 834,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build",
+    "title": "sysconfig — Provide access to Python’s configuration information — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sysconfig — Provide access to Python’s configuration information | Theme Auto Light Dark | sysconfig — Provide access to Python’s configuration information¶ Added in version 3.2. Source code: Lib/sysconfig The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform. Configuration variables¶ A Python distribution contains a Makefile and a pyconfig.h header file that are necessary to build both the Python binary itself and third-party C extensions compiled using setuptools. sysconfig puts all variables found in these files in a dictionary that can be accessed using get_config_vars() or get_config_var(). Notice that on Windows, it’s a much smaller set. sysconfig.get_config_vars(*args)¶ With no arguments, return a dictionary of all configuration variables relevant for the current platform. With arguments, return a list of values that result from looking up each argument in the configuration variable dictionary. For each argument, if the value is not found, return None. sysconfig.get_config_var(name)¶ Return the value of a single variable name. Equivalent to get_config_vars().get(name). If name is not found, return None. Example of usage: \u003e\u003e\u003e import sysconfig\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027Py_ENABLE_SHARED\u0027)\n0\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027LIBDIR\u0027)\n\u0027/usr/local/lib\u0027\n\u003e\u003e\u003e sysconfig.get_config_vars(\u0027AR\u0027, \u0027CXX\u0027)\n[\u0027ar\u0027, \u0027g++\u0027]\n Installation paths¶ Python uses an installation scheme that differs depending on the platform and on the installation options. These schemes are stored in sysconfig under unique identifiers based on the value returned by os.name. The schemes are used by package installers to determine where to copy files to. Python currently supports nine schemes: posix_prefix: scheme for POSIX platforms like Linux or macOS. This is the default scheme used when Python or a component is installed. posix_home: scheme for POSIX platforms, when the home option is used. This scheme defines paths located under a specific home prefix. posix_user: scheme for POSIX platforms, when the user option is used. This scheme defines paths located under the user’s home directory (site.USER_BASE). posix_venv: scheme for Python virtual environments on POSIX platforms; by default it is the same as posix_prefix. nt: scheme for Windows. This is the default scheme used when Python or a component is installed. nt_user: scheme for Windows, when the user option is used. nt_venv: scheme for Python virtual environments on Windows; by default it is the same as nt. venv: a scheme with values from either posix_venv or nt_venv depending on the platform Python runs on. osx_framework_user: scheme for macOS, when the user option is used. Each scheme is itself composed of a series of paths and each path has a unique identifier. Python currently uses eight paths: stdlib: directory containing the standard Python library files that are not platform-specific. platstdlib: directory containing the standard Python library files that are platform-specific. platlib: directory for site-specific, platform-specific files. purelib: directory for site-specific, non-platform-specific files (‘pure’ Python). include: directory for non-platform-specific header files for the Python C-API. platinclude: directory for platform-specific header files for the Python C-API. scripts: directory for script files. data: directory for data files. User scheme¶ This scheme is designed to be the most convenient solution for users that don’t have write permission to the global site-packages directory or don’t want to install into it. Files will be installed into subdirectories of site.USER_BASE (written as userbase hereafter). This scheme installs pure Python modules and extension modules in the same location (also known as site.USER_SITE). posix_user¶ Path Installation directory stdlib userbase/lib/pythonX.Y platstdlib userbase/lib/pythonX.Y platlib userbase/lib/pythonX.Y/site-packages purelib userbase/lib/pythonX.Y/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase nt_user¶ Path Installation directory stdlib userbase\\PythonXY platstdlib userbase\\PythonXY platlib userbase\\PythonXY\\site-packages purelib userbase\\PythonXY\\site-packages include userbase\\PythonXY\\Include scripts userbase\\PythonXY\\Scripts data userbase osx_framework_user¶ Path Installation directory stdlib userbase/lib/python platstdlib userbase/lib/python platlib userbase/lib/python/site-packages purelib userbase/lib/python/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase Home scheme¶ The idea behind the “home scheme” is that you build and maintain a personal stash of Python modules. This scheme’s name is derived from the idea of a “home” directory on Unix, since it’s not unusual for a Unix user to make the",
+    "scrapedAt": "2026-10-08 19:16:10.87482"
+  },
+  {
+    "id": 833,
+    "url": "https://github.com/python/cpython/issues/125866",
+    "title": "Improve file URI ergonomics in `urllib.request` · Issue #125866 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Improve file URI ergonomics in urllib.request #125866 New issue Copy link New issue Copy link Closed Closed Improve file URI ergonomics in urllib.request#125866 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description barneygale opened on Oct 23, 2024 Issue body actions Feature or enhancement I request that we make pathname2url and url2pathname easier to use: pathname2url() is made to accept an optional include_scheme argument that sticks file: on the front when true url2pathname() is made to strip any file: prefix from its argument. I think this would go a long way towards making these functions usable, and allow us to remove the scary \"This does not accept/produce a complete URL\" warnings from the docs. Linked PRs GH-125866: Improve tests for pathname2url() and url2pathname() #125993 [3.13] GH-125866: Improve tests for pathname2url() and url2pathname() (GH-125993) #126144 [3.12] GH-125866: Improve tests for pathname2url() and url2pathname() (GH-125993) #126145 GH-125866: Preserve Windows drive letter case in file URIs #127138 GH-125866: Deprecate nturl2path module #131432 GH-125866: Support complete \"file:\" URLs in urllib #132378 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:16:09.640616"
+  },
+  {
+    "id": 832,
+    "url": "https://github.com/python/cpython/issues/121027",
+    "title": "Add __get__ to the partial object · Issue #121027 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add __get__ to the partial object #121027 New issue Copy link New issue Copy link Closed Closed Add __get__ to the partial object#121027 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Jun 26, 2024 Issue body actions Feature or enhancement In #119827 (comment), @rhettinger proposed to add the __get__ method to the partial object in functools. This is a breaking change, although the impact may be much lesser than of adding __get__ to builtin functions. But we should follow the common procedure for such changes: first add __get__ that emits FutureWarning with suggestion to wrap partial into staticmethod and return the partial object unchanged, then change the behavior few releases later. Linked PRs gh-121027: Add a future warning in functools.partial.__get__ #121086 gh-121027: Make the functools.partial object a method descriptor #121089 [3.13] gh-121027: Add a future warning in functools.partial.__get__ (GH-121086) #121092 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:16:07.518833"
+  },
+  {
+    "id": 831,
+    "url": "https://github.com/python/cpython/issues/132168",
+    "title": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add __class_getitem__ support to ctypes.py_object #132168 New issue Copy link New issue Copy link Closed Closed Add __class_getitem__ support to ctypes.py_object#132168 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-typingtype-featureA feature request or enhancementA feature request or enhancement Description brianschubert opened on Apr 6, 2025 Issue body actions Feature or enhancement Proposal: ctypes.py_object is generic in typeshed, but is not subscriptable at runtime. This can be troublesome for end users, since type checkers will prompt them to supply a generic type argument, but doing so will produce a TypeError at runtime: \u003e\u003e\u003e import ctypes\n\u003e\u003e\u003e ctypes.py_object[int]\nTraceback (most recent call last):\n  File \"\u003cpython-input-1\u003e\", line 1, in \u003cmodule\u003e\n    ctypes.py_object[int]\n    ~~~~~~~~~~~~~~~~^^^^^\nTypeError: type \u0027py_object\u0027 is not subscriptable (albeit this is partially mitigated by deferred annotations in 3.14, but TypeError can still pop up if the annotations are ever evaluated) py_object\u0027s typeshed stubs have been stable for a while, and it seems unlikely to be made non-generic in the future. Therefore I propose that __class_getitem__ be added to ctypes.py_object so that it can be subscripted at runtime. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: python/typeshed#13760 Linked PRs gh-132168: Add __class_getitem__ to ctypes.py_object #132169 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects Ctypes issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:16:05.292312"
+  },
+  {
     "id": 830,
     "url": "https://docs.python.org/3/reference/compound_stmts.html#except",
     "title": "8. Compound statements — Python 3.14.8 documentation",
@@ -5490,26 +5525,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 831,
-    "url": "https://github.com/python/cpython/issues/132168"
-  },
-  {
-    "id": 832,
-    "url": "https://github.com/python/cpython/issues/121027"
-  },
-  {
-    "id": 833,
-    "url": "https://github.com/python/cpython/issues/125866"
-  },
-  {
-    "id": 834,
-    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
-  },
-  {
-    "id": 835,
-    "url": "https://facebook.github.io/zstd/"
   },
   {
     "id": 836,
@@ -142515,10 +142530,379 @@ window.searchData = [
     "id": 111791,
     "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-name_or_attr",
     "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111793,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/132168",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111794,
+    "url": "https://github.com/python/cpython/issues/132168#issue-2975084498",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111795,
+    "url": "https://github.com/orgs/python/projects/42",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111798,
+    "url": "https://github.com/brianschubert",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111799,
+    "url": "https://github.com/python/typeshed/blob/1c17cd429c2f91b0066547deb99c537af3e54d39/stdlib/ctypes/__init__.pyi#L253",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111801,
+    "url": "https://github.com/python/cpython/pull/132169",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111804,
+    "url": "https://github.com/python/typeshed/pull/13760",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111805,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-ctypes%22",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111806,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/132168",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111807,
+    "url": "https://github.com/python/cpython/issues/132168#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111808,
+    "url": "https://github.com/python/cpython/issues/132168#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111810,
+    "url": "https://github.com/python/cpython/pull/121086",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111811,
+    "url": "https://github.com/python/cpython/pull/121092",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111816,
+    "url": "https://github.com/python/cpython/issues/121027#issue-2374344106",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111817,
+    "url": "https://github.com/python/cpython/issues/121027#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111818,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/121027",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111819,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/121027",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111820,
+    "url": "https://github.com/python/cpython/pull/119827#issuecomment-2190108757",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111821,
+    "url": "https://github.com/python/cpython/issues/121027#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111822,
+    "url": "https://github.com/python/cpython/pull/121089",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111823,
+    "url": "https://github.com/python/cpython/pull/126145",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111824,
+    "url": "https://github.com/python/cpython/pull/126144",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111825,
+    "url": "https://github.com/python/cpython/issues/125866#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111828,
+    "url": "https://github.com/python/cpython/issues/125866#issue-2607065453",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111829,
+    "url": "https://github.com/python/cpython/issues/125866#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111830,
+    "url": "https://github.com/barneygale",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111831,
+    "url": "https://github.com/python/cpython/pull/131432",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111832,
+    "url": "https://github.com/python/cpython/pull/132378",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111834,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125866",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111837,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125866",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111838,
+    "url": "https://github.com/python/cpython/pull/125993",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111839,
+    "url": "https://github.com/python/cpython/pull/127138",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111845,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_path",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111847,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_platform",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111853,
+    "url": "https://docs.python.org/3/library/sysconfig.html#user-scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111854,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_path_names",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111856,
+    "url": "https://docs.python.org/3/library/sysconfig.html#posix-prefix",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111858,
+    "url": "https://docs.python.org/3/library/sysconfig.html#posix-home",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111859,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_scheme_names",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111860,
+    "url": "https://docs.python.org/3/library/sysconfig.html#nt-user",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111861,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.parse_config_h",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111863,
+    "url": "https://docs.python.org/3/library/sysconfig.html#posix-user",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111866,
+    "url": "https://docs.python.org/3/library/sysconfig.html#",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111867,
+    "url": "https://docs.python.org/3/library/sysconfig.html#home-scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111873,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_python_version",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111874,
+    "url": "https://docs.python.org/3/library/sysconfig.html#osx-framework-user",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111875,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_default_scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111876,
+    "url": "https://docs.python.org/3/library/sysconfig.html#other-functions",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111877,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_makefile_filename",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111878,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/sysconfig",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111879,
+    "url": "https://docs.python.org/3/library/sysconfig.html#configuration-variables",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111880,
+    "url": "https://docs.python.org/3/library/sysconfig.html#installation-path-functions",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111881,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_h_filename",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111884,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_preferred_scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111889,
+    "url": "https://docs.python.org/3/library/sysconfig.html#nt",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111890,
+    "url": "https://docs.python.org/3/library/sysconfig.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111891,
+    "url": "https://docs.python.org/3/library/sysconfig.html#prefix-scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111893,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig._get_preferred_schemes",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111894,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/sysconfig.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111896,
+    "url": "https://facebook.github.io/zstd/#benchmarks",
+    "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 111897,
+    "url": "https://facebook.github.io/zstd/#small-data",
+    "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 111898,
+    "url": "https://tools.ietf.org/html/rfc8878",
+    "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 111899,
+    "url": "https://opensource.facebook.com/support-ukraine",
+    "parentUrl": "https://facebook.github.io/zstd/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://facebook.github.io/zstd/images/zstd85.png",
+    "alt": "",
+    "pageTitle": "Zstandard - Real-time data compression algorithm",
+    "pageUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/960340?v\u003d4\u0026size\u003d48",
+    "alt": "@barneygale",
+    "pageTitle": "Improve file URI ergonomics in `urllib.request` · Issue #125866 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Improve file URI ergonomics in `urllib.request` · Issue #125866 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add __get__ to the partial object · Issue #121027 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add __get__ to the partial object · Issue #121027 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@brianschubert",
+    "pageTitle": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132168"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
