@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1013,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_DontWriteBytecodeFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:23:31.374303"
+  },
+  {
+    "id": 1012,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context",
+    "title": "contextvars — Context Variables — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » contextvars — Context Variables | Theme Auto Light Dark | contextvars — Context Variables¶ This module provides APIs to manage, store, and access context-local state. The ContextVar class is used to declare and work with Context Variables. The copy_context() function and the Context class should be used to manage the current context in asynchronous frameworks. Context managers that have state should use Context Variables instead of threading.local() to prevent their state from bleeding to other code unexpectedly, when used in concurrent code. See also PEP 567 for additional details. Added in version 3.7. Context Variables¶ class contextvars.ContextVar(name[, *, default])¶ This class is used to declare a new Context Variable, e.g.: var: ContextVar[int] \u003d ContextVar(\u0027var\u0027, default\u003d42)\n The required name parameter is used for introspection and debug purposes. The optional keyword-only default parameter is returned by ContextVar.get() when no value for the variable is found in the current context. Important: Context Variables should be created at the top module level and never in closures. Context objects hold strong references to context variables which prevents context variables from being properly garbage collected. ContextVars are generic over the type of their contained value. name¶ The name of the variable. This is a read-only property. Added in version 3.7.1. get([default])¶ Return a value for the context variable for the current context. If there is no value for the variable in the current context, the method will: return the value of the default argument of the method, if provided; or return the default value for the context variable, if it was created with one; or raise a LookupError. set(value)¶ Call to set a new value for the context variable in the current context. The required value argument is the new value for the context variable. Returns a Token object that can be used to restore the variable to its previous value via the ContextVar.reset() method. For convenience, the token object can be used as a context manager to avoid calling ContextVar.reset() manually: var \u003d ContextVar(\u0027var\u0027, default\u003d\u0027default value\u0027)\n\nwith var.set(\u0027new value\u0027):\n    assert var.get() \u003d\u003d \u0027new value\u0027\n\nassert var.get() \u003d\u003d \u0027default value\u0027\n It is a shorthand for: var \u003d ContextVar(\u0027var\u0027, default\u003d\u0027default value\u0027)\n\ntoken \u003d var.set(\u0027new value\u0027)\ntry:\n    assert var.get() \u003d\u003d \u0027new value\u0027\nfinally:\n    var.reset(token)\n\nassert var.get() \u003d\u003d \u0027default value\u0027\n Added in version 3.14: Added support for using tokens as context managers. reset(token)¶ Reset the context variable to the value it had before the ContextVar.set() that created the token was used. For example: var \u003d ContextVar(\u0027var\u0027)\n\ntoken \u003d var.set(\u0027new value\u0027)\n# code that uses \u0027var\u0027; var.get() returns \u0027new value\u0027.\nvar.reset(token)\n\n# After the reset call the var has no value again, so\n# var.get() would raise a LookupError.\n The same token cannot be used twice. class contextvars.Token¶ Token objects are returned by the ContextVar.set() method. They can be passed to the ContextVar.reset() method to revert the value of the variable to what it was before the corresponding set. A single token cannot reset a context variable more than once. Tokens support the context manager protocol to automatically reset context variables. See ContextVar.set(). Tokens are generic over the same type as the ContextVar which created them. Added in version 3.14: Added support for usage as a context manager. var¶ A read-only property. Points to the ContextVar object that created the token. old_value¶ A read-only property. Set to the value the variable had before the ContextVar.set() method call that created the token. It points to Token.MISSING if the variable was not set before the call. MISSING¶ A marker object used by Token.old_value. Manual Context Management¶ contextvars.copy_context()¶ Returns a copy of the current Context object. The following snippet gets a copy of the current context and prints all variables and their values that are set in it: ctx: Context \u003d copy_context()\nprint(list(ctx.items()))\n The function has an O(1) complexity, i.e. works equally fast for contexts with a few context variables and for contexts that have a lot of them. class contextvars.Context¶ A mapping of ContextVars to their values. Context() creates an empty context with no values in it. To get a copy of the current context use the copy_context() function. Each thread has its own effective stack of Context objects. The current context is the Context object at the top of the current thread’s stack. All Context objects in the stacks are considered to be entered. Entering a context, which can be done by calling its run() method, makes the context the current context by pushing it onto the top of the current thread’s context stack. Exiting from the current context, which can be done by returning ",
+    "scrapedAt": "2026-10-08 19:23:30.147659"
+  },
+  {
+    "id": 1011,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp",
+    "title": "3. Configure Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python Setup and Usage » 3. Configure Python | Theme Auto Light Dark | 3. Configure Python¶ 3.1. Build Requirements¶ To build CPython, you will need: A C11 compiler. Optional C11 features are not required. On Windows, Microsoft Visual Studio 2017 or later is required. Support for IEEE 754 floating-point numbers and floating-point Not-a-Number (NaN). Support for threads. Changed in version 3.5: On Windows, Visual Studio 2015 or later is now required. Changed in version 3.6: Selected C99 features, like \u003cstdint.h\u003e and static inline functions, are now required. Changed in version 3.7: Thread support is now required. Changed in version 3.11: C11 compiler, IEEE 754 and NaN support are now required. On Windows, Visual Studio 2017 or later is required. See also PEP 7 “Style Guide for C Code” and PEP 11 “CPython platform support”. 3.1.1. Requirements for optional modules¶ Some optional modules of the standard library require third-party libraries installed for development (for example, header files must be available). Missing requirements are reported in the configure output. Modules that are missing due to missing dependencies are listed near the end of the make output, sometimes using an internal name, for example, _ctypes for ctypes module. If you distribute a CPython interpreter without optional modules, it’s best practice to advise users, who generally expect that standard library modules are available. Dependencies to build optional modules are: Dependency Minimum version Python module libbz2 bz2 libffi 3.3.0 recommended ctypes liblzma lzma libmpdec 2.5.0 decimal [1] libreadline or libedit [2] readline libuuid _uuid [3] ncurses [4] curses OpenSSL [6] ssl, hashlib [5] SQLite 3.15.2 sqlite3 Tcl/Tk 8.5.12 tkinter, IDLE, turtle zlib 1.2.2.1 zlib, gzip, ensurepip zstd 1.4.5 compression.zstd [1] If libmpdec is not available, the decimal module will use a pure-Python implementation. See --with-system-libmpdec for details. [2] See --with-readline for choosing the backend for the readline module. [3] The uuid module uses _uuid to generate “safe” UUIDs. See the module documentation for details. [4] The curses module requires the libncurses or libncursesw library. The curses.panel module additionally requires the libpanel or libpanelw library. [5] If OpenSSL is not available, the hashlib module will use bundled implementations of several hash functions. See --with-builtin-hashlib-hashes for forcing usage of OpenSSL. [6] OpenSSL 1.1.1 is the minimum possible version to build against, but the series is end-of-life and no longer receives public security fixes. Use the latest patch release of a currently supported LTS release series (see the OpenSSL Roadmap), or the package provided by your operating system if available. Other libraries that offer an API compatible with OpenSSL 1.1.1 or later may work, but are not officially supported. Note that the table does not include all optional modules; in particular, platform-specific modules like winreg are not listed here. See also The devguide includes a full list of dependencies required to build all modules and instructions on how to install them on common platforms. --with-system-expat allows building with an external libexpat library. Options for third-party dependencies Changed in version 3.1: Tcl/Tk version 8.3.1 is now required for tkinter. Changed in version 3.5: Tcl/Tk version 8.4 is now required for tkinter. Changed in version 3.7: OpenSSL 1.0.2 is now required for hashlib and ssl. Changed in version 3.10: OpenSSL 1.1.1 is now required for hashlib and ssl. SQLite 3.7.15 is now required for sqlite3. Changed in version 3.11: Tcl/Tk version 8.5.12 is now required for tkinter. Changed in version 3.13: SQLite 3.15.2 is now required for sqlite3. 3.2. Generated files¶ To reduce build dependencies, Python source code contains multiple generated files. Commands to regenerate all generated files: make regen-all\nmake regen-stdlib-module-names\nmake regen-limited-abi\nmake regen-configure\n The Makefile.pre.in file documents generated files, their inputs, and tools used to regenerate them. Search for regen-* make targets. 3.2.1. configure script¶ The make regen-configure command regenerates the aclocal.m4 file and the configure script using the Tools/build/regen-configure.sh shell script which uses an Ubuntu container to get the same tools versions and have a reproducible output. The container is optional, the following command can be run locally: autoreconf -ivf -Werror\n The generated files can change depending on the exact versions of the tools used. The container that CPython uses has Autoconf 2.72, aclocal from Automake 1.16.5, and pkg-config 1.8.1. Changed in version 3.13: Autoconf 2.71 and aclocal 1.16.5 and are now used to regenerate configure. Changed in version 3.14: Autoconf 2.72 is now used to regenerate configure. 3.3. Configure Options¶ List all configure script options using: ./configure --help\n ",
+    "scrapedAt": "2026-10-08 19:23:28.825317"
+  },
+  {
+    "id": 1010,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener",
+    "title": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.request — Extensible library for opening URLs | Theme Auto Light Dark | urllib.request — Extensible library for opening URLs¶ Source code: Lib/urllib/request.py The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. See also The Requests package is recommended for a higher-level HTTP client interface. Warning On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ[\"no_proxy\"] \u003d \"*\"). Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The urllib.request module defines the following functions: urllib.request.urlopen(url, data\u003dNone, [timeout, ]*, context\u003dNone)¶ Open url, which can be either a string containing a valid, properly encoded URL, or a Request object. data must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details. urllib.request module uses HTTP/1.1 and includes Connection:close header in its HTTP requests. The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections. If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details. This function always returns an object which can work as a context manager and has the properties url, headers, and status. See urllib.response.addinfourl for more detail on these properties. For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse object slightly modified. In addition to the three new methods above, the msg attribute contains the same information as the reason attribute — the reason phrase returned by server — instead of the response headers as it is specified in the documentation for HTTPResponse. For FTP, file, and data URLs, this function returns a urllib.response.addinfourl object. Raises URLError on protocol errors. Note that None may be returned if no handler handles the request (though the default installed global OpenerDirector uses UnknownHandler to ensure this never happens). In addition, if proxy settings are detected (for example, when a *_proxy environment variable like http_proxy is set), ProxyHandler is default installed and makes sure the requests are handled through the proxy. The legacy urllib.urlopen function from Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen. Proxy handling, which was done by passing a dictionary parameter to urllib.urlopen, can be obtained by using ProxyHandler objects. The default opener raises an auditing event urllib.Request with arguments fullurl, data, headers, method taken from the request object. Changed in version 3.2: cafile and capath were added. HTTPS virtual hosts are now supported if possible (that is, if ssl.HAS_SNI is true). data can be an iterable object. Changed in version 3.3: cadefault was added. Changed in version 3.4.3: context was added. Changed in version 3.10: HTTPS connection now send an ALPN extension with protocol indicator http/1.1 when no context is given. Custom context should set ALPN protocols with set_alpn_protocols(). Changed in version 3.13: Remove cafile, capath and cadefault parameters: use the context parameter instead. urllib.request.install_opener(opener)¶ Install an OpenerDirector instance as the default global opener. Installing an opener is only necessary if you want urlopen to use that opener; otherwise, simply call OpenerDirector.open() instead of urlopen(). The code does not check for a real OpenerDirector, and any class with the appropriate interface will work. urllib.request.build_opener([handler, ...])¶ Return an OpenerDirector instance, which chains the handlers in the order given. handlers can be either instances of BaseHandler, or subclasses of BaseHandler (in which case it must be possible to call the constructor without any parameters). Instances of the following classes will be in front of the handlers, unless the handlers contain them, instances of them or subclasses of them: ProxyHandler (if proxy settings are detected), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, HTTPErrorProcessor. If the Python installation has SSL support (i.e., if the ssl module can be imported), HTTPSHandler will also be added. A BaseHandler subclass may also change its handler_order attribute to modify its pos",
+    "scrapedAt": "2026-10-08 19:23:27.532736"
+  },
+  {
+    "id": 1009,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchRightEvent",
+    "title": "Monitoring C API — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Monitoring C API | Theme Auto Light Dark | Monitoring C API¶ Added in version 3.13. An extension may need to interact with the event monitoring system. Subscribing to events and registering callbacks can be done via the Python API exposed in sys.monitoring. Generating Execution Events¶ The functions below make it possible for an extension to fire monitoring events as it emulates the execution of Python code. Each of these functions accepts a PyMonitoringState struct which contains concise information about the activation state of events, as well as the event arguments, which include a PyObject* representing the code object, the instruction offset and sometimes additional, event-specific arguments (see sys.monitoring for details about the signatures of the different event callbacks). The codelike argument should be an instance of types.CodeType or of a type that emulates it. The VM disables tracing when firing an event, so there is no need for user code to do that. Monitoring functions should not be called with an exception set, except those listed below as working with the current exception. type PyMonitoringState¶ Representation of the state of an event type. It is allocated by the user while its contents are maintained by the monitoring API functions described below. All of the functions below return 0 on success and -1 (with an exception set) on error. See sys.monitoring for descriptions of the events. int PyMonitoring_FirePyStartEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_START event. int PyMonitoring_FirePyResumeEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_RESUME event. int PyMonitoring_FirePyReturnEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *retval)¶ Fire a PY_RETURN event. int PyMonitoring_FirePyYieldEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *retval)¶ Fire a PY_YIELD event. int PyMonitoring_FireCallEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *callable, PyObject *arg0)¶ Fire a CALL event. int PyMonitoring_FireLineEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, int lineno)¶ Fire a LINE event. int PyMonitoring_FireJumpEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *target_offset)¶ Fire a JUMP event. int PyMonitoring_FireBranchLeftEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *target_offset)¶ Fire a BRANCH_LEFT event. int PyMonitoring_FireBranchRightEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *target_offset)¶ Fire a BRANCH_RIGHT event. int PyMonitoring_FireCReturnEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *retval)¶ Fire a C_RETURN event. int PyMonitoring_FirePyThrowEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_THROW event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireRaiseEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a RAISE event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireCRaiseEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a C_RAISE event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireReraiseEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a RERAISE event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireExceptionHandledEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire an EXCEPTION_HANDLED event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FirePyUnwindEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_UNWIND event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireStopIterationEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *value)¶ Fire a STOP_ITERATION event. If value is an instance of StopIteration, it is used. Otherwise, a new StopIteration instance is created with value as its argument. Managing the Monitoring State¶ Monitoring states can be managed with the help of monitoring scopes. A scope would typically correspond to a Python function. int PyMonitoring_EnterScope(PyMonitoringState *state_array, uint64_t *version, const uint8_t *event_types, Py_ssize_t length)¶ Enter a monitored scope. event_types is an array of the event IDs for events that may be fired from the scope. For example, the ID of a PY_START event is the value PY_MONITORING_EVENT_PY_START, which is numerically equal to the base-2 logarithm of sys.monitoring.events.PY_START. state_array is an array with a monitoring state entry for each event in event_types",
+    "scrapedAt": "2026-10-08 19:23:26.222886"
+  },
+  {
     "id": 1008,
     "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_HCI",
     "title": "socket — Low-level networking interface — Python 3.14.8 documentation",
@@ -6720,26 +6755,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1009,
-    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchRightEvent"
-  },
-  {
-    "id": 1010,
-    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
-  },
-  {
-    "id": 1011,
-    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
-  },
-  {
-    "id": 1012,
-    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
-  },
-  {
-    "id": 1013,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_DontWriteBytecodeFlag"
   },
   {
     "id": 1014,
@@ -168266,10 +168281,1900 @@ window.searchData = [
     "id": 155112,
     "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/132449",
     "parentUrl": "https://github.com/python/cpython/issues/132449"
+  },
+  {
+    "id": 155455,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.origin_req_host",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155457,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.UnknownHandler.unknown_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155459,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPDefaultErrorHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155460,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgr",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155461,
+    "url": "https://docs.python.org/3/library/urllib.request.html#http-password-mgr-with-prior-auth",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155464,
+    "url": "https://docs.python.org/3/library/urllib.request.html#protocol-response",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155465,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler.http_error_301",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155467,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler.http_error_303",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155468,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.status",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155469,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler.http_error_302",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155470,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.headers",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155471,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.DataHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155472,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler.unknown_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155473,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPBasicAuthHandler.http_error_401",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155474,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgrWithPriorAuth.find_user_password",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155475,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPHandler.http_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155476,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155477,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.CacheFTPHandler.setMaxConns",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155478,
+    "url": "https://docs.python.org/3/library/urllib.request.html#",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155479,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgr.find_user_password",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155480,
+    "url": "https://docs.python.org/3/library/urllib.request.html#http-error-nnn",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155481,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.method",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155483,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.code",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155484,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8089.html#section-3",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155485,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.set_proxy",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155487,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler.http_error_308",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155488,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler.http_error_307",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155489,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.FileHandler.file_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155490,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155491,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#http.cookiejar.CookieJar",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155492,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.ProxyDigestAuthHandler.http_error_407",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155496,
+    "url": "https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse.reason",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155497,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.add_header",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155498,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.type",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155500,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7230.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155503,
+    "url": "https://html.spec.whatwg.org/#charset",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155504,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.getproxies",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155505,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPCookieProcessor",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155506,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.ProxyDigestAuthHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155508,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.unverifiable",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155509,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.AbstractBasicAuthHandler.http_error_auth_reqed",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155510,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.header_items",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155511,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPDigestAuthHandler.http_error_401",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155513,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/urllib/request.py",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155514,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155516,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.FTPHandler.ftp_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155517,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.get_method",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155518,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler.parent",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155521,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.CacheFTPHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155524,
+    "url": "https://docs.python.org/3/library/urllib.request.html#protocol-open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155526,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.selector",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155527,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgrWithPriorAuth.add_password",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155528,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.ProxyHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155529,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.info",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155533,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.HTTPError",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155535,
+    "url": "https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155537,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgrWithDefaultRealm",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155538,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgrWithPriorAuth",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155540,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.CacheFTPHandler.setTimeout",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155541,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.OpenerDirector.add_handler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155542,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.get_header",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155546,
+    "url": "https://docs.python.org/3/library/html.parser.html#module-html.parser",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155547,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.host",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155548,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.data",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155549,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.remove_header",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155552,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPErrorProcessor.http_response",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155556,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.add_unredirected_header",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155557,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.AbstractDigestAuthHandler.http_error_auth_reqed",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155558,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.ContentTooShortError",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155560,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler.default_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155561,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPDigestAuthHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155562,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgr.add_password",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155566,
+    "url": "https://www.w3.org/International/questions/qa-html-encoding-declarations",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155570,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPSHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155571,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.OpenerDirector",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155572,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2397.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155573,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.ProxyBasicAuthHandler.http_error_407",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155574,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.full_url",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155575,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.OpenerDirector.open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155576,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler.redirect_request",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155581,
+    "url": "https://requests.readthedocs.io/en/master/",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155582,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155583,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPBasicAuthHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155584,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgrWithPriorAuth.update_authenticated",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155586,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.FTPHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155589,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.geturl",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155591,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2965.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155592,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler.close",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155593,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPCookieProcessor.cookiejar",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155594,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPPasswordMgrWithPriorAuth.is_authenticated",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155595,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.FileHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155596,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.AbstractDigestAuthHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155598,
+    "url": "https://docs.python.org/3/library/http.client.html#http.client.HTTPSConnection",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155600,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPSHandler.https_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155602,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155605,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.OpenerDirector.error",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155607,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlcleanup",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155608,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler.add_parent",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155609,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.quote",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155610,
+    "url": "https://docs.python.org/3/library/urllib.html#module-urllib",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155611,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.AbstractBasicAuthHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155612,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.ProxyBasicAuthHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155613,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.install_opener",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155614,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155616,
+    "url": "https://docs.python.org/3/library/urllib.request.html#http-password-mgr",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155618,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.getcode",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155619,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.DataHandler.data_open",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155624,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.has_header",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155625,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.response.addinfourl.url",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155629,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.BaseHandler.http_error_default",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155633,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.UnknownHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155634,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.Request.get_full_url",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155635,
+    "url": "https://docs.python.org/3/library/urllib.request.html#protocol-request",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155636,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPErrorProcessor",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155637,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/urllib.request.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155638,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPRedirectHandler",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155639,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.HTTPErrorProcessor.https_response",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155640,
+    "url": "https://docs.python.org/3/howto/urllib2.html#urllib-howto",
+    "parentUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 155641,
+    "url": "https://docs.python.org/3/using/configure.html#webassembly-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155644,
+    "url": "https://docs.python.org/3/using/configure.html#make-buildbottest",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155645,
+    "url": "https://docs.python.org/3/using/configure.html#configure-python",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155646,
+    "url": "https://docs.python.org/3/using/configure.html#python-build-system",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155651,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CURSES_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155652,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-libs",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155653,
+    "url": "https://docs.python.org/3/using/configure.html#libraries-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155654,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-host",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155655,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-libm",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155656,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-readline",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155657,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155658,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CFLAGSFORSHARED",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155659,
+    "url": "https://docs.python.org/3/using/configure.html#make-distclean",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155660,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-ipv6",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155661,
+    "url": "https://docs.python.org/3/using/configure.html#c-compiler-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155662,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-universalsdk",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155663,
+    "url": "https://docs.python.org/3/using/configure.html#make-platform",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155664,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-undefined-behavior-sanitizer",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155666,
+    "url": "https://github.com/python/cpython/tree/3.14/Mac/README.rst",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155668,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_LDFLAGS_NODIST",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155669,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-PKG_CONFIG",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155670,
+    "url": "https://github.com/facebookarchive/BOLT",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155671,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBZSTD_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155672,
+    "url": "https://www.gnu.org/software/automake",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155673,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-GDBM_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155676,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_CFLAGS_NODIST",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155678,
+    "url": "https://docs.python.org/3/using/configure.html#configure-script",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155679,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-dbmliborder",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155680,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CONFIG_SITE",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155684,
+    "url": "https://docs.python.org/3/using/configure.html#make-install",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155688,
+    "url": "https://www.freedesktop.org/wiki/Software/pkg-config/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155689,
+    "url": "https://github.com/llvm/llvm-project/tree/main/bolt",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155690,
+    "url": "https://docs.python.org/3/using/configure.html#compiler-and-linker-flags",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155691,
+    "url": "https://en.wikipedia.org/wiki/C11_(C_standard_revision)#Optional_features",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155692,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBUUID_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155693,
+    "url": "https://devguide.python.org/getting-started/setup-building/#install-dependencies",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155694,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-system-expat",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155695,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-LDFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155697,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBLZMA_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155699,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-PKG_CONFIG_LIBDIR",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155701,
+    "url": "https://docs.python.org/3/using/configure.html#install-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155702,
+    "url": "https://docs.python.org/3/using/configure.html#make-test",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155703,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CCSHARED",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155705,
+    "url": "https://docs.python.org/3/using/configure.html#id16",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155706,
+    "url": "https://docs.python.org/3/using/configure.html#configure-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155707,
+    "url": "https://docs.python.org/3/using/configure.html#id18",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155708,
+    "url": "https://gnu.org/software/ncurses/ncurses.html",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155710,
+    "url": "https://docs.python.org/3/using/configure.html#id12",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155712,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-2",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155713,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CONFIGURE_LDFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155714,
+    "url": "https://docs.python.org/3/using/configure.html#id13",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155716,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-3",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155717,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-4",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155718,
+    "url": "https://docs.python.org/3/using/configure.html#id15",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155720,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-PANEL_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155721,
+    "url": "https://docs.python.org/3/using/configure.html#id10",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155722,
+    "url": "https://docs.python.org/3/using/configure.html#linker-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155723,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-0",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155724,
+    "url": "https://docs.python.org/3/using/configure.html#id11",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155725,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-1",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155726,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-static-libpython",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155727,
+    "url": "https://docs.python.org/3/using/configure.html#macos-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155729,
+    "url": "https://github.com/ossf/wg-best-practices-os-developers/blob/main/docs/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.md",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155730,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-COMPILEALL_OPTS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155732,
+    "url": "https://en.wikipedia.org/wiki/IEEE_754",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155733,
+    "url": "https://docs.python.org/3/using/configure.html#generated-files",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155734,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBMPDEC_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155736,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LDFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155737,
+    "url": "https://docs.python.org/3/using/configure.html#cross-compiling-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155740,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-dtrace",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155741,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-build",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155742,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PURIFY",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155743,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CONFIGURE_CPPFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155745,
+    "url": "https://docs.python.org/3/using/configure.html#make-profile-opt",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155746,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-wasm-pthreads",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155747,
+    "url": "https://openssl-library.org/roadmap/index.html",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155748,
+    "url": "https://docs.python.org/3/using/configure.html#main-build-steps",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155749,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_CPPFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155750,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CC",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155751,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-exec-prefix",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155753,
+    "url": "https://docs.python.org/3/using/configure.html#make-regen-all",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155754,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-BOLT_APPLY_FLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155755,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-system-libmpdec",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155756,
+    "url": "https://docs.python.org/3/using/configure.html#build-requirements",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155757,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-PKG_CONFIG_PATH",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155758,
+    "url": "https://docs.python.org/3/using/configure.html#preprocessor-flags",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155759,
+    "url": "https://docs.python.org/3/using/configure.html#python-debug-build",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155760,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-ZLIB_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155761,
+    "url": "https://docs.python.org/3/library/winreg.html#module-winreg",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155765,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CC",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155766,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-GDBM_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155767,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-thread-sanitizer",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155768,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-wheel-pkg-dir",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155769,
+    "url": "https://docs.python.org/3/using/configure.html#make-clean",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155770,
+    "url": "https://docs.python.org/3/using/configure.html#requirements-for-optional-modules",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155772,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-ensurepip",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155773,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-universal-archs",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155774,
+    "url": "https://docs.python.org/3/using/configure.html#options-for-third-party-dependencies",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155775,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-BASECFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155776,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155777,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-BZIP2_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155778,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_CORE_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155780,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-EXTRA_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155782,
+    "url": "https://docs.python.org/3/using/configure.html#make-ci",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155783,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-assertions",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155784,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-doc-strings",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155785,
+    "url": "https://github.com/ossf/wg-best-practices-os-developers/blob/main/docs/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.md#enable-run-time-checks-for-stack-based-buffer-overflows",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155786,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-profiling",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155787,
+    "url": "https://github.com/ossf/wg-best-practices-os-developers/blob/main/docs/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.md#enable-warning-about-trampolines-that-require-executable-stacks",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155788,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CPPFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155789,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-MACHDEP",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155790,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-shared",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155794,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-c-locale-coercion",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155795,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-PANEL_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155797,
+    "url": "https://github.com/python/cpython/issues/114505#issuecomment-1907021718",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155798,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-OPT",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155800,
+    "url": "https://github.com/python/cpython/tree/3.14/iOS/README.rst",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155801,
+    "url": "https://docs.python.org/3/using/configure.html#security-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155802,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-computed-gotos",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155803,
+    "url": "https://openssl-library.org/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155804,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-LDFLAGS_NODIST",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155805,
+    "url": "https://linux.die.net/man/3/libuuid",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155806,
+    "url": "https://docs.python.org/3/using/configure.html#performance-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155807,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CXX",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155808,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-openssl-rpath",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155809,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CONFIGURE_CFLAGS_NODIST",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155810,
+    "url": "https://docs.python.org/3/using/configure.html#debug-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155811,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-LINKCC",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155812,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#zoneinfo.TZPATH",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155813,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#module-zoneinfo",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155814,
+    "url": "https://docs.python.org/3/using/configure.html#make",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155816,
+    "url": "https://en.wikipedia.org/wiki/NaN#Floating_point",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155817,
+    "url": "https://www.zlib.net",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155819,
+    "url": "https://gnu.org/software/autoconf",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155822,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-BASECPPFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155823,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-LDSHARED",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155824,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#c.PyMODINIT_FUNC",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155825,
+    "url": "https://docs.python.org/3/using/configure.html#compiler-flags",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155826,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-pkg-config",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155828,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBREADLINE_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155829,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-test-modules",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155830,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-big-digits",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155831,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CONFIGURE_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155832,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CFLAGS_CEVAL",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155833,
+    "url": "https://sourceware.org/bzip2/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155835,
+    "url": "https://github.com/ossf/wg-best-practices-os-developers/blob/main/docs/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.md#fortify-sources-for-unsafe-libc-usage-and-buffer-overflows",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155836,
+    "url": "https://tukaani.org/xz/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155842,
+    "url": "https://github.com/python/cpython/issues/65320",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155844,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-memory-sanitizer",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155845,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-wasm-dynamic-linking",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155847,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-framework",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155851,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-suffix",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155852,
+    "url": "https://docs.python.org/3/using/configure.html#main-files-of-the-build-system",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155854,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-optimizations",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155855,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-build-python",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155856,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-address-sanitizer",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155858,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBFFI_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155859,
+    "url": "https://docs.python.org/3/library/dbm.html#module-dbm",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155861,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-tzpath",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155862,
+    "url": "https://docs.python.org/3/using/configure.html#main-makefile-targets",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155863,
+    "url": "https://docs.python.org/3/using/configure.html#linker-flags",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155865,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBFFI_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155866,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-framework-name",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155867,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_CORE_LDFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155868,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155870,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-TCLTK_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155871,
+    "url": "https://docs.python.org/3/using/configure.html#",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155872,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CONFIGURE_LDFLAGS_NODIST",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155873,
+    "url": "https://clang.llvm.org/docs/AttributeReference.html#preserve-none",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155874,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-TCLTK_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155875,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_LDFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155876,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CPPFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155877,
+    "url": "https://www.bytereef.org/mpdecimal/doc/libmpdec/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155878,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155880,
+    "url": "https://docs.python.org/3/using/configure.html#general-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155881,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-BLDSHARED",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155883,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-bolt",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155884,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBZSTD_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155885,
+    "url": "https://www.thrysoee.dk/editline/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155886,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CFLAGS_ALIASING",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155888,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155889,
+    "url": "https://en.cppreference.com/w/c/11",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155891,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBSQLITE3_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155892,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-strict-overflow",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155893,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-app-store-compliance",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155896,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBREADLINE_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155897,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-BZIP2_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155898,
+    "url": "https://docs.python.org/3/using/configure.html#c.Py_REMOTE_DEBUG",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155899,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-builtin-hashlib-hashes",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155901,
+    "url": "https://docs.python.org/3/using/configure.html#id2",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155902,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CPP",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155904,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBMPDEC_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155906,
+    "url": "https://docs.python.org/3/using/configure.html#id9",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155907,
+    "url": "https://docs.python.org/3/using/configure.html#c-extensions",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155908,
+    "url": "https://docs.python.org/3/using/configure.html#id8",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155910,
+    "url": "https://docs.python.org/3/library/uuid.html#module-uuid",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155911,
+    "url": "https://docs.python.org/3/using/configure.html#id7",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155912,
+    "url": "https://docs.python.org/3/using/configure.html#id6",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155913,
+    "url": "https://docs.python.org/3/using/configure.html#id5",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155914,
+    "url": "https://docs.python.org/3/using/configure.html#id4",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155915,
+    "url": "https://docs.python.org/3/using/configure.html#id3",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155916,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PROFILE_TASK",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155917,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBSQLITE3_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155918,
+    "url": "https://www.tcl-lang.org/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155920,
+    "url": "https://docs.python.org/3/using/configure.html#configure-options-for-dependencies",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155922,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-HOSTRUNNER",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155923,
+    "url": "https://peps.python.org/pep-0007/",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155925,
+    "url": "https://packaging.python.org/en/latest/specifications/platform-compatibility-tags/#macos",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155926,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-lto",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155928,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-openssl",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155933,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBEDIT_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155934,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-CFLAGS_NODIST",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155935,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBUUID_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155936,
+    "url": "https://tiswww.case.edu/php/chet/readline/rltop.html",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155939,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#zoneinfo-data-compile-time-config",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155940,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-CURSES_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155941,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_STDMODULE_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155943,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBLZMA_LIBS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155944,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-LIBEDIT_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155945,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-libc",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155946,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-ssl-default-suites",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155948,
+    "url": "https://docs.python.org/3/howto/instrumentation.html#instrumentation",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155951,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-BOLT_INSTRUMENT_FLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155953,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/using/configure.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155955,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-arg-ZLIB_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155957,
+    "url": "https://docs.python.org/3/using/configure.html#ios-options",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155959,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-readline",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155960,
+    "url": "https://docs.python.org/3/using/configure.html#envvar-PY_BUILTIN_MODULE_CFLAGS",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155962,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-valgrind",
+    "parentUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 155971,
+    "url": "https://docs.python.org/3/library/contextvars.html#context-variables",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155972,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Token.old_value",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155974,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar.reset",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155975,
+    "url": "https://peps.python.org/pep-0567/",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155977,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Token.MISSING",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155979,
+    "url": "https://docs.python.org/3/library/contextvars.html#manual-context-management",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155981,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context.values",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155983,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Token.var",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155985,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar.name",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155986,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar.get",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155988,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context.get",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155992,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar.set",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155993,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context.run",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155994,
+    "url": "https://docs.python.org/3/library/contextvars.html#asyncio-support",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155995,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context.copy",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 155998,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context.keys",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 156001,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/contextvars.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 156003,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context.items",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 156006,
+    "url": "https://docs.python.org/3/library/contextvars.html#",
+    "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_DontWriteBytecodeFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_DontWriteBytecodeFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "contextvars — Context Variables — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "contextvars — Context Variables — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Monitoring C API — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchRightEvent"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Monitoring C API — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchRightEvent"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
