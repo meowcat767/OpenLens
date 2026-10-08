@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 201,
+    "url": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html",
+    "title": "Python Software Foundation News: Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉",
+    "content": "Thursday, April 23, 2026 Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 The PSF is pleased to announce its first batch of PSF Fellows for 2026. Let us welcome the new PSF Fellows for Q1! The following people continue to do amazing things for the Python community: Bill Deegan Website, LinkedIn, GitHub, X El-karece Asiedu LinkedIn (James) Kanin Kearpimy Linktree Jonas Obrist Kristen McIntyre Lucie Anglade Website Phebe Polk Philippe Gagnon Sarah Kuchinsky Mastodon, Bluesky Simon Charette LinkedIn, GitHub Sony Valdez Website, GitHub Stan Ulbrych GitHub, Mastodon Steve Yonkeu Website, GitHub Thank you for your continued contributions. We have added you to our Fellows Roster. The above members help support the Python ecosystem by being phenomenal leaders, sustaining the growth of the Python scientific community, maintaining virtual Python communities, maintaining Python libraries, creating educational material, organizing Python events and conferences, starting Python communities in local regions, and overall being great mentors in our community. Each of them continues to help make Python more accessible around the world. To learn more about the new Fellow members, check out their links above. Let\u0027s continue recognizing Pythonistas all over the world for their impact on our community. The criteria for Fellow members is available on our PSF Fellow Membership page. If you would like to nominate someone to be a PSF Fellow, please send a description of their Python accomplishments and their email address to psf-fellow at python.org. We are accepting nominations for Quarter 2 of 2026 through May 20th, 2026. Are you a PSF Fellow and want to help the Work Group review nominations? Contact us at psf-fellow at python.org. Posted by Marie Nordin at 4/23/2026 07:07:00 AM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (52) ► September (6) ► August (19) ► July (7) ► June (6) ► May (3) ▼ April (3) Announcing Python Software Foundation Fellow Membe... PyCon US 2026: Why we\u0027re asking you to think about... Reflecting on Five Years as the PSF’s First CPytho... ► March (1) ► February (3) ► January (4) ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► March (3) ► February (1) ► January (1) ► 2021 (42) ► December (3) ► November (4) ► October (3) ► September (2) ► August (1) ► July (2) ► June (4) ► May (12) ► April (5) ► March (1) ► February (4) ► January (1) ► 2020 (51) ► December (8) ► November (3) ► October (3) ► September (4) ► July (4) ► June (2) ► May (10) ► April (11) ► March (4) ► January (2) ► 2019 (45) ► December (3) ► November (3) ► October (3) ► September (4) ► August (3) ► July (3) ► June (5) ► May (11) ► April (1) ► March (2) ► February (5) ► January (2) ► 2018 (31) ► December (5) ► November (1) ► October (4) ► September (1) ► August (2) ► July (3) ► June (3) ► May (5) ► April (2) ► March (2) ► February (1) ► January (2) ► 2017 (32) ► December (3) ► November (2) ► October (4) ► September (6) ► August (2) ► July (2) ► May (2) ► April (3) ► March (2) ► February (2) ► January (4) ► 2016 (27) ► December (2) ► October (2) ► August (4) ► July (1) ► June (3) ► May (6) ► April (4) ► March (2) ► January (3) ► 2015 (67) ► December (2) ► November (4) ► October (4) ► September (1) ► August (2) ► July (4) ► June (6) ► May (4) ► April (13) ► March (14) ► February (9) ► January (4) ► 2014 (14) ► October (1) ► September (1) ► August (2) ► July (1) ► May (1) ► April (1) ► March (2) ► February (3) ► January (2) ► 2013 (18) ► November (1) ► September (2) ► August (1) ► July (1) ► June (1) ► April (1) ► March (5) ► February (3) ► January (3) ► 2012 (21) ► December (3) ► November (2) ► October (2) ► September (1) ► August (1) ► July (1) ► June (2) ► May (4) ► April (1) ► March (1) ► January (3) ► 2011 (55) ► December (2) ► November (1) ► October (7) ► September (5) ► August (2) ► July (1) ► June (3) ► May (8) ► April (8) ► March (13) ► February (2) ► January (3) ► 2010 (35) ► December (4) ► November (1) ► October (3) ► September (2) ► August (1) ► July (8) ► June (6) ► May (2) ► April (4) ► Marc",
+    "scrapedAt": "2026-10-08 18:53:36.94417"
+  },
+  {
+    "id": 200,
+    "url": "https://docs.python.org",
+    "title": "3.14.8 Documentation",
+    "content": "Navigation index modules | Python » 3.14.8 Documentation » | Theme Auto Light Dark | Python 3.14.8 documentation Welcome! This is the official documentation for Python 3.14.8. Documentation sections: What\u0027s new in Python 3.14? Or all \"What\u0027s new\" documents since Python 2.0 Tutorial Start here: a tour of Python\u0027s syntax and features Built-ins reference Built-in functions and classes Library reference Standard library modules Language reference Syntax and language elements Python setup and usage How to install, configure, and use Python Python HOWTOs In-depth topic manuals Installing Python modules Third-party modules and PyPI.org Extending and embedding For C/C++ programmers Python\u0027s C API C API reference FAQs Frequently asked questions (with answers!) Deprecations Deprecated functionality Other resources: Python developer\u0027s guide Information on contributing to Python Python Packaging User Guide Resources relating to Python packaging Audio/visual talks Podcasts, talks, and video presentations from the community Python Enhancement Proposals Index of proposed improvements to Python Static Typing with Python Information and guides about Python type safety Indices, glossary, and search: Global module index All modules and libraries General index All functions, classes, and terms Glossary Terms explained Search page Search this documentation Complete table of contents All sections and subsections Project information: Reporting issues Contributing to docs Download the documentation History and license of Python Copyright About the documentation Download Download these documents Docs by version Python 3.16 (in development) Python 3.15 (pre-release) Python 3.14 (stable) Python 3.13 (security-fixes) Python 3.12 (security-fixes) Python 3.11 (security-fixes) Python 3.10 (EOL) Python 3.9 (EOL) Python 3.8 (EOL) Python 3.7 (EOL) Python 3.6 (EOL) Python 3.5 (EOL) Python 3.4 (EOL) Python 3.3 (EOL) Python 3.2 (EOL) Python 3.1 (EOL) Python 3.0 (EOL) Python 2.7 (EOL) Python 2.6 (EOL) All versions Other resources PEP Index Beginner\u0027s Guide Book List Audio/Visual Talks Python Developer’s Guide « Navigation index modules | Python » 3.14.8 Documentation » | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 18:53:35.34321"
+  },
+  {
+    "id": 199,
+    "url": "https://docs.ansible.com/",
+    "title": "Ansible Community | Ansible documentation",
+    "content": "Ansible community documentation Ansible community documentation can help you configure most operating systems, deploy software, and orchestrate advanced workflows to support application deployment, system updates, and more! Looking for Red Hat Ansible Automation Platform?  Get started Users Developers Maintainers Ansible ecosystem Contribute to Ansible Get started Ansible is open-source technology that can perform virtually any IT task and remove complexity from workflows. Code that reads like documentation Ansible is an automation language that can describe any IT environment, whether homelab or large scale infrastructure. It is easy to learn, beautiful code that reads like clear documentation. Freedom from repetitive tasks As an automation engine, Ansible ensures that your IT environment stays exactly as you describe it, no matter the complexity. Not only that, you can automate any command with Ansible to eliminate drudgery from your daily routine. Ansible gives you tooling to be more productive and solve problems that really matter. Ready to start automating? pip install ansible  Copied! Understand the fundamentals of Ansible automation Install the Ansible package Run your first ad hoc command in a few easy steps Back to top  Users Automate the management of remote systems and control their desired state. Start writing Ansible playbooks Learn about Ansible modules Build inventory files to manage multiple hosts Find more user documentation  Back to top  Developers Extend automation with custom Ansible modules, add functionality to existing modules, or fix bugs to improve existing code. Set up your development environment Learn how Ansible works Write custom modules or plugins Find more developer documentation  Back to top  Maintainers Ansible community maintainers are trusted contributors who oversee project lifecycle and overall health. Review community maintainer responsibilities Understand Ansible contributor paths Explore ways to grow community Find more maintainer documentation  Back to top  Grab the Bullhorn The Bullhorn is a weekly newsletter full of Ansible Community news and updates. Read the latest edition Ansible ecosystem View more  Expand automation to an unlimited set of use cases with projects in the Ansible ecosystem. Ansible Core The Ansible programming language, automation tooling, and architectural framework. Find out more  Antsibull Nox A nox helper library that simplifies the process of testing Ansible collections through a common interface for various tools. Find out more  Ansible Builder Ansible Builder lets you create Execution Environments, which are container images that act as Ansible control nodes. Find out more  Ansible developer tools An integrated tool kit and framework for creating Ansible automation content, from bootstrapping new projects to setting up ci/cd pipelines. Find out more  Back to top  Contribute You can contribute to Ansible in so many ways... Organize meetups with other automation enthusiasts. Give lighting talks. Host Ansible workshops. Code a new module or fix a bug. Improve the documentation. Want to get involved? Check out our contributor resources and join the Ansible community - we\u0027d love to have you. Back to top  Red Hat Ansible Automation Platform provides everything needed to create, execute, and manage automation in a single subscription. From execution environments to certified collections to automation analytics, discover the features and benefits of Ansible Automation Platform. Red Hat Ansible Automation Platform documentation Back to top  CC BY-SA 4.0 Privacy policy Code of conduct Sponsored by",
+    "scrapedAt": "2026-10-08 18:53:34.169034"
+  },
+  {
+    "id": 198,
+    "url": "https://www.python.org/events/calendars/",
+    "title": "Python Calendars | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Choose a calendar to view events. Python Events Calendar Python User Group Calendar",
+    "scrapedAt": "2026-10-08 18:53:32.985671"
+  },
+  {
+    "id": 197,
+    "url": "https://www.tornadoweb.org/",
+    "title": "Tornado Web Server — Tornado 6.5.10 documentation",
+    "content": "Tornado Web Server View page source ¶ Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user. Quick links¶ Current version: 6.5.10 (download from PyPI, release notes) Source (GitHub) Mailing lists: discussion and announcements Stack Overflow Wiki Hello, world¶ Here is a simple “Hello, world” example web app for Tornado: import asyncio\nimport tornado\n\nclass MainHandler(tornado.web.RequestHandler):\n    def get(self):\n        self.write(\"Hello, world\")\n\ndef make_app():\n    return tornado.web.Application([\n        (r\"/\", MainHandler),\n    ])\n\nasync def main():\n    app \u003d make_app()\n    app.listen(8888)\n    await asyncio.Event().wait()\n\nif __name__ \u003d\u003d \"__main__\":\n    asyncio.run(main())\n This example does not use any of Tornado’s asynchronous features; for that see this simple chat room. Threads and WSGI¶ Tornado is different from most Python web frameworks. It is not based on WSGI, and it is typically run with only one thread per process. See the User’s guide for more on Tornado’s approach to asynchronous programming. While some support of WSGI is available in the tornado.wsgi module, it is not a focus of development and most applications should be written to use Tornado’s own interfaces (such as tornado.web) directly instead of using WSGI. In general, Tornado code is not thread-safe. The only method in Tornado that is safe to call from other threads is IOLoop.add_callback. You can also use IOLoop.run_in_executor to asynchronously run a blocking function on another thread, but note that the function passed to run_in_executor should avoid referencing any Tornado objects. run_in_executor is the recommended way to interact with blocking code. asyncio Integration¶ Tornado is integrated with the standard library asyncio module and shares the same event loop (by default since Tornado 5.0). In general, libraries designed for use with asyncio can be mixed freely with Tornado. Installation¶ pip install tornado\n Tornado is listed in PyPI and can be installed with pip. Note that the source distribution includes demo applications that are not present when Tornado is installed in this way, so you may wish to download a copy of the source tarball or clone the git repository as well. Prerequisites: Tornado 6.3 requires Python 3.9 or newer. The following optional packages may be useful: pycurl is used by the optional tornado.curl_httpclient. Libcurl version 7.81 or higher is required (the version shipped by Ubuntu 22.04 LTS). pycares is an alternative non-blocking DNS resolver that can be used when threads are not appropriate. Platforms: Tornado is designed for Unix-like platforms, with best performance and scalability on systems supporting epoll (Linux), kqueue (BSD/macOS), or /dev/poll (Solaris). Tornado will also run on Windows, although this configuration is not officially supported or recommended for production use. Some features are missing on Windows (including multi-process mode) and scalability is limited (Even though Tornado is built on asyncio, which supports Windows, Tornado does not use the APIs that are necessary for scalable networking on Windows). Documentation¶ This documentation is also available in PDF and Epub formats. User’s guide Introduction Asynchronous and non-Blocking I/O Coroutines Queue example - a concurrent web spider Structure of a Tornado web application Templates and UI Authentication and security Running and deploying Web framework tornado.web — RequestHandler and Application classes tornado.template — Flexible output generation tornado.routing — Basic routing implementation tornado.escape — Escaping and string manipulation tornado.locale — Internationalization support tornado.websocket — Bidirectional communication to the browser HTTP servers and clients tornado.httpserver — Non-blocking HTTP server tornado.httpclient — Asynchronous HTTP client tornado.httputil — Manipulate HTTP headers and URLs tornado.http1connection – HTTP/1.x client/server implementation Asynchronous networking tornado.ioloop — Main event loop tornado.iostream — Convenient wrappers for non-blocking sockets tornado.netutil — Miscellaneous network utilities tornado.tcpclient — IOStream connection factory tornado.tcpserver — Basic IOStream-based TCP server Coroutines and concurrency tornado.gen — Generator-based coroutines tornado.locks – Synchronization primitives tornado.queues – Queues for coroutines tornado.process — Utilities for multiple processes Integration with other services tornado.auth — Third-party login with OpenID and OAuth tornado.wsgi — Interoperability with other Python frameworks and servers tornado.platform.caresresolver — Asynchronous DNS Resolver using C-Ares tornado.platform.twisted — Bridges between Twisted and Tornado tornado.platform.async",
+    "scrapedAt": "2026-10-08 18:53:31.873727"
+  },
+  {
     "id": 196,
     "url": "https://pytorch.org/",
     "title": "PyTorch Foundation - PyTorch",
@@ -1360,26 +1395,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 197,
-    "url": "https://www.tornadoweb.org/"
-  },
-  {
-    "id": 198,
-    "url": "https://www.python.org/events/calendars/"
-  },
-  {
-    "id": 199,
-    "url": "https://docs.ansible.com/"
-  },
-  {
-    "id": 200,
-    "url": "https://docs.python.org"
-  },
-  {
-    "id": 201,
-    "url": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
   },
   {
     "id": 202,
@@ -35106,10 +35121,2605 @@ window.searchData = [
     "id": 15288,
     "url": "https://pytorch.org/join-ecosystem",
     "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15289,
+    "url": "https://www.tornadoweb.org/en/stable/releases.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15290,
+    "url": "https://www.tornadoweb.org/en/stable/locale.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15291,
+    "url": "https://www.tornadoweb.org/en/stable/tcpclient.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15292,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15293,
+    "url": "https://www.tornadoweb.org/en/stable/process.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15294,
+    "url": "https://wsgi.readthedocs.io/en/latest/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15295,
+    "url": "https://pypi.python.org/pypi/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15296,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15297,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15298,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15299,
+    "url": "https://www.tornadoweb.org/en/stable/twisted.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15300,
+    "url": "https://www.tornadoweb.org/en/stable/httputil.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15301,
+    "url": "https://github.com/tornadoweb/tornado/tree/stable/demos/chat",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15302,
+    "url": "https://www.tornadoweb.org/en/stable/#threads-and-wsgi",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15303,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15304,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15305,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15306,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15307,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15308,
+    "url": "https://www.tornadoweb.org/en/stable/#quick-links",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15309,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15310,
+    "url": "https://www.tornadoweb.org/en/stable/caresresolver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15311,
+    "url": "https://github.com/tornadoweb/tornado/wiki/Links",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15312,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15313,
+    "url": "https://www.tornadoweb.org/en/stable/_sources/index.rst.txt",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15314,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.10.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15315,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15316,
+    "url": "https://www.tornadoweb.org/en/stable/utilities.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15317,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.9.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15318,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop.IOLoop.add_callback",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15319,
+    "url": "https://www.tornadoweb.org/en/stable/#documentation",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15320,
+    "url": "https://www.tornadoweb.org/en/stable/guide/coroutines.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15321,
+    "url": "https://www.tornadoweb.org/en/stable/networking.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15322,
+    "url": "https://www.tornadoweb.org/en/stable/asyncio.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15323,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop.IOLoop.run_in_executor",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15324,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15325,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15326,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15327,
+    "url": "https://www.tornadoweb.org/en/stable/auth.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15328,
+    "url": "https://www.tornadoweb.org/en/stable/util.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15329,
+    "url": "https://www.tornadoweb.org/en/stable/locks.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15330,
+    "url": "https://www.tornadoweb.org/en/stable/webframework.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15331,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15332,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15333,
+    "url": "https://groups.google.com/forum/#!forum/python-tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15334,
+    "url": "https://www.tornadoweb.org/en/stable/guide/intro.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15335,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15336,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15337,
+    "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15338,
+    "url": "https://www.tornadoweb.org/en/stable/#hello-world",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15339,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15340,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15341,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15342,
+    "url": "https://www.tornadoweb.org/en/stable/wsgi.html#module-tornado.wsgi",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15343,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15345,
+    "url": "https://www.tornadoweb.org/en/stable/guide/async.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15346,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15347,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15348,
+    "url": "https://www.tornadoweb.org/en/stable/integration.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15349,
+    "url": "https://www.tornadoweb.org/en/stable/options.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15350,
+    "url": "https://stackoverflow.com/questions/tagged/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15351,
+    "url": "https://github.com/tornadoweb/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15352,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15353,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.8.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15354,
+    "url": "https://www.tornadoweb.org/en/stable/httpclient.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15355,
+    "url": "https://www.tornadoweb.org/en/stable/iostream.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15356,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15357,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15358,
+    "url": "https://www.tornadoweb.org/en/stable/#asyncio-integration",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15359,
+    "url": "https://www.tornadoweb.org/en/stable/web.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15360,
+    "url": "https://www.tornadoweb.org/en/stable/#discussion-and-support",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15361,
+    "url": "https://www.tornadoweb.org/en/stable/guide/queues.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15362,
+    "url": "https://pypi.org/project/tornado/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15363,
+    "url": "https://pypi.org/project/pycares/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15364,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15365,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15366,
+    "url": "https://www.tornadoweb.org/en/stable/http1connection.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15367,
+    "url": "https://www.tornadoweb.org/en/stable/search.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15368,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15369,
+    "url": "https://www.tornadoweb.org/en/stable/genindex.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15370,
+    "url": "https://www.tornadoweb.org/en/stable/py-modindex.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15371,
+    "url": "https://www.tornadoweb.org/en/stable/gen.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15372,
+    "url": "https://www.tornadoweb.org/en/stable/httpserver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15373,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15374,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15375,
+    "url": "https://www.tornadoweb.org/en/stable/guide/templates.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15376,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.4.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15377,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.4.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15378,
+    "url": "https://www.tornadoweb.org",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15379,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.5.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15380,
+    "url": "http://pycurl.io/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15381,
+    "url": "https://www.tornadoweb.org/en/stable/web.html#module-tornado.web",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15382,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15383,
+    "url": "https://github.com/tornadoweb/tornado/issues",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15384,
+    "url": "https://www.tornadoweb.org/en/stable/routing.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15385,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15386,
+    "url": "https://www.tornadoweb.org/en/stable/guide/structure.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15387,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15388,
+    "url": "https://readthedocs.org/projects/tornado/downloads/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15389,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15390,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15391,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15392,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15393,
+    "url": "https://www.tornadoweb.org/en/stable/#",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15394,
+    "url": "https://www.tornadoweb.org/en/stable/guide.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15395,
+    "url": "https://www.tornadoweb.org/en/stable/websocket.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15396,
+    "url": "https://en.wikipedia.org/wiki/FriendFeed",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15397,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15398,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15399,
+    "url": "https://www.tornadoweb.org/en/stable/tcpserver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15400,
+    "url": "https://www.tornadoweb.org/en/stable/coroutine.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15401,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15402,
+    "url": "https://www.tornadoweb.org/en/stable/log.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15403,
+    "url": "https://www.tornadoweb.org/en/stable/guide/running.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15404,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15405,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.6.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15406,
+    "url": "https://www.tornadoweb.org/en/stable/testing.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15407,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15408,
+    "url": "https://www.tornadoweb.org/en/stable/concurrent.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15409,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15410,
+    "url": "https://www.tornadoweb.org/en/stable/#installation",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15411,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15412,
+    "url": "https://www.tornadoweb.org/en/stable/wsgi.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15413,
+    "url": "https://www.tornadoweb.org/en/stable/#tornado-web-server",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15414,
+    "url": "https://www.tornadoweb.org/en/stable/escape.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15415,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15416,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.7.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15417,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15418,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15419,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15420,
+    "url": "https://www.tornadoweb.org/en/stable/template.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15421,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15422,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15423,
+    "url": "https://en.wikipedia.org/wiki/Push_technology#Long_polling",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15424,
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15425,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15426,
+    "url": "https://www.tornadoweb.org/en/stable/netutil.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15428,
+    "url": "https://www.tornadoweb.org/en/stable/http.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15429,
+    "url": "https://www.tornadoweb.org/en/stable/autoreload.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15430,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15431,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15432,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15433,
+    "url": "https://www.tornadoweb.org/en/stable/faq.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15434,
+    "url": "https://www.tornadoweb.org/en/stable/guide/security.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15435,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15436,
+    "url": "https://www.tornadoweb.org/en/stable/queues.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15437,
+    "url": "https://groups.google.com/forum/#!forum/python-tornado-announce",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15438,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15439,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15442,
+    "url": "https://forum.ansible.com/pub/how-to-contribute",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15443,
+    "url": "https://docs.ansible.com/projects/builder/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15444,
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15445,
+    "url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15446,
+    "url": "https://docs.ansible.com/ansible/latest/community/maintainers_guidelines.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15447,
+    "url": "https://docs.ansible.com/ansible/latest/community/maintainers_guidelines.html#expanding-the-collection-community",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15448,
+    "url": "https://docs.ansible.com/ansible/latest/module_plugin_guide/modules_intro.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15449,
+    "url": "https://docs.ansible.com/community.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15450,
+    "url": "https://docs.ansible.com/projects/ansible-core/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15451,
+    "url": "https://www.redhat.com/en/technologies/management/ansible?sc_id\u003dRHCTE0250000464439",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15452,
+    "url": "https://docs.ansible.com/#ecosystem",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15453,
+    "url": "https://docs.ansible.com/maintainers.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15454,
+    "url": "https://docs.ansible.com/ansible/latest/index.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15455,
+    "url": "https://docs.ansible.com/ansible/latest/dev_guide/overview_architecture.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15456,
+    "url": "https://docs.ansible.com/#get_started",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15457,
+    "url": "https://docs.ansible.com/ansible/latest/community/code_of_conduct.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15458,
+    "url": "https://docs.ansible.com/#contribute",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15459,
+    "url": "https://docs.ansible.com/developers.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15460,
+    "url": "https://docs.ansible.com/projects/dev-tools/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15461,
+    "url": "https://docs.ansible.com/#developers",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15462,
+    "url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/?sc_id\u003dRHCTE0250000464439",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15463,
+    "url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-and-upgrading-ansible",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15464,
+    "url": "https://docs.ansible.com/#maintainers",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15465,
+    "url": "https://docs.ansible.com/#platform",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15466,
+    "url": "https://www.redhat.com/en/about/privacy-policy",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15467,
+    "url": "https://docs.ansible.com/users.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15468,
+    "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15469,
+    "url": "https://docs.ansible.com/#top",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15470,
+    "url": "https://docs.ansible.com/ansible/latest/community/contributor_path.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15471,
+    "url": "https://forum.ansible.com/c/news/bullhorn/17",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15472,
+    "url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15473,
+    "url": "https://docs.ansible.com/#users",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15474,
+    "url": "https://docs.ansible.com/projects/antsibull-nox/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15475,
+    "url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html#playbook-syntax",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15476,
+    "url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html#environment-setup",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15477,
+    "url": "https://docs.ansible.com/ecosystem.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15478,
+    "url": "https://docs.python.org/3/library/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15479,
+    "url": "https://docs.python.org/3/glossary.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15480,
+    "url": "https://docs.python.org/3.13/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15481,
+    "url": "https://docs.python.org/3/about.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15483,
+    "url": "https://docs.python.org/3.0/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15485,
+    "url": "https://docs.python.org/3/#",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15487,
+    "url": "https://docs.python.org/3.4/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15488,
+    "url": "https://devguide.python.org/documentation/help-documenting/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15489,
+    "url": "https://docs.python.org/2.7/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15490,
+    "url": "https://wiki.python.org/moin/BeginnersGuide",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15491,
+    "url": "https://docs.python.org/3.8/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15492,
+    "url": "https://docs.python.org/3/search.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15493,
+    "url": "https://typing.python.org",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15494,
+    "url": "https://docs.python.org/3.12/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15495,
+    "url": "https://docs.python.org/3.1/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15497,
+    "url": "https://peps.python.org/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15498,
+    "url": "https://docs.python.org/3/c-api/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15499,
+    "url": "https://docs.python.org/3.16/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15500,
+    "url": "https://docs.python.org/3/tutorial/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15501,
+    "url": "https://docs.python.org/3.5/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15502,
+    "url": "https://www.python.org/doc/av/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15503,
+    "url": "https://docs.python.org/3/using/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15504,
+    "url": "https://docs.python.org/3.9/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15506,
+    "url": "https://docs.python.org/3.11/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15508,
+    "url": "https://docs.python.org/3/download.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15509,
+    "url": "https://docs.python.org/3/howto/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15510,
+    "url": "https://docs.python.org/3.2/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15511,
+    "url": "https://docs.python.org/3/builtins/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15514,
+    "url": "https://devguide.python.org",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15515,
+    "url": "https://docs.python.org/3.15/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15516,
+    "url": "https://devguide.python.org/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15517,
+    "url": "https://docs.python.org/3/license.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15518,
+    "url": "https://docs.python.org/3.6/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15520,
+    "url": "https://docs.python.org/3/reference/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15521,
+    "url": "https://docs.python.org/3.14/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15523,
+    "url": "https://docs.python.org/3/faq/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15524,
+    "url": "https://docs.python.org/3.10/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15525,
+    "url": "https://docs.python.org/3.3/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15530,
+    "url": "https://www.python.org/doc/versions/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15531,
+    "url": "https://docs.python.org/3/installing/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15532,
+    "url": "https://docs.python.org/3/extending/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15533,
+    "url": "https://docs.python.org/2.6/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15534,
+    "url": "https://docs.python.org/3.7/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15535,
+    "url": "https://packaging.python.org",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15536,
+    "url": "https://wiki.python.org/moin/PythonBooks",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15537,
+    "url": "https://pyfound.blogspot.com/2007/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15538,
+    "url": "https://pyfound.blogspot.com/2017/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15539,
+    "url": "https://pyfound.blogspot.com/2015/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15540,
+    "url": "https://pyfound.blogspot.com/2009/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15541,
+    "url": "https://pyfound.blogspot.com/2024/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15542,
+    "url": "https://pyfound.blogspot.com/2021/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15543,
+    "url": "https://pyfound.blogspot.com/2025/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15544,
+    "url": "https://pyfound.blogspot.com/2011/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15545,
+    "url": "https://pyfound.blogspot.com/2016/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15546,
+    "url": "https://pyfound.blogspot.com/2019/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15547,
+    "url": "https://pyfound.blogspot.com/2018/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15548,
+    "url": "https://pyfound.blogspot.com/2008/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15549,
+    "url": "https://pyfound.blogspot.com/2006/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15550,
+    "url": "https://pyfound.blogspot.com/2012/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15551,
+    "url": "https://pyfound.blogspot.com/2013/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15552,
+    "url": "https://pyfound.blogspot.com/2023/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15553,
+    "url": "https://pyfound.blogspot.com/2007/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15554,
+    "url": "https://pyfound.blogspot.com/2021/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15555,
+    "url": "https://pyfound.blogspot.com/2015/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15556,
+    "url": "https://pyfound.blogspot.com/2024/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15557,
+    "url": "https://pyfound.blogspot.com/2011/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15558,
+    "url": "https://pyfound.blogspot.com/2016/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15559,
+    "url": "https://pyfound.blogspot.com/2020/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15560,
+    "url": "https://pyfound.blogspot.com/2019/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15561,
+    "url": "https://pyfound.blogspot.com/2007/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15562,
+    "url": "https://pyfound.blogspot.com/2026/05/strategic-planning-at-psf.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15563,
+    "url": "https://baddogconsulting.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15564,
+    "url": "https://www.python.org/community/awards/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15565,
+    "url": "https://pyfound.blogspot.com/2023/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15566,
+    "url": "https://pyfound.blogspot.com/2013/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15567,
+    "url": "https://pyfound.blogspot.com/2017/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15568,
+    "url": "https://pyfound.blogspot.com/2019/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15569,
+    "url": "https://pyfound.blogspot.com/2009/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15570,
+    "url": "https://pyfound.blogspot.com/2021/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15571,
+    "url": "https://pyfound.blogspot.com/2024/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15572,
+    "url": "https://pyfound.blogspot.com/2015/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15573,
+    "url": "https://pyfound.blogspot.com/2012/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15574,
+    "url": "https://pyfound.blogspot.com/2011/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15575,
+    "url": "https://pyfound.blogspot.com/2007/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15576,
+    "url": "https://pyfound.blogspot.com/2008/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15577,
+    "url": "https://pyfound.blogspot.com/2008/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15578,
+    "url": "https://pyfound.blogspot.com/2020/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15579,
+    "url": "https://pyfound.blogspot.com/2006/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15580,
+    "url": "https://github.com/StanFromIreland",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15581,
+    "url": "https://pyfound.blogspot.com/2017/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15582,
+    "url": "https://pyfound.blogspot.com/2023/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15583,
+    "url": "https://pyfound.blogspot.com/2019/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15584,
+    "url": "https://pyfound.blogspot.com/2013/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15585,
+    "url": "https://pyfound.blogspot.com/2007/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15586,
+    "url": "https://pyfound.blogspot.com/2024/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15587,
+    "url": "https://pyfound.blogspot.com/2021/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15588,
+    "url": "https://yokwejuste.me/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15589,
+    "url": "https://pyfound.blogspot.com/2015/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15590,
+    "url": "https://pyfound.blogspot.com/2009/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15591,
+    "url": "https://pyfound.blogspot.com/2012/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15592,
+    "url": "https://pyfound.blogspot.com/2011/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15593,
+    "url": "https://pyfound.blogspot.com/2016/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15594,
+    "url": "https://pyfound.blogspot.com/2009/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15595,
+    "url": "https://pyfound.blogspot.com/2008/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15596,
+    "url": "https://pyfound.blogspot.com/2020/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15597,
+    "url": "https://pyfound.blogspot.com/2013/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15598,
+    "url": "https://pyfound.blogspot.com/2019/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15599,
+    "url": "https://pyfound.blogspot.com/2010/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15600,
+    "url": "https://pyfound.blogspot.com/2013/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15601,
+    "url": "https://pyfound.blogspot.com/2023/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15602,
+    "url": "https://pyfound.blogspot.com/2022/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15603,
+    "url": "https://pyfound.blogspot.com/2016/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15604,
+    "url": "https://pyfound.blogspot.com/2018/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15605,
+    "url": "https://pyfound.blogspot.com/2007/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15606,
+    "url": "https://github.com/charettes",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15607,
+    "url": "https://pyfound.blogspot.com/2014/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15608,
+    "url": "https://www.python.org/psf/sponsors/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15609,
+    "url": "https://pyfound.blogspot.com/2025/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15610,
+    "url": "https://pyfound.blogspot.com/2020/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15611,
+    "url": "https://pyfound.blogspot.com/2012/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15612,
+    "url": "https://pyfound.blogspot.com/2024/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15613,
+    "url": "https://github.com/yokwejuste",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15614,
+    "url": "https://pyfound.blogspot.com/2019/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15615,
+    "url": "https://pyfound.blogspot.com/2006/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15616,
+    "url": "https://pyfound.blogspot.com/2026/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15617,
+    "url": "https://pyfound.blogspot.com/2017/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15618,
+    "url": "https://pyfound.blogspot.com/2010/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15619,
+    "url": "https://pyfound.blogspot.com/2013/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15620,
+    "url": "https://github.com/mrvaldez",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15621,
+    "url": "https://pyfound.blogspot.com/2009/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15622,
+    "url": "https://pyfound.blogspot.com/2016/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15623,
+    "url": "https://pyfound.blogspot.com/2025/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15624,
+    "url": "https://pyfound.blogspot.com/2022/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15625,
+    "url": "https://pyfound.blogspot.com/2018/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15626,
+    "url": "https://pyfound.blogspot.com/2014/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15627,
+    "url": "https://pyfound.blogspot.com/2007/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15628,
+    "url": "https://pyfound.blogspot.com/2012/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15629,
+    "url": "https://pyfound.blogspot.com/2006/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15630,
+    "url": "https://pyfound.blogspot.com/2020/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15631,
+    "url": "https://pyfound.blogspot.com/2023/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15632,
+    "url": "https://pyfound.blogspot.com/2017/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15633,
+    "url": "https://pyfound.blogspot.com/2024/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15634,
+    "url": "https://pyfound.blogspot.com/2019/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15635,
+    "url": "https://pyfound.blogspot.com/2010/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15636,
+    "url": "https://pyfound.blogspot.com/2021/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15637,
+    "url": "https://pyfound.blogspot.com/2016/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15638,
+    "url": "https://pyfound.blogspot.com/2018/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15639,
+    "url": "https://pyfound.blogspot.com/2025/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15640,
+    "url": "https://pyfound.blogspot.com/2007/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15641,
+    "url": "https://www.linkedin.com/in/billdeegan/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15642,
+    "url": "https://pyfound.blogspot.com/2012/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15643,
+    "url": "https://pyfound.blogspot.com/2008/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15644,
+    "url": "https://pyfound.blogspot.com/2023/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15645,
+    "url": "https://pyfound.blogspot.com/2017/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15646,
+    "url": "https://pyfound.blogspot.com/2024/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15648,
+    "url": "https://pyfound.blogspot.com/2020/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15649,
+    "url": "https://pyfound.blogspot.com/2019/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15650,
+    "url": "https://pyfound.blogspot.com/2010/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15651,
+    "url": "https://pyfound.blogspot.com/2013/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15652,
+    "url": "https://pyfound.blogspot.com/2025/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15653,
+    "url": "https://pyfound.blogspot.com/2022/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15654,
+    "url": "https://pyfound.blogspot.com/2018/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15655,
+    "url": "https://pyfound.blogspot.com/2014/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15656,
+    "url": "https://pyfound.blogspot.com/2007/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15657,
+    "url": "https://www.python.org/psf/records/board/minutes/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15658,
+    "url": "https://mrvaldez.ph/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15659,
+    "url": "https://www.linkedin.com/in/simon-charette-1318b0b5/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15660,
+    "url": "https://pyfound.blogspot.com/2012/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15661,
+    "url": "https://pyfound.blogspot.com/2008/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15662,
+    "url": "https://pyfound.blogspot.com/2020/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15663,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d6001222137255401134\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15664,
+    "url": "https://pyfound.blogspot.com/2024/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15665,
+    "url": "https://pyfound.blogspot.com/2019/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15666,
+    "url": "https://pyfound.blogspot.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15667,
+    "url": "https://pyfound.blogspot.com/2021/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15668,
+    "url": "https://pyfound.blogspot.com/2023/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15669,
+    "url": "https://pyfound.blogspot.com/2017/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15670,
+    "url": "https://www.blogger.com/profile/15138793242213676112",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15671,
+    "url": "https://pyfound.blogspot.com/2013/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15672,
+    "url": "https://pyfound.blogspot.com/2026/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15673,
+    "url": "https://pyfound.blogspot.com/2023/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15674,
+    "url": "https://pyfound.blogspot.com/2007/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15675,
+    "url": "https://pyfound.blogspot.com/2018/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15676,
+    "url": "https://pyfound.blogspot.com/2025/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15677,
+    "url": "https://pyfound.blogspot.com/2014/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15678,
+    "url": "https://pyfound.blogspot.com/2022/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15679,
+    "url": "https://pyfound.blogspot.com/2011/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15680,
+    "url": "https://mastodon.social/@stanfromireland",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15681,
+    "url": "https://pyfound.blogspot.com/2022/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15682,
+    "url": "https://pyfound.blogspot.com/2017/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15683,
+    "url": "https://pyfound.blogspot.com/2010/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15684,
+    "url": "https://pyfound.blogspot.com/2021/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15685,
+    "url": "https://pyfound.blogspot.com/2015/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15686,
+    "url": "https://pyfound.blogspot.com/2006/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15687,
+    "url": "https://grewn0uille.fr/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15688,
+    "url": "https://pyfound.blogspot.com/2026/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15689,
+    "url": "https://pyfound.blogspot.com/2010/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15690,
+    "url": "https://pyfound.blogspot.com/2007/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15691,
+    "url": "https://linktr.ee/kanin.kearpimy",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15692,
+    "url": "https://pyfound.blogspot.com/2009/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15693,
+    "url": "https://pyfound.blogspot.com/2018/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15694,
+    "url": "https://pyfound.blogspot.com/2014/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15695,
+    "url": "https://pyfound.blogspot.com/2011/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15696,
+    "url": "https://pyfound.blogspot.com/2022/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15697,
+    "url": "https://pyfound.blogspot.com/2025/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15698,
+    "url": "https://pyfound.blogspot.com/2023/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15699,
+    "url": "https://pyfound.blogspot.com/2020/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15700,
+    "url": "https://pyfound.blogspot.com/2011/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15701,
+    "url": "https://pyfound.blogspot.com/2017/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15702,
+    "url": "https://pyfound.blogspot.com/2021/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15703,
+    "url": "https://pyfound.blogspot.com/2015/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15704,
+    "url": "https://pyfound.blogspot.com/2008/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15705,
+    "url": "https://pyfound.blogspot.com/2006/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15706,
+    "url": "https://pyfound.blogspot.com/2015/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15707,
+    "url": "https://www.linkedin.com/in/el-karece-asiedu/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15708,
+    "url": "https://x.com/bdbaddog",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15709,
+    "url": "https://pyfound.blogspot.com/2023/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15710,
+    "url": "https://pyfound.blogspot.com/2013/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15711,
+    "url": "https://pyfound.blogspot.com/2010/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15712,
+    "url": "https://pyfound.blogspot.com/2022/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15713,
+    "url": "https://pyfound.blogspot.com/2018/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15714,
+    "url": "https://pyfound.blogspot.com/2014/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15715,
+    "url": "https://pyfound.blogspot.com/2011/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15716,
+    "url": "https://pyfound.blogspot.com/2017/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15717,
+    "url": "https://pyfound.blogspot.com/2025/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15719,
+    "url": "https://pyfound.blogspot.com/2012/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15720,
+    "url": "https://pyfound.blogspot.com/2026/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15721,
+    "url": "https://pyfound.blogspot.com/2024/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15722,
+    "url": "https://pyfound.blogspot.com/2010/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15723,
+    "url": "https://pyfound.blogspot.com/2023/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15724,
+    "url": "https://pyfound.blogspot.com/2007/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15725,
+    "url": "https://pyfound.blogspot.com/2022/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15726,
+    "url": "https://mathstodon.xyz/@SarahK",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15727,
+    "url": "https://pyfound.blogspot.com/2018/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15728,
+    "url": "https://pyfound.blogspot.com/2009/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15730,
+    "url": "https://pyfound.blogspot.com/2014/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15731,
+    "url": "https://pyfound.blogspot.com/2011/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15732,
+    "url": "https://pyfound.blogspot.com/2025/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15733,
+    "url": "https://pyfound.blogspot.com/2017/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15734,
+    "url": "https://pyfound.blogspot.com/2006/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15735,
+    "url": "https://pyfound.blogspot.com/2024/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15736,
+    "url": "https://pyfound.blogspot.com/2026/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15737,
+    "url": "https://bsky.app/profile/sarahkuchinsky.bsky.social",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15738,
+    "url": "https://pyfound.blogspot.com/2025/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15739,
+    "url": "https://pyfound.blogspot.com/2021/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15740,
+    "url": "https://pyfound.blogspot.com/2015/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15741,
+    "url": "https://pyfound.blogspot.com/2013/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15742,
+    "url": "https://pyfound.blogspot.com/2015/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15743,
+    "url": "https://pyfound.blogspot.com/2009/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15744,
+    "url": "https://pyfound.blogspot.com/2021/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15745,
+    "url": "https://pyfound.blogspot.com/2018/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15746,
+    "url": "https://pyfound.blogspot.com/2024/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15747,
+    "url": "https://pyfound.blogspot.com/2026/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15748,
+    "url": "https://pyfound.blogspot.com/2011/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15749,
+    "url": "https://pyfound.blogspot.com/2012/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15750,
+    "url": "https://pyfound.blogspot.com/2020/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15751,
+    "url": "https://pyfound.blogspot.com/2022/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15752,
+    "url": "https://pyfound.blogspot.com/2016/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15753,
+    "url": "https://pyfound.blogspot.com/2019/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15754,
+    "url": "https://pyfound.blogspot.com/2010/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15755,
+    "url": "https://pyfound.blogspot.com/2006/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15756,
+    "url": "https://pyfound.blogspot.com/2026/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15757,
+    "url": "https://pyfound.blogspot.com/2014/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15758,
+    "url": "https://pyfound.blogspot.com/2008/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15759,
+    "url": "https://pyfound.blogspot.com/2021/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15760,
+    "url": "https://pyfound.blogspot.com/2015/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15761,
+    "url": "https://pyfound.blogspot.com/2009/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15762,
+    "url": "https://pyfound.blogspot.com/2024/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15763,
+    "url": "https://pyfound.blogspot.com/2018/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15764,
+    "url": "https://pyfound.blogspot.com/2026/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15766,
+    "url": "https://pyfound.blogspot.com/2012/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15767,
+    "url": "https://pyfound.blogspot.com/2025/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15768,
+    "url": "https://pyfound.blogspot.com/2019/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15769,
+    "url": "https://pyfound.blogspot.com/2014/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15770,
+    "url": "https://pyfound.blogspot.com/2011/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15771,
+    "url": "https://www.python.org/psf/fellows",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15773,
+    "url": "https://pyfound.blogspot.com/2010/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15774,
+    "url": "https://pyfound.blogspot.com/2006/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15775,
+    "url": "https://pyfound.blogspot.com/2015/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15776,
+    "url": "https://pyfound.blogspot.com/2008/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15777,
+    "url": "https://pyfound.blogspot.com/2026/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15779,
+    "url": "https://pyfound.blogspot.com/2024/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15780,
+    "url": "https://pyfound.blogspot.com/2018/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15781,
+    "url": "https://pyfound.blogspot.com/2007/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15783,
+    "url": "https://pyfound.blogspot.com/2015/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15784,
+    "url": "https://pyfound.blogspot.com/2012/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15785,
+    "url": "https://pyfound.blogspot.com/2016/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15786,
+    "url": "https://pyfound.blogspot.com/2025/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15787,
+    "url": "https://pyfound.blogspot.com/2020/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15788,
+    "url": "https://pyfound.blogspot.com/2019/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15789,
+    "url": "https://pyfound.blogspot.com/2014/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15790,
+    "url": "https://pyfound.blogspot.com/2022/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15791,
+    "url": "https://pyfound.blogspot.com/2011/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15792,
+    "url": "https://pyfound.blogspot.com/2010/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15793,
+    "url": "https://pyfound.blogspot.com/2016/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15794,
+    "url": "https://pyfound.blogspot.com/2008/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15795,
+    "url": "https://pyfound.blogspot.com/2021/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15796,
+    "url": "https://pyfound.blogspot.com/2026/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15797,
+    "url": "https://pyfound.blogspot.com/2018/10/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15798,
+    "url": "https://pyfound.blogspot.com/2021/02/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15799,
+    "url": "https://pyfound.blogspot.com/2023/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15800,
+    "url": "https://pyfound.blogspot.com/2015/03/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15801,
+    "url": "https://pyfound.blogspot.com/2009/04/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15802,
+    "url": "https://github.com/bdbaddog",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15803,
+    "url": "https://pyfound.blogspot.com/2006/09/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15804,
+    "url": "https://pyfound.blogspot.com/2012/08/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15805,
+    "url": "https://pyfound.blogspot.com/2020/11/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15806,
+    "url": "https://pyfound.blogspot.com/2016/07/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15807,
+    "url": "https://pyfound.blogspot.com/2019/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15808,
+    "url": "https://pyfound.blogspot.com/2025/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15809,
+    "url": "https://pyfound.blogspot.com/2017/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15810,
+    "url": "https://pyfound.blogspot.com/2011/05/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15811,
+    "url": "https://www.python.org/psf/fellows-roster/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15812,
+    "url": "https://pyfound.blogspot.com/2022/06/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15813,
+    "url": "https://pyfound.blogspot.com/2010/01/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 15814,
+    "url": "https://pyfound.blogspot.com/2008/12/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3.14.8 Documentation",
+    "pageUrl": "https://docs.python.org"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3.14.8 Documentation",
+    "pageUrl": "https://docs.python.org"
+  },
+  {
+    "src": "https://docs.ansible.com/images/redhat.svg",
+    "alt": "Red Hat logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/bull_welcome.svg",
+    "alt": "Welcome to Ansible",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/bullhorn_subscribe.svg",
+    "alt": "",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/ansible-core.svg",
+    "alt": "Ansible Core project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/ansible-community.svg",
+    "alt": "Antsibull-nox project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/builder.svg",
+    "alt": "Ansible Builder project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/ansible-community.svg",
+    "alt": "Ansible DevTools project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/bull-builder.svg",
+    "alt": "Ansible bull contributor logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/platform.svg",
+    "alt": "Red Hat Ansible Automation Platform logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/assets/images/redhat_reversed.svg",
+    "alt": "Red Hat logo.",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://www.tornadoweb.org/en/stable/_images/tornado.png",
+    "alt": "Tornado Web Server",
+    "pageTitle": "Tornado Web Server — Tornado 6.5.10 documentation",
+    "pageUrl": "https://www.tornadoweb.org/"
+  },
   {
     "src": "https://pandas.pydata.org/static/img/partners/numfocus.svg",
     "alt": "NumFOCUS",
