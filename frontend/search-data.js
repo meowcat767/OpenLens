@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1436,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Hash",
+    "title": "Object Protocol — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Abstract Objects Layer » Object Protocol | Theme Auto Light Dark | Object Protocol¶ PyObject *Py_GetConstant(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Get a strong reference to a constant. Set an exception and return NULL if constant_id is invalid. constant_id must be one of these constant identifiers: Constant Identifier Value Returned object Py_CONSTANT_NONE¶ 0 None Py_CONSTANT_FALSE¶ 1 False Py_CONSTANT_TRUE¶ 2 True Py_CONSTANT_ELLIPSIS¶ 3 Ellipsis Py_CONSTANT_NOT_IMPLEMENTED¶ 4 NotImplemented Py_CONSTANT_ZERO¶ 5 0 Py_CONSTANT_ONE¶ 6 1 Py_CONSTANT_EMPTY_STR¶ 7 \u0027\u0027 Py_CONSTANT_EMPTY_BYTES¶ 8 b\u0027\u0027 Py_CONSTANT_EMPTY_TUPLE¶ 9 () Numeric values are only given for projects which cannot use the constant identifiers. Added in version 3.13. CPython implementation detail: In CPython, all of these constants are immortal. PyObject *Py_GetConstantBorrowed(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Similar to Py_GetConstant(), but return a borrowed reference. This function is primarily intended for backwards compatibility: using Py_GetConstant() is recommended for new code. The reference is borrowed from the interpreter, and is valid until the interpreter finalization. Added in version 3.13. PyObject *Py_NotImplemented¶ The NotImplemented singleton, used to signal that an operation is not implemented for the given type combination. Py_RETURN_NOTIMPLEMENTED¶ Properly handle returning Py_NotImplemented from within a C function (that is, create a new strong reference to NotImplemented and return it). Py_PRINT_RAW¶ Flag to be used with multiple functions that print the object (like PyObject_Print() and PyFile_WriteObject()). If passed, these functions use the str() of the object instead of the repr(). int PyObject_Print(PyObject *o, FILE *fp, int flags)¶ Print an object o, on file fp. Returns -1 on error. The flags argument is used to enable certain printing options. The only option currently supported is Py_PRINT_RAW; if given, the str() of the object is written instead of the repr(). int PyObject_HasAttrWithError(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI since version 3.13. Returns 1 if o has the attribute attr_name, and 0 otherwise. This is equivalent to the Python expression hasattr(o, attr_name). On failure, return -1. Added in version 3.13. int PyObject_HasAttrStringWithError(PyObject *o, const char *attr_name)¶ Part of the Stable ABI since version 3.13. This is the same as PyObject_HasAttrWithError(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. int PyObject_HasAttr(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI. Returns 1 if o has the attribute attr_name, and 0 otherwise. This function always succeeds. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods aren’t propagated, but instead given to sys.unraisablehook(). For proper error handling, use PyObject_HasAttrWithError(), PyObject_GetOptionalAttr() or PyObject_GetAttr() instead. int PyObject_HasAttrString(PyObject *o, const char *attr_name)¶ Part of the Stable ABI. This is the same as PyObject_HasAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods or while creating the temporary str object are silently ignored. For proper error handling, use PyObject_HasAttrStringWithError(), PyObject_GetOptionalAttrString() or PyObject_GetAttrString() instead. PyObject *PyObject_GetAttr(PyObject *o, PyObject *attr_name)¶ Return value: New reference. Part of the Stable ABI. Retrieve an attribute named attr_name from object o. Returns the attribute value on success, or NULL on failure. This is the equivalent of the Python expression o.attr_name. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttr() instead. PyObject *PyObject_GetAttrString(PyObject *o, const char *attr_name)¶ Return value: New reference. Part of the Stable ABI. This is the same as PyObject_GetAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttrString() instead. int PyObject_GetOptionalAttr(PyObject *obj, PyObject *attr_name, PyObject **result);¶ Part of the Stable ABI since version 3.13. Variant of PyObject_GetAttr() which doesn’t raise AttributeError if the attribute is not found. If the attribute is found, return 1 and set *result to a new strong reference to the attribute. If the attribute is not found, return 0 and set *result to NULL; the AttributeError is silenced. If an error other than AttributeError is raised, return -1 and set *result to NULL. Added in version 3.13. int PyObject_",
+    "scrapedAt": "2026-10-08 19:42:02.847345"
+  },
+  {
+    "id": 1435,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError",
+    "title": "urllib.error — Exception classes raised by urllib.request — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.error — Exception classes raised by urllib.request | Theme Auto Light Dark | urllib.error — Exception classes raised by urllib.request¶ Source code: Lib/urllib/error.py The urllib.error module defines the exception classes for exceptions raised by urllib.request. The base exception class is URLError. The following exceptions are raised by urllib.error as appropriate: exception urllib.error.URLError¶ The handlers raise this exception (or derived exceptions) when they run into a problem. It is a subclass of OSError. reason¶ The reason for this error. It can be a message string or another exception instance. Changed in version 3.3: URLError used to be a subtype of IOError, which is now an alias of OSError. exception urllib.error.HTTPError(url, code, msg, hdrs, fp)¶ Though being an exception (a subclass of URLError), an HTTPError can also function as a non-exceptional file-like return value (the same thing that urlopen() returns). This is useful when handling exotic HTTP errors, such as requests for authentication. url¶ Contains the request URL. An alias for filename attribute. code¶ An HTTP status code as defined in RFC 2616. This numeric value corresponds to a value found in the dictionary of codes as found in http.server.BaseHTTPRequestHandler.responses. reason¶ This is usually a string explaining the reason for this error. An alias for msg attribute. headers¶ The HTTP response headers for the HTTP request that caused the HTTPError. An alias for hdrs attribute. Added in version 3.4. fp¶ A file-like object where the HTTP error body can be read from. exception urllib.error.ContentTooShortError(msg, content)¶ This exception is raised when the urlretrieve() function detects that the amount of the downloaded data is less than the expected amount (given by the Content-Length header). content¶ The downloaded (and supposedly truncated) data. Previous topic urllib.parse — Parse URLs into components Next topic urllib.robotparser — Parser for robots.txt This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.error — Exception classes raised by urllib.request | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:42:01.562643"
+  },
+  {
+    "id": 1434,
+    "url": "https://github.com/python/cpython/issues/132284",
+    "title": "Py_TYPE(lhs)-\u003etp_as_mapping-\u003emp_subscript is not the same as Dict_Type.tp_as_mapping-\u003emp_subscript when it should be · Issue #132284 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Py_TYPE(lhs)-\u003etp_as_mapping-\u003emp_subscript is not the same as Dict_Type.tp_as_mapping-\u003emp_subscript when it should be #132284 New issue Copy link New issue Copy link Closed Closed Py_TYPE(lhs)-\u003etp_as_mapping-\u003emp_subscript is not the same as Dict_Type.tp_as_mapping-\u003emp_subscript when it should be#132284 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description iritkatriel opened on Apr 8, 2025 Issue body actions A dict subclass which does not override __getitem__ (like collections.Counter) should have Dict_Type.tp_as_mapping-\u003emp_subscript as its Py_TYPE(lhs)-\u003etp_as_mapping-\u003emp_subscript, but they are not the same. CC @ericsnowcurrently . Linked PRs gh-132284: Don\u0027t wrap base PyCFunction slots on class creation if not overridden #132329 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:42:00.252901"
+  },
+  {
+    "id": 1433,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TextIO",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:41:58.029527"
+  },
+  {
+    "id": 1432,
+    "url": "https://github.com/python/cpython/issues/125746",
+    "title": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Delay deprecated zipimport.zipimporter.load_module removal time to 3.15 #125746 New issue Copy link New issue Copy link Closed Closed Delay deprecated zipimport.zipimporter.load_module removal time to 3.15#125746 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description Wulian233 opened on Oct 20, 2024 Issue body actions Feature or enhancement Proposal: This method have been deprecated since Python 3.10 At https://github.com/python/cpython/blob/main/Lib/zipimport.py#L224-L225 msg \u003d (\"zipimport.zipimporter.load_module() is deprecated and slated for \"\n               \"removal in Python 3.12; use exec_module() instead\") edit: Delay the removal time to 3.15 #125746 (comment) Linked PRs gh-125746: Delay deprecated zipimport.zipimporter.load_module removal time to 3.15 #125748 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees brettcannon warsaw Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:41:56.653481"
+  },
+  {
     "id": 1431,
     "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources",
     "title": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.8 documentation",
@@ -9590,26 +9625,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1432,
-    "url": "https://github.com/python/cpython/issues/125746"
-  },
-  {
-    "id": 1433,
-    "url": "https://docs.python.org/3/library/typing.html#typing.TextIO"
-  },
-  {
-    "id": 1434,
-    "url": "https://github.com/python/cpython/issues/132284"
-  },
-  {
-    "id": 1435,
-    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
-  },
-  {
-    "id": 1436,
-    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Hash"
   },
   {
     "id": 1437,
@@ -239816,10 +239831,214 @@ window.searchData = [
     "id": 298907,
     "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.files",
     "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298908,
+    "url": "https://github.com/python/cpython/blob/main/Lib/zipimport.py#L224-L225",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298912,
+    "url": "https://github.com/python/cpython/issues/125746#issuecomment-2425030377",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298915,
+    "url": "https://github.com/python/cpython/issues/125746#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298917,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125746",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298918,
+    "url": "https://github.com/python/cpython/issues/125746#issue-2599970156",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298919,
+    "url": "https://github.com/python/cpython/pull/125748",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298920,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125746",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 298921,
+    "url": "https://github.com/python/cpython/issues/125746#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 299268,
+    "url": "https://github.com/python/cpython/issues/132284#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 299271,
+    "url": "https://github.com/python/cpython/pull/132329",
+    "parentUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 299272,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/132284",
+    "parentUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 299274,
+    "url": "https://github.com/python/cpython/issues/132284#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 299276,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/132284",
+    "parentUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 299277,
+    "url": "https://github.com/python/cpython/issues/132284#issue-2980607311",
+    "parentUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 299283,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.ContentTooShortError.content",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299285,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.HTTPError.code",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299293,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/urllib/error.py",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299294,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.HTTPError.fp",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299297,
+    "url": "https://docs.python.org/3/library/urllib.error.html#module-urllib.error",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299302,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.HTTPError.reason",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299304,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError.reason",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299307,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/urllib.error.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299312,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.HTTPError.url",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 299313,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.HTTPError.headers",
+    "parentUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyObject_Hash"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyObject_Hash"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.error — Exception classes raised by urllib.request — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.error — Exception classes raised by urllib.request — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "Py_TYPE(lhs)-\u003etp_as_mapping-\u003emp_subscript is not the same as Dict_Type.tp_as_mapping-\u003emp_subscript when it should be · Issue #132284 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Py_TYPE(lhs)-\u003etp_as_mapping-\u003emp_subscript is not the same as Dict_Type.tp_as_mapping-\u003emp_subscript when it should be · Issue #132284 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.TextIO"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.TextIO"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "brettcannon",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d64\u0026u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4",
+    "alt": "warsaw",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Wulian233",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d64\u0026u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
