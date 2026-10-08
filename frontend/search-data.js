@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1694,
+    "url": "https://github.com/python/cpython/issues/124502",
+    "title": "[C API] Add PyUnicode_Equal() function · Issue #124502 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} [C API] Add PyUnicode_Equal() function #124502 New issue Copy link New issue Copy link Closed Closed [C API] Add PyUnicode_Equal() function#124502 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Sep 25, 2024 Issue body actions Python 3.13 moved the private _PyUnicode_EQ() function to internal C API. mypy and Pyodide are using it. I propose to add a public PyUnicode_Equal(a, b) function to the limited C API 3.14 to replace the private _PyUnicode_EQ() function: Return 1 if a is equal to b. Return 0 if a is not equal to b. Set a TypeError exception and return -1 if a or b is not a Python str object. The function always succeed if a and b are strings. Linked PRs gh-124502: Add PyUnicode_Equal() function #124504 gh-124502: Optimize unicode_eq() #125070 gh-124502: Optimize unicode_eq() #125105 gh-124502: Remove _PyUnicode_EQ() function #125114 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:54:13.014205"
+  },
+  {
+    "id": 1693,
+    "url": "https://github.com/python/cpython/issues/116022",
+    "title": "Improve `repr()` of AST nodes · Issue #116022 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Improve repr() of AST nodes #116022 New issue Copy link New issue Copy link Closed #117046 Closed Improve repr() of AST nodes#116022 #117046 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-parsertype-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Feb 28, 2024 Issue body actions Feature or enhancement Proposal: I often use ast.parse in the terminal to explore what the AST looks like: \u003e\u003e\u003e ast.parse(\"x \u003d 3\")\n\u003cast.Module object at 0x105450b50\u003e\n But I have to remember to use ast.dump() to get useful output: \u003e\u003e\u003e ast.dump(ast.parse(\"x \u003d 3\"))\n\"Module(body\u003d[Assign(targets\u003d[Name(id\u003d\u0027x\u0027, ctx\u003dStore())], value\u003dConstant(value\u003d3))], type_ignores\u003d[])\"\n It would be nice if the default repr() of AST nodes was more like the output of ast.dump(), so it\u0027s easier to see at a glance how it works. One concern would be around the size of the output: \u003e\u003e\u003e from pathlib import Path\n\u003e\u003e\u003e import typing\n\u003e\u003e\u003e typing_py \u003d Path(typing.__file__).read_text()\n\u003e\u003e\u003e len(ast.dump(ast.parse(typing_py)))\n304244\n As a middle ground, we could limit the depth of the AST provided in the repr(), e.g. to 2 levels, and also the number of list elements provided. The repr() of a module\u0027s AST might then look something like: Module(body\u003d[Expr(value\u003dConstant(...)), ..., Assign(targets\u003d[Name(...)], value\u003dConstant(...))], type_ignores\u003d[])\n Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-116022: Improve repr() of AST nodes #117046 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:54:10.675605"
+  },
+  {
+    "id": 1692,
+    "url": "https://docs.python.org/3/library/functions.html#pow",
+    "title": "Built-in Functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and Byte",
+    "scrapedAt": "2026-10-08 19:54:08.462369"
+  },
+  {
+    "id": 1691,
+    "url": "https://github.com/python/cpython/issues/120389",
+    "title": "[C API] Add PyLong_FromInt64() and PyLong_ToInt64() · Issue #120389 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} [C API] Add PyLong_FromInt64() and PyLong_ToInt64() #120389 New issue Copy link New issue Copy link Closed Closed [C API] Add PyLong_FromInt64() and PyLong_ToInt64()#120389 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Jun 12, 2024 Issue body actions Feature or enhancement I propose to add functions to convert \u003cstdint.h\u003e integers to/from Python int objects: PyObject* PyLong_FromInt32(int32_t value);\nPyObject* PyLong_FromInt64(int64_t value);\nPyObject* PyLong_FromUInt32(uint32_t value);\nPyObject* PyLong_FromUInt64(uint64_t value);\n\nint PyLong_ToInt32(PyObject *obj, int32_t *value);\nint PyLong_ToInt64(PyObject *obj, int64_t *value);\nint PyLong_ToUInt32(PyObject *obj, uint32_t *value);\nint PyLong_ToUInt64(PyObject *obj, uint64_t *value); Notes: I prefer to limit the API to 4 types for now: int32/64_t and uint32/64_t. Later, we can discuss add more types, but let\u0027s start with the most common ones. (UPDATE: I removed 8-bit and 16-bit types.) I prefer UInt to Uint since there are two words: Unsigned INTeger. To functions don\u0027t return the result, but a status: 0 on success, -1 on error (with an exception set). It\u0027s to solve the C API Problem #1: \"Ambiguous return values\". PyLong_AsLong() returns -1 on success and on error (with an exception set). Related discussion: Avoid C-specific Types. Linked PRs gh-120389: Add PyLong_FromInt64() and PyLong_AsInt64() #120390 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:54:06.962818"
+  },
+  {
+    "id": 1690,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_ResetWarnOptions",
+    "title": "Operating System Utilities — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Operating System Utilities | Theme Auto Light Dark | Operating System Utilities¶ PyObject *PyOS_FSPath(PyObject *path)¶ Return value: New reference. Part of the Stable ABI since version 3.6. Return the file system representation for path. If the object is a str or bytes object, then a new strong reference is returned. If the object implements the os.PathLike interface, then __fspath__() is returned as long as it is a str or bytes object. Otherwise TypeError is raised and NULL is returned. Added in version 3.6. int Py_FdIsInteractive(FILE *fp, const char *filename)¶ Return true (nonzero) if the standard I/O file fp with name filename is deemed interactive. This is the case for files for which isatty(fileno(fp)) is true. If the PyConfig.interactive is non-zero, this function also returns true if the filename pointer is NULL or if the name is equal to one of the strings \u0027\u003cstdin\u003e\u0027 or \u0027???\u0027. This function must not be called before Python is initialized. void PyOS_BeforeFork()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to prepare some internal state before a process fork. This should be called before calling fork() or any similar function that clones the current process. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_BeforeFork(). Added in version 3.7. void PyOS_AfterFork_Parent()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update some internal state after a process fork. This should be called from the parent process after calling fork() or any similar function that clones the current process, regardless of whether process cloning was successful. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Parent(). Added in version 3.7. void PyOS_AfterFork_Child()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update internal interpreter state after a process fork. This must be called from the child process after calling fork(), or any similar function that clones the current process, if there is any chance the process will call back into the Python interpreter. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Child(). Added in version 3.7. See also os.register_at_fork() allows registering custom Python functions to be called by PyOS_BeforeFork(), PyOS_AfterFork_Parent() and PyOS_AfterFork_Child(). void PyOS_AfterFork()¶ Part of the Stable ABI on platforms with fork(). Function to update some internal state after a process fork; this should be called in the new process if the Python interpreter will continue to be used. If a new executable is loaded into the new process, this function does not need to be called. Deprecated since version 3.7: This function is superseded by PyOS_AfterFork_Child(). int PyOS_CheckStack()¶ Part of the Stable ABI on platforms with USE_STACKCHECK since version 3.7. Return true when the interpreter runs out of stack space. This is a reliable check, but is only available when USE_STACKCHECK is defined (currently on certain versions of Windows using the Microsoft Visual C++ compiler). USE_STACKCHECK will be defined automatically; you should never change the definition in your own code. typedef void (*PyOS_sighandler_t)(int)¶ Part of the Stable ABI. PyOS_sighandler_t PyOS_getsig(int i)¶ Part of the Stable ABI. Return the current signal handler for signal i. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! PyOS_sighandler_t PyOS_setsig(int i, PyOS_sighandler_t h)¶ Part of the Stable ABI. Set the signal handler for signal i to be h; return the old signal handler. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! int PyOS_InterruptOccurred(void)¶ Part of the Stable ABI. Check if a SIGINT signal has been received. Returns 1 if a SIGINT has occurred and clears the signal flag, or 0 otherwise. In most cases, you should prefer PyErr_CheckSignals() over this function. PyErr_CheckSignals() invokes the appropriate signal handlers for all pending signals, allowing Python code to handle the signal properly. This function only detects SIGINT and does not invoke any Python signal handlers. This function is async-signal-safe and this function cannot fail. The caller must hold an attached thread state. wchar_t *Py_DecodeLocale(const char *arg, size_t *size)¶ Part of the Stable ABI since version 3.7. Warning This function should not be called directly: use the PyConfig API with the PyConfig_SetBytesString()",
+    "scrapedAt": "2026-10-08 19:54:04.776094"
+  },
+  {
     "id": 1689,
     "url": "https://github.com/python/cpython/issues/119775",
     "title": "Remove deprecated feature to create immutable types with mutable bases · Issue #119775 · python/cpython · GitHub",
@@ -11375,26 +11410,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1690,
-    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_ResetWarnOptions"
-  },
-  {
-    "id": 1691,
-    "url": "https://github.com/python/cpython/issues/120389"
-  },
-  {
-    "id": 1692,
-    "url": "https://docs.python.org/3/library/functions.html#pow"
-  },
-  {
-    "id": 1693,
-    "url": "https://github.com/python/cpython/issues/116022"
-  },
-  {
-    "id": 1694,
-    "url": "https://github.com/python/cpython/issues/124502"
   },
   {
     "id": 1695,
@@ -252826,10 +252841,185 @@ window.searchData = [
     "id": 369134,
     "url": "https://github.com/python/cpython/issues/119775#top",
     "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369238,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/120389",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369240,
+    "url": "https://github.com/python/cpython/pull/120390",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369241,
+    "url": "https://github.com/python/cpython/issues/120389#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369242,
+    "url": "https://github.com/capi-workgroup/api-evolution/issues/10",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369244,
+    "url": "https://github.com/python/cpython/issues/120389#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369245,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/120389",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369246,
+    "url": "https://github.com/python/cpython/issues/120389#issue-2348085250",
+    "parentUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 369563,
+    "url": "https://github.com/python/cpython/issues/116022#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 369564,
+    "url": "https://github.com/python/cpython/issues/116022#issue-2157949734",
+    "parentUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 369565,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/116022",
+    "parentUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 369566,
+    "url": "https://github.com/python/cpython/issues/116022#top",
+    "parentUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 369568,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/116022",
+    "parentUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 369570,
+    "url": "https://github.com/python/cpython/pull/117046",
+    "parentUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 369573,
+    "url": "https://github.com/python/cpython/issues/124502#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369574,
+    "url": "https://github.com/python/cpython/issues/124502#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369577,
+    "url": "https://github.com/capi-workgroup/problems/issues/79",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369578,
+    "url": "https://github.com/python/cpython/pull/125070",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369582,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/124502",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369583,
+    "url": "https://github.com/python/cpython/issues/124502#issue-2547461456",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369584,
+    "url": "https://github.com/python/cpython/pull/124504",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369585,
+    "url": "https://github.com/python/cpython/pull/125114",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369586,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/124502",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 369587,
+    "url": "https://github.com/python/cpython/pull/125105",
+    "parentUrl": "https://github.com/python/cpython/issues/124502"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add PyUnicode_Equal() function · Issue #124502 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "[C API] Add PyUnicode_Equal() function · Issue #124502 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Improve `repr()` of AST nodes · Issue #116022 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Improve `repr()` of AST nodes · Issue #116022 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#pow"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#pow"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add PyLong_FromInt64() and PyLong_ToInt64() · Issue #120389 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "[C API] Add PyLong_FromInt64() and PyLong_ToInt64() · Issue #120389 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PySys_ResetWarnOptions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PySys_ResetWarnOptions"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
     "alt": "sobolevn",
